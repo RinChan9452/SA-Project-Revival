@@ -1,0 +1,8 @@
+"EmployeeID","FirstName","LastName","Email","Phone","Username","Password","ProfilePicture","Role"
+"1","Kagamine","Rin","sale@demo.local","0948278888","sale","$2a$10$oDzKyFnwkgDpq8Q6UOp4nuSe1gz2nyxV92NU75UsRGDlpf3/0mL1u","/uploads/profile/3052c6f7-816e-4125-ab62-d26973d03ebd.jpg","Sale"
+"2","Kagamine","Len","presale@demo.local","0880878211","presale","$2a$10$MllRdAWwth.m9KyNje/bfuot9mLBDKy.77i7hyR5VaylfSEZ827TK","/uploads/profile/bef8b37e-86a5-4885-a269-8c71c90ce5f8.jpg","Presale"
+"3","Big","Boss","pm@demo.local","0999877244","pm","$2a$10$9N2VDMsE2ma8SVFA23TZbe1DvrkrI.uhSnm7VhInWSsZSQPYiXjFm","/uploads/profile/d1c5cb28-f524-44ac-a6f3-a797c2bab3fc.png","PM"
+"4","AI","Capri","tech1@demo.local","0878738888","tech1","$2a$10$Tc1/oARD/FOUhArZ0SkKy.1DS0XwQn1UQCvw7JoCqwGTt/HmiZMIO","/uploads/profile/6bf0427f-7ebd-41c0-932e-c00e689c9aed.jpg","TechEngineer"
+"5","Manhattan","Cafe","tech2@demo.local","0676711044","tech2","$2a$10$bEcMN9Aizo7Lxvj.uBJnJeZRtilGD8eO.279uieIJBihC00X9ZtiC","/uploads/profile/ce61960c-db22-4978-8276-c10789857704.jpg","TechEngineer"
+"33","Agnes","Tachyon","tachyon.a@gmail.com","0889998888","tech3","$2a$10$OtAxUAV4IevMP3q68wtr9eipnc22jETnAN3ixQj9PUexViaV1Obfi","/uploads/profile/77d48115-e25a-4b99-9b98-ee3bbde7fa1d.png","TechEngineer"
+"34","Rintaro","Okabe","rintaro.okb@gmail.com","0824441111","tech4","$2a$10$q9r8a3OZ.8chUS6ahKl50.Kb8fb0tfowY3ixhPnk5QbAPEANEEOuK",,"TechEngineer"

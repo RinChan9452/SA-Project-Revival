@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>บันทึก Solution – ProjectSA</title>
+  <link rel="stylesheet" href="css/app.css?v=2">
+</head>
+<body>
+<main>
+  <div class="card">
+    <h1>Store Project Solution Details</h1>
+    <p class="muted">Presale บันทึกรายละเอียด Solution และเอกสาร PDF หลังลูกค้า Confirm Project → สถานะ WaitingForAssignEngineer และแจ้งเตือน PM</p>
+  </div>
+
+  <!-- <<Boundary>> ProjectList Form -->
+  <div class="card">
+    <h2>1. Project สถานะ NewProject ที่คุณรับผิดชอบ</h2>
+    <div id="projectList"></div>
+  </div>
+
+  <!-- <<Boundary>> SolutionDetail Form -->
+  <div class="card hidden" id="solutionDetailForm">
+    <h2 id="formTitle">รายละเอียด Solution</h2>
+    <dl class="info" id="projectInfo" style="margin-bottom:16px"></dl>
+    <form id="form" class="grid2" novalidate>
+      <div class="field" data-f="startDate"><label>Start Date *</label><input type="date" name="startDate"><div class="msg"></div></div>
+      <div class="field" data-f="endDate"><label>End Date *</label><input type="date" name="endDate"><div class="msg"></div></div>
+      <div class="field full" data-f="objective"><label>Project Objective *</label><textarea name="objective"></textarea><div class="msg"></div></div>
+      <div class="field" data-f="estimatedBudget"><label>Estimated Budget (บาท) *</label><input name="estimatedBudget" inputmode="decimal"><div class="msg"></div></div>
+      <div class="field full" data-f="solutionDetail"><label>รายละเอียด Solution</label><textarea name="solutionDetail" style="min-height:120px"></textarea><div class="msg"></div></div>
+      <div class="field" data-f="files"><label>เอกสาร Solution (PDF ≤ 50 MB) *</label><input type="file" name="solutionFiles" accept="application/pdf" multiple><div class="msg"></div></div>
+      <div class="field"><label>เอกสาร Product Requirement (PDF ≤ 50 MB)</label><input type="file" name="requirementFiles" accept="application/pdf" multiple></div>
+      <div class="full"><label>เอกสารที่เคยอัปโหลด</label><div id="documents" class="muted"></div></div>
+      <div class="full actions"><button>บันทึก</button></div>
+    </form>
+  </div>
+</main>
+<script src="js/app.js?v=2"></script>
+<script src="js/bell.js?v=2"></script>
+<script src="js/uc02.js?v=2"></script>
+</body>
+</html>

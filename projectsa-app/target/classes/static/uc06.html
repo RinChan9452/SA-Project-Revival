@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>เพิ่ม Requirement ใหม่ – ProjectSA</title>
+  <link rel="stylesheet" href="css/app.css?v=2">
+</head>
+<body>
+<main>
+  <div class="card">
+    <h1>Add Customer New Requirement</h1>
+    <p class="muted">PM บันทึก Requirement ที่ลูกค้าขอเพิ่มระหว่างการทดสอบ → สถานะ "รออนุมัติ", Project เป็น WaitingForApprove และแจ้งเตือน Sale (เพิ่มได้หลายข้อในรอบเดียวกัน)</p>
+  </div>
+
+  <!-- <<Boundary>> ProjectList Form -->
+  <div class="card">
+    <h2>1. Project ที่คุณดูแล (Testing / WaitingForApprove)</h2>
+    <div id="projectList"></div>
+  </div>
+
+  <!-- <<Boundary>> NewRequirement Form -->
+  <div class="card hidden" id="newRequirementForm">
+    <h2 id="title"></h2>
+    <dl class="info" id="info" style="margin-bottom:16px"></dl>
+    <form id="form" class="grid2" novalidate>
+      <div class="field full" data-f="title"><label>หัวข้อ / ชื่อ Requirement *</label><input name="title"><div class="msg"></div></div>
+      <div class="field full" data-f="detail"><label>รายละเอียดความต้องการ *</label><textarea name="detail"></textarea><div class="msg"></div></div>
+      <div class="field" data-f="priority"><label>ระดับความสำคัญ *</label>
+        <select name="priority"><option value="">– เลือก –</option><option>Low</option><option>Medium</option><option>High</option></select><div class="msg"></div></div>
+      <div class="field" data-f="dueDate"><label>วันที่ลูกค้าต้องการให้เสร็จ *</label><input type="date" name="dueDate"><div class="msg"></div></div>
+      <div class="field full" data-f="relatedFeature"><label>ส่วนงาน / ฟีเจอร์ที่เกี่ยวข้อง (ถ้ามี)</label><input name="relatedFeature"><div class="msg"></div></div>
+      <div class="field full" data-f="files"><label>เอกสารประกอบ (ถ้ามี) – PDF / JPG / PNG ≤ 50 MB</label><input type="file" name="attachments" accept=".pdf,.jpg,.jpeg,.png" multiple><div class="msg"></div></div>
+      <div class="full actions"><button>ส่งอนุมัติ</button></div>
+    </form>
+  </div>
+</main>
+<script src="js/app.js?v=2"></script>
+<script src="js/bell.js?v=2"></script>
+<script src="js/uc06.js?v=2"></script>
+</body>
+</html>

@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net">
+  <diagram name="Class Diagram – Boundary / Controller / API (UC05–UC08)" id="classLayerPage2">
+    <mxGraphModel dx="1600" dy="1000" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="cdL2-0" />
+        <mxCell id="cdL2-1" parent="cdL2-0" />
+        <mxCell id="cdL2-a1" parent="cdL2-1" style="text;html=1;fontSize=24;fontStyle=1;align=left;verticalAlign=middle;" value="Class Diagram – Boundary / Controller / API (UC05–UC08)" vertex="1">
+          <mxGeometry x="40" y="0" width="1200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="cdL2-AppPage" parent="cdL2-1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fontSize=12;spacingLeft=4;" value='&lt;p style="margin:0px;margin-top:4px;text-align:center;"&gt;&amp;lt;&amp;lt;Boundary&amp;gt;&amp;gt;&lt;br&gt;{abstract}&lt;br&gt;&lt;b&gt;&lt;i&gt;AppPage&lt;/i&gt;&lt;/b&gt;&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;#loginUser: SessionUser&lt;br&gt;#unreadCount: int&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;+header()&lt;br&gt;+showErrors(form, errors)&lt;br&gt;+toast(message)&lt;br&gt;+formData(form): Map&lt;/p&gt;' vertex="1">
+          <mxGeometry x="40" y="70" width="300" height="171" as="geometry" />
+        </mxCell>
+        <mxCell id="cdL2-BaseController" parent="cdL2-1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fontSize=12;spacingLeft=4;" value='&lt;p style="margin:0px;margin-top:4px;text-align:center;"&gt;&amp;lt;&amp;lt;Controller&amp;gt;&amp;gt;&lt;br&gt;{abstract}&lt;br&gt;&lt;b&gt;&lt;i&gt;BaseController&lt;/i&gt;&lt;/b&gt;&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;#api: String&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;+loadProjectList(): List&lt;br&gt;+selectProject(ProjectID)&lt;/p&gt;' vertex="1">
+          <mxGeometry x="470" y="70" width="300" height="124.5" as="geometry" />
+        </mxCell>
+        <mxCell id="cdL2-DetectBlank" parent="cdL2-1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fontSize=12;spacingLeft=4;" value='&lt;p style="margin:0px;margin-top:4px;text-align:center;"&gt;&amp;lt;&amp;lt;Controller&amp;gt;&amp;gt;&lt;br&gt;{abstract}&lt;br&gt;&lt;b&gt;&lt;i&gt;DetectBlank&lt;/i&gt;&lt;/b&gt;&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;#errors: Map&amp;lt;String,String&amp;gt;&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;+check(formData): Map&lt;br&gt;#required(field): boolean&lt;/p&gt;' vertex="1">
+          <mxGeometry x="900" y="70" width="300" height="124.5" as="geometry" />
+        </mxCell>
+        <mxCell id="cdL2-BaseAPI" parent="cdL2-1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fontSize=12;spacingLeft=4;" value='&lt;p style="margin:0px;margin-top:4px;text-align:center;"&gt;&amp;lt;&amp;lt;API&amp;gt;&amp;gt;&lt;br&gt;{abstract}&lt;br&gt;&lt;b&gt;&lt;i&gt;BaseAPI&lt;/i&gt;&lt;/b&gt;&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;#sql: Sql&lt;br&gt;#auth: Auth&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;+requireRole(session, role): SessionUser&lt;br&gt;+listProjects(filter): List  «GET /api/projects»&lt;/p&gt;' vertex="1">
+          <mxGeometry x="1330" y="70" width="420" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="cdL2-ProjectListForm" parent="cdL2-1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fontSize=12;spacingLeft=4;" value='&lt;p style="margin:0px;margin-top:4px;text-align:center;"&gt;&amp;lt;&amp;lt;Boundary&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;ProjectList Form&lt;/b&gt;&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;-projects: List&lt;br&gt;-keyword: String&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;+show(projects)&lt;br&gt;+search(keyword)&lt;br&gt;+select(ProjectID)&lt;/p&gt;' vertex="1">
+          <mxGeometry x="40" y="331" width="300" height="139.5" as="geometry" />
+        </mxCell>
+        <mxCell id="cdL2-a2" parent="cdL2-1" style="text;html=1;fontSize=13;rotation=-90;" value="&lt;b&gt;UC05&lt;/b&gt;" vertex="1">
+          <mxGeometry x="4" y="520.5" width="40" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="cdL2-TestScheduleForm" parent="cdL2-1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fontSize=12;spacingLeft=4;" value='&lt;p style="margin:0px;margin-top:4px;text-align:center;"&gt;&amp;lt;&amp;lt;Boundary&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;TestSchedule Form&lt;/b&gt;&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;-testDate: Date&lt;br&gt;-startTime: Time&lt;br&gt;-endTime: Time&lt;br&gt;-location: String&lt;br&gt;-testDetail: String&lt;br&gt;-remindBefore: int&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;+show(form)&lt;br&gt;+submit()&lt;/p&gt;' vertex="1">
+          <mxGeometry x="40" y="520.5" width="300" height="186" as="geometry" />
+        </mxCell>
+        <mxCell id="cdL2-ScheduleController" parent="cdL2-1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fontSize=12;spacingLeft=4;" value='&lt;p style="margin:0px;margin-top:4px;text-align:center;"&gt;&amp;lt;&amp;lt;Controller&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Schedule Controller&lt;/b&gt;&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;-selectedProjectId: int&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;+saveSchedule(formData)&lt;/p&gt;' vertex="1">
+          <mxGeometry x="470" y="520.5" width="300" height="93" as="geometry" />
+        </mxCell>
+        <mxCell id="cdL2-ScheduleDetectBlank" parent="cdL2-1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fontSize=12;spacingLeft=4;" value='&lt;p style="margin:0px;margin-top:4px;text-align:center;"&gt;&amp;lt;&amp;lt;Controller&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Schedule DetectBlank&lt;/b&gt;&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;-remindOptions: List&amp;lt;int&amp;gt;&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;+check(formData): Map  «5.1–5.4»&lt;/p&gt;' vertex="1">
+          <mxGeometry x="900" y="590.5" width="300" height="93" as="geometry" />
+        </mxCell>
+        <mxCell id="cdL2-ScheduleAPI" parent="cdL2-1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fontSize=12;spacingLeft=4;" value='&lt;p style="margin:0px;margin-top:4px;text-align:center;"&gt;&amp;lt;&amp;lt;API&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Schedule API&lt;/b&gt;&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;-service: ScheduleService&lt;br&gt;-email: EmailStub&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;+getScheduleForm(id)  «GET …/schedule-form»&lt;br&gt;+saveSchedule(id, form)  «POST …/schedules»&lt;/p&gt;' vertex="1">
+          <mxGeometry x="1330" y="520.5" width="420" height="124" as="geometry" />
+        </mxCell>
+        <mxCell id="cdL2-a3" edge="1" parent="cdL2-1" source="cdL2-TestScheduleForm" target="cdL2-ScheduleController" style="endArrow=open;endFill=0;endSize=10;html=1;rounded=0;fontSize=12;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cdL2-a4" edge="1" parent="cdL2-1" source="cdL2-ProjectListForm" target="cdL2-ScheduleController" style="endArrow=open;endFill=0;endSize=10;html=1;rounded=0;fontSize=12;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.15;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="380" y="400.75" />
+              <mxPoint x="380" y="534.45" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cdL2-a5" edge="1" parent="cdL2-1" source="cdL2-ScheduleController" target="cdL2-ScheduleAPI" style="endArrow=open;endFill=0;endSize=10;html=1;rounded=0;fontSize=12;exitX=1;exitY=0.23655913978494625;exitDx=0;exitDy=0;entryX=0;entryY=0.1774193548387097;entryDx=0;entryDy=0;" value="calls">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cdL2-a6" edge="1" parent="cdL2-1" source="cdL2-ScheduleController" target="cdL2-ScheduleDetectBlank" style="endArrow=open;endFill=0;endSize=10;dashed=1;html=1;rounded=0;fontSize=11;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" value="«use»">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cdL2-a7" parent="cdL2-1" style="text;html=1;fontSize=13;rotation=-90;" value="&lt;b&gt;UC06&lt;/b&gt;" vertex="1">
+          <mxGeometry x="4" y="806.5" width="40" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="cdL2-NewRequirementForm" parent="cdL2-1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fontSize=12;spacingLeft=4;" value='&lt;p style="margin:0px;margin-top:4px;text-align:center;"&gt;&amp;lt;&amp;lt;Boundary&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;NewRequirement Form&lt;/b&gt;&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;-title: String&lt;br&gt;-detail: String&lt;br&gt;-priority: String&lt;br&gt;-dueDate: Date&lt;br&gt;-relatedFeature: String&lt;br&gt;-attachments: List&amp;lt;File&amp;gt;&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;+show(project)&lt;br&gt;+submit()&lt;/p&gt;' vertex="1">
+          <mxGeometry x="40" y="806.5" width="300" height="186" as="geometry" />
+        </mxCell>
+        <mxCell id="cdL2-RequirementController" parent="cdL2-1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fontSize=12;spacingLeft=4;" value='&lt;p style="margin:0px;margin-top:4px;text-align:center;"&gt;&amp;lt;&amp;lt;Controller&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Requirement Controller&lt;/b&gt;&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;-selectedProjectId: int&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;+validateRequirement(formData)&lt;br&gt;+submitRequirement(formData, files)&lt;/p&gt;' vertex="1">
+          <mxGeometry x="470" y="806.5" width="300" height="108.5" as="geometry" />
+        </mxCell>
+        <mxCell id="cdL2-RequirementDetectBlank" parent="cdL2-1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fontSize=12;spacingLeft=4;" value='&lt;p style="margin:0px;margin-top:4px;text-align:center;"&gt;&amp;lt;&amp;lt;Controller&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Requirement DetectBlank&lt;/b&gt;&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;-priorities: List&amp;lt;String&amp;gt;&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;+check(formData): Map  «5.1–5.3»&lt;/p&gt;' vertex="1">
+          <mxGeometry x="900" y="876.5" width="300" height="93" as="geometry" />
+        </mxCell>
+        <mxCell id="cdL2-FileCheck" parent="cdL2-1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fontSize=12;spacingLeft=4;" value='&lt;p style="margin:0px;margin-top:4px;text-align:center;"&gt;&amp;lt;&amp;lt;Controller&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;File Check&lt;/b&gt;&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;-allowedTypes: List&amp;lt;String&amp;gt;&lt;br&gt;-maxSize: long = 50 MB&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;+check(files, rule): List  «UC02 7.1–7.3, UC06 7»&lt;br&gt;+extension(name): String&lt;/p&gt;' vertex="1">
+          <mxGeometry x="900" y="999.5" width="300" height="124" as="geometry" />
+        </mxCell>
+        <mxCell id="cdL2-RequirementAPI" parent="cdL2-1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fontSize=12;spacingLeft=4;" value='&lt;p style="margin:0px;margin-top:4px;text-align:center;"&gt;&amp;lt;&amp;lt;API&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Requirement API&lt;/b&gt;&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;-service: RequirementService&lt;br&gt;-email: EmailStub&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;+getRequirementForm(id)  «GET …/requirement-form»&lt;br&gt;+addRequirement(id, form, files)  «POST …/requirements»&lt;/p&gt;' vertex="1">
+          <mxGeometry x="1330" y="806.5" width="420" height="124" as="geometry" />
+        </mxCell>
+        <mxCell id="cdL2-a8" edge="1" parent="cdL2-1" source="cdL2-NewRequirementForm" target="cdL2-RequirementController" style="endArrow=open;endFill=0;endSize=10;html=1;rounded=0;fontSize=12;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cdL2-a9" edge="1" parent="cdL2-1" source="cdL2-ProjectListForm" target="cdL2-RequirementController" style="endArrow=open;endFill=0;endSize=10;html=1;rounded=0;fontSize=12;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.15;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="388" y="400.75" />
+              <mxPoint x="388" y="822.775" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cdL2-a10" edge="1" parent="cdL2-1" source="cdL2-RequirementController" target="cdL2-RequirementAPI" style="endArrow=open;endFill=0;endSize=10;html=1;rounded=0;fontSize=12;exitX=1;exitY=0.20276497695852536;exitDx=0;exitDy=0;entryX=0;entryY=0.1774193548387097;entryDx=0;entryDy=0;" value="calls">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cdL2-a11" edge="1" parent="cdL2-1" source="cdL2-RequirementController" target="cdL2-RequirementDetectBlank" style="endArrow=open;endFill=0;endSize=10;dashed=1;html=1;rounded=0;fontSize=11;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" value="«use»">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cdL2-a12" edge="1" parent="cdL2-1" source="cdL2-RequirementController" target="cdL2-FileCheck" style="endArrow=open;endFill=0;endSize=10;dashed=1;html=1;rounded=0;fontSize=11;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" value="«use»">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cdL2-a13" parent="cdL2-1" style="text;html=1;fontSize=13;rotation=-90;" value="&lt;b&gt;UC07&lt;/b&gt;" vertex="1">
+          <mxGeometry x="4" y="1223.5" width="40" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="cdL2-RequirementListForm" parent="cdL2-1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fontSize=12;spacingLeft=4;" value='&lt;p style="margin:0px;margin-top:4px;text-align:center;"&gt;&amp;lt;&amp;lt;Boundary&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;RequirementList Form&lt;/b&gt;&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;-requirements: List&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;+show(requirements)&lt;br&gt;+select(RequirementID)&lt;/p&gt;' vertex="1">
+          <mxGeometry x="40" y="1223.5" width="300" height="108.5" as="geometry" />
+        </mxCell>
+        <mxCell id="cdL2-ApproveForm" parent="cdL2-1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fontSize=12;spacingLeft=4;" value='&lt;p style="margin:0px;margin-top:4px;text-align:center;"&gt;&amp;lt;&amp;lt;Boundary&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Approve Form&lt;/b&gt;&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;-requirement: Map&lt;br&gt;-attachments: List&lt;br&gt;-decision: String&lt;br&gt;-rejectReason: String&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;+show(requirement)&lt;br&gt;+approve()&lt;br&gt;+reject()&lt;/p&gt;' vertex="1">
+          <mxGeometry x="40" y="1362" width="300" height="170.5" as="geometry" />
+        </mxCell>
+        <mxCell id="cdL2-ApproveController" parent="cdL2-1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fontSize=12;spacingLeft=4;" value='&lt;p style="margin:0px;margin-top:4px;text-align:center;"&gt;&amp;lt;&amp;lt;Controller&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Approve Controller&lt;/b&gt;&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;-selectedProjectId: int&lt;br&gt;-selectedRequirementId: int&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;+selectRequirement(RequirementID)&lt;br&gt;+submitDecision(RequirementID, decision)&lt;/p&gt;' vertex="1">
+          <mxGeometry x="470" y="1223.5" width="300" height="124" as="geometry" />
+        </mxCell>
+        <mxCell id="cdL2-ApproveDetectBlank" parent="cdL2-1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fontSize=12;spacingLeft=4;" value='&lt;p style="margin:0px;margin-top:4px;text-align:center;"&gt;&amp;lt;&amp;lt;Controller&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Approve DetectBlank&lt;/b&gt;&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;-decisions: List&amp;lt;String&amp;gt;&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;+check(decision, reason): Map  «8, alt 8a»&lt;/p&gt;' vertex="1">
+          <mxGeometry x="900" y="1293.5" width="300" height="93" as="geometry" />
+        </mxCell>
+        <mxCell id="cdL2-ApproveAPI" parent="cdL2-1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fontSize=12;spacingLeft=4;" value='&lt;p style="margin:0px;margin-top:4px;text-align:center;"&gt;&amp;lt;&amp;lt;API&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Approve API&lt;/b&gt;&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;-service: ApproveService&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;+pending(id)  «GET …/requirements?status=Pending»&lt;br&gt;+getRequirement(reqId, project)  «GET /api/requirements/{reqId}»&lt;br&gt;+decide(reqId, body)  «PUT …/decision»&lt;/p&gt;' vertex="1">
+          <mxGeometry x="1330" y="1223.5" width="420" height="124" as="geometry" />
+        </mxCell>
+        <mxCell id="cdL2-a14" edge="1" parent="cdL2-1" source="cdL2-RequirementListForm" target="cdL2-ApproveController" style="endArrow=open;endFill=0;endSize=10;html=1;rounded=0;fontSize=12;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cdL2-a15" edge="1" parent="cdL2-1" source="cdL2-ApproveForm" target="cdL2-ApproveController" style="endArrow=open;endFill=0;endSize=10;html=1;rounded=0;fontSize=12;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.9;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="420" y="1447.25" />
+              <mxPoint x="420" y="1335.1" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cdL2-a16" edge="1" parent="cdL2-1" source="cdL2-ProjectListForm" target="cdL2-ApproveController" style="endArrow=open;endFill=0;endSize=10;html=1;rounded=0;fontSize=12;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.15;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="396" y="400.75" />
+              <mxPoint x="396" y="1242.1" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cdL2-a17" edge="1" parent="cdL2-1" source="cdL2-ApproveController" target="cdL2-ApproveAPI" style="endArrow=open;endFill=0;endSize=10;html=1;rounded=0;fontSize=12;exitX=1;exitY=0.1774193548387097;exitDx=0;exitDy=0;entryX=0;entryY=0.1774193548387097;entryDx=0;entryDy=0;" value="calls">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cdL2-a18" edge="1" parent="cdL2-1" source="cdL2-ApproveController" target="cdL2-ApproveDetectBlank" style="endArrow=open;endFill=0;endSize=10;dashed=1;html=1;rounded=0;fontSize=11;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" value="«use»">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cdL2-a19" parent="cdL2-1" style="text;html=1;fontSize=13;rotation=-90;" value="&lt;b&gt;UC08&lt;/b&gt;" vertex="1">
+          <mxGeometry x="4" y="1632.5" width="40" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="cdL2-CloseProjectForm" parent="cdL2-1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fontSize=12;spacingLeft=4;" value='&lt;p style="margin:0px;margin-top:4px;text-align:center;"&gt;&amp;lt;&amp;lt;Boundary&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;CloseProject Form&lt;/b&gt;&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;-project: Map&lt;br&gt;-engineers: List&lt;br&gt;-latestTest: Map&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;+show(form)&lt;br&gt;+confirmClose()&lt;br&gt;+cancel()&lt;/p&gt;' vertex="1">
+          <mxGeometry x="40" y="1632.5" width="300" height="155" as="geometry" />
+        </mxCell>
+        <mxCell id="cdL2-CloseController" parent="cdL2-1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fontSize=12;spacingLeft=4;" value='&lt;p style="margin:0px;margin-top:4px;text-align:center;"&gt;&amp;lt;&amp;lt;Controller&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Close Controller&lt;/b&gt;&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;-selectedProjectId: int&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;+closeProject(ProjectID)&lt;/p&gt;' vertex="1">
+          <mxGeometry x="470" y="1632.5" width="300" height="93" as="geometry" />
+        </mxCell>
+        <mxCell id="cdL2-CloseAPI" parent="cdL2-1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fontSize=12;spacingLeft=4;" value='&lt;p style="margin:0px;margin-top:4px;text-align:center;"&gt;&amp;lt;&amp;lt;API&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Close API&lt;/b&gt;&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;-service: CloseService&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;+getCloseForm(id)  «GET …/close-form»&lt;br&gt;+close(id)  «POST …/close»&lt;/p&gt;' vertex="1">
+          <mxGeometry x="1330" y="1632.5" width="420" height="108.5" as="geometry" />
+        </mxCell>
+        <mxCell id="cdL2-a20" edge="1" parent="cdL2-1" source="cdL2-CloseProjectForm" target="cdL2-CloseController" style="endArrow=open;endFill=0;endSize=10;html=1;rounded=0;fontSize=12;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cdL2-a21" edge="1" parent="cdL2-1" source="cdL2-ProjectListForm" target="cdL2-CloseController" style="endArrow=open;endFill=0;endSize=10;html=1;rounded=0;fontSize=12;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.15;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="404" y="400.75" />
+              <mxPoint x="404" y="1646.45" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cdL2-a22" edge="1" parent="cdL2-1" source="cdL2-CloseController" target="cdL2-CloseAPI" style="endArrow=open;endFill=0;endSize=10;html=1;rounded=0;fontSize=12;exitX=1;exitY=0.23655913978494625;exitDx=0;exitDy=0;entryX=0;entryY=0.20276497695852536;entryDx=0;entryDy=0;" value="calls">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cdL2-a23" edge="1" parent="cdL2-1" source="cdL2-ProjectListForm" target="cdL2-AppPage" style="endArrow=block;endFill=0;endSize=14;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.12;entryY=1;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="18" y="400.75" />
+              <mxPoint x="18" y="271" />
+              <mxPoint x="76" y="271" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cdL2-a24" edge="1" parent="cdL2-1" source="cdL2-TestScheduleForm" target="cdL2-AppPage" style="endArrow=block;endFill=0;endSize=14;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.12;entryY=1;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="18" y="613.5" />
+              <mxPoint x="18" y="271" />
+              <mxPoint x="76" y="271" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cdL2-a25" edge="1" parent="cdL2-1" source="cdL2-ScheduleController" target="cdL2-BaseController" style="endArrow=block;endFill=0;endSize=14;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.12;entryY=1;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="448" y="567" />
+              <mxPoint x="448" y="224.5" />
+              <mxPoint x="506" y="224.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cdL2-a26" edge="1" parent="cdL2-1" source="cdL2-ScheduleDetectBlank" target="cdL2-DetectBlank" style="endArrow=block;endFill=0;endSize=14;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.12;entryY=1;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="878" y="637" />
+              <mxPoint x="878" y="224.5" />
+              <mxPoint x="936" y="224.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cdL2-a27" edge="1" parent="cdL2-1" source="cdL2-ScheduleAPI" target="cdL2-BaseAPI" style="endArrow=block;endFill=0;endSize=14;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.12;entryY=1;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1308" y="582.5" />
+              <mxPoint x="1308" y="240" />
+              <mxPoint x="1380.4" y="240" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cdL2-a28" edge="1" parent="cdL2-1" source="cdL2-NewRequirementForm" target="cdL2-AppPage" style="endArrow=block;endFill=0;endSize=14;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.12;entryY=1;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="18" y="899.5" />
+              <mxPoint x="18" y="271" />
+              <mxPoint x="76" y="271" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cdL2-a29" edge="1" parent="cdL2-1" source="cdL2-RequirementController" target="cdL2-BaseController" style="endArrow=block;endFill=0;endSize=14;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.12;entryY=1;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="448" y="860.75" />
+              <mxPoint x="448" y="224.5" />
+              <mxPoint x="506" y="224.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cdL2-a30" edge="1" parent="cdL2-1" source="cdL2-RequirementDetectBlank" target="cdL2-DetectBlank" style="endArrow=block;endFill=0;endSize=14;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.12;entryY=1;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="878" y="923" />
+              <mxPoint x="878" y="224.5" />
+              <mxPoint x="936" y="224.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cdL2-a31" edge="1" parent="cdL2-1" source="cdL2-RequirementAPI" target="cdL2-BaseAPI" style="endArrow=block;endFill=0;endSize=14;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.12;entryY=1;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1308" y="868.5" />
+              <mxPoint x="1308" y="240" />
+              <mxPoint x="1380.4" y="240" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cdL2-a32" edge="1" parent="cdL2-1" source="cdL2-RequirementListForm" target="cdL2-AppPage" style="endArrow=block;endFill=0;endSize=14;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.12;entryY=1;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="18" y="1277.75" />
+              <mxPoint x="18" y="271" />
+              <mxPoint x="76" y="271" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cdL2-a33" edge="1" parent="cdL2-1" source="cdL2-ApproveForm" target="cdL2-AppPage" style="endArrow=block;endFill=0;endSize=14;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.12;entryY=1;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="18" y="1447.25" />
+              <mxPoint x="18" y="271" />
+              <mxPoint x="76" y="271" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cdL2-a34" edge="1" parent="cdL2-1" source="cdL2-ApproveController" target="cdL2-BaseController" style="endArrow=block;endFill=0;endSize=14;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.12;entryY=1;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="448" y="1285.5" />
+              <mxPoint x="448" y="224.5" />
+              <mxPoint x="506" y="224.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cdL2-a35" edge="1" parent="cdL2-1" source="cdL2-ApproveDetectBlank" target="cdL2-DetectBlank" style="endArrow=block;endFill=0;endSize=14;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.12;entryY=1;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="878" y="1340" />
+              <mxPoint x="878" y="224.5" />
+              <mxPoint x="936" y="224.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cdL2-a36" edge="1" parent="cdL2-1" source="cdL2-ApproveAPI" target="cdL2-BaseAPI" style="endArrow=block;endFill=0;endSize=14;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.12;entryY=1;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1308" y="1285.5" />
+              <mxPoint x="1308" y="240" />
+              <mxPoint x="1380.4" y="240" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cdL2-a37" edge="1" parent="cdL2-1" source="cdL2-CloseProjectForm" target="cdL2-AppPage" style="endArrow=block;endFill=0;endSize=14;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.12;entryY=1;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="18" y="1710" />
+              <mxPoint x="18" y="271" />
+              <mxPoint x="76" y="271" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cdL2-a38" edge="1" parent="cdL2-1" source="cdL2-CloseController" target="cdL2-BaseController" style="endArrow=block;endFill=0;endSize=14;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.12;entryY=1;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="448" y="1679" />
+              <mxPoint x="448" y="224.5" />
+              <mxPoint x="506" y="224.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cdL2-a39" edge="1" parent="cdL2-1" source="cdL2-CloseAPI" target="cdL2-BaseAPI" style="endArrow=block;endFill=0;endSize=14;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.12;entryY=1;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1308" y="1686.75" />
+              <mxPoint x="1308" y="240" />
+              <mxPoint x="1380.4" y="240" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cdL2-EMPLOYEE" parent="cdL2-1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fontSize=12;spacingLeft=4;" value='&lt;p style="margin:0px;margin-top:4px;text-align:center;"&gt;&amp;lt;&amp;lt;Entity&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;EMPLOYEE&lt;/b&gt;&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;(attributes: Class Diagram – Entity)&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;(methods: Class Diagram – Entity)&lt;/p&gt;' vertex="1">
+          <mxGeometry x="1960" y="70" width="280" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="cdL2-CUSTOMER" parent="cdL2-1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fontSize=12;spacingLeft=4;" value='&lt;p style="margin:0px;margin-top:4px;text-align:center;"&gt;&amp;lt;&amp;lt;Entity&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;CUSTOMER&lt;/b&gt;&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;(attributes: Class Diagram – Entity)&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;(methods: Class Diagram – Entity)&lt;/p&gt;' vertex="1">
+          <mxGeometry x="1960" y="190" width="280" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="cdL2-PROJECT" parent="cdL2-1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fontSize=12;spacingLeft=4;" value='&lt;p style="margin:0px;margin-top:4px;text-align:center;"&gt;&amp;lt;&amp;lt;Entity&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;PROJECT&lt;/b&gt;&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;(attributes: Class Diagram – Entity)&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;(methods: Class Diagram – Entity)&lt;/p&gt;' vertex="1">
+          <mxGeometry x="1960" y="310" width="280" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="cdL2-PROJECT_ASSIGNMENT" parent="cdL2-1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fontSize=12;spacingLeft=4;" value='&lt;p style="margin:0px;margin-top:4px;text-align:center;"&gt;&amp;lt;&amp;lt;Entity&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;PROJECT_ASSIGNMENT&lt;/b&gt;&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;(attributes: Class Diagram – Entity)&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;(methods: Class Diagram – Entity)&lt;/p&gt;' vertex="1">
+          <mxGeometry x="1960" y="430" width="280" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="cdL2-TEST_SCHEDULE" parent="cdL2-1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fontSize=12;spacingLeft=4;" value='&lt;p style="margin:0px;margin-top:4px;text-align:center;"&gt;&amp;lt;&amp;lt;Entity&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;TEST_SCHEDULE&lt;/b&gt;&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;(attributes: Class Diagram – Entity)&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;(methods: Class Diagram – Entity)&lt;/p&gt;' vertex="1">
+          <mxGeometry x="1960" y="550" width="280" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="cdL2-NOTIFICATION" parent="cdL2-1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fontSize=12;spacingLeft=4;" value='&lt;p style="margin:0px;margin-top:4px;text-align:center;"&gt;&amp;lt;&amp;lt;Entity&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;NOTIFICATION&lt;/b&gt;&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;(attributes: Class Diagram – Entity)&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;(methods: Class Diagram – Entity)&lt;/p&gt;' vertex="1">
+          <mxGeometry x="1960" y="670" width="280" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="cdL2-CUSTOMER_REQUIREMENT" parent="cdL2-1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fontSize=12;spacingLeft=4;" value='&lt;p style="margin:0px;margin-top:4px;text-align:center;"&gt;&amp;lt;&amp;lt;Entity&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;CUSTOMER_REQUIREMENT&lt;/b&gt;&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;(attributes: Class Diagram – Entity)&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;(methods: Class Diagram – Entity)&lt;/p&gt;' vertex="1">
+          <mxGeometry x="1960" y="790" width="280" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="cdL2-REQUIREMENT_ATTACHMENT" parent="cdL2-1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fontSize=12;spacingLeft=4;" value='&lt;p style="margin:0px;margin-top:4px;text-align:center;"&gt;&amp;lt;&amp;lt;Entity&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;REQUIREMENT_ATTACHMENT&lt;/b&gt;&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;(attributes: Class Diagram – Entity)&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;(methods: Class Diagram – Entity)&lt;/p&gt;' vertex="1">
+          <mxGeometry x="1960" y="910" width="280" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="cdL2-a40" edge="1" parent="cdL2-1" source="cdL2-ScheduleAPI" target="cdL2-EMPLOYEE" style="endArrow=open;endFill=0;endSize=10;dashed=1;html=1;rounded=0;fontSize=11;exitX=1;exitY=0.3;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cdL2-a41" edge="1" parent="cdL2-1" source="cdL2-ScheduleAPI" target="cdL2-CUSTOMER" style="endArrow=open;endFill=0;endSize=10;dashed=1;html=1;rounded=0;fontSize=11;exitX=1;exitY=0.3;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cdL2-a42" edge="1" parent="cdL2-1" source="cdL2-ScheduleAPI" target="cdL2-PROJECT" style="endArrow=open;endFill=0;endSize=10;dashed=1;html=1;rounded=0;fontSize=11;exitX=1;exitY=0.3;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cdL2-a43" edge="1" parent="cdL2-1" source="cdL2-ScheduleAPI" target="cdL2-PROJECT_ASSIGNMENT" style="endArrow=open;endFill=0;endSize=10;dashed=1;html=1;rounded=0;fontSize=11;exitX=1;exitY=0.3;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cdL2-a44" edge="1" parent="cdL2-1" source="cdL2-ScheduleAPI" target="cdL2-TEST_SCHEDULE" style="endArrow=open;endFill=0;endSize=10;dashed=1;html=1;rounded=0;fontSize=11;exitX=1;exitY=0.3;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cdL2-a45" edge="1" parent="cdL2-1" source="cdL2-ScheduleAPI" target="cdL2-NOTIFICATION" style="endArrow=open;endFill=0;endSize=10;dashed=1;html=1;rounded=0;fontSize=11;exitX=1;exitY=0.3;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cdL2-a46" edge="1" parent="cdL2-1" source="cdL2-RequirementAPI" target="cdL2-EMPLOYEE" style="endArrow=open;endFill=0;endSize=10;dashed=1;html=1;rounded=0;fontSize=11;exitX=1;exitY=0.35;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cdL2-a47" edge="1" parent="cdL2-1" source="cdL2-RequirementAPI" target="cdL2-CUSTOMER" style="endArrow=open;endFill=0;endSize=10;dashed=1;html=1;rounded=0;fontSize=11;exitX=1;exitY=0.35;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cdL2-a48" edge="1" parent="cdL2-1" source="cdL2-RequirementAPI" target="cdL2-PROJECT" style="endArrow=open;endFill=0;endSize=10;dashed=1;html=1;rounded=0;fontSize=11;exitX=1;exitY=0.35;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cdL2-a49" edge="1" parent="cdL2-1" source="cdL2-RequirementAPI" target="cdL2-PROJECT_ASSIGNMENT" style="endArrow=open;endFill=0;endSize=10;dashed=1;html=1;rounded=0;fontSize=11;exitX=1;exitY=0.35;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cdL2-a50" edge="1" parent="cdL2-1" source="cdL2-RequirementAPI" target="cdL2-CUSTOMER_REQUIREMENT" style="endArrow=open;endFill=0;endSize=10;dashed=1;html=1;rounded=0;fontSize=11;exitX=1;exitY=0.35;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cdL2-a51" edge="1" parent="cdL2-1" source="cdL2-RequirementAPI" target="cdL2-REQUIREMENT_ATTACHMENT" style="endArrow=open;endFill=0;endSize=10;dashed=1;html=1;rounded=0;fontSize=11;exitX=1;exitY=0.35;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cdL2-a52" edge="1" parent="cdL2-1" source="cdL2-RequirementAPI" target="cdL2-NOTIFICATION" style="endArrow=open;endFill=0;endSize=10;dashed=1;html=1;rounded=0;fontSize=11;exitX=1;exitY=0.35;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cdL2-a53" edge="1" parent="cdL2-1" source="cdL2-ApproveAPI" target="cdL2-EMPLOYEE" style="endArrow=open;endFill=0;endSize=10;dashed=1;html=1;rounded=0;fontSize=11;exitX=1;exitY=0.4;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cdL2-a54" edge="1" parent="cdL2-1" source="cdL2-ApproveAPI" target="cdL2-CUSTOMER" style="endArrow=open;endFill=0;endSize=10;dashed=1;html=1;rounded=0;fontSize=11;exitX=1;exitY=0.4;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cdL2-a55" edge="1" parent="cdL2-1" source="cdL2-ApproveAPI" target="cdL2-PROJECT" style="endArrow=open;endFill=0;endSize=10;dashed=1;html=1;rounded=0;fontSize=11;exitX=1;exitY=0.4;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cdL2-a56" edge="1" parent="cdL2-1" source="cdL2-ApproveAPI" target="cdL2-TEST_SCHEDULE" style="endArrow=open;endFill=0;endSize=10;dashed=1;html=1;rounded=0;fontSize=11;exitX=1;exitY=0.4;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cdL2-a57" edge="1" parent="cdL2-1" source="cdL2-ApproveAPI" target="cdL2-CUSTOMER_REQUIREMENT" style="endArrow=open;endFill=0;endSize=10;dashed=1;html=1;rounded=0;fontSize=11;exitX=1;exitY=0.4;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cdL2-a58" edge="1" parent="cdL2-1" source="cdL2-ApproveAPI" target="cdL2-REQUIREMENT_ATTACHMENT" style="endArrow=open;endFill=0;endSize=10;dashed=1;html=1;rounded=0;fontSize=11;exitX=1;exitY=0.4;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cdL2-a59" edge="1" parent="cdL2-1" source="cdL2-ApproveAPI" target="cdL2-NOTIFICATION" style="endArrow=open;endFill=0;endSize=10;dashed=1;html=1;rounded=0;fontSize=11;exitX=1;exitY=0.4;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cdL2-a60" edge="1" parent="cdL2-1" source="cdL2-CloseAPI" target="cdL2-EMPLOYEE" style="endArrow=open;endFill=0;endSize=10;dashed=1;html=1;rounded=0;fontSize=11;exitX=1;exitY=0.3;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cdL2-a61" edge="1" parent="cdL2-1" source="cdL2-CloseAPI" target="cdL2-CUSTOMER" style="endArrow=open;endFill=0;endSize=10;dashed=1;html=1;rounded=0;fontSize=11;exitX=1;exitY=0.3;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cdL2-a62" edge="1" parent="cdL2-1" source="cdL2-CloseAPI" target="cdL2-PROJECT" style="endArrow=open;endFill=0;endSize=10;dashed=1;html=1;rounded=0;fontSize=11;exitX=1;exitY=0.3;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cdL2-a63" edge="1" parent="cdL2-1" source="cdL2-CloseAPI" target="cdL2-PROJECT_ASSIGNMENT" style="endArrow=open;endFill=0;endSize=10;dashed=1;html=1;rounded=0;fontSize=11;exitX=1;exitY=0.3;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cdL2-a64" edge="1" parent="cdL2-1" source="cdL2-CloseAPI" target="cdL2-TEST_SCHEDULE" style="endArrow=open;endFill=0;endSize=10;dashed=1;html=1;rounded=0;fontSize=11;exitX=1;exitY=0.3;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cdL2-a65" edge="1" parent="cdL2-1" source="cdL2-CloseAPI" target="cdL2-CUSTOMER_REQUIREMENT" style="endArrow=open;endFill=0;endSize=10;dashed=1;html=1;rounded=0;fontSize=11;exitX=1;exitY=0.3;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cdL2-a66" edge="1" parent="cdL2-1" source="cdL2-CloseAPI" target="cdL2-NOTIFICATION" style="endArrow=open;endFill=0;endSize=10;dashed=1;html=1;rounded=0;fontSize=11;exitX=1;exitY=0.3;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

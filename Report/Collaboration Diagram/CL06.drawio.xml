@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net">
+  <diagram name="Collaboration UC06" id="colPage06xx">
+    <mxGraphModel dx="2575" dy="1503" grid="1" gridSize="20" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="co6-0" />
+        <mxCell id="co6-1" parent="co6-0" />
+        <mxCell id="co6-title" parent="co6-1" style="text;html=1;align=left;verticalAlign=middle;fontSize=26;" value="UC06 Add Customer New Requirement (Collaboration)" vertex="1">
+          <mxGeometry height="50" width="1100" x="-340" y="-260" as="geometry" />
+        </mxCell>
+        <mxCell id="co6-o0" parent="co6-1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=15;" value="PM" vertex="1">
+          <mxGeometry height="55" width="30" x="-315" y="352.5" as="geometry" />
+        </mxCell>
+        <mxCell id="co6-o1" parent="co6-1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=15;" value="&amp;lt;&amp;lt;Boundary&amp;gt;&amp;gt;&lt;br&gt;ProjectList&lt;br&gt;Form" vertex="1">
+          <mxGeometry height="80" width="200" x="200" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="co6-o2" parent="co6-1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=15;" value="&amp;lt;&amp;lt;Boundary&amp;gt;&amp;gt;&lt;br&gt;NewRequirement&lt;br&gt;Form" vertex="1">
+          <mxGeometry height="80" width="200" x="200" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="co6-o3" parent="co6-1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=15;" value="&amp;lt;&amp;lt;Controller&amp;gt;&amp;gt;&lt;br&gt;Requirement&lt;br&gt;Controller" vertex="1">
+          <mxGeometry height="80" width="200" x="800" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="co6-o4" parent="co6-1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=15;" value="&amp;lt;&amp;lt;Controller&amp;gt;&amp;gt;&lt;br&gt;Requirement&lt;br&gt;DetectBlank" vertex="1">
+          <mxGeometry height="80" width="200" x="800" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="co6-o5" parent="co6-1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=15;" value="&amp;lt;&amp;lt;Controller&amp;gt;&amp;gt;&lt;br&gt;File&lt;br&gt;Check" vertex="1">
+          <mxGeometry height="80" width="200" x="800" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="co6-o6" parent="co6-1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=15;" value="&amp;lt;&amp;lt;API&amp;gt;&amp;gt;&lt;br&gt;Requirement&lt;br&gt;API" vertex="1">
+          <mxGeometry height="80" width="200" x="1450" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="co6-o7" parent="co6-1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=15;" value="&amp;lt;&amp;lt;Entity&amp;gt;&amp;gt;&lt;br&gt;PROJECT" vertex="1">
+          <mxGeometry height="80" width="200" x="2100" y="-40" as="geometry" />
+        </mxCell>
+        <mxCell id="co6-o8" parent="co6-1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=15;" value="&amp;lt;&amp;lt;Entity&amp;gt;&amp;gt;&lt;br&gt;PROJECT_&lt;br&gt;ASSIGNMENT" vertex="1">
+          <mxGeometry height="80" width="200" x="2100" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="co6-o9" parent="co6-1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=15;" value="&amp;lt;&amp;lt;Entity&amp;gt;&amp;gt;&lt;br&gt;CUSTOMER_&lt;br&gt;REQUIREMENT" vertex="1">
+          <mxGeometry height="80" width="200" x="2100" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="co6-o10" parent="co6-1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=15;" value="&amp;lt;&amp;lt;Entity&amp;gt;&amp;gt;&lt;br&gt;REQUIREMENT_&lt;br&gt;ATTACHMENT" vertex="1">
+          <mxGeometry height="80" width="200" x="2100" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="co6-o11" parent="co6-1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=15;" value="&amp;lt;&amp;lt;Entity&amp;gt;&amp;gt;&lt;br&gt;NOTIFICATION" vertex="1">
+          <mxGeometry height="80" width="200" x="2100" y="720" as="geometry" />
+        </mxCell>
+        <mxCell id="co6-l0" edge="1" parent="co6-1" source="co6-o0" style="endArrow=none;html=1;fontSize=12;labelBackgroundColor=default;" target="co6-o1" value="→ 1a เปิดเมนู Add New Requirement&lt;br&gt;→ 2. เลือก Project">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="co6-l1" edge="1" parent="co6-1" source="co6-o1" style="endArrow=none;html=1;fontSize=12;labelBackgroundColor=default;" target="co6-o3" value="→ 1b loadProjectList()&lt;br&gt;← 1. แสดงรายการ Project สถานะ Testing / WaitingForApprove&lt;br&gt;→ 3a selectProject(ProjectID)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="co6-l2" edge="1" parent="co6-1" source="co6-o3" style="endArrow=none;html=1;fontSize=12;labelBackgroundColor=default;" target="co6-o6" value="→ 1c GET /api/projects?status=Testing,WaitingForApprove&lt;br&gt;→ 3b GET /api/projects/{ProjectID}/requirement-form&lt;br&gt;→ 8a POST /api/projects/{ProjectID}/requirements">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="co6-l3" edge="1" parent="co6-1" source="co6-o6" style="endArrow=none;html=1;fontSize=12;labelBackgroundColor=default;" target="co6-o7" value="↗ 1.1 ดึง Project (Testing / WaitingForApprove)&lt;br&gt;↗ 3.1 ดึงรายละเอียด Project&lt;br&gt;↗ 9.1 อัปเดตสถานะ WaitingForApprove">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="co6-l4" edge="1" parent="co6-1" source="co6-o6" style="endArrow=none;html=1;fontSize=12;labelBackgroundColor=default;" target="co6-o8" value="→ 3.2 ดึง Tech Engineer ที่ถูกมอบหมาย">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="co6-l5" edge="1" parent="co6-1" source="co6-o2" style="endArrow=none;html=1;fontSize=12;labelBackgroundColor=default;" target="co6-o3" value="← 3. แสดงรายละเอียด Project และแบบฟอร์ม Requirement&lt;br&gt;→ 5a validateRequirement(formData)&lt;br&gt;→ 7a submitRequirement(formData, files)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="co6-l6" edge="1" parent="co6-1" source="co6-o0" style="endArrow=none;html=1;fontSize=12;labelBackgroundColor=default;" target="co6-o2" value="→ 4. กรอกรายละเอียด Requirement ใหม่&lt;br&gt;→ 6. อัปโหลดเอกสารประกอบ และกดส่งอนุมัติ">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="co6-l7" edge="1" parent="co6-1" source="co6-o3" style="endArrow=none;html=1;fontSize=12;labelBackgroundColor=default;" target="co6-o4" value="↑ 5. ตรวจสอบความถูกต้องของข้อมูล (5.1–5.3)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="co6-l8" edge="1" parent="co6-1" source="co6-o3" style="endArrow=none;html=1;fontSize=12;labelBackgroundColor=default;" target="co6-o5" value="↓ 7. ตรวจสอบไฟล์ (PDF / JPG / PNG ≤ 50 MB)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="co6-l9" edge="1" parent="co6-1" source="co6-o6" style="endArrow=none;html=1;fontSize=12;labelBackgroundColor=default;" target="co6-o9" value="→ 8.1 บันทึก Requirement ใหม่ (รออนุมัติ)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="co6-l10" edge="1" parent="co6-1" source="co6-o6" style="endArrow=none;html=1;fontSize=12;labelBackgroundColor=default;" target="co6-o10" value="→ 8.2 บันทึกไฟล์แนบ">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="co6-l11" edge="1" parent="co6-1" source="co6-o6" style="endArrow=none;html=1;fontSize=12;labelBackgroundColor=default;" target="co6-o11" value="↘ 10.1 ส่งการแจ้งเตือนไปยัง Sale in Charge">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

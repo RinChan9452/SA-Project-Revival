@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net">
+  <diagram name="ERD with Query UC08" id="erdQueryUC08">
+    <mxGraphModel dx="1600" dy="1000" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="eq8-0" />
+        <mxCell id="eq8-1" parent="eq8-0" />
+        <mxCell id="eq8-a1" parent="eq8-1" style="text;html=1;fontSize=24;fontStyle=1;align=left;verticalAlign=middle;" value="UC08 Close Project – ERD with Query" vertex="1">
+          <mxGeometry x="40" y="10" width="1200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="eq8-EMPLOYEE" parent="eq8-1" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;fontSize=13;fillColor=#F5F5F5;" value="EMPLOYEE" vertex="1">
+          <mxGeometry x="460" y="80" width="300" height="102" as="geometry" />
+        </mxCell>
+        <mxCell id="eq8-EMPLOYEE-r0" parent="eq8-EMPLOYEE" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&lt;b&gt;PK&lt;/b&gt;&amp;nbsp;&amp;nbsp;&lt;u&gt;EmployeeID&lt;/u&gt;" vertex="1">
+          <mxGeometry x="0" y="30" width="300" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="eq8-EMPLOYEE-r1" parent="eq8-EMPLOYEE" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;fillColor=#FFF2CC;whiteSpace=wrap;" value="&lt;b&gt;Q3.1&lt;/b&gt; SELECT" vertex="1">
+          <mxGeometry x="0" y="54" width="300" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="eq8-EMPLOYEE-r2" parent="eq8-EMPLOYEE" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;fillColor=#FFF2CC;whiteSpace=wrap;" value="&lt;b&gt;Q3.2&lt;/b&gt; SELECT" vertex="1">
+          <mxGeometry x="0" y="78" width="300" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="eq8-PROJECT_ASSIGNMENT" parent="eq8-1" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;fontSize=13;fillColor=#F5F5F5;" value="PROJECT_ASSIGNMENT" vertex="1">
+          <mxGeometry x="880" y="80" width="300" height="126" as="geometry" />
+        </mxCell>
+        <mxCell id="eq8-PROJECT_ASSIGNMENT-r0" parent="eq8-PROJECT_ASSIGNMENT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&lt;b&gt;PK, FK&lt;/b&gt;&amp;nbsp;&amp;nbsp;&lt;u&gt;ProjectID&lt;/u&gt;" vertex="1">
+          <mxGeometry x="0" y="30" width="300" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="eq8-PROJECT_ASSIGNMENT-r1" parent="eq8-PROJECT_ASSIGNMENT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&lt;b&gt;PK, FK&lt;/b&gt;&amp;nbsp;&amp;nbsp;&lt;u&gt;EngineerID&lt;/u&gt;" vertex="1">
+          <mxGeometry x="0" y="54" width="300" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="eq8-PROJECT_ASSIGNMENT-r2" parent="eq8-PROJECT_ASSIGNMENT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;fillColor=#FFF2CC;whiteSpace=wrap;" value="&lt;b&gt;Q3.2&lt;/b&gt; SELECT" vertex="1">
+          <mxGeometry x="0" y="78" width="300" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="eq8-PROJECT_ASSIGNMENT-r3" parent="eq8-PROJECT_ASSIGNMENT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;fillColor=#FFF2CC;whiteSpace=wrap;" value="&lt;b&gt;Q8.1&lt;/b&gt; SELECT" vertex="1">
+          <mxGeometry x="0" y="102" width="300" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="eq8-CUSTOMER" parent="eq8-1" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;fontSize=13;fillColor=#F5F5F5;" value="CUSTOMER" vertex="1">
+          <mxGeometry x="40" y="560" width="300" height="102" as="geometry" />
+        </mxCell>
+        <mxCell id="eq8-CUSTOMER-r0" parent="eq8-CUSTOMER" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&lt;b&gt;PK&lt;/b&gt;&amp;nbsp;&amp;nbsp;&lt;u&gt;CustomerID&lt;/u&gt;" vertex="1">
+          <mxGeometry x="0" y="30" width="300" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="eq8-CUSTOMER-r1" parent="eq8-CUSTOMER" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;fillColor=#FFF2CC;whiteSpace=wrap;" value="&lt;b&gt;Q1.1&lt;/b&gt; SELECT" vertex="1">
+          <mxGeometry x="0" y="54" width="300" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="eq8-CUSTOMER-r2" parent="eq8-CUSTOMER" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;fillColor=#FFF2CC;whiteSpace=wrap;" value="&lt;b&gt;Q3.1&lt;/b&gt; SELECT" vertex="1">
+          <mxGeometry x="0" y="78" width="300" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="eq8-PROJECT" parent="eq8-1" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;fontSize=13;fillColor=#F5F5F5;" value="PROJECT" vertex="1">
+          <mxGeometry x="460" y="560" width="300" height="294" as="geometry" />
+        </mxCell>
+        <mxCell id="eq8-PROJECT-r0" parent="eq8-PROJECT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&lt;b&gt;PK&lt;/b&gt;&amp;nbsp;&amp;nbsp;&lt;u&gt;ProjectID&lt;/u&gt;" vertex="1">
+          <mxGeometry x="0" y="30" width="300" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="eq8-PROJECT-r1" parent="eq8-PROJECT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&lt;b&gt;FK&lt;/b&gt;&amp;nbsp;&amp;nbsp;CustomerID" vertex="1">
+          <mxGeometry x="0" y="54" width="300" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="eq8-PROJECT-r2" parent="eq8-PROJECT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&lt;b&gt;FK&lt;/b&gt;&amp;nbsp;&amp;nbsp;SaleID" vertex="1">
+          <mxGeometry x="0" y="78" width="300" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="eq8-PROJECT-r3" parent="eq8-PROJECT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&lt;b&gt;FK&lt;/b&gt;&amp;nbsp;&amp;nbsp;PresaleID" vertex="1">
+          <mxGeometry x="0" y="102" width="300" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="eq8-PROJECT-r4" parent="eq8-PROJECT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&lt;b&gt;FK&lt;/b&gt;&amp;nbsp;&amp;nbsp;PMID" vertex="1">
+          <mxGeometry x="0" y="126" width="300" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="eq8-PROJECT-r5" parent="eq8-PROJECT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&lt;b&gt;U&lt;/b&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;i&gt;Status&lt;/i&gt;" vertex="1">
+          <mxGeometry x="0" y="150" width="300" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="eq8-PROJECT-r6" parent="eq8-PROJECT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;fillColor=#FFF2CC;whiteSpace=wrap;" value="&lt;b&gt;Q1.1&lt;/b&gt; SELECT" vertex="1">
+          <mxGeometry x="0" y="174" width="300" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="eq8-PROJECT-r7" parent="eq8-PROJECT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;fillColor=#FFF2CC;whiteSpace=wrap;" value="&lt;b&gt;Q3.1&lt;/b&gt; SELECT" vertex="1">
+          <mxGeometry x="0" y="198" width="300" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="eq8-PROJECT-r8" parent="eq8-PROJECT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;fillColor=#FFF2CC;whiteSpace=wrap;" value="&lt;b&gt;Q5.1&lt;/b&gt; SELECT" vertex="1">
+          <mxGeometry x="0" y="222" width="300" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="eq8-PROJECT-r9" parent="eq8-PROJECT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;fillColor=#FFF2CC;whiteSpace=wrap;" value="&lt;b&gt;Q6.1&lt;/b&gt; UPDATE" vertex="1">
+          <mxGeometry x="0" y="246" width="300" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="eq8-PROJECT-r10" parent="eq8-PROJECT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;fillColor=#FFF2CC;whiteSpace=wrap;" value="&lt;b&gt;Q8.1&lt;/b&gt; SELECT" vertex="1">
+          <mxGeometry x="0" y="270" width="300" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="eq8-NOTIFICATION" parent="eq8-1" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;fontSize=13;fillColor=#F5F5F5;" value="NOTIFICATION" vertex="1">
+          <mxGeometry x="880" y="560" width="300" height="126" as="geometry" />
+        </mxCell>
+        <mxCell id="eq8-NOTIFICATION-r0" parent="eq8-NOTIFICATION" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&lt;b&gt;PK&lt;/b&gt;&amp;nbsp;&amp;nbsp;&lt;u&gt;NotificationID&lt;/u&gt;" vertex="1">
+          <mxGeometry x="0" y="30" width="300" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="eq8-NOTIFICATION-r1" parent="eq8-NOTIFICATION" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&lt;b&gt;FK&lt;/b&gt;&amp;nbsp;&amp;nbsp;RecipientID" vertex="1">
+          <mxGeometry x="0" y="54" width="300" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="eq8-NOTIFICATION-r2" parent="eq8-NOTIFICATION" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&lt;b&gt;FK&lt;/b&gt;&amp;nbsp;&amp;nbsp;ProjectID" vertex="1">
+          <mxGeometry x="0" y="78" width="300" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="eq8-NOTIFICATION-r3" parent="eq8-NOTIFICATION" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;fillColor=#FFF2CC;whiteSpace=wrap;" value="&lt;b&gt;Q8.1&lt;/b&gt; INSERT" vertex="1">
+          <mxGeometry x="0" y="102" width="300" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="eq8-CUSTOMER_REQUIREMENT" parent="eq8-1" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;fontSize=13;fillColor=#F5F5F5;" value="CUSTOMER_REQUIREMENT" vertex="1">
+          <mxGeometry x="40" y="1040" width="300" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="eq8-CUSTOMER_REQUIREMENT-r0" parent="eq8-CUSTOMER_REQUIREMENT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&lt;b&gt;PK&lt;/b&gt;&amp;nbsp;&amp;nbsp;&lt;u&gt;RequirementID&lt;/u&gt;" vertex="1">
+          <mxGeometry x="0" y="30" width="300" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="eq8-CUSTOMER_REQUIREMENT-r1" parent="eq8-CUSTOMER_REQUIREMENT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&lt;b&gt;FK&lt;/b&gt;&amp;nbsp;&amp;nbsp;ProjectID" vertex="1">
+          <mxGeometry x="0" y="54" width="300" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="eq8-CUSTOMER_REQUIREMENT-r2" parent="eq8-CUSTOMER_REQUIREMENT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&lt;b&gt;FK&lt;/b&gt;&amp;nbsp;&amp;nbsp;CreatedByID" vertex="1">
+          <mxGeometry x="0" y="78" width="300" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="eq8-CUSTOMER_REQUIREMENT-r3" parent="eq8-CUSTOMER_REQUIREMENT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&lt;b&gt;FK&lt;/b&gt;&amp;nbsp;&amp;nbsp;ReviewedByID" vertex="1">
+          <mxGeometry x="0" y="102" width="300" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="eq8-CUSTOMER_REQUIREMENT-r4" parent="eq8-CUSTOMER_REQUIREMENT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;fillColor=#FFF2CC;whiteSpace=wrap;" value="&lt;b&gt;Q5.2&lt;/b&gt; SELECT" vertex="1">
+          <mxGeometry x="0" y="126" width="300" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="eq8-TEST_SCHEDULE" parent="eq8-1" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;fontSize=13;fillColor=#F5F5F5;" value="TEST_SCHEDULE" vertex="1">
+          <mxGeometry x="460" y="1040" width="300" height="174" as="geometry" />
+        </mxCell>
+        <mxCell id="eq8-TEST_SCHEDULE-r0" parent="eq8-TEST_SCHEDULE" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&lt;b&gt;PK&lt;/b&gt;&amp;nbsp;&amp;nbsp;&lt;u&gt;ScheduleID&lt;/u&gt;" vertex="1">
+          <mxGeometry x="0" y="30" width="300" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="eq8-TEST_SCHEDULE-r1" parent="eq8-TEST_SCHEDULE" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&lt;b&gt;FK&lt;/b&gt;&amp;nbsp;&amp;nbsp;ProjectID" vertex="1">
+          <mxGeometry x="0" y="54" width="300" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="eq8-TEST_SCHEDULE-r2" parent="eq8-TEST_SCHEDULE" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&lt;b&gt;FK&lt;/b&gt;&amp;nbsp;&amp;nbsp;CreatedByID" vertex="1">
+          <mxGeometry x="0" y="78" width="300" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="eq8-TEST_SCHEDULE-r3" parent="eq8-TEST_SCHEDULE" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&lt;b&gt;U&lt;/b&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;i&gt;Status&lt;/i&gt;" vertex="1">
+          <mxGeometry x="0" y="102" width="300" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="eq8-TEST_SCHEDULE-r4" parent="eq8-TEST_SCHEDULE" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;fillColor=#FFF2CC;whiteSpace=wrap;" value="&lt;b&gt;Q3.3&lt;/b&gt; SELECT" vertex="1">
+          <mxGeometry x="0" y="126" width="300" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="eq8-TEST_SCHEDULE-r5" parent="eq8-TEST_SCHEDULE" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;fillColor=#FFF2CC;whiteSpace=wrap;" value="&lt;b&gt;Q7.1&lt;/b&gt; UPDATE" vertex="1">
+          <mxGeometry x="0" y="150" width="300" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="eq8-a2" edge="1" parent="eq8-1" source="eq8-PROJECT_ASSIGNMENT" target="eq8-PROJECT" style="rounded=0;html=1;endArrow=ERmandOne;startArrow=ERmany;endFill=0;startFill=0;endSize=10;startSize=10;" value="">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eq8-a3" edge="1" parent="eq8-1" source="eq8-PROJECT_ASSIGNMENT" target="eq8-EMPLOYEE" style="rounded=0;html=1;endArrow=ERmandOne;startArrow=ERmany;endFill=0;startFill=0;endSize=10;startSize=10;" value="">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eq8-a4" edge="1" parent="eq8-1" source="eq8-PROJECT" target="eq8-CUSTOMER" style="rounded=0;html=1;endArrow=ERmandOne;startArrow=ERmany;endFill=0;startFill=0;endSize=10;startSize=10;" value="">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eq8-a5" edge="1" parent="eq8-1" source="eq8-PROJECT" target="eq8-EMPLOYEE" style="rounded=0;html=1;endArrow=ERmandOne;startArrow=ERmany;endFill=0;startFill=0;endSize=10;startSize=10;" value="">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eq8-a6" edge="1" parent="eq8-1" source="eq8-NOTIFICATION" target="eq8-EMPLOYEE" style="rounded=0;html=1;endArrow=ERmandOne;startArrow=ERmany;endFill=0;startFill=0;endSize=10;startSize=10;" value="">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eq8-a7" edge="1" parent="eq8-1" source="eq8-NOTIFICATION" target="eq8-PROJECT" style="rounded=0;html=1;endArrow=ERmandOne;startArrow=ERmany;endFill=0;startFill=0;endSize=10;startSize=10;" value="">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eq8-a8" edge="1" parent="eq8-1" source="eq8-CUSTOMER_REQUIREMENT" target="eq8-PROJECT" style="rounded=0;html=1;endArrow=ERmandOne;startArrow=ERmany;endFill=0;startFill=0;endSize=10;startSize=10;" value="">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eq8-a9" edge="1" parent="eq8-1" source="eq8-CUSTOMER_REQUIREMENT" target="eq8-EMPLOYEE" style="rounded=0;html=1;endArrow=ERmandOne;startArrow=ERmany;endFill=0;startFill=0;endSize=10;startSize=10;" value="">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eq8-a10" edge="1" parent="eq8-1" source="eq8-TEST_SCHEDULE" target="eq8-PROJECT" style="rounded=0;html=1;endArrow=ERmandOne;startArrow=ERmany;endFill=0;startFill=0;endSize=10;startSize=10;" value="">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eq8-a11" edge="1" parent="eq8-1" source="eq8-TEST_SCHEDULE" target="eq8-EMPLOYEE" style="rounded=0;html=1;endArrow=ERmandOne;startArrow=ERmany;endFill=0;startFill=0;endSize=10;startSize=10;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.137;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="820" y="1127" />
+              <mxPoint x="820" y="94" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

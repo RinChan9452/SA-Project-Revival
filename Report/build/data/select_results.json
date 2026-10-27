@@ -1,0 +1,32 @@
+{
+ "UC01 2.2": {
+  "params": {},
+  "output": "CustomerID | CustomerName             | CustomerEmail\n5          | Bangkok Retail Group     | network@bkkretail.co.th\n4          | Chao Phraya Hospital     | itsupport@cphospital.co.th\n1          | Crypton Corp             | crypton@gmail.com\n3          | Siam Logistics Co., Ltd. | it@siamlogistics.co.th\n2          | TestCorp                 | testcorp@gmail.com\n(5 rows, 9 ms)"
+ },
+ "UC03 1.1": {
+  "params": {
+   "Role": "'PM'",
+   "LoginID": "3",
+   "Keyword": "NULL"
+  },
+  "output": "ProjectID | ProjectName                    | CustomerName             | Status\n6         | Hardening Linux Server         | TestCorp                 | WaitingForApprove\n5         | อัปเกรด Firewall สาขา          | Bangkok Retail Group     | Finish\n4         | ย้าย Data Center ไป Colocation | Chao Phraya Hospital     | WaitingForApprove\n3         | ระบบ Wi-Fi สำนักงานใหญ่        | Siam Logistics Co., Ltd. | NewProject\n2         | Test System                    | TestCorp                 | WaitingForAssignEngineer\n1         | Crypton Network Infra          | Crypton Corp             | Finish\n(6 rows, 12 ms)"
+ },
+ "UC04 3.2": {
+  "params": {
+   "ProjectID": "2"
+  },
+  "output": "EmployeeID | FirstName | LastName | Skills                | ActiveProjects | InThisProject\n4          | AI        | Capri    | CCIE, CCNA, Linux     | 0              | 0\n5          | Manhattan | Cafe     | Java, Linux           | 0              | 0\n33         | Agnes     | Tachyon  | CCNA, Linux, ClaudeAI | 0              | 0\n34         | Rintaro   | Okabe    | CCIE, Linux, Docker   | 0              | 0\n(4 rows, 16 ms)"
+ },
+ "UC07 11.2": {
+  "params": {
+   "ProjectID": "4"
+  },
+  "output": "ApprovedThisRound\n0\n(1 row, 11 ms)"
+ },
+ "UC08 5.2": {
+  "params": {
+   "ProjectID": "6"
+  },
+  "output": "PendingCount\n1\n(1 row, 13 ms)"
+ }
+}

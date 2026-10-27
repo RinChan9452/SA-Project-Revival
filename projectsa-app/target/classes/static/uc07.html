@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>อนุมัติ Requirement – ProjectSA</title>
+  <link rel="stylesheet" href="css/app.css?v=2">
+</head>
+<body>
+<main>
+  <div class="card">
+    <h1>Approve New Project Requirement</h1>
+    <p class="muted">Sale พิจารณา Requirement ใหม่ทีละข้อ เมื่อพิจารณาครบ: มีข้อที่อนุมัติ → NewProject (กลับไปให้ Presale ปรับ Solution), ปฏิเสธทั้งหมด → Finish</p>
+  </div>
+
+  <!-- <<Boundary>> ProjectList Form -->
+  <div class="card">
+    <h2>1. Project ที่รออนุมัติ Requirement</h2>
+    <div id="projectList"></div>
+  </div>
+
+  <!-- <<Boundary>> RequirementList Form -->
+  <div class="card hidden" id="requirementListForm">
+    <h2 id="reqTitle"></h2>
+    <div id="requirementList"></div>
+  </div>
+
+  <!-- <<Boundary>> Approve Form -->
+  <div class="card hidden" id="approveForm">
+    <h2 id="title"></h2>
+    <dl class="info" id="detail" style="margin-bottom:16px"></dl>
+    <form id="form" novalidate>
+      <div class="field" data-f="decision"><label>ผลการพิจารณา *</label>
+        <div class="choices">
+          <label><input type="radio" name="decision" value="Approved"> อนุมัติ</label>
+          <label><input type="radio" name="decision" value="Rejected"> ปฏิเสธ</label>
+        </div><div class="msg"></div></div>
+      <div class="field" data-f="rejectReason" style="margin-top:10px"><label>เหตุผล (บังคับเมื่อปฏิเสธ)</label><textarea name="rejectReason"></textarea><div class="msg"></div></div>
+      <div class="actions"><button>ยืนยัน</button></div>
+    </form>
+  </div>
+</main>
+<script src="js/app.js?v=2"></script>
+<script src="js/bell.js?v=2"></script>
+<script src="js/uc07.js?v=2"></script>
+</body>
+</html>

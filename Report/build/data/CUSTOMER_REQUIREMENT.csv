@@ -1,0 +1,6 @@
+"RequirementID","ProjectID","Title","Detail","Priority","DueDate","RelatedFeature","Status","CreatedByID","CreatedDate","ReviewedByID","ReviewedDate","RejectReason"
+"1","1","Test Other Building","Test","Medium","2026-10-27","Test","Approved","3","2026-10-26 20:20:26.529","1","2026-10-26 20:21:19.56",
+"2","3","เพิ่ม Guest Wi-Fi แยก VLAN","ลูกค้าต้องการ SSID สำหรับแขกแยกจากเครือข่ายภายใน","Medium","2026-11-26","Wireless SSID","Approved","3","2026-10-27 19:20:42.086","1","2026-10-27 19:20:42.11",
+"3","4","เพิ่มระบบ Backup นอกสถานที่","ต้องการ Backup ข้อมูลผู้ป่วยไป Cloud ทุกคืน","High","2026-12-06","Backup","Rejected","3","2026-10-27 19:20:42.179","1","2026-10-27 19:20:42.204","เกินงบประมาณที่ลูกค้าอนุมัติไว้"
+"4","4","เพิ่ม Monitoring Dashboard","ต้องการหน้าจอแสดงสถานะ Server แบบ Real-time","Low","2026-12-26","Monitoring","Pending","3","2026-10-27 19:20:42.192",,,
+"5","6","เพิ่ม Audit Log ส่งไป SIEM","ต้องการส่ง Log การเข้าใช้งานไปยังระบบ SIEM ของลูกค้า","High","2026-11-21","Logging","Pending","3","2026-10-27 19:20:42.317",,,

@@ -1,0 +1,58 @@
+PASS F1 R.1 skills seeded: 0
+PASS F1 R.1 skills list: ['CCIE', 'CCNA', 'Java', 'Unix']
+PASS F1 R.2 somchai free: 0
+PASS F1 R.2 pim free: 0
+PASS F1 R.2 kan free: 0
+PASS F1 R.2 ton free: 0
+PASS F1 R.2 nok free: 0
+PASS F1 R.5 existing skill, any case: [(3,)]
+PASS F1 R.5 unknown skill: []
+PASS F1 R.6 new skill found by R.5: [(5,)]
+PASS F1 R.1 suggestions include the typed skill: ['CCIE', 'CCNA', 'Docker', 'Java', 'Unix']
+PASS F1 R.2 duplicate username refused: 1
+PASS one role per account (CHECK): 'rejected'
+PASS F2 L.1 login returns id + role: (3, 'PM')
+PASS F2 L.1 unknown user: []
+PASS UC01 -> NewProject: 'NewProject'
+PASS UC02 -> WaitingForAssignEngineer: 'WaitingForAssignEngineer'
+PASS UC04 5.1 filter Java: ['Nok']
+PASS UC04 -> Working: 'Working'
+PASS UC05 -> Testing: 'Testing'
+PASS UC05 9.1 reminder SendAt = test time - 1440 min: '2026-12-19 10:00:00'
+PASS UC05 8.1 message shows HH:MM: 'นัดทดสอบ 2026-12-20 10:00 ที่ Bangkok HQ'
+PASS UC07 round 1 -> NewProject: 'NewProject'
+PASS UC03 6.2 download attachment: [('vpn.pdf',)]
+PASS UC07 round 2 -> Finish: 'Finish'
+PASS UC08 1.1 not listed before Testing: []
+PASS UC08 1.1 lists the Testing project: [2]
+PASS UC08 1.1 other PM sees nothing: []
+PASS UC08 3.1 sale / presale names: ('Somchai Sale', 'Pim Presale')
+PASS UC08 3.2 engineers: 2
+PASS UC08 3.3 latest test: '2027-02-01'
+PASS UC08 5.1 status Testing: 'Testing'
+PASS UC08 5.2 no pending: 0
+PASS UC08 6.1 updates 1 row: 1
+PASS UC08 7.1 schedule Done: 1
+PASS UC08 -> Finish: 'Finish'
+PASS UC08 schedule statuses: ['Done']
+PASS UC08 8.1 notifies Sale, Presale, both engineers: [1, 2, 4, 5]
+PASS UC08 8.1 message: 'Project ปิดแล้ว: Data Center (เตรียมจัดทำเอกสาร UAT และ Handover)'
+PASS UC08 6.1 refuses when not Testing: 0
+PASS UC03 4.3 still shows the test after UC08 (Done): '2027-02-01'
+PASS UC08 5.1 other PM cannot close: []
+PASS F3 P.1 own profile + role: (4, 'TechEngineer', None)
+PASS F3 P.2 skills: ['CCNA', 'Unix']
+PASS F3 P.3 email taken by other: 1
+PASS F3 P.3 own email ok: 0
+PASS F3 profile saved; role unchanged: ('Tonny', 'tonny@x.com', 'TechEngineer', '/uploads/profile/4.png')
+PASS F3 skills replaced: ['CCIE', 'Java']
+PASS F2 login sees new password + picture: ('$2a$new', '/uploads/profile/4.png')
+PASS F4 N.1 counts only notifications already due: 5
+PASS F4 future reminders hidden: True
+PASS F4 N.2 newest first, max 20: (True, 'ProjectClosed')
+PASS F4 N.3 one read: 4
+PASS F4 N.3 cannot mark someone else's: 0
+PASS F4 N.4 all read: 0
+
+queries executed: 87/87; missing: none
+FAILED: 0

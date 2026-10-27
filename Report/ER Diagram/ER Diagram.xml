@@ -1,0 +1,708 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net">
+  <diagram name="ER Diagram (Revised)" id="erRevisedPage001">
+    <mxGraphModel dx="2975" dy="1503" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="erC-0" />
+        <mxCell id="erC-1" parent="erC-0" />
+        <mxCell id="erC-EMP" parent="erC-1" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;" value="EMPLOYEE" vertex="1">
+          <mxGeometry height="60" width="140" y="870" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-SALE" parent="erC-1" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;" value="SALE" vertex="1">
+          <mxGeometry height="60" width="140" x="400" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-PM" parent="erC-1" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;" value="PM" vertex="1">
+          <mxGeometry height="60" width="140" x="400" y="1050" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-PRE" parent="erC-1" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;" value="PRESALE" vertex="1">
+          <mxGeometry height="60" width="140" x="400" y="1350" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-TECH" parent="erC-1" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;" value="TECH_ENGINEER" vertex="1">
+          <mxGeometry height="60" width="140" x="400" y="1650" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-SKILL" parent="erC-1" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;" value="SKILL" vertex="1">
+          <mxGeometry height="60" width="140" x="400" y="1970" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-REQ" parent="erC-1" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;" value="CUSTOMER_&lt;br&gt;REQUIREMENT" vertex="1">
+          <mxGeometry height="64" width="150" x="875" y="573" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-PRJ" parent="erC-1" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;" value="PROJECT" vertex="1">
+          <mxGeometry height="70" width="200" x="1500" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-CUS" parent="erC-1" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;" value="CUSTOMER" vertex="1">
+          <mxGeometry height="60" width="140" x="1270" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-SCH" parent="erC-1" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;" value="TEST_SCHEDULE" vertex="1">
+          <mxGeometry height="60" width="150" x="1595" y="1660" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-DOC" parent="erC-1" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;" value="PROJECT_&lt;br&gt;DOCUMENT" vertex="1">
+          <mxGeometry height="64" width="150" x="2075" y="738" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-NOT" parent="erC-1" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;" value="NOTIFICATION" vertex="1">
+          <mxGeometry height="60" width="150" x="2115" y="1300" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-td" parent="erC-1" style="text;html=1;align=center;verticalAlign=middle;fontStyle=1;" value="(T,D)" vertex="1">
+          <mxGeometry height="30" width="70" x="168" y="862" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-rCreates" parent="erC-1" style="rhombus;whiteSpace=wrap;html=1;shapeInside=1;" value="Creates" vertex="1">
+          <mxGeometry height="80" width="130" x="995" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-rApproves" parent="erC-1" style="rhombus;whiteSpace=wrap;html=1;shapeInside=1;" value="Approves" vertex="1">
+          <mxGeometry height="80" width="130" x="585" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-rRecords" parent="erC-1" style="rhombus;whiteSpace=wrap;html=1;shapeInside=1;" value="Records" vertex="1">
+          <mxGeometry height="80" width="130" x="585" y="860" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-rManages" parent="erC-1" style="rhombus;whiteSpace=wrap;html=1;shapeInside=1;" value="Manages" vertex="1">
+          <mxGeometry height="80" width="130" x="995" y="925" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-rDesigns" parent="erC-1" style="rhombus;whiteSpace=wrap;html=1;shapeInside=1;" value="Designs" vertex="1">
+          <mxGeometry height="80" width="130" x="995" y="1225" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-rAssigned" parent="erC-1" style="rhombus;whiteSpace=wrap;html=1;shapeInside=1;" value="AssignedTo" vertex="1">
+          <mxGeometry height="80" width="130" x="995" y="1505" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-rContains" parent="erC-1" style="rhombus;whiteSpace=wrap;html=1;shapeInside=1;" value="Contains" vertex="1">
+          <mxGeometry height="80" width="130" x="1170" y="565" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-rOwns" parent="erC-1" style="rhombus;whiteSpace=wrap;html=1;shapeInside=1;" value="Owns" vertex="1">
+          <mxGeometry height="80" width="130" x="1275" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-rHasSch" parent="erC-1" style="rhombus;whiteSpace=wrap;html=1;shapeInside=1;" value="Has" vertex="1">
+          <mxGeometry height="80" width="130" x="1605" y="1110" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-rSets" parent="erC-1" style="rhombus;whiteSpace=wrap;html=1;shapeInside=1;" value="Sets" vertex="1">
+          <mxGeometry height="80" width="130" x="945" y="1790" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-rHasSkill" parent="erC-1" style="rhombus;whiteSpace=wrap;html=1;shapeInside=1;" value="Possesses" vertex="1">
+          <mxGeometry height="80" width="130" x="405" y="1800" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-rStores" parent="erC-1" style="rhombus;whiteSpace=wrap;html=1;shapeInside=1;" value="Stores" vertex="1">
+          <mxGeometry height="80" width="130" x="1840" y="660" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-rTriggers" parent="erC-1" style="rhombus;whiteSpace=wrap;html=1;shapeInside=1;" value="Triggers" vertex="1">
+          <mxGeometry height="80" width="130" x="1925" y="1030" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-rReceives" parent="erC-1" style="rhombus;whiteSpace=wrap;html=1;shapeInside=1;" value="Receives" vertex="1">
+          <mxGeometry height="80" width="130" x="1135" y="2260" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-eID" parent="erC-1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;fontStyle=4;" value="EmployeeID" vertex="1">
+          <mxGeometry height="42" width="116" x="-268" y="699" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-eName" parent="erC-1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="Name" vertex="1">
+          <mxGeometry height="42" width="116" x="-268" y="759" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-eEmail" parent="erC-1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="Email" vertex="1">
+          <mxGeometry height="42" width="116" x="-268" y="819" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-ePhone" parent="erC-1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="Phone" vertex="1">
+          <mxGeometry height="42" width="116" x="-268" y="879" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-eUser" parent="erC-1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="Username" vertex="1">
+          <mxGeometry height="42" width="116" x="-268" y="939" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-ePass" parent="erC-1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="Password" vertex="1">
+          <mxGeometry height="42" width="116" x="-268" y="999" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-eRole" parent="erC-1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="Role" vertex="1">
+          <mxGeometry height="42" width="116" x="-268" y="1059" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-eFirst" parent="erC-1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="FirstName" vertex="1">
+          <mxGeometry height="42" width="116" x="-458" y="724" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-eLast" parent="erC-1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="LastName" vertex="1">
+          <mxGeometry height="42" width="116" x="-458" y="794" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-qID" parent="erC-1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;fontStyle=4;" value="RequirementID" vertex="1">
+          <mxGeometry height="42" width="104" x="1071" y="484" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-qTitle" parent="erC-1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="Title" vertex="1">
+          <mxGeometry height="42" width="104" x="1119" y="339" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-qDetail" parent="erC-1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="Detail" vertex="1">
+          <mxGeometry height="42" width="104" x="979" y="401" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-qPri" parent="erC-1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="Priority" vertex="1">
+          <mxGeometry height="42" width="104" x="932" y="256" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-qDue" parent="erC-1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="DueDate" vertex="1">
+          <mxGeometry height="42" width="104" x="848" y="388" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-qFeat" parent="erC-1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="RelatedFeature" vertex="1">
+          <mxGeometry height="42" width="104" x="723" y="299" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-qStatus" parent="erC-1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="Status" vertex="1">
+          <mxGeometry height="42" width="104" x="1071" y="684" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-qAtt" parent="erC-1" style="ellipse;shape=doubleEllipse;whiteSpace=wrap;html=1;" value="AttachmentFile" vertex="1">
+          <mxGeometry height="42" width="104" x="1098" y="809" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-qCDate" parent="erC-1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="CreatedDate" vertex="1">
+          <mxGeometry height="42" width="104" x="958" y="769" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-qRDate" parent="erC-1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="ReviewedDate" vertex="1">
+          <mxGeometry height="42" width="104" x="888" y="874" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-qReason" parent="erC-1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="RejectReason" vertex="1">
+          <mxGeometry height="42" width="104" x="818" y="809" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-pID" parent="erC-1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;fontStyle=4;" value="ProjectID" vertex="1">
+          <mxGeometry height="42" width="116" x="1839.1" y="542.2" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-pSol" parent="erC-1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="Solution" vertex="1">
+          <mxGeometry height="42" width="116" x="1962.9" y="424.9" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-pSite" parent="erC-1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="ProjectSite" vertex="1">
+          <mxGeometry height="42" width="116" x="1792.7" y="419.3" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-pPeriod" parent="erC-1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="Period" vertex="1">
+          <mxGeometry height="42" width="116" x="1854.6" y="260.3" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-pStatus" parent="erC-1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="Status" vertex="1">
+          <mxGeometry height="42" width="116" x="1697.9" y="327.7" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-pName" parent="erC-1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="ProjectName" vertex="1">
+          <mxGeometry height="42" width="116" x="1686.3" y="157.8" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-pCDate" parent="erC-1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="CreatedDate" vertex="1">
+          <mxGeometry height="42" width="116" x="1573.4" y="285.6" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-pObj" parent="erC-1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="Objective" vertex="1">
+          <mxGeometry height="42" width="116" x="2132.9" y="358.9" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-pBudget" parent="erC-1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="EstimatedBudget" vertex="1">
+          <mxGeometry height="42" width="116" x="2152.9" y="424.9" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-pDetail" parent="erC-1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="SolutionDetail" vertex="1">
+          <mxGeometry height="42" width="116" x="2132.9" y="490.9" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-pStart" parent="erC-1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="StartDate" vertex="1">
+          <mxGeometry height="42" width="116" x="2019.6" y="215.3" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-pEnd" parent="erC-1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="EndDate" vertex="1">
+          <mxGeometry height="42" width="116" x="2029.6" y="285.3" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-cID" parent="erC-1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;fontStyle=4;" value="CustomerID" vertex="1">
+          <mxGeometry height="42" width="116" x="1132" y="279" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-cName" parent="erC-1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="CustomerName" vertex="1">
+          <mxGeometry height="42" width="116" x="1252" y="201" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-cEmail" parent="erC-1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="CustomerEmail" vertex="1">
+          <mxGeometry height="42" width="116" x="1382" y="214" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-dID" parent="erC-1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;fontStyle=4;" value="DocumentID" vertex="1">
+          <mxGeometry height="42" width="116" x="2328.4" y="707.3" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-dType" parent="erC-1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="DocType" vertex="1">
+          <mxGeometry height="42" width="116" x="2317.5" y="831.1" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-dName" parent="erC-1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="FileName" vertex="1">
+          <mxGeometry height="42" width="116" x="2246.3" y="932.9" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-dPath" parent="erC-1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="FilePath" vertex="1">
+          <mxGeometry height="42" width="116" x="2133.7" y="985.4" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-dSize" parent="erC-1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="FileSize" vertex="1">
+          <mxGeometry height="42" width="116" x="2009.9" y="974.5" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-dDate" parent="erC-1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="UploadedDate" vertex="1">
+          <mxGeometry height="42" width="116" x="1908.1" y="903.3" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-nID" parent="erC-1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;fontStyle=4;" value="NotificationID" vertex="1">
+          <mxGeometry height="42" width="116" x="2275.4" y="1104.2" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-nType" parent="erC-1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="Type" vertex="1">
+          <mxGeometry height="42" width="116" x="2353.8" y="1193.6" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-nMsg" parent="erC-1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="Message" vertex="1">
+          <mxGeometry height="42" width="116" x="2382" y="1309" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-nSend" parent="erC-1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="SendAt" vertex="1">
+          <mxGeometry height="42" width="116" x="2353.8" y="1424.4" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-nRead" parent="erC-1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="IsRead" vertex="1">
+          <mxGeometry height="42" width="116" x="2275.4" y="1513.8" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-sID" parent="erC-1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;fontStyle=4;" value="ScheduleID" vertex="1">
+          <mxGeometry height="42" width="116" x="1828.7" y="1630.8" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-sDate" parent="erC-1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="TestDate" vertex="1">
+          <mxGeometry height="42" width="116" x="1956.7" y="1729.8" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-sStart" parent="erC-1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="StartTime" vertex="1">
+          <mxGeometry height="42" width="116" x="1802.5" y="1779" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-sEnd" parent="erC-1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="EndTime" vertex="1">
+          <mxGeometry height="42" width="116" x="1837" y="1937.1" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-sLoc" parent="erC-1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="Location" vertex="1">
+          <mxGeometry height="42" width="116" x="1687.2" y="1875.7" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-sDetail" parent="erC-1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="TestDetail" vertex="1">
+          <mxGeometry height="42" width="116" x="1612" y="2019" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-sRemind" parent="erC-1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="RemindBefore" vertex="1">
+          <mxGeometry height="42" width="116" x="1536.8" y="1875.7" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-sStatus" parent="erC-1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="Status" vertex="1">
+          <mxGeometry height="42" width="116" x="1387" y="1937.1" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-sCDate" parent="erC-1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="CreatedDate" vertex="1">
+          <mxGeometry height="42" width="116" x="1421.5" y="1779" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-kID" parent="erC-1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;fontStyle=4;" value="SkillID" vertex="1">
+          <mxGeometry height="42" width="116" x="629.5" y="1877.6" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-kName" parent="erC-1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="SkillName" vertex="1">
+          <mxGeometry height="42" width="116" x="652" y="1979" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-kDesc" parent="erC-1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="Description" vertex="1">
+          <mxGeometry height="42" width="116" x="629.5" y="2080.4" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-aDate" parent="erC-1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="AssignedDate" vertex="1">
+          <mxGeometry height="42" width="116" x="1157" y="1609" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-title" parent="erC-1" style="text;html=1;align=left;verticalAlign=top;fontSize=28;fontStyle=1;" value="ER Diagram" vertex="1">
+          <mxGeometry height="50" width="1200" x="-600" y="-60" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-e0" edge="1" parent="erC-1" source="erC-SALE" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;html=1;endArrow=block;endFill=0;endSize=10;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="erC-EMP" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="265" y="180" />
+              <mxPoint x="265" y="900" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="erC-e1" edge="1" parent="erC-1" source="erC-PM" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;html=1;endArrow=block;endFill=0;endSize=10;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="erC-EMP" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="265" y="1080" />
+              <mxPoint x="265" y="900" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="erC-e2" edge="1" parent="erC-1" source="erC-PRE" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;html=1;endArrow=block;endFill=0;endSize=10;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="erC-EMP" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="265" y="1380" />
+              <mxPoint x="265" y="900" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="erC-e3" edge="1" parent="erC-1" source="erC-TECH" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;html=1;endArrow=block;endFill=0;endSize=10;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="erC-EMP" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="265" y="1680" />
+              <mxPoint x="265" y="900" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="erC-e4" edge="1" parent="erC-1" source="erC-SALE" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="erC-rCreates" value="1">
+          <mxGeometry relative="1" x="-0.55" y="12" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="erC-e5" edge="1" parent="erC-1" source="erC-rCreates" style="shape=link;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.03;entryY=0;entryDx=0;entryDy=0;" target="erC-PRJ" value="M">
+          <mxGeometry relative="1" x="-0.55" y="12" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="1506" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="erC-e6" edge="1" parent="erC-1" source="erC-SALE" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="erC-rApproves" value="1">
+          <mxGeometry relative="1" x="-0.55" y="12" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="erC-e7" edge="1" parent="erC-1" source="erC-rApproves" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="erC-REQ" value="M">
+          <mxGeometry relative="1" x="-0.55" y="12" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="erC-e8" edge="1" parent="erC-1" source="erC-PM" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="erC-rRecords" value="1">
+          <mxGeometry relative="1" x="-0.55" y="12" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="erC-e9" edge="1" parent="erC-1" source="erC-rRecords" style="shape=link;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="erC-REQ" value="M">
+          <mxGeometry relative="1" x="-0.55" y="12" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="erC-e10" edge="1" parent="erC-1" source="erC-PM" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="erC-rManages" value="1">
+          <mxGeometry relative="1" x="-0.55" y="12" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="erC-e11" edge="1" parent="erC-1" source="erC-rManages" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;entryX=0.1;entryY=1;entryDx=0;entryDy=0;" target="erC-PRJ" value="M">
+          <mxGeometry relative="1" x="-0.55" y="12" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="erC-e12" edge="1" parent="erC-1" source="erC-PRE" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="erC-rDesigns" value="1">
+          <mxGeometry relative="1" x="-0.55" y="12" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="erC-e13" edge="1" parent="erC-1" source="erC-rDesigns" style="shape=link;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;entryX=0.3;entryY=1;entryDx=0;entryDy=0;" target="erC-PRJ" value="M">
+          <mxGeometry relative="1" x="-0.55" y="12" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="erC-e14" edge="1" parent="erC-1" source="erC-TECH" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="erC-rAssigned" value="M">
+          <mxGeometry relative="1" x="-0.55" y="12" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="erC-e15" edge="1" parent="erC-1" source="erC-rAssigned" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="erC-PRJ" value="N">
+          <mxGeometry relative="1" x="-0.55" y="12" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="erC-e16" edge="1" parent="erC-1" source="erC-REQ" style="shape=link;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="erC-rContains" value="M">
+          <mxGeometry relative="1" x="-0.55" y="12" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="erC-e17" edge="1" parent="erC-1" source="erC-rContains" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="erC-PRJ" value="1">
+          <mxGeometry relative="1" x="-0.55" y="12" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="erC-e18" edge="1" parent="erC-1" source="erC-CUS" style="shape=link;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="erC-rOwns" value="1">
+          <mxGeometry relative="1" x="-0.55" y="12" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="erC-e19" edge="1" parent="erC-1" source="erC-rOwns" style="shape=link;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;entryX=0;entryY=0.15;entryDx=0;entryDy=0;" target="erC-PRJ" value="M">
+          <mxGeometry relative="1" x="-0.55" y="12" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="erC-e20" edge="1" parent="erC-1" source="erC-PRJ" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;exitX=0.85;exitY=1;exitDx=0;exitDy=0;" target="erC-rHasSch" value="1">
+          <mxGeometry relative="1" x="-0.55" y="12" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="erC-e21" edge="1" parent="erC-1" source="erC-rHasSch" style="shape=link;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="erC-SCH" value="M">
+          <mxGeometry relative="1" x="-0.55" y="12" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="erC-e22" edge="1" parent="erC-1" source="erC-TECH" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="erC-rSets" value="1">
+          <mxGeometry relative="1" x="-0.55" y="12" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="erC-e23" edge="1" parent="erC-1" source="erC-rSets" style="shape=link;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="erC-SCH" value="M">
+          <mxGeometry relative="1" x="-0.55" y="12" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="erC-e24" edge="1" parent="erC-1" source="erC-TECH" style="shape=link;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="erC-rHasSkill" value="M">
+          <mxGeometry relative="1" x="-0.55" y="12" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="erC-e25" edge="1" parent="erC-1" source="erC-rHasSkill" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="erC-SKILL" value="N">
+          <mxGeometry relative="1" x="-0.55" y="12" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="erC-e26" edge="1" parent="erC-1" source="erC-PRJ" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;exitX=1;exitY=0.6;exitDx=0;exitDy=0;" target="erC-rStores" value="1">
+          <mxGeometry relative="1" x="-0.55" y="12" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="erC-e27" edge="1" parent="erC-1" source="erC-rStores" style="shape=link;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="erC-DOC" value="M">
+          <mxGeometry relative="1" x="-0.55" y="12" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="erC-e28" edge="1" parent="erC-1" source="erC-PRJ" style="shape=link;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;exitX=1;exitY=1;exitDx=0;exitDy=0;" target="erC-rTriggers" value="1">
+          <mxGeometry relative="1" x="-0.55" y="12" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="erC-e29" edge="1" parent="erC-1" source="erC-rTriggers" style="shape=link;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="erC-NOT" value="M">
+          <mxGeometry relative="1" x="-0.55" y="12" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="erC-e30" edge="1" parent="erC-1" source="erC-EMP" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="erC-rReceives" value="1">
+          <mxGeometry relative="1" x="-0.55" y="12" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="70" y="2300" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="erC-e31" edge="1" parent="erC-1" source="erC-rReceives" style="shape=link;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="erC-NOT" value="M">
+          <mxGeometry relative="1" x="-0.55" y="12" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="2190" y="2300" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="erC-e32" edge="1" parent="erC-1" source="erC-EMP" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="erC-eID" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-e33" edge="1" parent="erC-1" source="erC-EMP" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="erC-eName" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-e34" edge="1" parent="erC-1" source="erC-EMP" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="erC-eEmail" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-e35" edge="1" parent="erC-1" source="erC-EMP" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="erC-ePhone" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-e36" edge="1" parent="erC-1" source="erC-EMP" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="erC-eUser" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-e37" edge="1" parent="erC-1" source="erC-EMP" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="erC-ePass" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-e38" edge="1" parent="erC-1" source="erC-EMP" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="erC-eRole" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-e39" edge="1" parent="erC-1" source="erC-eName" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="erC-eFirst" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-e40" edge="1" parent="erC-1" source="erC-eName" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="erC-eLast" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-e41" edge="1" parent="erC-1" source="erC-REQ" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="erC-qID" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-e42" edge="1" parent="erC-1" source="erC-REQ" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="erC-qTitle" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-e43" edge="1" parent="erC-1" source="erC-REQ" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="erC-qDetail" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-e44" edge="1" parent="erC-1" source="erC-REQ" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="erC-qPri" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-e45" edge="1" parent="erC-1" source="erC-REQ" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="erC-qDue" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-e46" edge="1" parent="erC-1" source="erC-REQ" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="erC-qFeat" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-e47" edge="1" parent="erC-1" source="erC-REQ" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="erC-qStatus" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-e48" edge="1" parent="erC-1" source="erC-REQ" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="erC-qAtt" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-e49" edge="1" parent="erC-1" source="erC-REQ" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="erC-qCDate" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-e50" edge="1" parent="erC-1" source="erC-REQ" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="erC-qRDate" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-e51" edge="1" parent="erC-1" source="erC-REQ" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="erC-qReason" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-e52" edge="1" parent="erC-1" source="erC-PRJ" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="erC-pID" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-e53" edge="1" parent="erC-1" source="erC-PRJ" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="erC-pSol" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-e54" edge="1" parent="erC-1" source="erC-PRJ" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="erC-pSite" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-e55" edge="1" parent="erC-1" source="erC-PRJ" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="erC-pPeriod" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-e56" edge="1" parent="erC-1" source="erC-PRJ" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="erC-pStatus" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-e57" edge="1" parent="erC-1" source="erC-PRJ" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="erC-pName" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-e58" edge="1" parent="erC-1" source="erC-PRJ" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="erC-pCDate" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-e59" edge="1" parent="erC-1" source="erC-pSol" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="erC-pObj" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-e60" edge="1" parent="erC-1" source="erC-pSol" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="erC-pBudget" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-e61" edge="1" parent="erC-1" source="erC-pSol" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="erC-pDetail" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-e62" edge="1" parent="erC-1" source="erC-pPeriod" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="erC-pStart" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-e63" edge="1" parent="erC-1" source="erC-pPeriod" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="erC-pEnd" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-e64" edge="1" parent="erC-1" source="erC-CUS" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="erC-cID" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-e65" edge="1" parent="erC-1" source="erC-CUS" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="erC-cName" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-e66" edge="1" parent="erC-1" source="erC-CUS" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="erC-cEmail" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-e67" edge="1" parent="erC-1" source="erC-DOC" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="erC-dID" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-e68" edge="1" parent="erC-1" source="erC-DOC" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="erC-dType" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-e69" edge="1" parent="erC-1" source="erC-DOC" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="erC-dName" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-e70" edge="1" parent="erC-1" source="erC-DOC" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="erC-dPath" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-e71" edge="1" parent="erC-1" source="erC-DOC" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="erC-dSize" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-e72" edge="1" parent="erC-1" source="erC-DOC" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="erC-dDate" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-e73" edge="1" parent="erC-1" source="erC-NOT" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="erC-nID" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-e74" edge="1" parent="erC-1" source="erC-NOT" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="erC-nType" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-e75" edge="1" parent="erC-1" source="erC-NOT" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="erC-nMsg" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-e76" edge="1" parent="erC-1" source="erC-NOT" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="erC-nSend" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-e77" edge="1" parent="erC-1" source="erC-NOT" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="erC-nRead" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-e78" edge="1" parent="erC-1" source="erC-SCH" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="erC-sID" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-e79" edge="1" parent="erC-1" source="erC-SCH" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="erC-sDate" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-e80" edge="1" parent="erC-1" source="erC-SCH" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="erC-sStart" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-e81" edge="1" parent="erC-1" source="erC-SCH" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="erC-sEnd" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-e82" edge="1" parent="erC-1" source="erC-SCH" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="erC-sLoc" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-e83" edge="1" parent="erC-1" source="erC-SCH" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="erC-sDetail" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-e84" edge="1" parent="erC-1" source="erC-SCH" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="erC-sRemind" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-e85" edge="1" parent="erC-1" source="erC-SCH" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="erC-sStatus" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-e86" edge="1" parent="erC-1" source="erC-SCH" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="erC-sCDate" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-e87" edge="1" parent="erC-1" source="erC-SKILL" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="erC-kID" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-e88" edge="1" parent="erC-1" source="erC-SKILL" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="erC-kName" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-e89" edge="1" parent="erC-1" source="erC-SKILL" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="erC-kDesc" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-e90" edge="1" parent="erC-1" source="erC-rAssigned" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="erC-aDate" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-ePic" parent="erC-1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="ProfilePicture" vertex="1">
+          <mxGeometry height="42" width="116" x="-268" y="1119" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-ePic-l" edge="1" parent="erC-1" source="erC-EMP" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="erC-ePic" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-fk-prjCus" parent="erC-1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;dashed=1;fontStyle=2;" value="CustomerID (FK)" vertex="1">
+          <mxGeometry height="42" width="124" x="1712" y="850" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-fke-prjCus" edge="1" parent="erC-1" source="erC-PRJ" target="erC-fk-prjCus" style="edgeStyle=orthogonalEdgeStyle;exitX=0.93;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-fk-prjSale" parent="erC-1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;dashed=1;fontStyle=2;" value="SaleID (FK)" vertex="1">
+          <mxGeometry height="42" width="124" x="1712" y="910" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-fke-prjSale" edge="1" parent="erC-1" source="erC-PRJ" target="erC-fk-prjSale" style="edgeStyle=orthogonalEdgeStyle;exitX=0.93;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-fk-prjPre" parent="erC-1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;dashed=1;fontStyle=2;" value="PresaleID (FK)" vertex="1">
+          <mxGeometry height="42" width="124" x="1712" y="970" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-fke-prjPre" edge="1" parent="erC-1" source="erC-PRJ" target="erC-fk-prjPre" style="edgeStyle=orthogonalEdgeStyle;exitX=0.93;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-fk-prjPM" parent="erC-1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;dashed=1;fontStyle=2;" value="PMID (FK)" vertex="1">
+          <mxGeometry height="42" width="124" x="1712" y="1030" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-fke-prjPM" edge="1" parent="erC-1" source="erC-PRJ" target="erC-fk-prjPM" style="edgeStyle=orthogonalEdgeStyle;exitX=0.93;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-fk-reqRev" parent="erC-1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;dashed=1;fontStyle=2;" value="ReviewedByID (FK)" vertex="1">
+          <mxGeometry height="42" width="124" x="700" y="540" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-fke-reqRev" edge="1" parent="erC-1" source="erC-REQ" target="erC-fk-reqRev" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-fk-reqBy" parent="erC-1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;dashed=1;fontStyle=2;" value="CreatedByID (FK)" vertex="1">
+          <mxGeometry height="42" width="124" x="690" y="610" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-fke-reqBy" edge="1" parent="erC-1" source="erC-REQ" target="erC-fk-reqBy" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-fk-reqPrj" parent="erC-1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;dashed=1;fontStyle=2;" value="ProjectID (FK)" vertex="1">
+          <mxGeometry height="42" width="124" x="690" y="680" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-fke-reqPrj" edge="1" parent="erC-1" source="erC-REQ" target="erC-fk-reqPrj" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-fk-schPrj" parent="erC-1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;dashed=1;fontStyle=2;" value="ProjectID (FK)" vertex="1">
+          <mxGeometry height="42" width="124" x="1440" y="1580" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-fke-schPrj" edge="1" parent="erC-1" source="erC-SCH" target="erC-fk-schPrj" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-fk-schBy" parent="erC-1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;dashed=1;fontStyle=2;" value="CreatedByID (FK)" vertex="1">
+          <mxGeometry height="42" width="124" x="1700" y="1560" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-fke-schBy" edge="1" parent="erC-1" source="erC-SCH" target="erC-fk-schBy" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-fk-docPrj" parent="erC-1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;dashed=1;fontStyle=2;" value="ProjectID (FK)" vertex="1">
+          <mxGeometry height="42" width="124" x="2215" y="635" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-fke-docPrj" edge="1" parent="erC-1" source="erC-DOC" target="erC-fk-docPrj" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-fk-notPrj" parent="erC-1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;dashed=1;fontStyle=2;" value="ProjectID (FK)" vertex="1">
+          <mxGeometry height="42" width="124" x="1900" y="1200" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-fke-notPrj" edge="1" parent="erC-1" source="erC-NOT" target="erC-fk-notPrj" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-fk-notRec" parent="erC-1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;dashed=1;fontStyle=2;" value="RecipientID (FK)" vertex="1">
+          <mxGeometry height="42" width="124" x="1925" y="1420" as="geometry" />
+        </mxCell>
+        <mxCell id="erC-fke-notRec" edge="1" parent="erC-1" source="erC-NOT" target="erC-fk-notRec" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

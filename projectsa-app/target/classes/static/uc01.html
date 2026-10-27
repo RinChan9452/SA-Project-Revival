@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>สร้าง Project Profile – ProjectSA</title>
+  <link rel="stylesheet" href="css/app.css?v=2">
+</head>
+<body>
+<main>
+  <div class="card">
+    <h1>Create Project Profile</h1>
+    <p class="muted">Sale สร้าง Project Profile ใหม่หลังตัดสินใจรับ Project (สถานะเริ่มต้น NewProject และแจ้งเตือน Presale)</p>
+    <!-- <<Boundary>> CreateProject Button -->
+    <button id="createProjectButton">+ Create Project Profile</button>
+  </div>
+
+  <!-- <<Boundary>> ProjectDetail Form -->
+  <div class="card hidden" id="projectDetailForm">
+    <h2>รายละเอียดเบื้องต้นของ Project</h2>
+    <form id="form" class="grid2" novalidate>
+      <div class="field full" data-f="projectName"><label>Project Name *</label><input name="projectName"><div class="msg"></div></div>
+      <div class="field"><label>Sale in Charge</label><input id="saleInCharge" disabled></div>
+      <div class="field" data-f="presaleId"><label>Presale Engineer in Charge *</label><select name="presaleId" id="presale"></select><div class="msg"></div></div>
+      <div class="field full" data-f="customerId"><label>ลูกค้า *</label>
+        <div class="choices">
+          <label><input type="radio" name="customerMode" value="old" checked> ลูกค้าเดิม</label>
+          <label><input type="radio" name="customerMode" value="new"> ลูกค้าใหม่</label>
+        </div>
+        <select name="customerId" id="customer"></select><div class="msg"></div></div>
+      <div class="field hidden newCust" data-f="newCustomerName"><label>Customer Name *</label><input name="newCustomerName"><div class="msg"></div></div>
+      <div class="field hidden newCust" data-f="newCustomerEmail"><label>Customer Email *</label><input name="newCustomerEmail" type="email"><div class="msg"></div></div>
+      <div class="field full" data-f="projectSite"><label>Project Site (สถานที่ติดตั้ง / ทำงาน) *</label><textarea name="projectSite"></textarea><div class="msg"></div></div>
+      <div class="full actions"><button type="button" class="secondary" id="cancel">ยกเลิก</button><button>บันทึก</button></div>
+    </form>
+  </div>
+</main>
+<script src="js/app.js?v=2"></script>
+<script src="js/bell.js?v=2"></script>
+<script src="js/uc01.js?v=2"></script>
+</body>
+</html>

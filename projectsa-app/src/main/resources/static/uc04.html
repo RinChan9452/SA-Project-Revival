@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>มอบหมาย Engineer – ProjectSA</title>
+  <link rel="stylesheet" href="css/app.css?v=2">
+</head>
+<body>
+<main>
+  <div class="card">
+    <h1>Assign Engineer to Project</h1>
+    <p class="muted">PM มอบหมาย Tech Engineer ตาม Skill และภาระงาน → สถานะ Working และแจ้งเตือน Engineer</p>
+  </div>
+
+  <!-- <<Boundary>> ProjectList Form -->
+  <div class="card">
+    <h2>1. Project ที่รอมอบหมาย Engineer</h2>
+    <div id="projectList"></div>
+  </div>
+
+  <!-- <<Boundary>> AssignEngineer Form -->
+  <div class="card hidden" id="assignEngineerForm">
+    <h2 id="title"></h2>
+    <dl class="info" id="solution" style="margin-bottom:16px"></dl>
+    <div style="display:flex;gap:10px;align-items:end;margin-bottom:12px">
+      <div style="flex:1"><label>Filter ตาม Skill</label><select id="skill"></select></div>
+      <button type="button" class="secondary" id="showAll">แสดงทั้งหมด</button>
+    </div>
+    <form id="form" novalidate>
+      <div class="field" data-f="engineerIds"><div id="engineers"></div><div class="msg"></div></div>
+      <div class="actions"><button>ยืนยันการมอบหมาย</button></div>
+    </form>
+  </div>
+</main>
+<script src="js/app.js?v=2"></script>
+<script src="js/bell.js?v=2"></script>
+<script src="js/uc04.js?v=2"></script>
+</body>
+</html>

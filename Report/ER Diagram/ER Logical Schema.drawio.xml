@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net">
+  <diagram name="ER Logical Schema" id="erLogicalPage01">
+    <mxGraphModel dx="1600" dy="1000" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="erL-0" />
+        <mxCell id="erL-1" parent="erL-0" />
+        <mxCell id="erL-a1" parent="erL-1" style="text;html=1;fontSize=24;fontStyle=1;align=left;verticalAlign=middle;" value="ER Diagram – Logical Schema" vertex="1">
+          <mxGeometry x="40" y="20" width="700" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-SKILL" parent="erL-1" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;fontSize=13;fillColor=#F5F5F5;" value="SKILL" vertex="1">
+          <mxGeometry x="40" y="100" width="270" height="102" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-SKILL-r0" parent="erL-SKILL" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&lt;b&gt;PK&lt;/b&gt;&amp;nbsp;&amp;nbsp;&lt;u&gt;SkillID&lt;/u&gt; : INT" vertex="1">
+          <mxGeometry x="0" y="30" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-SKILL-r1" parent="erL-SKILL" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;SkillName : NVARCHAR(50)" vertex="1">
+          <mxGeometry x="0" y="54" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-SKILL-r2" parent="erL-SKILL" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Description : NVARCHAR(255)" vertex="1">
+          <mxGeometry x="0" y="78" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-ENGINEER_SKILL" parent="erL-1" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;fontSize=13;fillColor=#F5F5F5;" value="ENGINEER_SKILL" vertex="1">
+          <mxGeometry x="420" y="100" width="270" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-ENGINEER_SKILL-r0" parent="erL-ENGINEER_SKILL" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&lt;b&gt;PK, FK&lt;/b&gt;&amp;nbsp;&amp;nbsp;&lt;u&gt;EmployeeID&lt;/u&gt; : INT" vertex="1">
+          <mxGeometry x="0" y="30" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-ENGINEER_SKILL-r1" parent="erL-ENGINEER_SKILL" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&lt;b&gt;PK, FK&lt;/b&gt;&amp;nbsp;&amp;nbsp;&lt;u&gt;SkillID&lt;/u&gt; : INT" vertex="1">
+          <mxGeometry x="0" y="54" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-EMPLOYEE" parent="erL-1" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;fontSize=13;fillColor=#F5F5F5;" value="EMPLOYEE" vertex="1">
+          <mxGeometry x="800" y="100" width="270" height="246" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-EMPLOYEE-r0" parent="erL-EMPLOYEE" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&lt;b&gt;PK&lt;/b&gt;&amp;nbsp;&amp;nbsp;&lt;u&gt;EmployeeID&lt;/u&gt; : INT" vertex="1">
+          <mxGeometry x="0" y="30" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-EMPLOYEE-r1" parent="erL-EMPLOYEE" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;FirstName : NVARCHAR(50)" vertex="1">
+          <mxGeometry x="0" y="54" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-EMPLOYEE-r2" parent="erL-EMPLOYEE" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;LastName : NVARCHAR(50)" vertex="1">
+          <mxGeometry x="0" y="78" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-EMPLOYEE-r3" parent="erL-EMPLOYEE" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Email : NVARCHAR(100)" vertex="1">
+          <mxGeometry x="0" y="102" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-EMPLOYEE-r4" parent="erL-EMPLOYEE" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Phone : NVARCHAR(20)" vertex="1">
+          <mxGeometry x="0" y="126" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-EMPLOYEE-r5" parent="erL-EMPLOYEE" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Username : NVARCHAR(50)" vertex="1">
+          <mxGeometry x="0" y="150" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-EMPLOYEE-r6" parent="erL-EMPLOYEE" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Password : NVARCHAR(255)" vertex="1">
+          <mxGeometry x="0" y="174" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-EMPLOYEE-r7" parent="erL-EMPLOYEE" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;ProfilePicture : NVARCHAR(255)" vertex="1">
+          <mxGeometry x="0" y="198" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-EMPLOYEE-r8" parent="erL-EMPLOYEE" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Role : NVARCHAR(20)" vertex="1">
+          <mxGeometry x="0" y="222" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-PROJECT_ASSIGNMENT" parent="erL-1" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;fontSize=13;fillColor=#F5F5F5;" value="PROJECT_ASSIGNMENT" vertex="1">
+          <mxGeometry x="1250" y="100" width="270" height="102" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-PROJECT_ASSIGNMENT-r0" parent="erL-PROJECT_ASSIGNMENT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&lt;b&gt;PK, FK&lt;/b&gt;&amp;nbsp;&amp;nbsp;&lt;u&gt;ProjectID&lt;/u&gt; : INT" vertex="1">
+          <mxGeometry x="0" y="30" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-PROJECT_ASSIGNMENT-r1" parent="erL-PROJECT_ASSIGNMENT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&lt;b&gt;PK, FK&lt;/b&gt;&amp;nbsp;&amp;nbsp;&lt;u&gt;EngineerID&lt;/u&gt; : INT" vertex="1">
+          <mxGeometry x="0" y="54" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-PROJECT_ASSIGNMENT-r2" parent="erL-PROJECT_ASSIGNMENT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;AssignedDate : DATETIME" vertex="1">
+          <mxGeometry x="0" y="78" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-CUSTOMER" parent="erL-1" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;fontSize=13;fillColor=#F5F5F5;" value="CUSTOMER" vertex="1">
+          <mxGeometry x="420" y="480" width="270" height="102" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-CUSTOMER-r0" parent="erL-CUSTOMER" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&lt;b&gt;PK&lt;/b&gt;&amp;nbsp;&amp;nbsp;&lt;u&gt;CustomerID&lt;/u&gt; : INT" vertex="1">
+          <mxGeometry x="0" y="30" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-CUSTOMER-r1" parent="erL-CUSTOMER" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;CustomerName : NVARCHAR(100)" vertex="1">
+          <mxGeometry x="0" y="54" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-CUSTOMER-r2" parent="erL-CUSTOMER" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;CustomerEmail : NVARCHAR(100)" vertex="1">
+          <mxGeometry x="0" y="78" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-PROJECT" parent="erL-1" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;fontSize=13;fillColor=#F5F5F5;" value="PROJECT" vertex="1">
+          <mxGeometry x="800" y="480" width="270" height="366" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-PROJECT-r0" parent="erL-PROJECT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&lt;b&gt;PK&lt;/b&gt;&amp;nbsp;&amp;nbsp;&lt;u&gt;ProjectID&lt;/u&gt; : INT" vertex="1">
+          <mxGeometry x="0" y="30" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-PROJECT-r1" parent="erL-PROJECT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;ProjectName : NVARCHAR(100)" vertex="1">
+          <mxGeometry x="0" y="54" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-PROJECT-r2" parent="erL-PROJECT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;ProjectSite : NVARCHAR(255)" vertex="1">
+          <mxGeometry x="0" y="78" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-PROJECT-r3" parent="erL-PROJECT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Status : NVARCHAR(30)" vertex="1">
+          <mxGeometry x="0" y="102" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-PROJECT-r4" parent="erL-PROJECT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;CreatedDate : DATETIME" vertex="1">
+          <mxGeometry x="0" y="126" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-PROJECT-r5" parent="erL-PROJECT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;StartDate : DATE" vertex="1">
+          <mxGeometry x="0" y="150" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-PROJECT-r6" parent="erL-PROJECT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;EndDate : DATE" vertex="1">
+          <mxGeometry x="0" y="174" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-PROJECT-r7" parent="erL-PROJECT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Objective : NVARCHAR(MAX)" vertex="1">
+          <mxGeometry x="0" y="198" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-PROJECT-r8" parent="erL-PROJECT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;EstimatedBudget : DECIMAL(12,2)" vertex="1">
+          <mxGeometry x="0" y="222" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-PROJECT-r9" parent="erL-PROJECT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;SolutionDetail : NVARCHAR(MAX)" vertex="1">
+          <mxGeometry x="0" y="246" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-PROJECT-r10" parent="erL-PROJECT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&lt;b&gt;FK&lt;/b&gt;&amp;nbsp;&amp;nbsp;CustomerID : INT" vertex="1">
+          <mxGeometry x="0" y="270" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-PROJECT-r11" parent="erL-PROJECT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&lt;b&gt;FK&lt;/b&gt;&amp;nbsp;&amp;nbsp;SaleID : INT" vertex="1">
+          <mxGeometry x="0" y="294" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-PROJECT-r12" parent="erL-PROJECT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&lt;b&gt;FK&lt;/b&gt;&amp;nbsp;&amp;nbsp;PresaleID : INT" vertex="1">
+          <mxGeometry x="0" y="318" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-PROJECT-r13" parent="erL-PROJECT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&lt;b&gt;FK&lt;/b&gt;&amp;nbsp;&amp;nbsp;PMID : INT" vertex="1">
+          <mxGeometry x="0" y="342" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-NOTIFICATION" parent="erL-1" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;fontSize=13;fillColor=#F5F5F5;" value="NOTIFICATION" vertex="1">
+          <mxGeometry x="1250" y="480" width="270" height="198" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-NOTIFICATION-r0" parent="erL-NOTIFICATION" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&lt;b&gt;PK&lt;/b&gt;&amp;nbsp;&amp;nbsp;&lt;u&gt;NotificationID&lt;/u&gt; : INT" vertex="1">
+          <mxGeometry x="0" y="30" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-NOTIFICATION-r1" parent="erL-NOTIFICATION" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&lt;b&gt;FK&lt;/b&gt;&amp;nbsp;&amp;nbsp;RecipientID : INT" vertex="1">
+          <mxGeometry x="0" y="54" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-NOTIFICATION-r2" parent="erL-NOTIFICATION" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&lt;b&gt;FK&lt;/b&gt;&amp;nbsp;&amp;nbsp;ProjectID : INT" vertex="1">
+          <mxGeometry x="0" y="78" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-NOTIFICATION-r3" parent="erL-NOTIFICATION" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Type : NVARCHAR(30)" vertex="1">
+          <mxGeometry x="0" y="102" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-NOTIFICATION-r4" parent="erL-NOTIFICATION" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Message : NVARCHAR(255)" vertex="1">
+          <mxGeometry x="0" y="126" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-NOTIFICATION-r5" parent="erL-NOTIFICATION" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;SendAt : DATETIME" vertex="1">
+          <mxGeometry x="0" y="150" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-NOTIFICATION-r6" parent="erL-NOTIFICATION" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;IsRead : BIT" vertex="1">
+          <mxGeometry x="0" y="174" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-CUSTOMER_REQUIREMENT" parent="erL-1" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;fontSize=13;fillColor=#F5F5F5;" value="CUSTOMER_REQUIREMENT" vertex="1">
+          <mxGeometry x="420" y="940" width="270" height="342" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-CUSTOMER_REQUIREMENT-r0" parent="erL-CUSTOMER_REQUIREMENT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&lt;b&gt;PK&lt;/b&gt;&amp;nbsp;&amp;nbsp;&lt;u&gt;RequirementID&lt;/u&gt; : INT" vertex="1">
+          <mxGeometry x="0" y="30" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-CUSTOMER_REQUIREMENT-r1" parent="erL-CUSTOMER_REQUIREMENT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&lt;b&gt;FK&lt;/b&gt;&amp;nbsp;&amp;nbsp;ProjectID : INT" vertex="1">
+          <mxGeometry x="0" y="54" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-CUSTOMER_REQUIREMENT-r2" parent="erL-CUSTOMER_REQUIREMENT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Title : NVARCHAR(150)" vertex="1">
+          <mxGeometry x="0" y="78" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-CUSTOMER_REQUIREMENT-r3" parent="erL-CUSTOMER_REQUIREMENT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Detail : NVARCHAR(MAX)" vertex="1">
+          <mxGeometry x="0" y="102" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-CUSTOMER_REQUIREMENT-r4" parent="erL-CUSTOMER_REQUIREMENT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Priority : NVARCHAR(10)" vertex="1">
+          <mxGeometry x="0" y="126" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-CUSTOMER_REQUIREMENT-r5" parent="erL-CUSTOMER_REQUIREMENT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;DueDate : DATE" vertex="1">
+          <mxGeometry x="0" y="150" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-CUSTOMER_REQUIREMENT-r6" parent="erL-CUSTOMER_REQUIREMENT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;RelatedFeature : NVARCHAR(150)" vertex="1">
+          <mxGeometry x="0" y="174" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-CUSTOMER_REQUIREMENT-r7" parent="erL-CUSTOMER_REQUIREMENT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Status : NVARCHAR(20)" vertex="1">
+          <mxGeometry x="0" y="198" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-CUSTOMER_REQUIREMENT-r8" parent="erL-CUSTOMER_REQUIREMENT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&lt;b&gt;FK&lt;/b&gt;&amp;nbsp;&amp;nbsp;CreatedByID : INT" vertex="1">
+          <mxGeometry x="0" y="222" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-CUSTOMER_REQUIREMENT-r9" parent="erL-CUSTOMER_REQUIREMENT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;CreatedDate : DATETIME" vertex="1">
+          <mxGeometry x="0" y="246" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-CUSTOMER_REQUIREMENT-r10" parent="erL-CUSTOMER_REQUIREMENT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&lt;b&gt;FK&lt;/b&gt;&amp;nbsp;&amp;nbsp;ReviewedByID : INT" vertex="1">
+          <mxGeometry x="0" y="270" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-CUSTOMER_REQUIREMENT-r11" parent="erL-CUSTOMER_REQUIREMENT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;ReviewedDate : DATETIME" vertex="1">
+          <mxGeometry x="0" y="294" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-CUSTOMER_REQUIREMENT-r12" parent="erL-CUSTOMER_REQUIREMENT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;RejectReason : NVARCHAR(255)" vertex="1">
+          <mxGeometry x="0" y="318" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-TEST_SCHEDULE" parent="erL-1" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;fontSize=13;fillColor=#F5F5F5;" value="TEST_SCHEDULE" vertex="1">
+          <mxGeometry x="800" y="940" width="270" height="294" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-TEST_SCHEDULE-r0" parent="erL-TEST_SCHEDULE" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&lt;b&gt;PK&lt;/b&gt;&amp;nbsp;&amp;nbsp;&lt;u&gt;ScheduleID&lt;/u&gt; : INT" vertex="1">
+          <mxGeometry x="0" y="30" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-TEST_SCHEDULE-r1" parent="erL-TEST_SCHEDULE" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&lt;b&gt;FK&lt;/b&gt;&amp;nbsp;&amp;nbsp;ProjectID : INT" vertex="1">
+          <mxGeometry x="0" y="54" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-TEST_SCHEDULE-r2" parent="erL-TEST_SCHEDULE" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&lt;b&gt;FK&lt;/b&gt;&amp;nbsp;&amp;nbsp;CreatedByID : INT" vertex="1">
+          <mxGeometry x="0" y="78" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-TEST_SCHEDULE-r3" parent="erL-TEST_SCHEDULE" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;TestDate : DATE" vertex="1">
+          <mxGeometry x="0" y="102" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-TEST_SCHEDULE-r4" parent="erL-TEST_SCHEDULE" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;StartTime : TIME" vertex="1">
+          <mxGeometry x="0" y="126" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-TEST_SCHEDULE-r5" parent="erL-TEST_SCHEDULE" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;EndTime : TIME" vertex="1">
+          <mxGeometry x="0" y="150" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-TEST_SCHEDULE-r6" parent="erL-TEST_SCHEDULE" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Location : NVARCHAR(255)" vertex="1">
+          <mxGeometry x="0" y="174" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-TEST_SCHEDULE-r7" parent="erL-TEST_SCHEDULE" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;TestDetail : NVARCHAR(MAX)" vertex="1">
+          <mxGeometry x="0" y="198" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-TEST_SCHEDULE-r8" parent="erL-TEST_SCHEDULE" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;RemindBefore : INT" vertex="1">
+          <mxGeometry x="0" y="222" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-TEST_SCHEDULE-r9" parent="erL-TEST_SCHEDULE" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Status : NVARCHAR(20)" vertex="1">
+          <mxGeometry x="0" y="246" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-TEST_SCHEDULE-r10" parent="erL-TEST_SCHEDULE" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;CreatedDate : DATETIME" vertex="1">
+          <mxGeometry x="0" y="270" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-PROJECT_DOCUMENT" parent="erL-1" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;fontSize=13;fillColor=#F5F5F5;" value="PROJECT_DOCUMENT" vertex="1">
+          <mxGeometry x="1250" y="940" width="270" height="198" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-PROJECT_DOCUMENT-r0" parent="erL-PROJECT_DOCUMENT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&lt;b&gt;PK&lt;/b&gt;&amp;nbsp;&amp;nbsp;&lt;u&gt;DocumentID&lt;/u&gt; : INT" vertex="1">
+          <mxGeometry x="0" y="30" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-PROJECT_DOCUMENT-r1" parent="erL-PROJECT_DOCUMENT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&lt;b&gt;FK&lt;/b&gt;&amp;nbsp;&amp;nbsp;ProjectID : INT" vertex="1">
+          <mxGeometry x="0" y="54" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-PROJECT_DOCUMENT-r2" parent="erL-PROJECT_DOCUMENT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;DocType : NVARCHAR(30)" vertex="1">
+          <mxGeometry x="0" y="78" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-PROJECT_DOCUMENT-r3" parent="erL-PROJECT_DOCUMENT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;FileName : NVARCHAR(255)" vertex="1">
+          <mxGeometry x="0" y="102" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-PROJECT_DOCUMENT-r4" parent="erL-PROJECT_DOCUMENT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;FilePath : NVARCHAR(255)" vertex="1">
+          <mxGeometry x="0" y="126" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-PROJECT_DOCUMENT-r5" parent="erL-PROJECT_DOCUMENT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;FileSize : INT" vertex="1">
+          <mxGeometry x="0" y="150" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-PROJECT_DOCUMENT-r6" parent="erL-PROJECT_DOCUMENT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;UploadedDate : DATETIME" vertex="1">
+          <mxGeometry x="0" y="174" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-REQUIREMENT_ATTACHMENT" parent="erL-1" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;fontSize=13;fillColor=#F5F5F5;" value="REQUIREMENT_ATTACHMENT" vertex="1">
+          <mxGeometry x="40" y="1150" width="270" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-REQUIREMENT_ATTACHMENT-r0" parent="erL-REQUIREMENT_ATTACHMENT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&lt;b&gt;PK, FK&lt;/b&gt;&amp;nbsp;&amp;nbsp;&lt;u&gt;RequirementID&lt;/u&gt; : INT" vertex="1">
+          <mxGeometry x="0" y="30" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-REQUIREMENT_ATTACHMENT-r1" parent="erL-REQUIREMENT_ATTACHMENT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&lt;b&gt;PK&lt;/b&gt;&amp;nbsp;&amp;nbsp;&lt;u&gt;AttachmentFile&lt;/u&gt; : NVARCHAR(255)" vertex="1">
+          <mxGeometry x="0" y="54" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="erL-a2" edge="1" parent="erL-1" source="erL-ENGINEER_SKILL" target="erL-EMPLOYEE" style="rounded=0;html=1;endArrow=ERmandOne;startArrow=ERmany;endFill=0;startFill=0;endSize=10;startSize=10;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.16;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="erL-a3" edge="1" parent="erL-1" source="erL-ENGINEER_SKILL" target="erL-SKILL" style="rounded=0;html=1;endArrow=ERmandOne;startArrow=ERmany;endFill=0;startFill=0;endSize=10;startSize=10;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.38;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="erL-a4" edge="1" parent="erL-1" source="erL-PROJECT_ASSIGNMENT" target="erL-EMPLOYEE" style="rounded=0;html=1;endArrow=ERmandOne;startArrow=ERmany;endFill=0;startFill=0;endSize=10;startSize=10;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.2;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="erL-a5" edge="1" parent="erL-1" source="erL-PROJECT_ASSIGNMENT" target="erL-PROJECT" style="rounded=0;html=1;endArrow=ERmandOne;startArrow=ERmany;endFill=0;startFill=0;endSize=10;startSize=10;exitX=0.2;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.055;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1304" y="240" />
+              <mxPoint x="1120" y="240" />
+              <mxPoint x="1120" y="500" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="erL-a6" edge="1" parent="erL-1" source="erL-PROJECT" target="erL-EMPLOYEE" style="rounded=0;html=1;endArrow=ERmandOne;startArrow=ERmany;endFill=0;startFill=0;endSize=10;startSize=10;exitX=0.3;exitY=0;exitDx=0;exitDy=0;entryX=0.3;entryY=1;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="erL-a7" edge="1" parent="erL-1" source="erL-PROJECT" target="erL-EMPLOYEE" style="rounded=0;html=1;endArrow=ERmandOne;startArrow=ERmany;endFill=0;startFill=0;endSize=10;startSize=10;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="erL-a8" edge="1" parent="erL-1" source="erL-PROJECT" target="erL-EMPLOYEE" style="rounded=0;html=1;endArrow=ERmandOne;startArrow=ERmany;endFill=0;startFill=0;endSize=10;startSize=10;exitX=0.7;exitY=0;exitDx=0;exitDy=0;entryX=0.7;entryY=1;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="erL-a9" edge="1" parent="erL-1" source="erL-PROJECT" target="erL-CUSTOMER" style="rounded=0;html=1;endArrow=ERmandOne;startArrow=ERmany;endFill=0;startFill=0;endSize=10;startSize=10;exitX=0;exitY=0.14;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="erL-a10" edge="1" parent="erL-1" source="erL-NOTIFICATION" target="erL-PROJECT" style="rounded=0;html=1;endArrow=ERmandOne;startArrow=ERmany;endFill=0;startFill=0;endSize=10;startSize=10;exitX=0;exitY=0.3;exitDx=0;exitDy=0;entryX=1;entryY=0.16;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="erL-a11" edge="1" parent="erL-1" source="erL-NOTIFICATION" target="erL-EMPLOYEE" style="rounded=0;html=1;endArrow=ERmandOne;startArrow=ERmany;endFill=0;startFill=0;endSize=10;startSize=10;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.81;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1385" y="300" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="erL-a12" edge="1" parent="erL-1" source="erL-PROJECT_DOCUMENT" target="erL-PROJECT" style="rounded=0;html=1;endArrow=ERmandOne;startArrow=ERmany;endFill=0;startFill=0;endSize=10;startSize=10;exitX=0.2;exitY=0;exitDx=0;exitDy=0;entryX=0.889;entryY=1;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1304" y="890" />
+              <mxPoint x="1040" y="890" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="erL-a13" edge="1" parent="erL-1" source="erL-TEST_SCHEDULE" target="erL-PROJECT" style="rounded=0;html=1;endArrow=ERmandOne;startArrow=ERmany;endFill=0;startFill=0;endSize=10;startSize=10;exitX=0.3;exitY=0;exitDx=0;exitDy=0;entryX=0.3;entryY=1;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="erL-a14" edge="1" parent="erL-1" source="erL-TEST_SCHEDULE" target="erL-EMPLOYEE" style="rounded=0;html=1;endArrow=ERmandOne;startArrow=ERmany;endFill=0;startFill=0;endSize=10;startSize=10;exitX=1;exitY=0.1;exitDx=0;exitDy=0;entryX=1;entryY=0.894;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1180" y="969" />
+              <mxPoint x="1180" y="320" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="erL-a15" edge="1" parent="erL-1" source="erL-CUSTOMER_REQUIREMENT" target="erL-PROJECT" style="rounded=0;html=1;endArrow=ERmandOne;startArrow=ERmany;endFill=0;startFill=0;endSize=10;startSize=10;exitX=0.8;exitY=0;exitDx=0;exitDy=0;entryX=0.15;entryY=1;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="636" y="900" />
+              <mxPoint x="840" y="900" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="erL-a16" edge="1" parent="erL-1" source="erL-CUSTOMER_REQUIREMENT" target="erL-EMPLOYEE" style="rounded=0;html=1;endArrow=ERmandOne;startArrow=ERmany;endFill=0;startFill=0;endSize=10;startSize=10;exitX=0;exitY=0.3;exitDx=0;exitDy=0;entryX=0;entryY=0.61;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="380" y="1043" />
+              <mxPoint x="380" y="250" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="erL-a17" edge="1" parent="erL-1" source="erL-CUSTOMER_REQUIREMENT" target="erL-EMPLOYEE" style="rounded=0;html=1;endArrow=ERmandOne;startArrow=ERmany;endFill=0;startFill=0;endSize=10;startSize=10;exitX=0;exitY=0.4;exitDx=0;exitDy=0;entryX=0;entryY=0.73;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="360" y="1077" />
+              <mxPoint x="360" y="280" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="erL-a18" edge="1" parent="erL-1" source="erL-REQUIREMENT_ATTACHMENT" target="erL-CUSTOMER_REQUIREMENT" style="rounded=0;html=1;endArrow=ERmandOne;startArrow=ERmany;endFill=0;startFill=0;endSize=10;startSize=10;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.73;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

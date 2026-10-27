@@ -1,0 +1,17 @@
+com.projectsa.ApplicationStartsTest Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
+com.projectsa.LifecycleAcceptanceTest Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+com.projectsa.auth.AuthApiTest Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
+com.projectsa.auth.DemoUsersTest Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+com.projectsa.common.FileCheckTest Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+com.projectsa.common.SqlCompatibilityTest Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+com.projectsa.common.SqlLifecycleH2Test Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+com.projectsa.notification.NotificationApiTest Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+com.projectsa.profile.ProfileApiTest Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+com.projectsa.uc01.ProjectApiTest Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+com.projectsa.uc02.SolutionApiTest Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+com.projectsa.uc03.CheckProjectApiTest Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+com.projectsa.uc04.AssignApiTest Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+com.projectsa.uc05.ScheduleApiTest Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+com.projectsa.uc06.RequirementApiTest Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+com.projectsa.uc07.ApproveApiTest Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+com.projectsa.uc08.CloseApiTest Tests run: 1, Failures: 0, Errors: 0, Skipped: 0

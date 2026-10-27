@@ -1,0 +1,7 @@
+"ScheduleID","ProjectID","CreatedByID","TestDate","StartTime","EndTime","Location","TestDetail","RemindBefore","Status","CreatedDate"
+"1","1","4","2026-10-27","00:01:00","00:02:00","ชั้น 11 อาคารนิฮอน เซเมอิ ซัปโปโร (11F Nihon Seimei Sapporo Bldg., 1-1 Nishi4 Kita3, Chuo-ku, Sapporo 060-0003 Japan)","Test all sys","60","Cancelled","2026-10-26 18:38:52.337"
+"2","1","4","2026-10-26","20:32:00","20:34:00","ชั้น 11 อาคารนิฮอน เซเมอิ ซัปโปโร (11F Nihon Seimei Sapporo Bldg., 1-1 Nishi4 Kita3, Chuo-ku, Sapporo 060-0003 Japan)","Test","60","Done","2026-10-26 20:32:36.558"
+"3","3","4","2026-11-10","10:00:00","12:00:00","อาคารสยามทาวเวอร์ ชั้น 12","ทดสอบ Roaming และความเร็วทุกจุด","1440","Scheduled","2026-10-27 19:20:42.062"
+"4","4","5","2026-11-17","22:00:00","23:59:00","ศูนย์ข้อมูล True IDC ห้อง B2","ทดสอบ Failover ของ Firewall HA","120","Scheduled","2026-10-27 19:20:42.162"
+"5","5","4","2026-11-03","09:00:00","11:30:00","สำนักงานใหญ่ Bangkok Retail Group ชั้น 3","ทดสอบ Policy และ VPN สาขา","60","Done","2026-10-27 19:20:42.244"
+"6","6","4","2026-11-06","13:00:00","16:00:00","TestCorp ห้อง Server ชั้น 2","ตรวจผลสแกนช่องโหว่หลัง Hardening","30","Scheduled","2026-10-27 19:20:42.305"

@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net">
+  <diagram name="Class Diagram – Entity" id="classEntityPage1">
+    <mxGraphModel dx="1600" dy="1000" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="cdE-0" />
+        <mxCell id="cdE-1" parent="cdE-0" />
+        <mxCell id="cdE-a1" parent="cdE-1" style="text;html=1;fontSize=24;fontStyle=1;align=left;verticalAlign=middle;" value="Class Diagram – Entity Classes" vertex="1">
+          <mxGeometry x="40" y="0" width="800" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="cdE-EMPLOYEE" parent="cdE-1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fontSize=12;spacingLeft=4;" value='&lt;p style="margin:0px;margin-top:4px;text-align:center;"&gt;&amp;lt;&amp;lt;Entity&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;EMPLOYEE&lt;/b&gt;&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;-EmployeeID: int&lt;br&gt;-FirstName: String&lt;br&gt;-LastName: String&lt;br&gt;-Email: String&lt;br&gt;-Phone: String&lt;br&gt;-Username: String&lt;br&gt;-Password: String&lt;br&gt;-ProfilePicture: String&lt;br&gt;-Role: String&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;+findById(id): EMPLOYEE&lt;br&gt;+findByRole(role): List&lt;br&gt;+register(): int&lt;br&gt;+updateProfile()&lt;/p&gt;' vertex="1">
+          <mxGeometry x="760" y="70" width="280" height="263.5" as="geometry" />
+        </mxCell>
+        <mxCell id="cdE-SALE" parent="cdE-1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fontSize=12;spacingLeft=4;" value='&lt;p style="margin:0px;margin-top:4px;text-align:center;"&gt;&amp;lt;&amp;lt;Entity&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;SALE&lt;/b&gt;&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;-role: String = &amp;#x27;Sale&amp;#x27;&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;+createProject(): PROJECT&lt;br&gt;+approveRequirement(reqId, decision)&lt;/p&gt;' vertex="1">
+          <mxGeometry x="140" y="500" width="300" height="108.5" as="geometry" />
+        </mxCell>
+        <mxCell id="cdE-PRESALE" parent="cdE-1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fontSize=12;spacingLeft=4;" value='&lt;p style="margin:0px;margin-top:4px;text-align:center;"&gt;&amp;lt;&amp;lt;Entity&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;PRESALE&lt;/b&gt;&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;-role: String = &amp;#x27;Presale&amp;#x27;&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;+storeSolution(projectId)&lt;/p&gt;' vertex="1">
+          <mxGeometry x="540" y="500" width="300" height="93" as="geometry" />
+        </mxCell>
+        <mxCell id="cdE-PM" parent="cdE-1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fontSize=12;spacingLeft=4;" value='&lt;p style="margin:0px;margin-top:4px;text-align:center;"&gt;&amp;lt;&amp;lt;Entity&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;PM&lt;/b&gt;&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;-role: String = &amp;#x27;PM&amp;#x27;&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;+assignEngineer(projectId, engineerIds)&lt;br&gt;+addRequirement(projectId)&lt;br&gt;+closeProject(projectId)&lt;/p&gt;' vertex="1">
+          <mxGeometry x="940" y="500" width="300" height="124" as="geometry" />
+        </mxCell>
+        <mxCell id="cdE-TECH_ENGINEER" parent="cdE-1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fontSize=12;spacingLeft=4;" value='&lt;p style="margin:0px;margin-top:4px;text-align:center;"&gt;&amp;lt;&amp;lt;Entity&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;TECH_ENGINEER&lt;/b&gt;&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;-role: String = &amp;#x27;TechEngineer&amp;#x27;&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;+setTestSchedule(projectId)&lt;br&gt;+skills(): List&amp;lt;SKILL&amp;gt;&lt;/p&gt;' vertex="1">
+          <mxGeometry x="1340" y="500" width="300" height="108.5" as="geometry" />
+        </mxCell>
+        <mxCell id="cdE-NOTIFICATION" parent="cdE-1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fontSize=12;spacingLeft=4;" value='&lt;p style="margin:0px;margin-top:4px;text-align:center;"&gt;&amp;lt;&amp;lt;Entity&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;NOTIFICATION&lt;/b&gt;&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;-NotificationID: int&lt;br&gt;-RecipientID: int&lt;br&gt;-ProjectID: int&lt;br&gt;-Type: String&lt;br&gt;-Message: String&lt;br&gt;-SendAt: DateTime&lt;br&gt;-IsRead: boolean&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;+send(recipientId, projectId, type, msg, sendAt)&lt;br&gt;+unread(recipientId): int&lt;br&gt;+markRead(id)&lt;/p&gt;' vertex="1">
+          <mxGeometry x="1300" y="70" width="330" height="217" as="geometry" />
+        </mxCell>
+        <mxCell id="cdE-ENGINEER_SKILL" parent="cdE-1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fontSize=12;spacingLeft=4;" value='&lt;p style="margin:0px;margin-top:4px;text-align:center;"&gt;&amp;lt;&amp;lt;Entity&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;ENGINEER_SKILL&lt;/b&gt;&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;-EmployeeID: int&lt;br&gt;-SkillID: int&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;+add(employeeId, skillId)&lt;br&gt;+replaceAll(employeeId, skillIds)&lt;/p&gt;' vertex="1">
+          <mxGeometry x="1780" y="500" width="280" height="124" as="geometry" />
+        </mxCell>
+        <mxCell id="cdE-SKILL" parent="cdE-1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fontSize=12;spacingLeft=4;" value='&lt;p style="margin:0px;margin-top:4px;text-align:center;"&gt;&amp;lt;&amp;lt;Entity&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;SKILL&lt;/b&gt;&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;-SkillID: int&lt;br&gt;-SkillName: String&lt;br&gt;-Description: String&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;+findAll(): List&lt;br&gt;+findByName(name): SKILL&lt;br&gt;+create(name): int&lt;/p&gt;' vertex="1">
+          <mxGeometry x="1780" y="760" width="280" height="155" as="geometry" />
+        </mxCell>
+        <mxCell id="cdE-CUSTOMER" parent="cdE-1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fontSize=12;spacingLeft=4;" value='&lt;p style="margin:0px;margin-top:4px;text-align:center;"&gt;&amp;lt;&amp;lt;Entity&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;CUSTOMER&lt;/b&gt;&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;-CustomerID: int&lt;br&gt;-CustomerName: String&lt;br&gt;-CustomerEmail: String&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;+findAll(): List&lt;br&gt;+create(): int&lt;/p&gt;' vertex="1">
+          <mxGeometry x="60" y="900" width="260" height="139.5" as="geometry" />
+        </mxCell>
+        <mxCell id="cdE-PROJECT" parent="cdE-1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fontSize=12;spacingLeft=4;" value='&lt;p style="margin:0px;margin-top:4px;text-align:center;"&gt;&amp;lt;&amp;lt;Entity&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;PROJECT&lt;/b&gt;&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;-ProjectID: int&lt;br&gt;-ProjectName: String&lt;br&gt;-ProjectSite: String&lt;br&gt;-Status: String&lt;br&gt;-CreatedDate: DateTime&lt;br&gt;-StartDate: Date&lt;br&gt;-EndDate: Date&lt;br&gt;-Objective: String&lt;br&gt;-EstimatedBudget: decimal&lt;br&gt;-SolutionDetail: String&lt;br&gt;-CustomerID: int&lt;br&gt;-SaleID: int&lt;br&gt;-PresaleID: int&lt;br&gt;-PMID: int&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;+create(): int&lt;br&gt;+updateSolution()&lt;br&gt;+updateStatus(status)&lt;br&gt;+setPM(pmId)&lt;br&gt;+findByRole(role, loginId): List&lt;br&gt;+canAccess(loginId): boolean&lt;/p&gt;' vertex="1">
+          <mxGeometry x="560" y="900" width="300" height="372" as="geometry" />
+        </mxCell>
+        <mxCell id="cdE-PROJECT_ASSIGNMENT" parent="cdE-1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fontSize=12;spacingLeft=4;" value='&lt;p style="margin:0px;margin-top:4px;text-align:center;"&gt;&amp;lt;&amp;lt;Entity&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;PROJECT_ASSIGNMENT&lt;/b&gt;&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;-ProjectID: int&lt;br&gt;-EngineerID: int&lt;br&gt;-AssignedDate: DateTime&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;+assign(projectId, engineerId)&lt;br&gt;+findTeam(projectId): List&lt;/p&gt;' vertex="1">
+          <mxGeometry x="1300" y="900" width="300" height="139.5" as="geometry" />
+        </mxCell>
+        <mxCell id="cdE-PROJECT_DOCUMENT" parent="cdE-1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fontSize=12;spacingLeft=4;" value='&lt;p style="margin:0px;margin-top:4px;text-align:center;"&gt;&amp;lt;&amp;lt;Entity&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;PROJECT_DOCUMENT&lt;/b&gt;&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;-DocumentID: int&lt;br&gt;-ProjectID: int&lt;br&gt;-DocType: String&lt;br&gt;-FileName: String&lt;br&gt;-FilePath: String&lt;br&gt;-FileSize: int&lt;br&gt;-UploadedDate: DateTime&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;+add(projectId, docType, file)&lt;br&gt;+findByProject(id): List&lt;/p&gt;' vertex="1">
+          <mxGeometry x="60" y="1420" width="300" height="201.5" as="geometry" />
+        </mxCell>
+        <mxCell id="cdE-TEST_SCHEDULE" parent="cdE-1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fontSize=12;spacingLeft=4;" value='&lt;p style="margin:0px;margin-top:4px;text-align:center;"&gt;&amp;lt;&amp;lt;Entity&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;TEST_SCHEDULE&lt;/b&gt;&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;-ScheduleID: int&lt;br&gt;-ProjectID: int&lt;br&gt;-CreatedByID: int&lt;br&gt;-TestDate: Date&lt;br&gt;-StartTime: Time&lt;br&gt;-EndTime: Time&lt;br&gt;-Location: String&lt;br&gt;-TestDetail: String&lt;br&gt;-RemindBefore: int&lt;br&gt;-Status: String&lt;br&gt;-CreatedDate: DateTime&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;+create(): int&lt;br&gt;+cancelActive(projectId)&lt;br&gt;+markDone(projectId)&lt;br&gt;+latest(projectId)&lt;/p&gt;' vertex="1">
+          <mxGeometry x="560" y="1420" width="300" height="294.5" as="geometry" />
+        </mxCell>
+        <mxCell id="cdE-CUSTOMER_REQUIREMENT" parent="cdE-1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fontSize=12;spacingLeft=4;" value='&lt;p style="margin:0px;margin-top:4px;text-align:center;"&gt;&amp;lt;&amp;lt;Entity&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;CUSTOMER_REQUIREMENT&lt;/b&gt;&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;-RequirementID: int&lt;br&gt;-ProjectID: int&lt;br&gt;-Title: String&lt;br&gt;-Detail: String&lt;br&gt;-Priority: String&lt;br&gt;-DueDate: Date&lt;br&gt;-RelatedFeature: String&lt;br&gt;-Status: String&lt;br&gt;-CreatedByID: int&lt;br&gt;-CreatedDate: DateTime&lt;br&gt;-ReviewedByID: int&lt;br&gt;-ReviewedDate: DateTime&lt;br&gt;-RejectReason: String&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;+create(): int&lt;br&gt;+decide(status, reviewer, reason)&lt;br&gt;+countPending(projectId): int&lt;br&gt;+countApprovedThisRound(projectId): int&lt;/p&gt;' vertex="1">
+          <mxGeometry x="1060" y="1420" width="320" height="325.5" as="geometry" />
+        </mxCell>
+        <mxCell id="cdE-REQUIREMENT_ATTACHMENT" parent="cdE-1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;fontSize=12;spacingLeft=4;" value='&lt;p style="margin:0px;margin-top:4px;text-align:center;"&gt;&amp;lt;&amp;lt;Entity&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;REQUIREMENT_ATTACHMENT&lt;/b&gt;&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;-RequirementID: int&lt;br&gt;-AttachmentFile: String&lt;/p&gt;&lt;hr size="1" style="border-style:solid;"&gt;&lt;p style="margin:0px;margin-left:4px;"&gt;+add(requirementId, file)&lt;br&gt;+findByRequirement(id): List&lt;/p&gt;' vertex="1">
+          <mxGeometry x="1560" y="1420" width="320" height="124" as="geometry" />
+        </mxCell>
+        <mxCell id="cdE-a2" edge="1" parent="cdE-1" source="cdE-SALE" target="cdE-EMPLOYEE" style="endArrow=block;endFill=0;endSize=14;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="290" y="450" />
+              <mxPoint x="900" y="450" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cdE-a3" edge="1" parent="cdE-1" source="cdE-PRESALE" target="cdE-EMPLOYEE" style="endArrow=block;endFill=0;endSize=14;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="690" y="450" />
+              <mxPoint x="900" y="450" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cdE-a4" edge="1" parent="cdE-1" source="cdE-PM" target="cdE-EMPLOYEE" style="endArrow=block;endFill=0;endSize=14;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1090" y="450" />
+              <mxPoint x="900" y="450" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cdE-a5" edge="1" parent="cdE-1" source="cdE-TECH_ENGINEER" target="cdE-EMPLOYEE" style="endArrow=block;endFill=0;endSize=14;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1490" y="450" />
+              <mxPoint x="900" y="450" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cdE-a6" parent="cdE-1" style="text;html=1;fontSize=12;fontStyle=2;" value="{disjoint, complete}" vertex="1">
+          <mxGeometry x="910" y="420" width="160" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="cdE-a7" edge="1" parent="cdE-1" source="cdE-SALE" target="cdE-PROJECT" style="endArrow=none;html=1;rounded=0;fontSize=12;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.1;entryDx=0;entryDy=0;" value="creates">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cdE-a7-s" connectable="0" parent="cdE-a7" style="edgeLabel;html=1;fontSize=12;" value="1" vertex="1">
+          <mxGeometry x="-0.85" y="-12" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+        </mxCell>
+        <mxCell id="cdE-a7-t" connectable="0" parent="cdE-a7" style="edgeLabel;html=1;fontSize=12;" value="0..*" vertex="1">
+          <mxGeometry x="0.85" y="-12" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+        </mxCell>
+        <mxCell id="cdE-a8" edge="1" parent="cdE-1" source="cdE-PRESALE" target="cdE-PROJECT" style="endArrow=none;html=1;rounded=0;fontSize=12;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.3;entryY=0;entryDx=0;entryDy=0;" value="designs">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cdE-a8-s" connectable="0" parent="cdE-a8" style="edgeLabel;html=1;fontSize=12;" value="1" vertex="1">
+          <mxGeometry x="-0.85" y="-12" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+        </mxCell>
+        <mxCell id="cdE-a8-t" connectable="0" parent="cdE-a8" style="edgeLabel;html=1;fontSize=12;" value="0..*" vertex="1">
+          <mxGeometry x="0.85" y="-12" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+        </mxCell>
+        <mxCell id="cdE-a9" edge="1" parent="cdE-1" source="cdE-PM" target="cdE-PROJECT" style="endArrow=none;html=1;rounded=0;fontSize=12;exitX=0.3;exitY=1;exitDx=0;exitDy=0;entryX=0.8;entryY=0;entryDx=0;entryDy=0;" value="manages">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cdE-a9-s" connectable="0" parent="cdE-a9" style="edgeLabel;html=1;fontSize=12;" value="0..1" vertex="1">
+          <mxGeometry x="-0.85" y="-12" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+        </mxCell>
+        <mxCell id="cdE-a9-t" connectable="0" parent="cdE-a9" style="edgeLabel;html=1;fontSize=12;" value="0..*" vertex="1">
+          <mxGeometry x="0.85" y="-12" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+        </mxCell>
+        <mxCell id="cdE-a10" edge="1" parent="cdE-1" source="cdE-TECH_ENGINEER" target="cdE-PROJECT_ASSIGNMENT" style="endArrow=none;html=1;rounded=0;fontSize=12;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cdE-a10-s" connectable="0" parent="cdE-a10" style="edgeLabel;html=1;fontSize=12;" value="1" vertex="1">
+          <mxGeometry x="-0.85" y="-12" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+        </mxCell>
+        <mxCell id="cdE-a10-t" connectable="0" parent="cdE-a10" style="edgeLabel;html=1;fontSize=12;" value="0..*" vertex="1">
+          <mxGeometry x="0.85" y="-12" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+        </mxCell>
+        <mxCell id="cdE-a11" edge="1" parent="cdE-1" source="cdE-PROJECT_ASSIGNMENT" target="cdE-PROJECT" style="endArrow=none;html=1;rounded=0;fontSize=12;exitX=0;exitY=0.3;exitDx=0;exitDy=0;entryX=1;entryY=0.12;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cdE-a11-s" connectable="0" parent="cdE-a11" style="edgeLabel;html=1;fontSize=12;" value="0..*" vertex="1">
+          <mxGeometry x="-0.85" y="-12" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+        </mxCell>
+        <mxCell id="cdE-a11-t" connectable="0" parent="cdE-a11" style="edgeLabel;html=1;fontSize=12;" value="1" vertex="1">
+          <mxGeometry x="0.85" y="-12" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+        </mxCell>
+        <mxCell id="cdE-a12" edge="1" parent="cdE-1" source="cdE-TECH_ENGINEER" target="cdE-ENGINEER_SKILL" style="endArrow=none;html=1;rounded=0;fontSize=12;exitX=1;exitY=0.4;exitDx=0;exitDy=0;entryX=0;entryY=0.4;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cdE-a12-s" connectable="0" parent="cdE-a12" style="edgeLabel;html=1;fontSize=12;" value="1" vertex="1">
+          <mxGeometry x="-0.85" y="-12" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+        </mxCell>
+        <mxCell id="cdE-a12-t" connectable="0" parent="cdE-a12" style="edgeLabel;html=1;fontSize=12;" value="1..*" vertex="1">
+          <mxGeometry x="0.85" y="-12" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+        </mxCell>
+        <mxCell id="cdE-a13" edge="1" parent="cdE-1" source="cdE-ENGINEER_SKILL" target="cdE-SKILL" style="endArrow=none;html=1;rounded=0;fontSize=12;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cdE-a13-s" connectable="0" parent="cdE-a13" style="edgeLabel;html=1;fontSize=12;" value="0..*" vertex="1">
+          <mxGeometry x="-0.85" y="-12" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+        </mxCell>
+        <mxCell id="cdE-a13-t" connectable="0" parent="cdE-a13" style="edgeLabel;html=1;fontSize=12;" value="1" vertex="1">
+          <mxGeometry x="0.85" y="-12" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+        </mxCell>
+        <mxCell id="cdE-a14" edge="1" parent="cdE-1" source="cdE-CUSTOMER" target="cdE-PROJECT" style="endArrow=none;html=1;rounded=0;fontSize=12;exitX=1;exitY=0.3;exitDx=0;exitDy=0;entryX=0;entryY=0.3;entryDx=0;entryDy=0;" value="owns">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cdE-a14-s" connectable="0" parent="cdE-a14" style="edgeLabel;html=1;fontSize=12;" value="1" vertex="1">
+          <mxGeometry x="-0.85" y="-12" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+        </mxCell>
+        <mxCell id="cdE-a14-t" connectable="0" parent="cdE-a14" style="edgeLabel;html=1;fontSize=12;" value="1..*" vertex="1">
+          <mxGeometry x="0.85" y="-12" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+        </mxCell>
+        <mxCell id="cdE-a15" edge="1" parent="cdE-1" source="cdE-PROJECT" target="cdE-PROJECT_DOCUMENT" style="startArrow=diamondThin;startFill=1;startSize=16;endArrow=none;html=1;rounded=0;fontSize=12;exitX=0.15;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cdE-a15-s" connectable="0" parent="cdE-a15" style="edgeLabel;html=1;fontSize=12;" value="1" vertex="1">
+          <mxGeometry x="-0.85" y="-12" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+        </mxCell>
+        <mxCell id="cdE-a15-t" connectable="0" parent="cdE-a15" style="edgeLabel;html=1;fontSize=12;" value="0..*" vertex="1">
+          <mxGeometry x="0.85" y="-12" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+        </mxCell>
+        <mxCell id="cdE-a16" edge="1" parent="cdE-1" source="cdE-PROJECT" target="cdE-TEST_SCHEDULE" style="startArrow=diamondThin;startFill=0;startSize=16;endArrow=none;html=1;rounded=0;fontSize=12;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cdE-a16-s" connectable="0" parent="cdE-a16" style="edgeLabel;html=1;fontSize=12;" value="1" vertex="1">
+          <mxGeometry x="-0.85" y="-12" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+        </mxCell>
+        <mxCell id="cdE-a16-t" connectable="0" parent="cdE-a16" style="edgeLabel;html=1;fontSize=12;" value="0..*" vertex="1">
+          <mxGeometry x="0.85" y="-12" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+        </mxCell>
+        <mxCell id="cdE-a17" edge="1" parent="cdE-1" source="cdE-PROJECT" target="cdE-CUSTOMER_REQUIREMENT" style="startArrow=diamondThin;startFill=0;startSize=16;endArrow=none;html=1;rounded=0;fontSize=12;exitX=0.85;exitY=1;exitDx=0;exitDy=0;entryX=0.3;entryY=0;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cdE-a17-s" connectable="0" parent="cdE-a17" style="edgeLabel;html=1;fontSize=12;" value="1" vertex="1">
+          <mxGeometry x="-0.85" y="-12" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+        </mxCell>
+        <mxCell id="cdE-a17-t" connectable="0" parent="cdE-a17" style="edgeLabel;html=1;fontSize=12;" value="0..*" vertex="1">
+          <mxGeometry x="0.85" y="-12" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+        </mxCell>
+        <mxCell id="cdE-a18" edge="1" parent="cdE-1" source="cdE-CUSTOMER_REQUIREMENT" target="cdE-REQUIREMENT_ATTACHMENT" style="startArrow=diamondThin;startFill=1;startSize=16;endArrow=none;html=1;rounded=0;fontSize=12;exitX=1;exitY=0.3;exitDx=0;exitDy=0;entryX=0;entryY=0.3;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cdE-a18-s" connectable="0" parent="cdE-a18" style="edgeLabel;html=1;fontSize=12;" value="1" vertex="1">
+          <mxGeometry x="-0.85" y="-12" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+        </mxCell>
+        <mxCell id="cdE-a18-t" connectable="0" parent="cdE-a18" style="edgeLabel;html=1;fontSize=12;" value="0..*" vertex="1">
+          <mxGeometry x="0.85" y="-12" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+        </mxCell>
+        <mxCell id="cdE-a19" edge="1" parent="cdE-1" source="cdE-PROJECT" target="cdE-NOTIFICATION" style="endArrow=none;html=1;rounded=0;fontSize=12;exitX=1;exitY=0.05;exitDx=0;exitDy=0;entryX=0;entryY=0.85;entryDx=0;entryDy=0;" value="triggers">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1285" y="918" />
+              <mxPoint x="1285" y="250" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cdE-a19-s" connectable="0" parent="cdE-a19" style="edgeLabel;html=1;fontSize=12;" value="1" vertex="1">
+          <mxGeometry x="-0.85" y="-12" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+        </mxCell>
+        <mxCell id="cdE-a19-t" connectable="0" parent="cdE-a19" style="edgeLabel;html=1;fontSize=12;" value="0..*" vertex="1">
+          <mxGeometry x="0.85" y="-12" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+        </mxCell>
+        <mxCell id="cdE-a20" edge="1" parent="cdE-1" source="cdE-EMPLOYEE" target="cdE-NOTIFICATION" style="endArrow=none;html=1;rounded=0;fontSize=12;exitX=1;exitY=0.3;exitDx=0;exitDy=0;entryX=0;entryY=0.3;entryDx=0;entryDy=0;" value="receives">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cdE-a20-s" connectable="0" parent="cdE-a20" style="edgeLabel;html=1;fontSize=12;" value="1" vertex="1">
+          <mxGeometry x="-0.85" y="-12" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+        </mxCell>
+        <mxCell id="cdE-a20-t" connectable="0" parent="cdE-a20" style="edgeLabel;html=1;fontSize=12;" value="0..*" vertex="1">
+          <mxGeometry x="0.85" y="-12" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+        </mxCell>
+        <mxCell id="cdE-a21" edge="1" parent="cdE-1" source="cdE-TECH_ENGINEER" target="cdE-TEST_SCHEDULE" style="endArrow=none;html=1;rounded=0;fontSize=12;exitX=0;exitY=0.9;exitDx=0;exitDy=0;entryX=1;entryY=0.08;entryDx=0;entryDy=0;" value="sets">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1255" y="590" />
+              <mxPoint x="1255" y="1300" />
+              <mxPoint x="900" y="1300" />
+              <mxPoint x="900" y="1446" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cdE-a21-s" connectable="0" parent="cdE-a21" style="edgeLabel;html=1;fontSize=12;" value="1" vertex="1">
+          <mxGeometry x="-0.85" y="-12" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+        </mxCell>
+        <mxCell id="cdE-a21-t" connectable="0" parent="cdE-a21" style="edgeLabel;html=1;fontSize=12;" value="0..*" vertex="1">
+          <mxGeometry x="0.85" y="-12" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+        </mxCell>
+        <mxCell id="cdE-a22" edge="1" parent="cdE-1" source="cdE-PM" target="cdE-CUSTOMER_REQUIREMENT" style="endArrow=none;html=1;rounded=0;fontSize=12;exitX=0.7;exitY=1;exitDx=0;exitDy=0;entryX=0.6;entryY=0;entryDx=0;entryDy=0;" value="records">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1050" y="870" />
+              <mxPoint x="1250" y="870" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cdE-a22-s" connectable="0" parent="cdE-a22" style="edgeLabel;html=1;fontSize=12;" value="1" vertex="1">
+          <mxGeometry x="-0.85" y="-12" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+        </mxCell>
+        <mxCell id="cdE-a22-t" connectable="0" parent="cdE-a22" style="edgeLabel;html=1;fontSize=12;" value="0..*" vertex="1">
+          <mxGeometry x="0.85" y="-12" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+        </mxCell>
+        <mxCell id="cdE-a23" edge="1" parent="cdE-1" source="cdE-SALE" target="cdE-CUSTOMER_REQUIREMENT" style="endArrow=none;html=1;rounded=0;fontSize=12;exitX=0.1;exitY=1;exitDx=0;exitDy=0;entryX=0.1;entryY=0;entryDx=0;entryDy=0;" value="approves">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="170" y="860" />
+              <mxPoint x="30" y="860" />
+              <mxPoint x="30" y="1380" />
+              <mxPoint x="1092" y="1380" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cdE-a23-s" connectable="0" parent="cdE-a23" style="edgeLabel;html=1;fontSize=12;" value="0..1" vertex="1">
+          <mxGeometry x="-0.85" y="-12" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+        </mxCell>
+        <mxCell id="cdE-a23-t" connectable="0" parent="cdE-a23" style="edgeLabel;html=1;fontSize=12;" value="0..*" vertex="1">
+          <mxGeometry x="0.85" y="-12" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

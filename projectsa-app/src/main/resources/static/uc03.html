@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ดูรายละเอียด Project – ProjectSA</title>
+  <link rel="stylesheet" href="css/app.css?v=2">
+</head>
+<body>
+<main>
+  <div class="card">
+    <h1>Check Project Details</h1>
+    <p class="muted">ดูรายละเอียดล่าสุดของ Project ที่คุณเกี่ยวข้อง และดาวน์โหลดเอกสาร (อ่านอย่างเดียว)</p>
+  </div>
+
+  <!-- <<Boundary>> ProjectList Form -->
+  <div class="card" id="listCard">
+    <form id="search" style="display:flex;gap:10px;margin-bottom:12px">
+      <input name="keyword" placeholder="ค้นหาด้วย Project ID หรือชื่อ Project">
+      <button>ค้นหา</button>
+    </form>
+    <div id="projectList"></div>
+  </div>
+
+  <!-- <<Boundary>> ProjectDetail Page -->
+  <div id="projectDetailPage" class="hidden">
+    <div class="card"><h2 id="title"></h2><dl class="info" id="basic"></dl></div>
+    <div class="card"><h2>ผู้รับผิดชอบ</h2><dl class="info" id="people"></dl></div>
+    <div class="card"><h2>Solution</h2><div id="solution"></div></div>
+    <div class="card"><h2>นัดหมายทดสอบล่าสุด</h2><div id="test"></div></div>
+    <div class="card"><h2>New Requirement</h2><div id="requirements"></div></div>
+    <div class="card"><h2>เอกสาร</h2><div id="documents"></div></div>
+  </div>
+</main>
+<script src="js/app.js?v=2"></script>
+<script src="js/bell.js?v=2"></script>
+<script src="js/uc03.js?v=2"></script>
+</body>
+</html>

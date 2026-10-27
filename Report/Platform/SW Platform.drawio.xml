@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net">
+  <diagram name="SW Development Platform" id="platformPage1">
+    <mxGraphModel dx="1600" dy="1000" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="pf-0" />
+        <mxCell id="pf-1" parent="pf-0" />
+        <mxCell id="pf-a1" parent="pf-1" style="text;html=1;fontSize=24;fontStyle=1;align=left;verticalAlign=middle;" value="SW Development Platform – Project Management Program" vertex="1">
+          <mxGeometry x="40" y="0" width="1100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="pf-a2" parent="pf-1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=15;align=center;verticalAlign=middle;strokeColor=#333333;fillColor=#DAE8FC;" value="&lt;b&gt;Client&lt;/b&gt;" vertex="1">
+          <mxGeometry x="40" y="70" width="200" height="106" as="geometry" />
+        </mxCell>
+        <mxCell id="pf-a3" parent="pf-1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=15;align=center;verticalAlign=middle;strokeColor=#333333;fillColor=#DAE8FC;" value="" vertex="1">
+          <mxGeometry x="240" y="70" width="900" height="106" as="geometry" />
+        </mxCell>
+        <mxCell id="pf-a4" parent="pf-1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#666666;fillColor=#FFFFFF;" value="Web Browser (Google Chrome / Microsoft Edge)" vertex="1">
+          <mxGeometry x="260" y="84" width="348.4" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="pf-a5" parent="pf-1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#666666;fillColor=#FFFFFF;" value="HTML5 + CSS3" vertex="1">
+          <mxGeometry x="620.4" y="84" width="105.2" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="pf-a6" parent="pf-1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#666666;fillColor=#FFFFFF;" value="Vanilla JavaScript (ไม่มี front-end build)" vertex="1">
+          <mxGeometry x="737.6" y="84" width="333.2" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="pf-a7" parent="pf-1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#666666;fillColor=#FFFFFF;" value="&amp;lt;&amp;lt;Boundary&amp;gt;&amp;gt; หน้าจอ static/*.html" vertex="1">
+          <mxGeometry x="260" y="128" width="264.8" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="pf-a8" parent="pf-1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#666666;fillColor=#FFFFFF;" value="&amp;lt;&amp;lt;Controller&amp;gt;&amp;gt; js/ucNN.js, app.js, bell.js" vertex="1">
+          <mxGeometry x="536.8" y="128" width="333.2" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="pf-a9" parent="pf-1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=15;align=center;verticalAlign=middle;strokeColor=#333333;fillColor=#D5E8D4;" value="&lt;b&gt;Application&lt;/b&gt;" vertex="1">
+          <mxGeometry x="40" y="186" width="200" height="106" as="geometry" />
+        </mxCell>
+        <mxCell id="pf-a10" parent="pf-1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=15;align=center;verticalAlign=middle;strokeColor=#333333;fillColor=#D5E8D4;" value="" vertex="1">
+          <mxGeometry x="240" y="186" width="900" height="106" as="geometry" />
+        </mxCell>
+        <mxCell id="pf-a11" parent="pf-1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#666666;fillColor=#FFFFFF;" value="Spring Boot 3.5.16 (embedded Tomcat, port 8080)" vertex="1">
+          <mxGeometry x="260" y="200" width="371.2" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="pf-a12" parent="pf-1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#666666;fillColor=#FFFFFF;" value="Spring Web – REST &amp;lt;&amp;lt;API&amp;gt;&amp;gt; /api/…" vertex="1">
+          <mxGeometry x="643.2" y="200" width="257.2" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="pf-a13" parent="pf-1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#666666;fillColor=#FFFFFF;" value="Spring Validation – DetectBlank" vertex="1">
+          <mxGeometry x="260" y="244" width="249.6" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="pf-a14" parent="pf-1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#666666;fillColor=#FFFFFF;" value="HttpSession + BCrypt (spring-security-crypto)" vertex="1">
+          <mxGeometry x="521.6" y="244" width="356" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="pf-a15" parent="pf-1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=15;align=center;verticalAlign=middle;strokeColor=#333333;fillColor=#FFF2CC;" value="&lt;b&gt;Data Access&lt;/b&gt;" vertex="1">
+          <mxGeometry x="40" y="302" width="200" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="pf-a16" parent="pf-1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=15;align=center;verticalAlign=middle;strokeColor=#333333;fillColor=#FFF2CC;" value="" vertex="1">
+          <mxGeometry x="240" y="302" width="900" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="pf-a17" parent="pf-1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#666666;fillColor=#FFFFFF;" value="Spring JDBC – NamedParameterJdbcTemplate" vertex="1">
+          <mxGeometry x="260" y="316" width="318" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="pf-a18" parent="pf-1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#666666;fillColor=#FFFFFF;" value="QueryCatalog + Sql (รัน Query N.M ตาม id)" vertex="1">
+          <mxGeometry x="590" y="316" width="325.6" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="pf-a19" parent="pf-1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#666666;fillColor=#FFFFFF;" value="ไม่มี JPA / Hibernate" vertex="1">
+          <mxGeometry x="927.6" y="316" width="173.6" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="pf-a20" parent="pf-1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=15;align=center;verticalAlign=middle;strokeColor=#333333;fillColor=#F8CECC;" value="&lt;b&gt;Database / Storage&lt;/b&gt;" vertex="1">
+          <mxGeometry x="40" y="374" width="200" height="106" as="geometry" />
+        </mxCell>
+        <mxCell id="pf-a21" parent="pf-1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=15;align=center;verticalAlign=middle;strokeColor=#333333;fillColor=#F8CECC;" value="" vertex="1">
+          <mxGeometry x="240" y="374" width="900" height="106" as="geometry" />
+        </mxCell>
+        <mxCell id="pf-a22" parent="pf-1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#666666;fillColor=#FFFFFF;" value="H2 Database (file mode, MODE=MSSQLServer)" vertex="1">
+          <mxGeometry x="260" y="388" width="325.6" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="pf-a23" parent="pf-1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#666666;fillColor=#FFFFFF;" value="Schema + Query: ProjectSA_SQL.sql (T-SQL)" vertex="1">
+          <mxGeometry x="597.6" y="388" width="325.6" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="pf-a24" parent="pf-1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#666666;fillColor=#FFFFFF;" value="ไฟล์แนบ: ./uploads (PDF / JPG / PNG)" vertex="1">
+          <mxGeometry x="260" y="432" width="287.6" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="pf-a25" parent="pf-1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=15;align=center;verticalAlign=middle;strokeColor=#333333;fillColor=#E1D5E7;" value="&lt;b&gt;Runtime / OS&lt;/b&gt;" vertex="1">
+          <mxGeometry x="40" y="490" width="200" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="pf-a26" parent="pf-1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=15;align=center;verticalAlign=middle;strokeColor=#333333;fillColor=#E1D5E7;" value="" vertex="1">
+          <mxGeometry x="240" y="490" width="900" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="pf-a27" parent="pf-1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#666666;fillColor=#FFFFFF;" value="Java 21 (JDK 21.0.7)" vertex="1">
+          <mxGeometry x="260" y="504" width="166" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="pf-a28" parent="pf-1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#666666;fillColor=#FFFFFF;" value="Maven 3.9.10 + Maven Wrapper (mvnw)" vertex="1">
+          <mxGeometry x="438" y="504" width="280" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="pf-a29" parent="pf-1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#666666;fillColor=#FFFFFF;" value="Windows 11" vertex="1">
+          <mxGeometry x="730" y="504" width="90" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="pf-a30" parent="pf-1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=15;align=center;verticalAlign=middle;strokeColor=#333333;fillColor=#F5F5F5;" value="&lt;b&gt;เครื่องมือพัฒนา / ทดสอบ&lt;/b&gt;" vertex="1">
+          <mxGeometry x="1180" y="70" width="330" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="pf-a31" parent="pf-1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#666666;fillColor=#FFFFFF;" value="Visual Studio Code / IntelliJ IDEA" vertex="1">
+          <mxGeometry x="1180" y="130" width="330" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="pf-a32" parent="pf-1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#666666;fillColor=#FFFFFF;" value="draw.io (BP, UML, ER Diagram)" vertex="1">
+          <mxGeometry x="1180" y="180" width="330" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="pf-a33" parent="pf-1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#666666;fillColor=#FFFFFF;" value="JUnit 5 + Spring Boot Test (MockMvc)" vertex="1">
+          <mxGeometry x="1180" y="230" width="330" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="pf-a34" parent="pf-1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#666666;fillColor=#FFFFFF;" value="H2 Console (/h2-console)" vertex="1">
+          <mxGeometry x="1180" y="280" width="330" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="pf-a35" parent="pf-1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#666666;fillColor=#FFFFFF;" value="Python 3 – tools/check_docs.py, tools/test_sql.py" vertex="1">
+          <mxGeometry x="1180" y="330" width="330" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="pf-a36" parent="pf-1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#666666;fillColor=#FFFFFF;" value="Claude Code (ผู้ช่วยเขียนโค้ด)" vertex="1">
+          <mxGeometry x="1180" y="380" width="330" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

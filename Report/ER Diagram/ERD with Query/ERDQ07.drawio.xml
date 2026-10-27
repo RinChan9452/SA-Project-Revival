@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net">
+  <diagram name="ERD with Query UC07" id="erdQueryUC07">
+    <mxGraphModel dx="1600" dy="1000" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="eq7-0" />
+        <mxCell id="eq7-1" parent="eq7-0" />
+        <mxCell id="eq7-a1" parent="eq7-1" style="text;html=1;fontSize=24;fontStyle=1;align=left;verticalAlign=middle;" value="UC07 Approve New Project Requirement – ERD with Query" vertex="1">
+          <mxGeometry x="40" y="10" width="1200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="eq7-EMPLOYEE" parent="eq7-1" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;fontSize=13;fillColor=#F5F5F5;" value="EMPLOYEE" vertex="1">
+          <mxGeometry x="880" y="80" width="300" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="eq7-EMPLOYEE-r0" parent="eq7-EMPLOYEE" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&lt;b&gt;PK&lt;/b&gt;&amp;nbsp;&amp;nbsp;&lt;u&gt;EmployeeID&lt;/u&gt;" vertex="1">
+          <mxGeometry x="0" y="30" width="300" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="eq7-EMPLOYEE-r1" parent="eq7-EMPLOYEE" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;fillColor=#FFF2CC;whiteSpace=wrap;" value="&lt;b&gt;Q3.1&lt;/b&gt; SELECT" vertex="1">
+          <mxGeometry x="0" y="54" width="300" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="eq7-CUSTOMER" parent="eq7-1" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;fontSize=13;fillColor=#F5F5F5;" value="CUSTOMER" vertex="1">
+          <mxGeometry x="460" y="560" width="300" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="eq7-CUSTOMER-r0" parent="eq7-CUSTOMER" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&lt;b&gt;PK&lt;/b&gt;&amp;nbsp;&amp;nbsp;&lt;u&gt;CustomerID&lt;/u&gt;" vertex="1">
+          <mxGeometry x="0" y="30" width="300" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="eq7-CUSTOMER-r1" parent="eq7-CUSTOMER" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;fillColor=#FFF2CC;whiteSpace=wrap;" value="&lt;b&gt;Q1.1&lt;/b&gt; SELECT" vertex="1">
+          <mxGeometry x="0" y="54" width="300" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="eq7-PROJECT" parent="eq7-1" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;fontSize=13;fillColor=#F5F5F5;" value="PROJECT" vertex="1">
+          <mxGeometry x="880" y="560" width="300" height="246" as="geometry" />
+        </mxCell>
+        <mxCell id="eq7-PROJECT-r0" parent="eq7-PROJECT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&lt;b&gt;PK&lt;/b&gt;&amp;nbsp;&amp;nbsp;&lt;u&gt;ProjectID&lt;/u&gt;" vertex="1">
+          <mxGeometry x="0" y="30" width="300" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="eq7-PROJECT-r1" parent="eq7-PROJECT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&lt;b&gt;FK&lt;/b&gt;&amp;nbsp;&amp;nbsp;CustomerID" vertex="1">
+          <mxGeometry x="0" y="54" width="300" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="eq7-PROJECT-r2" parent="eq7-PROJECT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&lt;b&gt;FK&lt;/b&gt;&amp;nbsp;&amp;nbsp;SaleID" vertex="1">
+          <mxGeometry x="0" y="78" width="300" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="eq7-PROJECT-r3" parent="eq7-PROJECT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&lt;b&gt;FK&lt;/b&gt;&amp;nbsp;&amp;nbsp;PresaleID" vertex="1">
+          <mxGeometry x="0" y="102" width="300" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="eq7-PROJECT-r4" parent="eq7-PROJECT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&lt;b&gt;FK&lt;/b&gt;&amp;nbsp;&amp;nbsp;PMID" vertex="1">
+          <mxGeometry x="0" y="126" width="300" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="eq7-PROJECT-r5" parent="eq7-PROJECT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&lt;b&gt;U&lt;/b&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;i&gt;Status&lt;/i&gt;" vertex="1">
+          <mxGeometry x="0" y="150" width="300" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="eq7-PROJECT-r6" parent="eq7-PROJECT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;fillColor=#FFF2CC;whiteSpace=wrap;" value="&lt;b&gt;Q1.1&lt;/b&gt; SELECT" vertex="1">
+          <mxGeometry x="0" y="174" width="300" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="eq7-PROJECT-r7" parent="eq7-PROJECT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;fillColor=#FFF2CC;whiteSpace=wrap;" value="&lt;b&gt;Q11.3&lt;/b&gt; SELECT/UPDATE" vertex="1">
+          <mxGeometry x="0" y="198" width="300" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="eq7-PROJECT-r8" parent="eq7-PROJECT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;fillColor=#FFF2CC;whiteSpace=wrap;" value="&lt;b&gt;Q11.4&lt;/b&gt; UPDATE" vertex="1">
+          <mxGeometry x="0" y="222" width="300" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="eq7-NOTIFICATION" parent="eq7-1" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;fontSize=13;fillColor=#F5F5F5;" value="NOTIFICATION" vertex="1">
+          <mxGeometry x="1300" y="560" width="300" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="eq7-NOTIFICATION-r0" parent="eq7-NOTIFICATION" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&lt;b&gt;PK&lt;/b&gt;&amp;nbsp;&amp;nbsp;&lt;u&gt;NotificationID&lt;/u&gt;" vertex="1">
+          <mxGeometry x="0" y="30" width="300" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="eq7-NOTIFICATION-r1" parent="eq7-NOTIFICATION" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&lt;b&gt;FK&lt;/b&gt;&amp;nbsp;&amp;nbsp;RecipientID" vertex="1">
+          <mxGeometry x="0" y="54" width="300" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="eq7-NOTIFICATION-r2" parent="eq7-NOTIFICATION" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&lt;b&gt;FK&lt;/b&gt;&amp;nbsp;&amp;nbsp;ProjectID" vertex="1">
+          <mxGeometry x="0" y="78" width="300" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="eq7-NOTIFICATION-r3" parent="eq7-NOTIFICATION" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;fillColor=#FFF2CC;whiteSpace=wrap;" value="&lt;b&gt;Q10.1&lt;/b&gt; INSERT" vertex="1">
+          <mxGeometry x="0" y="102" width="300" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="eq7-NOTIFICATION-r4" parent="eq7-NOTIFICATION" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;fillColor=#FFF2CC;whiteSpace=wrap;" value="&lt;b&gt;Q11.3&lt;/b&gt; INSERT" vertex="1">
+          <mxGeometry x="0" y="126" width="300" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="eq7-REQUIREMENT_ATTACHMENT" parent="eq7-1" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;fontSize=13;fillColor=#F5F5F5;" value="REQUIREMENT_ATTACHMENT" vertex="1">
+          <mxGeometry x="40" y="1040" width="300" height="102" as="geometry" />
+        </mxCell>
+        <mxCell id="eq7-REQUIREMENT_ATTACHMENT-r0" parent="eq7-REQUIREMENT_ATTACHMENT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&lt;b&gt;PK, FK&lt;/b&gt;&amp;nbsp;&amp;nbsp;&lt;u&gt;RequirementID&lt;/u&gt;" vertex="1">
+          <mxGeometry x="0" y="30" width="300" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="eq7-REQUIREMENT_ATTACHMENT-r1" parent="eq7-REQUIREMENT_ATTACHMENT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&lt;b&gt;PK&lt;/b&gt;&amp;nbsp;&amp;nbsp;&lt;u&gt;AttachmentFile&lt;/u&gt;" vertex="1">
+          <mxGeometry x="0" y="54" width="300" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="eq7-REQUIREMENT_ATTACHMENT-r2" parent="eq7-REQUIREMENT_ATTACHMENT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;fillColor=#FFF2CC;whiteSpace=wrap;" value="&lt;b&gt;Q6.2&lt;/b&gt; SELECT" vertex="1">
+          <mxGeometry x="0" y="78" width="300" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="eq7-CUSTOMER_REQUIREMENT" parent="eq7-1" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;fontSize=13;fillColor=#F5F5F5;" value="CUSTOMER_REQUIREMENT" vertex="1">
+          <mxGeometry x="460" y="1040" width="300" height="390" as="geometry" />
+        </mxCell>
+        <mxCell id="eq7-CUSTOMER_REQUIREMENT-r0" parent="eq7-CUSTOMER_REQUIREMENT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&lt;b&gt;PK&lt;/b&gt;&amp;nbsp;&amp;nbsp;&lt;u&gt;RequirementID&lt;/u&gt;" vertex="1">
+          <mxGeometry x="0" y="30" width="300" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="eq7-CUSTOMER_REQUIREMENT-r1" parent="eq7-CUSTOMER_REQUIREMENT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&lt;b&gt;FK&lt;/b&gt;&amp;nbsp;&amp;nbsp;ProjectID" vertex="1">
+          <mxGeometry x="0" y="54" width="300" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="eq7-CUSTOMER_REQUIREMENT-r2" parent="eq7-CUSTOMER_REQUIREMENT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&lt;b&gt;FK&lt;/b&gt;&amp;nbsp;&amp;nbsp;CreatedByID" vertex="1">
+          <mxGeometry x="0" y="78" width="300" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="eq7-CUSTOMER_REQUIREMENT-r3" parent="eq7-CUSTOMER_REQUIREMENT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&lt;b&gt;FK&lt;/b&gt;&amp;nbsp;&amp;nbsp;ReviewedByID" vertex="1">
+          <mxGeometry x="0" y="102" width="300" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="eq7-CUSTOMER_REQUIREMENT-r4" parent="eq7-CUSTOMER_REQUIREMENT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&lt;b&gt;U&lt;/b&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;i&gt;Status&lt;/i&gt;" vertex="1">
+          <mxGeometry x="0" y="126" width="300" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="eq7-CUSTOMER_REQUIREMENT-r5" parent="eq7-CUSTOMER_REQUIREMENT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&lt;b&gt;U&lt;/b&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;i&gt;ReviewedDate&lt;/i&gt;" vertex="1">
+          <mxGeometry x="0" y="150" width="300" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="eq7-CUSTOMER_REQUIREMENT-r6" parent="eq7-CUSTOMER_REQUIREMENT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&lt;b&gt;U&lt;/b&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;i&gt;RejectReason&lt;/i&gt;" vertex="1">
+          <mxGeometry x="0" y="174" width="300" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="eq7-CUSTOMER_REQUIREMENT-r7" parent="eq7-CUSTOMER_REQUIREMENT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;fillColor=#FFF2CC;whiteSpace=wrap;" value="&lt;b&gt;Q1.1&lt;/b&gt; SELECT" vertex="1">
+          <mxGeometry x="0" y="198" width="300" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="eq7-CUSTOMER_REQUIREMENT-r8" parent="eq7-CUSTOMER_REQUIREMENT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;fillColor=#FFF2CC;whiteSpace=wrap;" value="&lt;b&gt;Q3.1&lt;/b&gt; SELECT" vertex="1">
+          <mxGeometry x="0" y="222" width="300" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="eq7-CUSTOMER_REQUIREMENT-r9" parent="eq7-CUSTOMER_REQUIREMENT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;fillColor=#FFF2CC;whiteSpace=wrap;" value="&lt;b&gt;Q5.1&lt;/b&gt; SELECT" vertex="1">
+          <mxGeometry x="0" y="246" width="300" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="eq7-CUSTOMER_REQUIREMENT-r10" parent="eq7-CUSTOMER_REQUIREMENT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;fillColor=#FFF2CC;whiteSpace=wrap;" value="&lt;b&gt;Q6.1&lt;/b&gt; SELECT" vertex="1">
+          <mxGeometry x="0" y="270" width="300" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="eq7-CUSTOMER_REQUIREMENT-r11" parent="eq7-CUSTOMER_REQUIREMENT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;fillColor=#FFF2CC;whiteSpace=wrap;" value="&lt;b&gt;Q9.1&lt;/b&gt; UPDATE" vertex="1">
+          <mxGeometry x="0" y="294" width="300" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="eq7-CUSTOMER_REQUIREMENT-r12" parent="eq7-CUSTOMER_REQUIREMENT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;fillColor=#FFF2CC;whiteSpace=wrap;" value="&lt;b&gt;Q10.1&lt;/b&gt; SELECT" vertex="1">
+          <mxGeometry x="0" y="318" width="300" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="eq7-CUSTOMER_REQUIREMENT-r13" parent="eq7-CUSTOMER_REQUIREMENT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;fillColor=#FFF2CC;whiteSpace=wrap;" value="&lt;b&gt;Q11.1&lt;/b&gt; SELECT" vertex="1">
+          <mxGeometry x="0" y="342" width="300" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="eq7-CUSTOMER_REQUIREMENT-r14" parent="eq7-CUSTOMER_REQUIREMENT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;fillColor=#FFF2CC;whiteSpace=wrap;" value="&lt;b&gt;Q11.2&lt;/b&gt; SELECT" vertex="1">
+          <mxGeometry x="0" y="366" width="300" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="eq7-TEST_SCHEDULE" parent="eq7-1" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;fontSize=13;fillColor=#F5F5F5;" value="TEST_SCHEDULE" vertex="1">
+          <mxGeometry x="880" y="1040" width="300" height="126" as="geometry" />
+        </mxCell>
+        <mxCell id="eq7-TEST_SCHEDULE-r0" parent="eq7-TEST_SCHEDULE" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&lt;b&gt;PK&lt;/b&gt;&amp;nbsp;&amp;nbsp;&lt;u&gt;ScheduleID&lt;/u&gt;" vertex="1">
+          <mxGeometry x="0" y="30" width="300" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="eq7-TEST_SCHEDULE-r1" parent="eq7-TEST_SCHEDULE" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&lt;b&gt;FK&lt;/b&gt;&amp;nbsp;&amp;nbsp;ProjectID" vertex="1">
+          <mxGeometry x="0" y="54" width="300" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="eq7-TEST_SCHEDULE-r2" parent="eq7-TEST_SCHEDULE" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;" value="&lt;b&gt;FK&lt;/b&gt;&amp;nbsp;&amp;nbsp;CreatedByID" vertex="1">
+          <mxGeometry x="0" y="78" width="300" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="eq7-TEST_SCHEDULE-r3" parent="eq7-TEST_SCHEDULE" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;html=1;fontSize=12;fillColor=#FFF2CC;whiteSpace=wrap;" value="&lt;b&gt;Q11.2&lt;/b&gt; SELECT" vertex="1">
+          <mxGeometry x="0" y="102" width="300" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="eq7-a2" edge="1" parent="eq7-1" source="eq7-PROJECT" target="eq7-CUSTOMER" style="rounded=0;html=1;endArrow=ERmandOne;startArrow=ERmany;endFill=0;startFill=0;endSize=10;startSize=10;" value="">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eq7-a3" edge="1" parent="eq7-1" source="eq7-PROJECT" target="eq7-EMPLOYEE" style="rounded=0;html=1;endArrow=ERmandOne;startArrow=ERmany;endFill=0;startFill=0;endSize=10;startSize=10;" value="">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eq7-a4" edge="1" parent="eq7-1" source="eq7-NOTIFICATION" target="eq7-EMPLOYEE" style="rounded=0;html=1;endArrow=ERmandOne;startArrow=ERmany;endFill=0;startFill=0;endSize=10;startSize=10;" value="">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eq7-a5" edge="1" parent="eq7-1" source="eq7-NOTIFICATION" target="eq7-PROJECT" style="rounded=0;html=1;endArrow=ERmandOne;startArrow=ERmany;endFill=0;startFill=0;endSize=10;startSize=10;" value="">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eq7-a6" edge="1" parent="eq7-1" source="eq7-REQUIREMENT_ATTACHMENT" target="eq7-CUSTOMER_REQUIREMENT" style="rounded=0;html=1;endArrow=ERmandOne;startArrow=ERmany;endFill=0;startFill=0;endSize=10;startSize=10;" value="">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eq7-a7" edge="1" parent="eq7-1" source="eq7-CUSTOMER_REQUIREMENT" target="eq7-PROJECT" style="rounded=0;html=1;endArrow=ERmandOne;startArrow=ERmany;endFill=0;startFill=0;endSize=10;startSize=10;" value="">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eq7-a8" edge="1" parent="eq7-1" source="eq7-CUSTOMER_REQUIREMENT" target="eq7-EMPLOYEE" style="rounded=0;html=1;endArrow=ERmandOne;startArrow=ERmany;endFill=0;startFill=0;endSize=10;startSize=10;" value="">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eq7-a9" edge="1" parent="eq7-1" source="eq7-TEST_SCHEDULE" target="eq7-PROJECT" style="rounded=0;html=1;endArrow=ERmandOne;startArrow=ERmany;endFill=0;startFill=0;endSize=10;startSize=10;" value="">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eq7-a10" edge="1" parent="eq7-1" source="eq7-TEST_SCHEDULE" target="eq7-EMPLOYEE" style="rounded=0;html=1;endArrow=ERmandOne;startArrow=ERmany;endFill=0;startFill=0;endSize=10;startSize=10;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.179;entryDx=0;entryDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1240" y="1103" />
+              <mxPoint x="1240" y="94" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

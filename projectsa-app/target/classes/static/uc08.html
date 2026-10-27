@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ปิด Project – ProjectSA</title>
+  <link rel="stylesheet" href="css/app.css?v=2">
+</head>
+<body>
+<main>
+  <div class="card">
+    <h1>Close Project</h1>
+    <p class="muted">เมื่อลูกค้าทดสอบผ่านและไม่มี Requirement ใหม่ PM กด "ปิด Project" → สถานะ Finish นัดทดสอบล่าสุดเป็น Done และแจ้งเตือนผู้รับผิดชอบทุกคน (จากนั้นจัดทำเอกสาร UAT และ Handover)</p>
+  </div>
+
+  <!-- <<Boundary>> ProjectList Form -->
+  <div class="card">
+    <h2>1. Project ที่คุณดูแล สถานะ Testing</h2>
+    <div id="projectList"></div>
+  </div>
+
+  <!-- <<Boundary>> CloseProject Form -->
+  <div class="card hidden" id="closeProjectForm">
+    <h2 id="title"></h2>
+    <dl class="info" id="info"></dl>
+    <div class="actions"><button class="danger" id="closeButton">ปิด Project</button></div>
+  </div>
+</main>
+<script src="js/app.js?v=2"></script>
+<script src="js/bell.js?v=2"></script>
+<script src="js/uc08.js?v=2"></script>
+</body>
+</html>

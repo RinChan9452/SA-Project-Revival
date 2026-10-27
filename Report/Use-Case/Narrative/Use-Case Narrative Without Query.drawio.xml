@@ -1,0 +1,1013 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net">
+  <diagram name="Use-Case Narrative Without Query (Revised)" id="narRevisedPage01">
+    <mxGraphModel dx="10875" dy="5915" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="narR-0" />
+        <mxCell id="narR-1" parent="narR-0" />
+        <mxCell id="narR-title" parent="narR-1" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;fontSize=28;fontStyle=1;" value="Use-Case Narrative (Revised) – Project Management Program" vertex="1">
+          <mxGeometry height="50" width="2500" y="-260" as="geometry" />
+        </mxCell>
+        <mxCell id="narR-c-1" parent="narR-1" style="shape=table;startSize=44;container=1;collapsible=0;childLayout=tableLayout;strokeColor=default;fontSize=18;fontStyle=1;fillColor=#E1D5E7;html=1;" value="UC01 Create Project Profile" vertex="1">
+          <mxGeometry height="759" width="1200" as="geometry" />
+        </mxCell>
+        <mxCell id="narR-c-2" parent="narR-c-1" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="48" width="1200" y="44" as="geometry" />
+        </mxCell>
+        <mxCell id="narR-c-3" parent="narR-c-2" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=#F5F5F5;fontStyle=1;align=center;verticalAlign=middle;" value="Main Actor" vertex="1">
+          <mxGeometry height="48" width="600" as="geometry">
+            <mxRectangle height="48" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-4" parent="narR-c-2" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=middle;" value="Sale" vertex="1">
+          <mxGeometry height="48" width="600" x="600" as="geometry">
+            <mxRectangle height="48" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-5" parent="narR-c-1" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="87" width="1200" y="92" as="geometry" />
+        </mxCell>
+        <mxCell id="narR-c-6" parent="narR-c-5" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=#F5F5F5;fontStyle=1;align=center;verticalAlign=middle;" value="Describe" vertex="1">
+          <mxGeometry height="87" width="600" as="geometry">
+            <mxRectangle height="87" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-7" parent="narR-c-5" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=middle;" value="ใช้ในการสร้าง Project Profile ใหม่ลงในระบบ หลังจาก Sale ตัดสินใจรับ Project เพื่อเป็นแหล่งข้อมูลกลางของ Project ที่ทุกฝ่ายใช้งานร่วมกัน และส่งต่อให้ Presale Engineer ออกแบบ Solution" vertex="1">
+          <mxGeometry height="87" width="600" x="600" as="geometry">
+            <mxRectangle height="87" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-8" parent="narR-c-1" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="66" width="1200" y="179" as="geometry" />
+        </mxCell>
+        <mxCell id="narR-c-9" parent="narR-c-8" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=#F5F5F5;fontStyle=1;align=center;verticalAlign=middle;" value="Pre-Condition" vertex="1">
+          <mxGeometry height="66" width="600" as="geometry">
+            <mxRectangle height="66" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-10" parent="narR-c-8" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=middle;" value="1. Sale เข้าสู่ระบบแล้ว&lt;br&gt;2. Sale ตัดสินใจรับ Project จากลูกค้าแล้ว" vertex="1">
+          <mxGeometry height="66" width="600" x="600" as="geometry">
+            <mxRectangle height="66" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-11" parent="narR-c-1" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="66" width="1200" y="245" as="geometry" />
+        </mxCell>
+        <mxCell id="narR-c-12" parent="narR-c-11" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=#F5F5F5;fontStyle=1;align=center;verticalAlign=middle;" value="Post-Condition" vertex="1">
+          <mxGeometry height="66" width="600" as="geometry">
+            <mxRectangle height="66" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-13" parent="narR-c-11" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=middle;" value="1. มี Project Profile ใหม่ในระบบ สถานะ &quot;NewProject&quot;&lt;br&gt;2. Presale Engineer in Charge ได้รับการแจ้งเตือนให้ออกแบบ Solution" vertex="1">
+          <mxGeometry height="66" width="600" x="600" as="geometry">
+            <mxRectangle height="66" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-14" parent="narR-c-1" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="40" width="1200" y="311" as="geometry" />
+        </mxCell>
+        <mxCell id="narR-c-15" parent="narR-c-14" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=#DAE8FC;fontStyle=1;align=center;verticalAlign=middle;" value="Actor Action" vertex="1">
+          <mxGeometry height="40" width="600" as="geometry">
+            <mxRectangle height="40" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-16" parent="narR-c-14" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=#DAE8FC;fontStyle=1;align=center;verticalAlign=middle;" value="System" vertex="1">
+          <mxGeometry height="40" width="600" x="600" as="geometry">
+            <mxRectangle height="40" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-17" parent="narR-c-1" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="87" width="1200" y="351" as="geometry" />
+        </mxCell>
+        <mxCell id="narR-c-18" parent="narR-c-17" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=top;spacingTop=6;" value="&lt;b&gt;Step 1:&lt;/b&gt; Sale กด &quot;Create Project Profile&quot;" vertex="1">
+          <mxGeometry height="87" width="600" as="geometry">
+            <mxRectangle height="87" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-19" parent="narR-c-17" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=top;spacingTop=6;" value="&lt;b&gt;Step 2:&lt;/b&gt; ระบบแสดงแบบฟอร์มสร้าง Project Profile โดยกำหนด Sale in Charge เป็นผู้ใช้งานปัจจุบันอัตโนมัติ พร้อมแสดงรายชื่อลูกค้าเดิมและรายชื่อ Presale Engineer ให้เลือก" vertex="1">
+          <mxGeometry height="87" width="600" x="600" as="geometry">
+            <mxRectangle height="87" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-20" parent="narR-c-1" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="234" width="1200" y="438" as="geometry" />
+        </mxCell>
+        <mxCell id="narR-c-21" parent="narR-c-20" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=top;spacingTop=6;" value="&lt;b&gt;Step 3:&lt;/b&gt; Sale กรอกข้อมูลเบื้องต้นของ Project แล้วกด &quot;บันทึก&quot;&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;3.1 Project Name&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;3.2 เลือกลูกค้าเดิม หรือกรอกลูกค้าใหม่ (Customer Name, Customer Email)&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;3.3 เลือก Presale Engineer in Charge&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;3.4 Project Site (สถานที่ติดตั้ง/ทำงาน)" vertex="1">
+          <mxGeometry height="234" width="600" as="geometry">
+            <mxRectangle height="234" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-22" parent="narR-c-20" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=top;spacingTop=6;" value="&lt;b&gt;Step 4:&lt;/b&gt; ระบบตรวจสอบความถูกต้องของข้อมูลที่กรอก&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;4.1 เช็คว่ากรอก Project Name&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;4.2 เช็คว่ากรอก Customer Name&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;4.3 เช็คว่ากรอก Customer Email และรูปแบบอีเมลถูกต้อง&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;4.4 เช็คว่าเลือก Presale Engineer in Charge&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;4.5 เช็คว่ากรอก Project Site&lt;div&gt;&lt;div&gt;&lt;b&gt;Step 5:&lt;/b&gt; ระบบสร้าง Project ID อัตโนมัติ และบันทึก Project Profile (กรณีลูกค้าใหม่ บันทึกข้อมูลลูกค้าลงระบบด้วย)&lt;br&gt;&lt;b&gt;Step 6:&lt;/b&gt; ระบบตั้งสถานะ Project เป็น &quot;NewProject&quot;&lt;br&gt;&lt;b&gt;Step 7:&lt;/b&gt; ระบบส่งการแจ้งเตือนไปยัง Presale Engineer in Charge&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="234" width="600" x="600" as="geometry">
+            <mxRectangle height="234" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-23" parent="narR-c-1" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="87" width="1200" y="672" as="geometry" />
+        </mxCell>
+        <mxCell id="narR-c-24" parent="narR-c-23" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=#F5F5F5;fontStyle=1;align=center;verticalAlign=middle;" value="Alternative / Exception Flow" vertex="1">
+          <mxGeometry height="87" width="600" as="geometry">
+            <mxRectangle height="87" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-25" parent="narR-c-23" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=top;spacingTop=6;" value="&lt;b&gt;4a:&lt;/b&gt; ข้อมูลไม่ครบหรือรูปแบบไม่ถูกต้อง → ระบบแสดงข้อความแจ้งเตือนที่ช่องที่ผิด และกลับไป Step 3&lt;br&gt;&lt;b&gt;3a:&lt;/b&gt; Sale กด &quot;ยกเลิก&quot; → ระบบไม่บันทึกข้อมูล และจบ Use Case" vertex="1">
+          <mxGeometry height="87" width="600" x="600" as="geometry">
+            <mxRectangle height="87" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-26" parent="narR-1" style="shape=table;startSize=44;container=1;collapsible=0;childLayout=tableLayout;strokeColor=default;fontSize=18;fontStyle=1;fillColor=#E1D5E7;html=1;" value="UC02 Store Project Solution Details" vertex="1">
+          <mxGeometry height="933" width="1200" x="1320" as="geometry" />
+        </mxCell>
+        <mxCell id="narR-c-27" parent="narR-c-26" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="48" width="1200" y="44" as="geometry" />
+        </mxCell>
+        <mxCell id="narR-c-28" parent="narR-c-27" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=#F5F5F5;fontStyle=1;align=center;verticalAlign=middle;" value="Main Actor" vertex="1">
+          <mxGeometry height="48" width="600" as="geometry">
+            <mxRectangle height="48" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-29" parent="narR-c-27" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=middle;" value="Presale Engineer" vertex="1">
+          <mxGeometry height="48" width="600" x="600" as="geometry">
+            <mxRectangle height="48" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-30" parent="narR-c-26" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="87" width="1200" y="92" as="geometry" />
+        </mxCell>
+        <mxCell id="narR-c-31" parent="narR-c-30" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=#F5F5F5;fontStyle=1;align=center;verticalAlign=middle;" value="Describe" vertex="1">
+          <mxGeometry height="87" width="600" as="geometry">
+            <mxRectangle height="87" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-32" parent="narR-c-30" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=middle;" value="ใช้ในการจัดเก็บรายละเอียด Solution แผนการทำงาน และเอกสารประกอบของ Project ลงในระบบ หลังลูกค้า Confirm Project เพื่อให้ PM และทีมงานนำไปใช้ต่อ และใช้ปรับปรุง Solution เมื่อ Sale อนุมัติ Requirement ใหม่ (UC07)" vertex="1">
+          <mxGeometry height="87" width="600" x="600" as="geometry">
+            <mxRectangle height="87" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-33" parent="narR-c-26" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="87" width="1200" y="179" as="geometry" />
+        </mxCell>
+        <mxCell id="narR-c-34" parent="narR-c-33" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=#F5F5F5;fontStyle=1;align=center;verticalAlign=middle;" value="Pre-Condition" vertex="1">
+          <mxGeometry height="87" width="600" as="geometry">
+            <mxRectangle height="87" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-35" parent="narR-c-33" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=middle;" value="1. Presale Engineer เข้าสู่ระบบแล้ว&lt;br&gt;2. มี Project Profile ในระบบ (UC01) ที่ตนเป็น Presale Engineer in Charge&lt;br&gt;3. ลูกค้า Confirm Project แล้ว และ Project อยู่ในสถานะ &quot;NewProject&quot;" vertex="1">
+          <mxGeometry height="87" width="600" x="600" as="geometry">
+            <mxRectangle height="87" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-36" parent="narR-c-26" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="87" width="1200" y="266" as="geometry" />
+        </mxCell>
+        <mxCell id="narR-c-37" parent="narR-c-36" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=#F5F5F5;fontStyle=1;align=center;verticalAlign=middle;" value="Post-Condition" vertex="1">
+          <mxGeometry height="87" width="600" as="geometry">
+            <mxRectangle height="87" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-38" parent="narR-c-36" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=middle;" value="1. รายละเอียด Solution และเอกสาร PDF ถูกบันทึกลง Project&lt;br&gt;2. สถานะ Project เปลี่ยนเป็น &quot;WaitingForAssignEngineer&quot;&lt;br&gt;3. PM ได้รับการแจ้งเตือนว่ามี Project รอมอบหมาย Engineer" vertex="1">
+          <mxGeometry height="87" width="600" x="600" as="geometry">
+            <mxRectangle height="87" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-39" parent="narR-c-26" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="40" width="1200" y="353" as="geometry" />
+        </mxCell>
+        <mxCell id="narR-c-40" parent="narR-c-39" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=#DAE8FC;fontStyle=1;align=center;verticalAlign=middle;" value="Actor Action" vertex="1">
+          <mxGeometry height="40" width="600" as="geometry">
+            <mxRectangle height="40" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-41" parent="narR-c-39" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=#DAE8FC;fontStyle=1;align=center;verticalAlign=middle;" value="System" vertex="1">
+          <mxGeometry height="40" width="600" x="600" as="geometry">
+            <mxRectangle height="40" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-42" parent="narR-c-26" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="66" width="1200" y="393" as="geometry" />
+        </mxCell>
+        <mxCell id="narR-c-43" parent="narR-c-42" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=top;spacingTop=6;" value="" vertex="1">
+          <mxGeometry height="66" width="600" as="geometry">
+            <mxRectangle height="66" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-44" parent="narR-c-42" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=top;spacingTop=6;" value="&lt;b&gt;Step 1:&lt;/b&gt; ระบบแสดงรายการ Project สถานะ &quot;NewProject&quot; ที่ Presale คนนี้รับผิดชอบ (Project ID, Project Name, Customer Name)" vertex="1">
+          <mxGeometry height="66" width="600" x="600" as="geometry">
+            <mxRectangle height="66" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-45" parent="narR-c-26" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="66" width="1200" y="459" as="geometry" />
+        </mxCell>
+        <mxCell id="narR-c-46" parent="narR-c-45" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=top;spacingTop=6;" value="&lt;b&gt;Step 2:&lt;/b&gt; Presale เลือก Project ที่ต้องการ" vertex="1">
+          <mxGeometry height="66" width="600" as="geometry">
+            <mxRectangle height="66" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-47" parent="narR-c-45" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=top;spacingTop=6;" value="&lt;b&gt;Step 3:&lt;/b&gt; ระบบแสดงข้อมูล Project ที่เลือก และแบบฟอร์มรายละเอียด Solution (ถ้ามีข้อมูลเดิมจะแสดงข้อมูลเดิมให้แก้ไข)" vertex="1">
+          <mxGeometry height="66" width="600" x="600" as="geometry">
+            <mxRectangle height="66" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-48" parent="narR-c-26" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="129" width="1200" y="525" as="geometry" />
+        </mxCell>
+        <mxCell id="narR-c-49" parent="narR-c-48" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=top;spacingTop=6;" value="&lt;b&gt;Step 4:&lt;/b&gt; Presale กรอกรายละเอียด Solution&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;4.1 Start Date / End Date&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;4.2 Project Objective&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;4.3 Estimated Budget&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;4.4 รายละเอียด Solution" vertex="1">
+          <mxGeometry height="129" width="600" as="geometry">
+            <mxRectangle height="129" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-50" parent="narR-c-48" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=top;spacingTop=6;" value="&lt;b&gt;Step 5:&lt;/b&gt; ระบบตรวจสอบความถูกต้องของข้อมูลที่กรอก&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;5.1 เช็คการกรอก Start / End Date และ End Date ต้องไม่ก่อน Start Date&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;5.2 เช็คการกรอก Project Objective&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;5.3 เช็คการกรอก Estimated Budget เป็นตัวเลขที่มากกว่า 0" vertex="1">
+          <mxGeometry height="129" width="600" x="600" as="geometry">
+            <mxRectangle height="129" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-51" parent="narR-c-26" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="192" width="1200" y="654" as="geometry" />
+        </mxCell>
+        <mxCell id="narR-c-52" parent="narR-c-51" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=top;spacingTop=6;" value="&lt;b&gt;Step 6:&lt;/b&gt; Presale อัปโหลดเอกสาร Solution และ Product Requirement แล้วกด &quot;บันทึก&quot;" vertex="1">
+          <mxGeometry height="192" width="600" as="geometry">
+            <mxRectangle height="192" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-53" parent="narR-c-51" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=top;spacingTop=6;" value="&lt;b&gt;Step 7:&lt;/b&gt; ระบบตรวจสอบไฟล์ที่อัปโหลด&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;7.1 ต้องเป็นไฟล์ PDF&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;7.2 ขนาดไฟล์ไม่เกิน 50 MB ต่อไฟล์&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;7.3 ต้องมีเอกสาร Solution อย่างน้อย 1 ไฟล์&lt;br&gt;&lt;b&gt;Step 8:&lt;/b&gt; ระบบบันทึกรายละเอียด Solution และไฟล์ลง Project ที่เลือก พร้อมประเภทเอกสาร (Solution / Product Requirement) และวันเวลาที่อัปโหลด&lt;br&gt;&lt;b&gt;Step 9:&lt;/b&gt; ระบบอัปเดตสถานะ Project เป็น &quot;WaitingForAssignEngineer&quot;&lt;br&gt;&lt;b&gt;Step 10:&lt;/b&gt; ระบบส่งการแจ้งเตือนไปยัง PM ว่ามี Project รอมอบหมาย Engineer" vertex="1">
+          <mxGeometry height="192" width="600" x="600" as="geometry">
+            <mxRectangle height="192" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-54" parent="narR-c-26" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="87" width="1200" y="846" as="geometry" />
+        </mxCell>
+        <mxCell id="narR-c-55" parent="narR-c-54" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=#F5F5F5;fontStyle=1;align=center;verticalAlign=middle;" value="Alternative / Exception Flow" vertex="1">
+          <mxGeometry height="87" width="600" as="geometry">
+            <mxRectangle height="87" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-56" parent="narR-c-54" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=top;spacingTop=6;" value="&lt;b&gt;5a:&lt;/b&gt; ข้อมูลไม่ครบหรือไม่ถูกต้อง → ระบบแจ้งเตือนที่ช่องที่ผิด และกลับไป Step 4&lt;br&gt;&lt;b&gt;7a:&lt;/b&gt; ไฟล์ไม่ใช่ PDF หรือมีขนาดเกิน 50 MB → ระบบแจ้งเตือนและไม่บันทึกไฟล์นั้น กลับไป Step 6" vertex="1">
+          <mxGeometry height="87" width="600" x="600" as="geometry">
+            <mxRectangle height="87" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-57" parent="narR-1" style="shape=table;startSize=44;container=1;collapsible=0;childLayout=tableLayout;strokeColor=default;fontSize=18;fontStyle=1;fillColor=#E1D5E7;html=1;" value="UC03 Check Project Details" vertex="1">
+          <mxGeometry height="930" width="1200" x="2640" as="geometry" />
+        </mxCell>
+        <mxCell id="narR-c-58" parent="narR-c-57" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="48" width="1200" y="44" as="geometry" />
+        </mxCell>
+        <mxCell id="narR-c-59" parent="narR-c-58" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=#F5F5F5;fontStyle=1;align=center;verticalAlign=middle;" value="Main Actor" vertex="1">
+          <mxGeometry height="48" width="600" as="geometry">
+            <mxRectangle height="48" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-60" parent="narR-c-58" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=middle;" value="Sale, Presale Engineer, PM, Tech Engineer" vertex="1">
+          <mxGeometry height="48" width="600" x="600" as="geometry">
+            <mxRectangle height="48" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-61" parent="narR-c-57" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="87" width="1200" y="92" as="geometry" />
+        </mxCell>
+        <mxCell id="narR-c-62" parent="narR-c-61" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=#F5F5F5;fontStyle=1;align=center;verticalAlign=middle;" value="Describe" vertex="1">
+          <mxGeometry height="87" width="600" as="geometry">
+            <mxRectangle height="87" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-63" parent="narR-c-61" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=middle;" value="สำหรับให้ทุกฝ่ายเข้ามาดูรายละเอียดล่าสุดของ Project ได้ตลอดเวลา และดาวน์โหลดเอกสาร Solution / Requirement เพื่อลดปัญหาข้อมูลตกหล่นเมื่อส่งต่องานระหว่างฝ่าย (ดูข้อมูลอย่างเดียว ไม่มีการแก้ไข)" vertex="1">
+          <mxGeometry height="87" width="600" x="600" as="geometry">
+            <mxRectangle height="87" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-64" parent="narR-c-57" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="66" width="1200" y="179" as="geometry" />
+        </mxCell>
+        <mxCell id="narR-c-65" parent="narR-c-64" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=#F5F5F5;fontStyle=1;align=center;verticalAlign=middle;" value="Pre-Condition" vertex="1">
+          <mxGeometry height="66" width="600" as="geometry">
+            <mxRectangle height="66" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-66" parent="narR-c-64" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=middle;" value="1. ผู้ใช้เข้าสู่ระบบแล้ว&lt;br&gt;2. มี Project Profile ในระบบ (UC01)" vertex="1">
+          <mxGeometry height="66" width="600" x="600" as="geometry">
+            <mxRectangle height="66" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-67" parent="narR-c-57" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="66" width="1200" y="245" as="geometry" />
+        </mxCell>
+        <mxCell id="narR-c-68" parent="narR-c-67" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=#F5F5F5;fontStyle=1;align=center;verticalAlign=middle;" value="Post-Condition" vertex="1">
+          <mxGeometry height="66" width="600" as="geometry">
+            <mxRectangle height="66" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-69" parent="narR-c-67" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=middle;" value="ผู้ใช้เห็นรายละเอียดล่าสุดของ Project และสามารถดาวน์โหลดเอกสารของ Project ได้ (ข้อมูลในระบบไม่ถูกเปลี่ยนแปลง)" vertex="1">
+          <mxGeometry height="66" width="600" x="600" as="geometry">
+            <mxRectangle height="66" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-70" parent="narR-c-57" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="40" width="1200" y="311" as="geometry" />
+        </mxCell>
+        <mxCell id="narR-c-71" parent="narR-c-70" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=#DAE8FC;fontStyle=1;align=center;verticalAlign=middle;" value="Actor Action" vertex="1">
+          <mxGeometry height="40" width="600" as="geometry">
+            <mxRectangle height="40" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-72" parent="narR-c-70" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=#DAE8FC;fontStyle=1;align=center;verticalAlign=middle;" value="System" vertex="1">
+          <mxGeometry height="40" width="600" x="600" as="geometry">
+            <mxRectangle height="40" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-73" parent="narR-c-57" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="129" width="1200" y="351" as="geometry" />
+        </mxCell>
+        <mxCell id="narR-c-74" parent="narR-c-73" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=top;spacingTop=6;" value="" vertex="1">
+          <mxGeometry height="129" width="600" as="geometry">
+            <mxRectangle height="129" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-75" parent="narR-c-73" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=top;spacingTop=6;" value="&lt;b&gt;Step 1:&lt;/b&gt; ระบบแสดงรายการ Project ที่ผู้ใช้เกี่ยวข้อง (Project ID, Project Name, Customer Name, Status)&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;1.1 Sale / Presale: Project ที่ตนเป็นผู้รับผิดชอบ&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;1.2 PM: Project ทั้งหมด&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;1.3 Tech Engineer: Project ที่ตนถูกมอบหมาย" vertex="1">
+          <mxGeometry height="129" width="600" x="600" as="geometry">
+            <mxRectangle height="129" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-76" parent="narR-c-57" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="276" width="1200" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="narR-c-77" parent="narR-c-76" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=top;spacingTop=6;" value="&lt;b&gt;Step 2:&lt;/b&gt; ผู้ใช้เลือก Project หรือค้นหาด้วย Project ID / Project Name" vertex="1">
+          <mxGeometry height="276" width="600" as="geometry">
+            <mxRectangle height="276" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-78" parent="narR-c-76" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=top;spacingTop=6;" value="&lt;b&gt;Step 3:&lt;/b&gt; ระบบตรวจสอบว่ามี Project อยู่ในระบบ และผู้ใช้มีสิทธิ์เข้าถึง&lt;br&gt;&lt;b&gt;Step 4:&lt;/b&gt; ระบบแสดงรายละเอียดของ Project&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;4.1 ข้อมูลเบื้องต้น: Project ID, Project Name, Status, Project Site&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;4.2 ข้อมูลลูกค้า: Customer Name, Customer Email&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;4.3 ผู้รับผิดชอบ: Sale in Charge, Presale Engineer in Charge, PM, Tech Engineer ที่ถูกมอบหมาย&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;4.4 Solution: Start / End Date, Project Objective, Estimated Budget, รายละเอียด Solution&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;4.5 นัดหมายทดสอบล่าสุด (วัน เวลา สถานที่)&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;4.6 รายการ New Requirement และสถานะ&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;4.7 รายการเอกสารแนบ (Solution, Product Requirement, New Requirement)" vertex="1">
+          <mxGeometry height="276" width="600" x="600" as="geometry">
+            <mxRectangle height="276" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-79" parent="narR-c-57" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="45" width="1200" y="756" as="geometry" />
+        </mxCell>
+        <mxCell id="narR-c-80" parent="narR-c-79" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=top;spacingTop=6;" value="&lt;b&gt;Step 5:&lt;/b&gt; ผู้ใช้กดดาวน์โหลดเอกสารที่ต้องการ" vertex="1">
+          <mxGeometry height="45" width="600" as="geometry">
+            <mxRectangle height="45" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-81" parent="narR-c-79" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=top;spacingTop=6;" value="&lt;b&gt;Step 6:&lt;/b&gt; ระบบส่งไฟล์เอกสารให้ผู้ใช้ดาวน์โหลด" vertex="1">
+          <mxGeometry height="45" width="600" x="600" as="geometry">
+            <mxRectangle height="45" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-82" parent="narR-c-57" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="129" width="1200" y="801" as="geometry" />
+        </mxCell>
+        <mxCell id="narR-c-83" parent="narR-c-82" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=#F5F5F5;fontStyle=1;align=center;verticalAlign=middle;" value="Alternative / Exception Flow" vertex="1">
+          <mxGeometry height="129" width="600" as="geometry">
+            <mxRectangle height="129" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-84" parent="narR-c-82" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=top;spacingTop=6;" value="&lt;b&gt;3a:&lt;/b&gt; ไม่พบ Project หรือผู้ใช้ไม่มีสิทธิ์ → ระบบแจ้ง &quot;ไม่พบ Project&quot; และกลับไป Step 1&lt;br&gt;&lt;b&gt;4a:&lt;/b&gt; ส่วนที่ยังไม่มีข้อมูล (เช่น ยังไม่มี Solution / นัดทดสอบ) → ระบบแสดง &quot;ยังไม่มีข้อมูล&quot; ในส่วนนั้น&lt;br&gt;&lt;b&gt;5a:&lt;/b&gt; ผู้ใช้ไม่ดาวน์โหลดเอกสาร → จบ Use Case หลัง Step 4" vertex="1">
+          <mxGeometry height="129" width="600" x="600" as="geometry">
+            <mxRectangle height="129" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-85" parent="narR-1" style="shape=table;startSize=44;container=1;collapsible=0;childLayout=tableLayout;strokeColor=default;fontSize=18;fontStyle=1;fillColor=#E1D5E7;html=1;" value="UC04 Assign Engineer to Project" vertex="1">
+          <mxGeometry height="828" width="1200" x="3960" as="geometry" />
+        </mxCell>
+        <mxCell id="narR-c-86" parent="narR-c-85" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="48" width="1200" y="44" as="geometry" />
+        </mxCell>
+        <mxCell id="narR-c-87" parent="narR-c-86" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=#F5F5F5;fontStyle=1;align=center;verticalAlign=middle;" value="Main Actor" vertex="1">
+          <mxGeometry height="48" width="600" as="geometry">
+            <mxRectangle height="48" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-88" parent="narR-c-86" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=middle;" value="PM" vertex="1">
+          <mxGeometry height="48" width="600" x="600" as="geometry">
+            <mxRectangle height="48" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-89" parent="narR-c-85" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="87" width="1200" y="92" as="geometry" />
+        </mxCell>
+        <mxCell id="narR-c-90" parent="narR-c-89" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=#F5F5F5;fontStyle=1;align=center;verticalAlign=middle;" value="Describe" vertex="1">
+          <mxGeometry height="87" width="600" as="geometry">
+            <mxRectangle height="87" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-91" parent="narR-c-89" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=middle;" value="ใช้ในการมอบหมาย Tech Engineer ให้รับผิดชอบ Project โดย PM สามารถ Filter Engineer ตาม Skill และเห็นจำนวน Project ที่ Engineer แต่ละคนรับผิดชอบอยู่ เพื่อเลือกคนให้เหมาะสมกับงาน" vertex="1">
+          <mxGeometry height="87" width="600" x="600" as="geometry">
+            <mxRectangle height="87" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-92" parent="narR-c-85" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="108" width="1200" y="179" as="geometry" />
+        </mxCell>
+        <mxCell id="narR-c-93" parent="narR-c-92" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=#F5F5F5;fontStyle=1;align=center;verticalAlign=middle;" value="Pre-Condition" vertex="1">
+          <mxGeometry height="108" width="600" as="geometry">
+            <mxRectangle height="108" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-94" parent="narR-c-92" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=middle;" value="1. PM เข้าสู่ระบบแล้ว&lt;br&gt;2. Project อยู่ในสถานะ &quot;WaitingForAssignEngineer&quot; (Presale บันทึก Solution แล้ว – UC02)&lt;br&gt;3. มีข้อมูล Tech Engineer และ Skill ของแต่ละคนในระบบ" vertex="1">
+          <mxGeometry height="108" width="600" x="600" as="geometry">
+            <mxRectangle height="108" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-95" parent="narR-c-85" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="108" width="1200" y="287" as="geometry" />
+        </mxCell>
+        <mxCell id="narR-c-96" parent="narR-c-95" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=#F5F5F5;fontStyle=1;align=center;verticalAlign=middle;" value="Post-Condition" vertex="1">
+          <mxGeometry height="108" width="600" as="geometry">
+            <mxRectangle height="108" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-97" parent="narR-c-95" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=middle;" value="1. รายชื่อ Tech Engineer ถูกบันทึกเข้า Project และ PM ถูกบันทึกเป็น PM ของ Project&lt;br&gt;2. สถานะ Project เปลี่ยนเป็น &quot;Working&quot;&lt;br&gt;3. Tech Engineer ที่ถูกมอบหมายได้รับการแจ้งเตือน" vertex="1">
+          <mxGeometry height="108" width="600" x="600" as="geometry">
+            <mxRectangle height="108" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-98" parent="narR-c-85" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="40" width="1200" y="395" as="geometry" />
+        </mxCell>
+        <mxCell id="narR-c-99" parent="narR-c-98" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=#DAE8FC;fontStyle=1;align=center;verticalAlign=middle;" value="Actor Action" vertex="1">
+          <mxGeometry height="40" width="600" as="geometry">
+            <mxRectangle height="40" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-100" parent="narR-c-98" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=#DAE8FC;fontStyle=1;align=center;verticalAlign=middle;" value="System" vertex="1">
+          <mxGeometry height="40" width="600" x="600" as="geometry">
+            <mxRectangle height="40" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-101" parent="narR-c-85" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="45" width="1200" y="435" as="geometry" />
+        </mxCell>
+        <mxCell id="narR-c-102" parent="narR-c-101" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=top;spacingTop=6;" value="" vertex="1">
+          <mxGeometry height="45" width="600" as="geometry">
+            <mxRectangle height="45" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-103" parent="narR-c-101" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=top;spacingTop=6;" value="&lt;b&gt;Step 1:&lt;/b&gt; ระบบแสดงรายการ Project สถานะ &quot;WaitingForAssignEngineer&quot;" vertex="1">
+          <mxGeometry height="45" width="600" x="600" as="geometry">
+            <mxRectangle height="45" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-104" parent="narR-c-85" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="87" width="1200" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="narR-c-105" parent="narR-c-104" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=top;spacingTop=6;" value="&lt;b&gt;Step 2:&lt;/b&gt; PM เลือก Project ที่จะกำหนด Tech Engineer" vertex="1">
+          <mxGeometry height="87" width="600" as="geometry">
+            <mxRectangle height="87" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-106" parent="narR-c-104" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=top;spacingTop=6;" value="&lt;b&gt;Step 3:&lt;/b&gt; ระบบแสดงรายละเอียด Solution ของ Project (Start / End Date, Objective) และรายชื่อ Tech Engineer ทั้งหมดพร้อม Skill และจำนวน Project ที่กำลังรับผิดชอบ (Engineer ที่อยู่ใน Project อยู่แล้วจะถูกเลือกไว้ให้)" vertex="1">
+          <mxGeometry height="87" width="600" x="600" as="geometry">
+            <mxRectangle height="87" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-107" parent="narR-c-85" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="45" width="1200" y="567" as="geometry" />
+        </mxCell>
+        <mxCell id="narR-c-108" parent="narR-c-107" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=top;spacingTop=6;" value="&lt;b&gt;Step 4:&lt;/b&gt; PM เลือก Skill ที่ต้องการเพื่อ Filter (เช่น CCNA, Linux)" vertex="1">
+          <mxGeometry height="45" width="600" as="geometry">
+            <mxRectangle height="45" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-109" parent="narR-c-107" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=top;spacingTop=6;" value="&lt;b&gt;Step 5:&lt;/b&gt; ระบบแสดงเฉพาะ Tech Engineer ที่มี Skill ตรงตามที่ Filter" vertex="1">
+          <mxGeometry height="45" width="600" x="600" as="geometry">
+            <mxRectangle height="45" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-110" parent="narR-c-85" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="129" width="1200" y="612" as="geometry" />
+        </mxCell>
+        <mxCell id="narR-c-111" parent="narR-c-110" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=top;spacingTop=6;" value="&lt;b&gt;Step 6:&lt;/b&gt; PM เลือก Tech Engineer เข้า Project ตามความเหมาะสม แล้วกด &quot;ยืนยัน&quot;" vertex="1">
+          <mxGeometry height="129" width="600" as="geometry">
+            <mxRectangle height="129" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-112" parent="narR-c-110" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=top;spacingTop=6;" value="&lt;b&gt;Step 7:&lt;/b&gt; ระบบตรวจสอบว่าเลือก Tech Engineer อย่างน้อย 1 คน&lt;br&gt;&lt;b&gt;Step 8:&lt;/b&gt; ระบบบันทึก Tech Engineer ลง Project พร้อมวันที่มอบหมาย และบันทึก PM ผู้มอบหมายเป็น PM ของ Project&lt;br&gt;&lt;b&gt;Step 9:&lt;/b&gt; ระบบอัปเดตสถานะ Project เป็น &quot;Working&quot;&lt;br&gt;&lt;b&gt;Step 10:&lt;/b&gt; ระบบส่งการแจ้งเตือนไปยัง Tech Engineer ที่ถูกมอบหมาย" vertex="1">
+          <mxGeometry height="129" width="600" x="600" as="geometry">
+            <mxRectangle height="129" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-113" parent="narR-c-85" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="87" width="1200" y="741" as="geometry" />
+        </mxCell>
+        <mxCell id="narR-c-114" parent="narR-c-113" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=#F5F5F5;fontStyle=1;align=center;verticalAlign=middle;" value="Alternative / Exception Flow" vertex="1">
+          <mxGeometry height="87" width="600" as="geometry">
+            <mxRectangle height="87" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-115" parent="narR-c-113" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=top;spacingTop=6;" value="&lt;b&gt;5a:&lt;/b&gt; ไม่มี Engineer ที่มี Skill ตรงตาม Filter → ระบบแสดง &quot;ไม่พบ Engineer&quot; และกลับไป Step 4&lt;br&gt;&lt;b&gt;7a:&lt;/b&gt; ยังไม่ได้เลือก Engineer → ระบบแจ้งเตือน และกลับไป Step 6" vertex="1">
+          <mxGeometry height="87" width="600" x="600" as="geometry">
+            <mxRectangle height="87" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-116" parent="narR-1" style="shape=table;startSize=44;container=1;collapsible=0;childLayout=tableLayout;strokeColor=default;fontSize=18;fontStyle=1;fillColor=#E1D5E7;html=1;" value="UC05 Set Project Test Calendar Notification" vertex="1">
+          <mxGeometry height="828" width="1200" y="1053" as="geometry" />
+        </mxCell>
+        <mxCell id="narR-c-117" parent="narR-c-116" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="48" width="1200" y="44" as="geometry" />
+        </mxCell>
+        <mxCell id="narR-c-118" parent="narR-c-117" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=#F5F5F5;fontStyle=1;align=center;verticalAlign=middle;" value="Main Actor" vertex="1">
+          <mxGeometry height="48" width="600" as="geometry">
+            <mxRectangle height="48" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-119" parent="narR-c-117" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=middle;" value="Tech Engineer" vertex="1">
+          <mxGeometry height="48" width="600" x="600" as="geometry">
+            <mxRectangle height="48" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-120" parent="narR-c-116" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="66" width="1200" y="92" as="geometry" />
+        </mxCell>
+        <mxCell id="narR-c-121" parent="narR-c-120" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=#F5F5F5;fontStyle=1;align=center;verticalAlign=middle;" value="Describe" vertex="1">
+          <mxGeometry height="66" width="600" as="geometry">
+            <mxRectangle height="66" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-122" parent="narR-c-120" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=middle;" value="ใช้ในการกำหนดวัน เวลา และสถานที่ทดสอบระบบกับลูกค้า พร้อมตั้งการแจ้งเตือนล่วงหน้าไปยัง PM, ทีม Engineer และลูกค้า เพื่อลดปัญหานัดหมายคลาดเคลื่อนและสถานที่ไม่ตรงตามนัด" vertex="1">
+          <mxGeometry height="66" width="600" x="600" as="geometry">
+            <mxRectangle height="66" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-123" parent="narR-c-116" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="87" width="1200" y="158" as="geometry" />
+        </mxCell>
+        <mxCell id="narR-c-124" parent="narR-c-123" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=#F5F5F5;fontStyle=1;align=center;verticalAlign=middle;" value="Pre-Condition" vertex="1">
+          <mxGeometry height="87" width="600" as="geometry">
+            <mxRectangle height="87" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-125" parent="narR-c-123" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=middle;" value="1. Tech Engineer เข้าสู่ระบบแล้ว และถูกมอบหมายใน Project (UC04)&lt;br&gt;2. ติดตั้งอุปกรณ์ที่ site และทดสอบภายในผ่านแล้ว&lt;br&gt;3. Project อยู่ในสถานะ &quot;Working&quot; (หรือ &quot;Testing&quot; กรณีนัดทดสอบใหม่หลังแก้ปัญหา)" vertex="1">
+          <mxGeometry height="87" width="600" x="600" as="geometry">
+            <mxRectangle height="87" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-126" parent="narR-c-116" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="108" width="1200" y="245" as="geometry" />
+        </mxCell>
+        <mxCell id="narR-c-127" parent="narR-c-126" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=#F5F5F5;fontStyle=1;align=center;verticalAlign=middle;" value="Post-Condition" vertex="1">
+          <mxGeometry height="108" width="600" as="geometry">
+            <mxRectangle height="108" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-128" parent="narR-c-126" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=middle;" value="1. นัดหมายทดสอบถูกบันทึกในระบบ&lt;br&gt;2. สถานะ Project เป็น &quot;Testing&quot;&lt;br&gt;3. PM, ทีม Engineer และลูกค้าได้รับการแจ้งเตือนทันที และได้รับแจ้งเตือนซ้ำตามเวลาที่ตั้งไว้" vertex="1">
+          <mxGeometry height="108" width="600" x="600" as="geometry">
+            <mxRectangle height="108" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-129" parent="narR-c-116" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="40" width="1200" y="353" as="geometry" />
+        </mxCell>
+        <mxCell id="narR-c-130" parent="narR-c-129" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=#DAE8FC;fontStyle=1;align=center;verticalAlign=middle;" value="Actor Action" vertex="1">
+          <mxGeometry height="40" width="600" as="geometry">
+            <mxRectangle height="40" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-131" parent="narR-c-129" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=#DAE8FC;fontStyle=1;align=center;verticalAlign=middle;" value="System" vertex="1">
+          <mxGeometry height="40" width="600" x="600" as="geometry">
+            <mxRectangle height="40" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-132" parent="narR-c-116" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="66" width="1200" y="393" as="geometry" />
+        </mxCell>
+        <mxCell id="narR-c-133" parent="narR-c-132" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=top;spacingTop=6;" value="" vertex="1">
+          <mxGeometry height="66" width="600" as="geometry">
+            <mxRectangle height="66" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-134" parent="narR-c-132" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=top;spacingTop=6;" value="&lt;b&gt;Step 1:&lt;/b&gt; ระบบแสดงรายการ Project ที่ Tech Engineer คนนี้ถูกมอบหมาย และมีสถานะ &quot;Working&quot; หรือ &quot;Testing&quot;" vertex="1">
+          <mxGeometry height="66" width="600" x="600" as="geometry">
+            <mxRectangle height="66" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-135" parent="narR-c-116" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="66" width="1200" y="459" as="geometry" />
+        </mxCell>
+        <mxCell id="narR-c-136" parent="narR-c-135" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=top;spacingTop=6;" value="&lt;b&gt;Step 2:&lt;/b&gt; Tech Engineer เลือก Project ที่ต้องการตั้งนัดทดสอบ" vertex="1">
+          <mxGeometry height="66" width="600" as="geometry">
+            <mxRectangle height="66" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-137" parent="narR-c-135" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=top;spacingTop=6;" value="&lt;b&gt;Step 3:&lt;/b&gt; ระบบแสดงข้อมูล Project (Project Site, Customer Name / Email, Engineer ในทีม) นัดหมายทดสอบเดิม (ถ้ามี) และแบบฟอร์มนัดหมาย" vertex="1">
+          <mxGeometry height="66" width="600" x="600" as="geometry">
+            <mxRectangle height="66" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-138" parent="narR-c-116" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="255" width="1200" y="525" as="geometry" />
+        </mxCell>
+        <mxCell id="narR-c-139" parent="narR-c-138" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=top;spacingTop=6;" value="&lt;b&gt;Step 4:&lt;/b&gt; Tech Engineer กรอกรายละเอียดนัดทดสอบ แล้วกด &quot;บันทึก&quot;&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;4.1 วันที่ทดสอบ&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;4.2 เวลาเริ่ม – เวลาสิ้นสุด&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;4.3 สถานที่ทดสอบ (ค่าเริ่มต้นคือ Project Site)&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;4.4 รายละเอียดการทดสอบ&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;4.5 เวลาแจ้งเตือนล่วงหน้า (เช่น 1 วัน, 3 ชั่วโมง)" vertex="1">
+          <mxGeometry height="255" width="600" as="geometry">
+            <mxRectangle height="255" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-140" parent="narR-c-138" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=top;spacingTop=6;" value="&lt;b&gt;Step 5:&lt;/b&gt; ระบบตรวจสอบความถูกต้องของข้อมูลที่กรอก&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;5.1 วันที่ทดสอบต้องไม่เป็นวันที่ผ่านมาแล้ว&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;5.2 เวลาสิ้นสุดต้องอยู่หลังเวลาเริ่ม&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;5.3 ต้องกรอกสถานที่ทดสอบ&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;5.4 ต้องเลือกเวลาแจ้งเตือนล่วงหน้า&lt;br&gt;&lt;b&gt;Step 6:&lt;/b&gt; ระบบบันทึกนัดหมายทดสอบลงระบบ สถานะนัด &quot;Scheduled&quot; (ถ้ามีนัดเดิม เปลี่ยนนัดเดิมเป็น &quot;Cancelled&quot;)&lt;br&gt;&lt;b&gt;Step 7:&lt;/b&gt; ระบบอัปเดตสถานะ Project เป็น &quot;Testing&quot;&lt;br&gt;&lt;b&gt;Step 8:&lt;/b&gt; ระบบส่งการแจ้งเตือนนัดหมายไปยัง PM และ Tech Engineer ใน Project และส่งอีเมลนัดหมายไปยัง Customer Email&lt;br&gt;&lt;b&gt;Step 9:&lt;/b&gt; ระบบส่งการแจ้งเตือนซ้ำตามเวลาแจ้งเตือนล่วงหน้าที่ตั้งไว้" vertex="1">
+          <mxGeometry height="255" width="600" x="600" as="geometry">
+            <mxRectangle height="255" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-141" parent="narR-c-116" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="48" width="1200" y="780" as="geometry" />
+        </mxCell>
+        <mxCell id="narR-c-142" parent="narR-c-141" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=#F5F5F5;fontStyle=1;align=center;verticalAlign=middle;" value="Alternative / Exception Flow" vertex="1">
+          <mxGeometry height="48" width="600" as="geometry">
+            <mxRectangle height="48" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-143" parent="narR-c-141" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=top;spacingTop=6;" value="&lt;b&gt;5a:&lt;/b&gt; ข้อมูลไม่ครบหรือไม่ถูกต้อง → ระบบแจ้งเตือนที่ช่องที่ผิด และกลับไป Step 4" vertex="1">
+          <mxGeometry height="48" width="600" x="600" as="geometry">
+            <mxRectangle height="48" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-144" parent="narR-1" style="shape=table;startSize=44;container=1;collapsible=0;childLayout=tableLayout;strokeColor=default;fontSize=18;fontStyle=1;fillColor=#E1D5E7;html=1;" value="UC06 Add Customer New Requirement" vertex="1">
+          <mxGeometry height="1038" width="1200" x="1320" y="1053" as="geometry" />
+        </mxCell>
+        <mxCell id="narR-c-145" parent="narR-c-144" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="48" width="1200" y="44" as="geometry" />
+        </mxCell>
+        <mxCell id="narR-c-146" parent="narR-c-145" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=#F5F5F5;fontStyle=1;align=center;verticalAlign=middle;" value="Main Actor" vertex="1">
+          <mxGeometry height="48" width="600" as="geometry">
+            <mxRectangle height="48" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-147" parent="narR-c-145" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=middle;" value="PM" vertex="1">
+          <mxGeometry height="48" width="600" x="600" as="geometry">
+            <mxRectangle height="48" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-148" parent="narR-c-144" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="66" width="1200" y="92" as="geometry" />
+        </mxCell>
+        <mxCell id="narR-c-149" parent="narR-c-148" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=#F5F5F5;fontStyle=1;align=center;verticalAlign=middle;" value="Describe" vertex="1">
+          <mxGeometry height="66" width="600" as="geometry">
+            <mxRectangle height="66" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-150" parent="narR-c-148" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=middle;" value="ใช้ในการบันทึก Requirement ใหม่ที่ลูกค้าขอเพิ่มระหว่างการทดสอบระบบเข้าสู่ Project และส่งให้ Sale พิจารณาอนุมัติผ่านระบบ แทนการส่งอีเมลและบันทึกซ้ำซ้อน" vertex="1">
+          <mxGeometry height="66" width="600" x="600" as="geometry">
+            <mxRectangle height="66" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-151" parent="narR-c-144" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="108" width="1200" y="158" as="geometry" />
+        </mxCell>
+        <mxCell id="narR-c-152" parent="narR-c-151" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=#F5F5F5;fontStyle=1;align=center;verticalAlign=middle;" value="Pre-Condition" vertex="1">
+          <mxGeometry height="108" width="600" as="geometry">
+            <mxRectangle height="108" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-153" parent="narR-c-151" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=middle;" value="1. PM เข้าสู่ระบบแล้ว และเป็น PM ของ Project&lt;br&gt;2. Project อยู่ในสถานะ &quot;Testing&quot; (หรือ &quot;WaitingForApprove&quot; กรณีเพิ่ม Requirement หลายข้อจากการทดสอบรอบเดียวกัน)&lt;br&gt;3. ลูกค้าแจ้งความต้องการเพิ่มเติม" vertex="1">
+          <mxGeometry height="108" width="600" x="600" as="geometry">
+            <mxRectangle height="108" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-154" parent="narR-c-144" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="87" width="1200" y="266" as="geometry" />
+        </mxCell>
+        <mxCell id="narR-c-155" parent="narR-c-154" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=#F5F5F5;fontStyle=1;align=center;verticalAlign=middle;" value="Post-Condition" vertex="1">
+          <mxGeometry height="87" width="600" as="geometry">
+            <mxRectangle height="87" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-156" parent="narR-c-154" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=middle;" value="1. Requirement ใหม่ถูกบันทึกในระบบ สถานะ &quot;รออนุมัติ&quot;&lt;br&gt;2. สถานะ Project เปลี่ยนเป็น &quot;WaitingForApprove&quot;&lt;br&gt;3. Sale in Charge ได้รับการแจ้งเตือนให้พิจารณา" vertex="1">
+          <mxGeometry height="87" width="600" x="600" as="geometry">
+            <mxRectangle height="87" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-157" parent="narR-c-144" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="40" width="1200" y="353" as="geometry" />
+        </mxCell>
+        <mxCell id="narR-c-158" parent="narR-c-157" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=#DAE8FC;fontStyle=1;align=center;verticalAlign=middle;" value="Actor Action" vertex="1">
+          <mxGeometry height="40" width="600" as="geometry">
+            <mxRectangle height="40" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-159" parent="narR-c-157" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=#DAE8FC;fontStyle=1;align=center;verticalAlign=middle;" value="System" vertex="1">
+          <mxGeometry height="40" width="600" x="600" as="geometry">
+            <mxRectangle height="40" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-160" parent="narR-c-144" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="66" width="1200" y="393" as="geometry" />
+        </mxCell>
+        <mxCell id="narR-c-161" parent="narR-c-160" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=top;spacingTop=6;" value="" vertex="1">
+          <mxGeometry height="66" width="600" as="geometry">
+            <mxRectangle height="66" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-162" parent="narR-c-160" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=top;spacingTop=6;" value="&lt;b&gt;Step 1:&lt;/b&gt; ระบบแสดงรายการ Project สถานะ &quot;Testing&quot; หรือ &quot;WaitingForApprove&quot; ที่ PM คนนี้ดูแล (Project ID, Project Name, Customer Name, Status)" vertex="1">
+          <mxGeometry height="66" width="600" x="600" as="geometry">
+            <mxRectangle height="66" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-163" parent="narR-c-144" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="192" width="1200" y="459" as="geometry" />
+        </mxCell>
+        <mxCell id="narR-c-164" parent="narR-c-163" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=top;spacingTop=6;" value="&lt;b&gt;Step 2:&lt;/b&gt; PM เลือก Project ที่ต้องการเพิ่ม Requirement ใหม่" vertex="1">
+          <mxGeometry height="192" width="600" as="geometry">
+            <mxRectangle height="192" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-165" parent="narR-c-163" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=top;spacingTop=6;" value="&lt;b&gt;Step 3:&lt;/b&gt; ระบบแสดงรายละเอียด Project และแบบฟอร์ม Requirement ใหม่&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;3.1 Project Name&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;3.2 Customer Name&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;3.3 PM&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;3.4 Tech Engineer ที่ถูกมอบหมาย&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;3.5 สถานะปัจจุบัน&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;3.6 Start Date&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;3.7 รายละเอียด Solution" vertex="1">
+          <mxGeometry height="192" width="600" x="600" as="geometry">
+            <mxRectangle height="192" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-166" parent="narR-c-144" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="150" width="1200" y="651" as="geometry" />
+        </mxCell>
+        <mxCell id="narR-c-167" parent="narR-c-166" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=top;spacingTop=6;" value="&lt;b&gt;Step 4:&lt;/b&gt; PM กรอกรายละเอียด Requirement ใหม่&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;4.1 หัวข้อ / ชื่อ Requirement&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;4.2 รายละเอียดความต้องการ&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;4.3 ระดับความสำคัญ (Low / Medium / High)&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;4.4 วันที่ลูกค้าต้องการให้เสร็จ&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;4.5 ส่วนงาน / ฟีเจอร์ที่เกี่ยวข้อง (ถ้ามี)" vertex="1">
+          <mxGeometry height="150" width="600" as="geometry">
+            <mxRectangle height="150" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-168" parent="narR-c-166" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=top;spacingTop=6;" value="&lt;b&gt;Step 5:&lt;/b&gt; ระบบตรวจสอบความถูกต้องของข้อมูลที่กรอก&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;5.1 หัวข้อและรายละเอียดต้องไม่ว่าง&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;5.2 ต้องเลือกระดับความสำคัญ&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;5.3 วันที่ต้องการให้เสร็จต้องไม่เป็นวันที่ผ่านมาแล้ว" vertex="1">
+          <mxGeometry height="150" width="600" x="600" as="geometry">
+            <mxRectangle height="150" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-169" parent="narR-c-144" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="150" width="1200" y="801" as="geometry" />
+        </mxCell>
+        <mxCell id="narR-c-170" parent="narR-c-169" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=top;spacingTop=6;" value="&lt;b&gt;Step 6:&lt;/b&gt; PM อัปโหลดเอกสารประกอบ (ไฟล์สเปค, รูปภาพตัวอย่าง, เอกสารจากลูกค้า) (ถ้ามี) แล้วกด &quot;ส่งอนุมัติ&quot;" vertex="1">
+          <mxGeometry height="150" width="600" as="geometry">
+            <mxRectangle height="150" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-171" parent="narR-c-169" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=top;spacingTop=6;" value="&lt;b&gt;Step 7:&lt;/b&gt; ระบบตรวจสอบไฟล์ที่อัปโหลด ต้องเป็น PDF / JPG / PNG และขนาดไม่เกิน 50 MB ต่อไฟล์&lt;br&gt;&lt;b&gt;Step 8:&lt;/b&gt; ระบบบันทึก Requirement ใหม่ลง Project พร้อม Requirement ID, วันเวลาที่บันทึก, ผู้บันทึก (PM) และสถานะ &quot;รออนุมัติ&quot;&lt;br&gt;&lt;b&gt;Step 9:&lt;/b&gt; ระบบอัปเดตสถานะ Project เป็น &quot;WaitingForApprove&quot;&lt;br&gt;&lt;b&gt;Step 10:&lt;/b&gt; ระบบส่งการแจ้งเตือนไปยัง Sale in Charge ทั้งในแอปและอีเมล" vertex="1">
+          <mxGeometry height="150" width="600" x="600" as="geometry">
+            <mxRectangle height="150" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-172" parent="narR-c-144" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="87" width="1200" y="951" as="geometry" />
+        </mxCell>
+        <mxCell id="narR-c-173" parent="narR-c-172" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=#F5F5F5;fontStyle=1;align=center;verticalAlign=middle;" value="Alternative / Exception Flow" vertex="1">
+          <mxGeometry height="87" width="600" as="geometry">
+            <mxRectangle height="87" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-174" parent="narR-c-172" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=top;spacingTop=6;" value="&lt;b&gt;5a:&lt;/b&gt; ข้อมูลไม่ครบหรือไม่ถูกต้อง → ระบบแจ้งเตือนที่ช่องที่ผิด และกลับไป Step 4&lt;br&gt;&lt;b&gt;6a:&lt;/b&gt; ไม่มีเอกสารประกอบ → ข้าม Step 7 ไป Step 8&lt;br&gt;&lt;b&gt;7a:&lt;/b&gt; ไฟล์ผิดประเภทหรือเกิน 50 MB → ระบบแจ้งเตือนและไม่บันทึกไฟล์นั้น กลับไป Step 6" vertex="1">
+          <mxGeometry height="87" width="600" x="600" as="geometry">
+            <mxRectangle height="87" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-175" parent="narR-1" style="shape=table;startSize=44;container=1;collapsible=0;childLayout=tableLayout;strokeColor=default;fontSize=18;fontStyle=1;fillColor=#E1D5E7;html=1;" value="UC07 Approve New Project Requirement" vertex="1">
+          <mxGeometry height="954" width="1200" x="2640" y="1053" as="geometry" />
+        </mxCell>
+        <mxCell id="narR-c-176" parent="narR-c-175" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="48" width="1200" y="44" as="geometry" />
+        </mxCell>
+        <mxCell id="narR-c-177" parent="narR-c-176" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=#F5F5F5;fontStyle=1;align=center;verticalAlign=middle;" value="Main Actor" vertex="1">
+          <mxGeometry height="48" width="600" as="geometry">
+            <mxRectangle height="48" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-178" parent="narR-c-176" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=middle;" value="Sale" vertex="1">
+          <mxGeometry height="48" width="600" x="600" as="geometry">
+            <mxRectangle height="48" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-179" parent="narR-c-175" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="66" width="1200" y="92" as="geometry" />
+        </mxCell>
+        <mxCell id="narR-c-180" parent="narR-c-179" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=#F5F5F5;fontStyle=1;align=center;verticalAlign=middle;" value="Describe" vertex="1">
+          <mxGeometry height="66" width="600" as="geometry">
+            <mxRectangle height="66" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-181" parent="narR-c-179" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=middle;" value="ใช้ในการตรวจสอบและพิจารณา Requirement ใหม่ที่ PM บันทึกไว้ (UC06) ว่าจะอนุมัติหรือปฏิเสธ ถ้าอนุมัติ Project จะกลับไปให้ Presale Engineer ปรับ Solution (UC02)" vertex="1">
+          <mxGeometry height="66" width="600" x="600" as="geometry">
+            <mxRectangle height="66" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-182" parent="narR-c-175" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="87" width="1200" y="158" as="geometry" />
+        </mxCell>
+        <mxCell id="narR-c-183" parent="narR-c-182" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=#F5F5F5;fontStyle=1;align=center;verticalAlign=middle;" value="Pre-Condition" vertex="1">
+          <mxGeometry height="87" width="600" as="geometry">
+            <mxRectangle height="87" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-184" parent="narR-c-182" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=middle;" value="1. Sale เข้าสู่ระบบแล้ว และเป็น Sale in Charge ของ Project&lt;br&gt;2. Project อยู่ในสถานะ &quot;WaitingForApprove&quot; และมี Requirement สถานะ &quot;รออนุมัติ&quot; (UC06)" vertex="1">
+          <mxGeometry height="87" width="600" x="600" as="geometry">
+            <mxRectangle height="87" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-185" parent="narR-c-175" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="108" width="1200" y="245" as="geometry" />
+        </mxCell>
+        <mxCell id="narR-c-186" parent="narR-c-185" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=#F5F5F5;fontStyle=1;align=center;verticalAlign=middle;" value="Post-Condition" vertex="1">
+          <mxGeometry height="108" width="600" as="geometry">
+            <mxRectangle height="108" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-187" parent="narR-c-185" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=middle;" value="1. Requirement ถูกอัปเดตเป็น &quot;อนุมัติ&quot; หรือ &quot;ปฏิเสธ&quot; พร้อมผู้พิจารณา วันที่ และเหตุผล&lt;br&gt;2. สถานะ Project เปลี่ยนเป็น &quot;NewProject&quot; (มีข้อที่อนุมัติ) หรือ &quot;Finish&quot; (ปฏิเสธทั้งหมด)&lt;br&gt;3. PM และ Presale Engineer ได้รับการแจ้งเตือนผลการพิจารณา" vertex="1">
+          <mxGeometry height="108" width="600" x="600" as="geometry">
+            <mxRectangle height="108" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-188" parent="narR-c-175" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="40" width="1200" y="353" as="geometry" />
+        </mxCell>
+        <mxCell id="narR-c-189" parent="narR-c-188" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=#DAE8FC;fontStyle=1;align=center;verticalAlign=middle;" value="Actor Action" vertex="1">
+          <mxGeometry height="40" width="600" as="geometry">
+            <mxRectangle height="40" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-190" parent="narR-c-188" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=#DAE8FC;fontStyle=1;align=center;verticalAlign=middle;" value="System" vertex="1">
+          <mxGeometry height="40" width="600" x="600" as="geometry">
+            <mxRectangle height="40" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-191" parent="narR-c-175" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="66" width="1200" y="393" as="geometry" />
+        </mxCell>
+        <mxCell id="narR-c-192" parent="narR-c-191" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=top;spacingTop=6;" value="" vertex="1">
+          <mxGeometry height="66" width="600" as="geometry">
+            <mxRectangle height="66" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-193" parent="narR-c-191" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=top;spacingTop=6;" value="&lt;b&gt;Step 1:&lt;/b&gt; ระบบแสดงรายการ Project สถานะ &quot;WaitingForApprove&quot; ที่ Sale คนนี้รับผิดชอบ พร้อมจำนวน Requirement ที่รออนุมัติ" vertex="1">
+          <mxGeometry height="66" width="600" x="600" as="geometry">
+            <mxRectangle height="66" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-194" parent="narR-c-175" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="66" width="1200" y="459" as="geometry" />
+        </mxCell>
+        <mxCell id="narR-c-195" parent="narR-c-194" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=top;spacingTop=6;" value="&lt;b&gt;Step 2:&lt;/b&gt; Sale เลือก Project ที่ต้องการตรวจสอบ" vertex="1">
+          <mxGeometry height="66" width="600" as="geometry">
+            <mxRectangle height="66" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-196" parent="narR-c-194" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=top;spacingTop=6;" value="&lt;b&gt;Step 3:&lt;/b&gt; ระบบแสดงรายการ Requirement สถานะ &quot;รออนุมัติ&quot; ของ Project (Requirement ID, หัวข้อ, ความสำคัญ, วันที่ต้องการ, ผู้บันทึก)" vertex="1">
+          <mxGeometry height="66" width="600" x="600" as="geometry">
+            <mxRectangle height="66" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-197" parent="narR-c-175" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="66" width="1200" y="525" as="geometry" />
+        </mxCell>
+        <mxCell id="narR-c-198" parent="narR-c-197" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=top;spacingTop=6;" value="&lt;b&gt;Step 4:&lt;/b&gt; Sale เลือก Requirement ที่ต้องการตรวจสอบ" vertex="1">
+          <mxGeometry height="66" width="600" as="geometry">
+            <mxRectangle height="66" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-199" parent="narR-c-197" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=top;spacingTop=6;" value="&lt;b&gt;Step 5:&lt;/b&gt; ระบบตรวจสอบว่า Requirement ยังอยู่ในสถานะ &quot;รออนุมัติ&quot;&lt;br&gt;&lt;b&gt;Step 6:&lt;/b&gt; ระบบแสดงรายละเอียด Requirement และเอกสารประกอบให้ Sale ตรวจ" vertex="1">
+          <mxGeometry height="66" width="600" x="600" as="geometry">
+            <mxRectangle height="66" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-200" parent="narR-c-175" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="255" width="1200" y="591" as="geometry" />
+        </mxCell>
+        <mxCell id="narR-c-201" parent="narR-c-200" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=top;spacingTop=6;" value="&lt;b&gt;Step 7:&lt;/b&gt; Sale เลือก &quot;อนุมัติ&quot; หรือ &quot;ปฏิเสธ&quot; พร้อมระบุเหตุผล (บังคับกรณีปฏิเสธ) แล้วกด &quot;ยืนยัน&quot;" vertex="1">
+          <mxGeometry height="255" width="600" as="geometry">
+            <mxRectangle height="255" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-202" parent="narR-c-200" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=top;spacingTop=6;" value="&lt;b&gt;Step 8:&lt;/b&gt; ระบบตรวจสอบว่ากรอกเหตุผลแล้ว (กรณีปฏิเสธ)&lt;br&gt;&lt;b&gt;Step 9:&lt;/b&gt; ระบบบันทึกผลการพิจารณาของ Sale ลง Requirement: สถานะ (อนุมัติ / ปฏิเสธ), ผู้พิจารณา, วันที่พิจารณา, เหตุผล&lt;br&gt;&lt;b&gt;Step 10:&lt;/b&gt; ระบบแจ้งเตือน PM ถึงผลการพิจารณา โดยระบุชื่อ Requirement ผลการพิจารณา และเหตุผล&lt;br&gt;&lt;b&gt;Step 11:&lt;/b&gt; เมื่อ Requirement ที่รออนุมัติของ Project ถูกพิจารณาครบทุกข้อ ระบบอัปเดตสถานะ Project&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;11.1 มีอย่างน้อย 1 ข้อที่อนุมัติ → สถานะ &quot;NewProject&quot; และแจ้งเตือน Presale Engineer in Charge ให้ปรับ Solution (UC02) โดยเอกสาร Requirement จะแสดงใน Check Project Details (UC03)&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;11.2 ปฏิเสธทั้งหมด → สถานะ &quot;Finish&quot; (ดำเนินการ UAT / Handover ต่อ)" vertex="1">
+          <mxGeometry height="255" width="600" x="600" as="geometry">
+            <mxRectangle height="255" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-203" parent="narR-c-175" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="108" width="1200" y="846" as="geometry" />
+        </mxCell>
+        <mxCell id="narR-c-204" parent="narR-c-203" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=#F5F5F5;fontStyle=1;align=center;verticalAlign=middle;" value="Alternative / Exception Flow" vertex="1">
+          <mxGeometry height="108" width="600" as="geometry">
+            <mxRectangle height="108" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-c-205" parent="narR-c-203" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=top;spacingTop=6;" value="&lt;b&gt;5a:&lt;/b&gt; Requirement ถูกพิจารณาไปแล้ว → ระบบแจ้งเตือน และกลับไป Step 3&lt;br&gt;&lt;b&gt;8a:&lt;/b&gt; ปฏิเสธแต่ไม่กรอกเหตุผล → ระบบแจ้งเตือน และกลับไป Step 7&lt;br&gt;&lt;b&gt;11a:&lt;/b&gt; ยังมี Requirement รออนุมัติเหลืออยู่ → สถานะ Project ยังเป็น &quot;WaitingForApprove&quot; และกลับไป Step 3" vertex="1">
+          <mxGeometry height="108" width="600" x="600" as="geometry">
+            <mxRectangle height="108" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-u8-t" parent="narR-1" style="shape=table;startSize=44;container=1;collapsible=0;childLayout=tableLayout;strokeColor=default;fontSize=18;fontStyle=1;fillColor=#E1D5E7;html=1;" value="UC08 Close Project" vertex="1">
+          <mxGeometry height="909" width="1200" x="3960" y="1053" as="geometry" />
+        </mxCell>
+        <mxCell id="narR-u8-r0" parent="narR-u8-t" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="48" width="1200" y="44" as="geometry" />
+        </mxCell>
+        <mxCell id="narR-u8-r0c0" parent="narR-u8-r0" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=#F5F5F5;fontStyle=1;align=center;verticalAlign=middle;" value="Main Actor" vertex="1">
+          <mxGeometry height="48" width="600" as="geometry">
+            <mxRectangle height="48" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-u8-r0c1" parent="narR-u8-r0" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=middle;" value="PM" vertex="1">
+          <mxGeometry height="48" width="600" x="600" as="geometry">
+            <mxRectangle height="48" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-u8-r1" parent="narR-u8-t" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="87" width="1200" y="92" as="geometry" />
+        </mxCell>
+        <mxCell id="narR-u8-r1c0" parent="narR-u8-r1" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=#F5F5F5;fontStyle=1;align=center;verticalAlign=middle;" value="Describe" vertex="1">
+          <mxGeometry height="87" width="600" as="geometry">
+            <mxRectangle height="87" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-u8-r1c1" parent="narR-u8-r1" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=middle;" value="ใช้ในการปิด Project เมื่อลูกค้าทดสอบระบบผ่านและไม่มี Requirement ใหม่ โดย PM เป็นผู้ตัดสินใจกดปุ่ม &quot;ปิด Project&quot; ระบบเปลี่ยนสถานะเป็น Finish และแจ้งเตือนผู้รับผิดชอบทุกคนใน Project ก่อนจัดทำเอกสาร UAT และ Handover" vertex="1">
+          <mxGeometry height="87" width="600" x="600" as="geometry">
+            <mxRectangle height="87" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-u8-r2" parent="narR-u8-t" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="87" width="1200" y="179" as="geometry" />
+        </mxCell>
+        <mxCell id="narR-u8-r2c0" parent="narR-u8-r2" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=#F5F5F5;fontStyle=1;align=center;verticalAlign=middle;" value="Pre-Condition" vertex="1">
+          <mxGeometry height="87" width="600" as="geometry">
+            <mxRectangle height="87" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-u8-r2c1" parent="narR-u8-r2" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=middle;" value="1. PM เข้าสู่ระบบแล้ว และเป็น PM ของ Project&lt;br&gt;2. Project อยู่ในสถานะ &quot;Testing&quot; และลูกค้าทดสอบระบบผ่านตามความต้องการ&lt;br&gt;3. ไม่มี Requirement สถานะ &quot;รออนุมัติ&quot;" vertex="1">
+          <mxGeometry height="87" width="600" x="600" as="geometry">
+            <mxRectangle height="87" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-u8-r3" parent="narR-u8-t" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="108" width="1200" y="266" as="geometry" />
+        </mxCell>
+        <mxCell id="narR-u8-r3c0" parent="narR-u8-r3" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=#F5F5F5;fontStyle=1;align=center;verticalAlign=middle;" value="Post-Condition" vertex="1">
+          <mxGeometry height="108" width="600" as="geometry">
+            <mxRectangle height="108" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-u8-r3c1" parent="narR-u8-r3" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=middle;" value="1. สถานะ Project เปลี่ยนเป็น &quot;Finish&quot;&lt;br&gt;2. นัดทดสอบล่าสุดเปลี่ยนเป็น &quot;Done&quot;&lt;br&gt;3. Sale in Charge, Presale Engineer in Charge และ Tech Engineer ทุกคนใน Project ได้รับการแจ้งเตือนว่า Project ถูกปิดแล้ว" vertex="1">
+          <mxGeometry height="108" width="600" x="600" as="geometry">
+            <mxRectangle height="108" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-u8-r4" parent="narR-u8-t" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="40" width="1200" y="374" as="geometry" />
+        </mxCell>
+        <mxCell id="narR-u8-r4c0" parent="narR-u8-r4" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=#DAE8FC;fontStyle=1;align=center;verticalAlign=middle;" value="Actor Action" vertex="1">
+          <mxGeometry height="40" width="600" as="geometry">
+            <mxRectangle height="40" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-u8-r4c1" parent="narR-u8-r4" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=#DAE8FC;fontStyle=1;align=center;verticalAlign=middle;" value="System" vertex="1">
+          <mxGeometry height="40" width="600" x="600" as="geometry">
+            <mxRectangle height="40" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-u8-r5" parent="narR-u8-t" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="66" width="1200" y="414" as="geometry" />
+        </mxCell>
+        <mxCell id="narR-u8-r5c0" parent="narR-u8-r5" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=top;spacingTop=6;" value="" vertex="1">
+          <mxGeometry height="66" width="600" as="geometry">
+            <mxRectangle height="66" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-u8-r5c1" parent="narR-u8-r5" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=top;spacingTop=6;" value="&lt;b&gt;Step 1:&lt;/b&gt; ระบบแสดงรายการ Project สถานะ &quot;Testing&quot; ที่ PM คนนี้ดูแล (Project ID, Project Name, Customer Name)" vertex="1">
+          <mxGeometry height="66" width="600" x="600" as="geometry">
+            <mxRectangle height="66" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-u8-r6" parent="narR-u8-t" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="150" width="1200" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="narR-u8-r6c0" parent="narR-u8-r6" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=top;spacingTop=6;" value="&lt;b&gt;Step 2:&lt;/b&gt; PM เลือก Project ที่ต้องการปิด" vertex="1">
+          <mxGeometry height="150" width="600" as="geometry">
+            <mxRectangle height="150" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-u8-r6c1" parent="narR-u8-r6" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=top;spacingTop=6;" value="&lt;b&gt;Step 3:&lt;/b&gt; ระบบแสดงข้อมูล Project ผู้รับผิดชอบ และนัดทดสอบล่าสุด พร้อมปุ่ม &quot;ปิด Project&quot;&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;3.1 Project Name, Customer Name, Sale in Charge, Presale Engineer in Charge&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;3.2 Tech Engineer ที่ถูกมอบหมาย&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;3.3 นัดทดสอบล่าสุด (วัน เวลา สถานที่)" vertex="1">
+          <mxGeometry height="150" width="600" x="600" as="geometry">
+            <mxRectangle height="150" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-u8-r7" parent="narR-u8-t" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="192" width="1200" y="630" as="geometry" />
+        </mxCell>
+        <mxCell id="narR-u8-r7c0" parent="narR-u8-r7" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=top;spacingTop=6;" value="&lt;b&gt;Step 4:&lt;/b&gt; PM กดปุ่ม &quot;ปิด Project&quot; และกดยืนยัน" vertex="1">
+          <mxGeometry height="192" width="600" as="geometry">
+            <mxRectangle height="192" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-u8-r7c1" parent="narR-u8-r7" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=top;spacingTop=6;" value="&lt;b&gt;Step 5:&lt;/b&gt; ระบบตรวจสอบก่อนปิด Project&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;5.1 Project ยังอยู่ในสถานะ &quot;Testing&quot; และ PM คนนี้เป็น PM ของ Project&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;5.2 ไม่มี Requirement สถานะ &quot;รออนุมัติ&quot;&lt;br&gt;&lt;b&gt;Step 6:&lt;/b&gt; ระบบอัปเดตสถานะ Project เป็น &quot;Finish&quot;&lt;br&gt;&lt;b&gt;Step 7:&lt;/b&gt; ระบบเปลี่ยนสถานะนัดทดสอบล่าสุดเป็น &quot;Done&quot;&lt;br&gt;&lt;b&gt;Step 8:&lt;/b&gt; ระบบส่งการแจ้งเตือนไปยังผู้รับผิดชอบทุกคนใน Project (Sale in Charge, Presale Engineer in Charge และ Tech Engineer ที่ถูกมอบหมาย) ว่า Project ถูกปิดแล้ว และให้เตรียมจัดทำเอกสาร UAT และ Handover" vertex="1">
+          <mxGeometry height="192" width="600" x="600" as="geometry">
+            <mxRectangle height="192" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-u8-r8" parent="narR-u8-t" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="87" width="1200" y="822" as="geometry" />
+        </mxCell>
+        <mxCell id="narR-u8-r8c0" parent="narR-u8-r8" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=#F5F5F5;fontStyle=1;align=center;verticalAlign=middle;" value="Alternative / Exception Flow" vertex="1">
+          <mxGeometry height="87" width="600" as="geometry">
+            <mxRectangle height="87" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="narR-u8-r8c1" parent="narR-u8-r8" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;fillColor=none;align=left;verticalAlign=top;spacingTop=6;" value="&lt;b&gt;4a:&lt;/b&gt; PM กดยกเลิกในหน้าต่างยืนยัน → ระบบไม่เปลี่ยนแปลงข้อมูล และจบ Use Case&lt;br&gt;&lt;b&gt;5a:&lt;/b&gt; Project ไม่ได้อยู่ในสถานะ &quot;Testing&quot; หรือยังมี Requirement รออนุมัติ → ระบบแจ้ง &quot;ไม่สามารถปิด Project ได้&quot; และกลับไป Step 1" vertex="1">
+          <mxGeometry height="87" width="600" x="600" as="geometry">
+            <mxRectangle height="87" width="600" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

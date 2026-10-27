@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net">
+  <diagram name="Sequence UC01" id="seqPage01xx">
+    <mxGraphModel dx="3625" dy="2238" grid="1" gridSize="20" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="sq1-0" />
+        <mxCell id="sq1-1" parent="sq1-0" />
+        <mxCell id="sq1-c1" parent="sq1-1" style="text;html=1;align=left;verticalAlign=middle;fontSize=26;" value="UC01 Create Project Profile (Sequence)" vertex="1">
+          <mxGeometry height="44" width="1000" x="40" y="-110" as="geometry" />
+        </mxCell>
+        <mxCell id="sq1-c3" parent="sq1-1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=16;" value="Sale" vertex="1">
+          <mxGeometry height="55" width="30" x="65" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="sq1-c4" edge="1" parent="sq1-1" style="endArrow=none;dashed=1;html=1;strokeColor=#808080;dashPattern=4 6;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="80" y="160" as="sourcePoint" />
+            <mxPoint x="80" y="1524" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sq1-c5" parent="sq1-1" style="text;html=1;align=center;verticalAlign=bottom;whiteSpace=wrap;fontSize=16;" value="&amp;lt;&amp;lt;Boundary&amp;gt;&amp;gt;&lt;br&gt;CreateProject&lt;br&gt;Button" vertex="1">
+          <mxGeometry height="90" width="192" x="184" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sq1-c6" edge="1" parent="sq1-1" style="endArrow=none;dashed=1;html=1;strokeColor=#808080;dashPattern=4 6;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="280" y="160" as="sourcePoint" />
+            <mxPoint x="280" y="1524" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sq1-c7" parent="sq1-1" style="text;html=1;align=center;verticalAlign=bottom;whiteSpace=wrap;fontSize=16;" value="&amp;lt;&amp;lt;Boundary&amp;gt;&amp;gt;&lt;br&gt;ProjectDetail&lt;br&gt;Form" vertex="1">
+          <mxGeometry height="90" width="192" x="384" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sq1-c8" edge="1" parent="sq1-1" style="endArrow=none;dashed=1;html=1;strokeColor=#808080;dashPattern=4 6;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="480" y="160" as="sourcePoint" />
+            <mxPoint x="480" y="1524" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sq1-c9" parent="sq1-1" style="text;html=1;align=center;verticalAlign=bottom;whiteSpace=wrap;fontSize=16;" value="&amp;lt;&amp;lt;Controller&amp;gt;&amp;gt;&lt;br&gt;Project&lt;br&gt;Controller" vertex="1">
+          <mxGeometry height="90" width="192" x="584" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sq1-c10" edge="1" parent="sq1-1" style="endArrow=none;dashed=1;html=1;strokeColor=#808080;dashPattern=4 6;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="680" y="160" as="sourcePoint" />
+            <mxPoint x="680" y="1524" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sq1-c11" parent="sq1-1" style="text;html=1;align=center;verticalAlign=bottom;whiteSpace=wrap;fontSize=16;" value="&amp;lt;&amp;lt;Controller&amp;gt;&amp;gt;&lt;br&gt;Project&lt;br&gt;DetectBlank" vertex="1">
+          <mxGeometry height="90" width="192" x="784" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sq1-c12" edge="1" parent="sq1-1" style="endArrow=none;dashed=1;html=1;strokeColor=#808080;dashPattern=4 6;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="880" y="160" as="sourcePoint" />
+            <mxPoint x="880" y="1524" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sq1-c13" parent="sq1-1" style="text;html=1;align=center;verticalAlign=bottom;whiteSpace=wrap;fontSize=16;" value="&amp;lt;&amp;lt;API&amp;gt;&amp;gt;&lt;br&gt;Project&lt;br&gt;API" vertex="1">
+          <mxGeometry height="90" width="192" x="984" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sq1-c14" edge="1" parent="sq1-1" style="endArrow=none;dashed=1;html=1;strokeColor=#808080;dashPattern=4 6;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1080" y="160" as="sourcePoint" />
+            <mxPoint x="1080" y="1524" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sq1-c15" parent="sq1-1" style="text;html=1;align=center;verticalAlign=bottom;whiteSpace=wrap;fontSize=16;" value="&amp;lt;&amp;lt;Entity&amp;gt;&amp;gt;&lt;br&gt;EMPLOYEE" vertex="1">
+          <mxGeometry height="90" width="192" x="1184" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sq1-c16" edge="1" parent="sq1-1" style="endArrow=none;dashed=1;html=1;strokeColor=#808080;dashPattern=4 6;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1280" y="160" as="sourcePoint" />
+            <mxPoint x="1280" y="1524" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sq1-c17" parent="sq1-1" style="text;html=1;align=center;verticalAlign=bottom;whiteSpace=wrap;fontSize=16;" value="&amp;lt;&amp;lt;Entity&amp;gt;&amp;gt;&lt;br&gt;CUSTOMER" vertex="1">
+          <mxGeometry height="90" width="192" x="1384" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sq1-c18" edge="1" parent="sq1-1" style="endArrow=none;dashed=1;html=1;strokeColor=#808080;dashPattern=4 6;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1480" y="160" as="sourcePoint" />
+            <mxPoint x="1480" y="1524" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sq1-c19" parent="sq1-1" style="text;html=1;align=center;verticalAlign=bottom;whiteSpace=wrap;fontSize=16;" value="&amp;lt;&amp;lt;Entity&amp;gt;&amp;gt;&lt;br&gt;PROJECT" vertex="1">
+          <mxGeometry height="90" width="192" x="1584" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sq1-c20" edge="1" parent="sq1-1" style="endArrow=none;dashed=1;html=1;strokeColor=#808080;dashPattern=4 6;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1680" y="160" as="sourcePoint" />
+            <mxPoint x="1680" y="1524" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sq1-c21" parent="sq1-1" style="text;html=1;align=center;verticalAlign=bottom;whiteSpace=wrap;fontSize=16;" value="&amp;lt;&amp;lt;Entity&amp;gt;&amp;gt;&lt;br&gt;NOTIFICATION" vertex="1">
+          <mxGeometry height="90" width="192" x="1784" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sq1-c22" edge="1" parent="sq1-1" style="endArrow=none;dashed=1;html=1;strokeColor=#808080;dashPattern=4 6;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1880" y="160" as="sourcePoint" />
+            <mxPoint x="1880" y="1524" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sq1-c23" parent="sq1-1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E6E6E6;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="56" width="16" x="1272" y="375" as="geometry" />
+        </mxCell>
+        <mxCell id="sq1-c24" parent="sq1-1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E6E6E6;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="56" width="16" x="1472" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="sq1-c25" parent="sq1-1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E6E6E6;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="56" width="16" x="1272" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="sq1-c26" parent="sq1-1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E6E6E6;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="416" width="16" x="1072" y="304" as="geometry" />
+        </mxCell>
+        <mxCell id="sq1-c27" parent="sq1-1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E6E6E6;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="24" width="16" x="472" y="752" as="geometry" />
+        </mxCell>
+        <mxCell id="sq1-c28" parent="sq1-1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E6E6E6;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="516" width="16" x="672" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="sq1-c29" parent="sq1-1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E6E6E6;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="560" width="16" x="272" y="216" as="geometry" />
+        </mxCell>
+        <mxCell id="sq1-c30" parent="sq1-1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E6E6E6;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="56" width="16" x="872" y="884" as="geometry" />
+        </mxCell>
+        <mxCell id="sq1-c31" parent="sq1-1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E6E6E6;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="56" width="16" x="1472" y="1043" as="geometry" />
+        </mxCell>
+        <mxCell id="sq1-c32" parent="sq1-1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E6E6E6;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="56" width="16" x="1672" y="1173" as="geometry" />
+        </mxCell>
+        <mxCell id="sq1-c33" parent="sq1-1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E6E6E6;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="56" width="16" x="1872" y="1288" as="geometry" />
+        </mxCell>
+        <mxCell id="sq1-c34" parent="sq1-1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E6E6E6;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="416" width="16" x="1072" y="972" as="geometry" />
+        </mxCell>
+        <mxCell id="sq1-c35" parent="sq1-1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E6E6E6;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="592" width="16" x="672" y="840" as="geometry" />
+        </mxCell>
+        <mxCell id="sq1-c36" parent="sq1-1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E6E6E6;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="668" width="16" x="472" y="796" as="geometry" />
+        </mxCell>
+        <mxCell id="sq1-c37" edge="1" parent="sq1-1" style="html=1;endArrow=block;endFill=0;endSize=10;fontSize=13;verticalAlign=bottom;labelBackgroundColor=default;" value="1. กด Create Project Profile">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="80" y="220" as="sourcePoint" />
+            <mxPoint x="272" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sq1-c38" edge="1" parent="sq1-1" style="html=1;endArrow=block;endFill=0;endSize=10;fontSize=13;verticalAlign=bottom;labelBackgroundColor=default;" value="2a onClick() : openCreateForm()">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="288" y="264" as="sourcePoint" />
+            <mxPoint x="672" y="264" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sq1-c39" edge="1" parent="sq1-1" style="html=1;endArrow=block;endFill=0;endSize=10;fontSize=13;verticalAlign=bottom;labelBackgroundColor=default;" value="2b GET /api/projects/create-form">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="688" y="308" as="sourcePoint" />
+            <mxPoint x="1072" y="308" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sq1-c40" edge="1" parent="sq1-1" style="html=1;endArrow=block;endFill=0;endSize=10;fontSize=12;fontFamily=Courier New;align=left;verticalAlign=bottom;labelBackgroundColor=default;" value="&lt;b&gt;2.1&lt;/b&gt;&amp;nbsp;SELECT EmployeeID, FirstName, LastName&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;FROM EMPLOYEE&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;WHERE EmployeeID = @LoginID AND Role = &#39;Sale&#39;;">
+          <mxGeometry relative="1" x="-1" as="geometry">
+            <mxPoint x="4" y="-4" as="offset" />
+            <mxPoint x="1088" y="379" as="sourcePoint" />
+            <mxPoint x="1272" y="379" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sq1-c41" edge="1" parent="sq1-1" style="html=1;endArrow=open;endFill=0;endSize=10;dashed=1;fontSize=13;verticalAlign=bottom;labelBackgroundColor=default;" value="Sale in Charge">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1272" y="423" as="sourcePoint" />
+            <mxPoint x="1088" y="423" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sq1-c42" edge="1" parent="sq1-1" style="html=1;endArrow=block;endFill=0;endSize=10;fontSize=12;fontFamily=Courier New;align=left;verticalAlign=bottom;labelBackgroundColor=default;" value="&lt;b&gt;2.2&lt;/b&gt;&amp;nbsp;SELECT CustomerID, CustomerName, CustomerEmail&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;FROM CUSTOMER&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;ORDER BY CustomerName;">
+          <mxGeometry relative="1" x="-1" as="geometry">
+            <mxPoint x="4" y="-4" as="offset" />
+            <mxPoint x="1088" y="494" as="sourcePoint" />
+            <mxPoint x="1472" y="494" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sq1-c43" edge="1" parent="sq1-1" style="html=1;endArrow=open;endFill=0;endSize=10;dashed=1;fontSize=13;verticalAlign=bottom;labelBackgroundColor=default;" value="รายชื่อลูกค้า">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1472" y="538" as="sourcePoint" />
+            <mxPoint x="1088" y="538" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sq1-c44" edge="1" parent="sq1-1" style="html=1;endArrow=block;endFill=0;endSize=10;fontSize=12;fontFamily=Courier New;align=left;verticalAlign=bottom;labelBackgroundColor=default;" value="&lt;b&gt;2.3&lt;/b&gt;&amp;nbsp;SELECT EmployeeID, FirstName, LastName&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;FROM EMPLOYEE&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;WHERE Role = &#39;Presale&#39;&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;ORDER BY FirstName;">
+          <mxGeometry relative="1" x="-1" as="geometry">
+            <mxPoint x="4" y="-4" as="offset" />
+            <mxPoint x="1088" y="624" as="sourcePoint" />
+            <mxPoint x="1272" y="624" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sq1-c45" edge="1" parent="sq1-1" style="html=1;endArrow=open;endFill=0;endSize=10;dashed=1;fontSize=13;verticalAlign=bottom;labelBackgroundColor=default;" value="รายชื่อ Presale">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1272" y="668" as="sourcePoint" />
+            <mxPoint x="1088" y="668" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sq1-c46" edge="1" parent="sq1-1" style="html=1;endArrow=open;endFill=0;endSize=10;dashed=1;fontSize=13;verticalAlign=bottom;labelBackgroundColor=default;" value="200 OK : ข้อมูลฟอร์ม">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1072" y="712" as="sourcePoint" />
+            <mxPoint x="688" y="712" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sq1-c47" edge="1" parent="sq1-1" style="html=1;endArrow=block;endFill=0;endSize=10;fontSize=13;verticalAlign=bottom;labelBackgroundColor=default;" value="2. แสดงแบบฟอร์มสร้าง Project Profile">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="672" y="756" as="sourcePoint" />
+            <mxPoint x="488" y="756" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sq1-c48" edge="1" parent="sq1-1" style="html=1;endArrow=block;endFill=0;endSize=10;fontSize=13;verticalAlign=bottom;labelBackgroundColor=default;" value="3. กรอกข้อมูลเบื้องต้นของ Project (ลูกค้าใหม่) และกดบันทึก">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="80" y="800" as="sourcePoint" />
+            <mxPoint x="472" y="800" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sq1-c49" edge="1" parent="sq1-1" style="html=1;endArrow=block;endFill=0;endSize=10;fontSize=13;verticalAlign=bottom;labelBackgroundColor=default;" value="4a submitProject(formData)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="488" y="844" as="sourcePoint" />
+            <mxPoint x="672" y="844" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sq1-c50" edge="1" parent="sq1-1" style="html=1;endArrow=block;endFill=0;endSize=10;fontSize=13;verticalAlign=bottom;labelBackgroundColor=default;" value="4. ตรวจสอบความถูกต้องของข้อมูล (4.1–4.5)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="688" y="888" as="sourcePoint" />
+            <mxPoint x="872" y="888" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sq1-c51" edge="1" parent="sq1-1" style="html=1;endArrow=open;endFill=0;endSize=10;dashed=1;fontSize=13;verticalAlign=bottom;labelBackgroundColor=default;" value="ถูกต้อง">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="872" y="932" as="sourcePoint" />
+            <mxPoint x="688" y="932" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sq1-c52" edge="1" parent="sq1-1" style="html=1;endArrow=block;endFill=0;endSize=10;fontSize=13;verticalAlign=bottom;labelBackgroundColor=default;" value="5a POST /api/projects">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="688" y="976" as="sourcePoint" />
+            <mxPoint x="1072" y="976" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sq1-c53" edge="1" parent="sq1-1" style="html=1;endArrow=block;endFill=0;endSize=10;fontSize=12;fontFamily=Courier New;align=left;verticalAlign=bottom;labelBackgroundColor=default;" value="&lt;b&gt;5.1&lt;/b&gt;&amp;nbsp;INSERT INTO CUSTOMER (CustomerName, CustomerEmail)&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;VALUES (@CustomerName, @CustomerEmail);&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;SET @CustomerID = SCOPE_IDENTITY();">
+          <mxGeometry relative="1" x="-1" as="geometry">
+            <mxPoint x="4" y="-4" as="offset" />
+            <mxPoint x="1088" y="1047" as="sourcePoint" />
+            <mxPoint x="1472" y="1047" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sq1-c54" edge="1" parent="sq1-1" style="html=1;endArrow=open;endFill=0;endSize=10;dashed=1;fontSize=13;verticalAlign=bottom;labelBackgroundColor=default;" value="@CustomerID">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1472" y="1091" as="sourcePoint" />
+            <mxPoint x="1088" y="1091" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sq1-c55" edge="1" parent="sq1-1" style="html=1;endArrow=block;endFill=0;endSize=10;fontSize=12;fontFamily=Courier New;align=left;verticalAlign=bottom;labelBackgroundColor=default;" value="&lt;b&gt;5.2&lt;/b&gt;&amp;nbsp;INSERT INTO PROJECT (ProjectName, ProjectSite, Status, CreatedDate, CustomerID, SaleID, PresaleID)&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;VALUES (@ProjectName, @ProjectSite, &#39;NewProject&#39;, GETDATE(), @CustomerID, @LoginID, @PresaleID);&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;SET @ProjectID = SCOPE_IDENTITY();&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;-- 6. Status = &#39;NewProject&#39; (Query 6.1)">
+          <mxGeometry relative="1" x="-1" as="geometry">
+            <mxPoint x="4" y="-4" as="offset" />
+            <mxPoint x="1088" y="1177" as="sourcePoint" />
+            <mxPoint x="1672" y="1177" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sq1-c56" edge="1" parent="sq1-1" style="html=1;endArrow=open;endFill=0;endSize=10;dashed=1;fontSize=13;verticalAlign=bottom;labelBackgroundColor=default;" value="@ProjectID">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1672" y="1221" as="sourcePoint" />
+            <mxPoint x="1088" y="1221" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sq1-c57" edge="1" parent="sq1-1" style="html=1;endArrow=block;endFill=0;endSize=10;fontSize=12;fontFamily=Courier New;align=left;verticalAlign=bottom;labelBackgroundColor=default;" value="&lt;b&gt;7.1&lt;/b&gt;&amp;nbsp;INSERT INTO NOTIFICATION (RecipientID, ProjectID, Type, Message, SendAt, IsRead)&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;VALUES (@PresaleID, @ProjectID, &#39;NewProject&#39;,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;CONCAT(N&#39;มี Project ใหม่รอออกแบบ Solution: &#39;, @ProjectName), GETDATE(), 0);">
+          <mxGeometry relative="1" x="-1" as="geometry">
+            <mxPoint x="4" y="-4" as="offset" />
+            <mxPoint x="1088" y="1292" as="sourcePoint" />
+            <mxPoint x="1872" y="1292" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sq1-c58" edge="1" parent="sq1-1" style="html=1;endArrow=open;endFill=0;endSize=10;dashed=1;fontSize=13;verticalAlign=bottom;labelBackgroundColor=default;" value="1 row inserted">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1872" y="1336" as="sourcePoint" />
+            <mxPoint x="1088" y="1336" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sq1-c59" edge="1" parent="sq1-1" style="html=1;endArrow=open;endFill=0;endSize=10;dashed=1;fontSize=13;verticalAlign=bottom;labelBackgroundColor=default;" value="201 Created : ProjectID">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1072" y="1380" as="sourcePoint" />
+            <mxPoint x="688" y="1380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sq1-c60" edge="1" parent="sq1-1" style="html=1;endArrow=open;endFill=0;endSize=10;dashed=1;fontSize=13;verticalAlign=bottom;labelBackgroundColor=default;" value="บันทึกสำเร็จ">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="672" y="1424" as="sourcePoint" />
+            <mxPoint x="488" y="1424" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

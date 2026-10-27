@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ตั้งนัดทดสอบ – ProjectSA</title>
+  <link rel="stylesheet" href="css/app.css?v=2">
+</head>
+<body>
+<main>
+  <div class="card">
+    <h1>Set Project Test Calendar Notification</h1>
+    <p class="muted">Tech Engineer กำหนดวัน เวลา สถานที่ทดสอบกับลูกค้า และเวลาแจ้งเตือนล่วงหน้า → สถานะ Testing แจ้งเตือน PM + ทีม (อีเมลลูกค้าในเดโมจะบันทึกลง log เท่านั้น)</p>
+  </div>
+
+  <!-- <<Boundary>> ProjectList Form -->
+  <div class="card">
+    <h2>1. Project ที่คุณถูกมอบหมาย (Working / Testing)</h2>
+    <div id="projectList"></div>
+  </div>
+
+  <!-- <<Boundary>> TestSchedule Form -->
+  <div class="card hidden" id="testScheduleForm">
+    <h2 id="title"></h2>
+    <dl class="info" id="info" style="margin-bottom:16px"></dl>
+    <div id="current" class="notice hidden"></div>
+    <form id="form" class="grid2" novalidate>
+      <div class="field" data-f="testDate"><label>วันที่ทดสอบ *</label><input type="date" name="testDate"><div class="msg"></div></div>
+      <div class="field" data-f="remindBefore"><label>แจ้งเตือนล่วงหน้า *</label>
+        <select name="remindBefore"><option value="">– เลือก –</option><option value="60">1 ชั่วโมง</option>
+          <option value="180">3 ชั่วโมง</option><option value="1440">1 วัน</option><option value="2880">2 วัน</option></select><div class="msg"></div></div>
+      <div class="field" data-f="startTime"><label>เวลาเริ่ม *</label><input type="time" name="startTime"><div class="msg"></div></div>
+      <div class="field" data-f="endTime"><label>เวลาสิ้นสุด *</label><input type="time" name="endTime"><div class="msg"></div></div>
+      <div class="field full" data-f="location"><label>สถานที่ทดสอบ * (ค่าเริ่มต้น = Project Site)</label><input name="location"><div class="msg"></div></div>
+      <div class="field full" data-f="testDetail"><label>รายละเอียดการทดสอบ</label><textarea name="testDetail"></textarea><div class="msg"></div></div>
+      <div class="full actions"><button>บันทึกนัดหมาย</button></div>
+    </form>
+  </div>
+</main>
+<script src="js/app.js?v=2"></script>
+<script src="js/bell.js?v=2"></script>
+<script src="js/uc05.js?v=2"></script>
+</body>
+</html>

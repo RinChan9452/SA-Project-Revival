@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net">
+  <diagram name="Collaboration UC01" id="colPage01xx">
+    <mxGraphModel dx="2575" dy="1503" grid="1" gridSize="20" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="co1-0" />
+        <mxCell id="co1-1" parent="co1-0" />
+        <mxCell id="co1-title" parent="co1-1" style="text;html=1;align=left;verticalAlign=middle;fontSize=26;" value="UC01 Create Project Profile (Collaboration)" vertex="1">
+          <mxGeometry height="50" width="1100" x="-340" y="-275" as="geometry" />
+        </mxCell>
+        <mxCell id="co1-o0" parent="co1-1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=15;" value="Sale" vertex="1">
+          <mxGeometry height="55" width="30" x="-315" y="257.5" as="geometry" />
+        </mxCell>
+        <mxCell id="co1-o1" parent="co1-1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=15;" value="&amp;lt;&amp;lt;Boundary&amp;gt;&amp;gt;&lt;br&gt;CreateProject&lt;br&gt;Button" vertex="1">
+          <mxGeometry height="80" width="200" x="200" y="105" as="geometry" />
+        </mxCell>
+        <mxCell id="co1-o2" parent="co1-1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=15;" value="&amp;lt;&amp;lt;Boundary&amp;gt;&amp;gt;&lt;br&gt;ProjectDetail&lt;br&gt;Form" vertex="1">
+          <mxGeometry height="80" width="200" x="200" y="385" as="geometry" />
+        </mxCell>
+        <mxCell id="co1-o3" parent="co1-1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=15;" value="&amp;lt;&amp;lt;Controller&amp;gt;&amp;gt;&lt;br&gt;Project&lt;br&gt;Controller" vertex="1">
+          <mxGeometry height="80" width="200" x="800" y="245" as="geometry" />
+        </mxCell>
+        <mxCell id="co1-o4" parent="co1-1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=15;" value="&amp;lt;&amp;lt;Controller&amp;gt;&amp;gt;&lt;br&gt;Project&lt;br&gt;DetectBlank" vertex="1">
+          <mxGeometry height="80" width="200" x="800" y="-55" as="geometry" />
+        </mxCell>
+        <mxCell id="co1-o5" parent="co1-1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=15;" value="&amp;lt;&amp;lt;API&amp;gt;&amp;gt;&lt;br&gt;Project&lt;br&gt;API" vertex="1">
+          <mxGeometry height="80" width="200" x="1450" y="245" as="geometry" />
+        </mxCell>
+        <mxCell id="co1-o6" parent="co1-1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=15;" value="&amp;lt;&amp;lt;Entity&amp;gt;&amp;gt;&lt;br&gt;EMPLOYEE" vertex="1">
+          <mxGeometry height="80" width="200" x="2100" y="-40" as="geometry" />
+        </mxCell>
+        <mxCell id="co1-o7" parent="co1-1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=15;" value="&amp;lt;&amp;lt;Entity&amp;gt;&amp;gt;&lt;br&gt;CUSTOMER" vertex="1">
+          <mxGeometry height="80" width="200" x="2100" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="co1-o8" parent="co1-1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=15;" value="&amp;lt;&amp;lt;Entity&amp;gt;&amp;gt;&lt;br&gt;PROJECT" vertex="1">
+          <mxGeometry height="80" width="200" x="2100" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="co1-o9" parent="co1-1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=15;" value="&amp;lt;&amp;lt;Entity&amp;gt;&amp;gt;&lt;br&gt;NOTIFICATION" vertex="1">
+          <mxGeometry height="80" width="200" x="2100" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="co1-l0" edge="1" parent="co1-1" source="co1-o0" style="endArrow=none;html=1;fontSize=12;labelBackgroundColor=default;" target="co1-o1" value="→ 1. กด Create Project Profile">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="co1-l1" edge="1" parent="co1-1" source="co1-o1" style="endArrow=none;html=1;fontSize=12;labelBackgroundColor=default;" target="co1-o3" value="→ 2a onClick() : openCreateForm()">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="co1-l2" edge="1" parent="co1-1" source="co1-o3" style="endArrow=none;html=1;fontSize=12;labelBackgroundColor=default;" target="co1-o5" value="→ 2b GET /api/projects/create-form&lt;br&gt;→ 5a POST /api/projects">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="co1-l3" edge="1" parent="co1-1" source="co1-o5" style="endArrow=none;html=1;fontSize=12;labelBackgroundColor=default;" target="co1-o6" value="↗ 2.1 ดึงข้อมูล Sale in Charge (ผู้ใช้ที่ login)&lt;br&gt;↗ 2.3 ดึงรายชื่อ Presale Engineer">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="co1-l4" edge="1" parent="co1-1" source="co1-o5" style="endArrow=none;html=1;fontSize=12;labelBackgroundColor=default;" target="co1-o7" value="→ 2.2 ดึงรายชื่อลูกค้าเดิม&lt;br&gt;→ 5.1 [ลูกค้าใหม่] บันทึกข้อมูลลูกค้า">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="co1-l5" edge="1" parent="co1-1" source="co1-o2" style="endArrow=none;html=1;fontSize=12;labelBackgroundColor=default;" target="co1-o3" value="← 2. แสดงแบบฟอร์มสร้าง Project Profile&lt;br&gt;→ 4a submitProject(formData)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="co1-l6" edge="1" parent="co1-1" source="co1-o0" style="endArrow=none;html=1;fontSize=12;labelBackgroundColor=default;" target="co1-o2" value="→ 3. กรอกข้อมูลเบื้องต้นของ Project (ลูกค้าใหม่) และกดบันทึก">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="co1-l7" edge="1" parent="co1-1" source="co1-o3" style="endArrow=none;html=1;fontSize=12;labelBackgroundColor=default;" target="co1-o4" value="↑ 4. ตรวจสอบความถูกต้องของข้อมูล (4.1–4.5)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="co1-l8" edge="1" parent="co1-1" source="co1-o5" style="endArrow=none;html=1;fontSize=12;labelBackgroundColor=default;" target="co1-o8" value="→ 5.2 บันทึก Project Profile + 6. สถานะ NewProject">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="co1-l9" edge="1" parent="co1-1" source="co1-o5" style="endArrow=none;html=1;fontSize=12;labelBackgroundColor=default;" target="co1-o9" value="↘ 7.1 ส่งแจ้งเตือนไปยัง Presale in Charge">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>โปรไฟล์ – ProjectSA</title>
+  <link rel="stylesheet" href="css/app.css?v=2">
+</head>
+<body>
+<main>
+  <div class="card" style="display:flex;gap:20px;align-items:center">
+    <img id="pic" class="avatar" style="width:96px;height:96px" alt="">
+    <div>
+      <h1 id="name"></h1>
+      <div class="muted" id="sub"></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>รูปโปรไฟล์</h2>
+    <form id="picForm" novalidate style="display:flex;gap:10px;align-items:start">
+      <div class="field" data-f="picture" style="flex:1"><input type="file" name="picture" accept=".jpg,.jpeg,.png"><div class="msg"></div></div>
+      <button>อัปโหลด</button>
+    </form>
+    <p class="muted" style="font-size:13px">JPG / PNG ขนาดไม่เกิน 5 MB</p>
+  </div>
+
+  <div class="card">
+    <h2>ข้อมูลส่วนตัว</h2>
+    <form id="infoForm" class="grid2" novalidate>
+      <div class="field"><label>Username (แก้ไขไม่ได้)</label><input id="username" disabled></div>
+      <div class="field"><label>บทบาท (แก้ไขไม่ได้ – 1 บัญชี = 1 บทบาท)</label><input id="role" disabled></div>
+      <div class="field" data-f="firstName"><label>ชื่อ *</label><input name="firstName"><div class="msg"></div></div>
+      <div class="field" data-f="lastName"><label>นามสกุล *</label><input name="lastName"><div class="msg"></div></div>
+      <div class="field" data-f="email"><label>อีเมล *</label><input name="email" type="email"><div class="msg"></div></div>
+      <div class="field" data-f="phone"><label>เบอร์โทร</label><input name="phone"><div class="msg"></div></div>
+      <div class="full actions"><button>บันทึกข้อมูล</button></div>
+    </form>
+  </div>
+
+  <div class="card hidden" id="skillCard">
+    <h2>Skill ของฉัน (Tech Engineer)</h2>
+    <form id="skillForm" novalidate>
+      <div class="field" data-f="skills"><label>พิมพ์ Skill ของคุณเอง (อย่างน้อย 1 รายการ)</label><div id="skills"></div><div class="msg"></div></div>
+      <div class="actions"><button>บันทึก Skill</button></div>
+    </form>
+  </div>
+
+  <div class="card">
+    <h2>เปลี่ยนรหัสผ่าน</h2>
+    <form id="pwForm" class="grid2" novalidate>
+      <div class="field" data-f="currentPassword"><label>รหัสผ่านเดิม *</label><input type="password" name="currentPassword" autocomplete="current-password"><div class="msg"></div></div>
+      <div class="field" data-f="newPassword"><label>รหัสผ่านใหม่ * (อย่างน้อย 6 ตัวอักษร)</label><input type="password" name="newPassword" autocomplete="new-password"><div class="msg"></div></div>
+      <div class="full actions"><button>เปลี่ยนรหัสผ่าน</button></div>
+    </form>
+  </div>
+</main>
+<script src="js/app.js?v=2"></script>
+<script src="js/bell.js?v=2"></script>
+<script src="js/profile.js?v=2"></script>
+</body>
+</html>

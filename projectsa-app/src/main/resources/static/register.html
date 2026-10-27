@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>สมัครสมาชิก – ProjectSA</title>
+  <link rel="stylesheet" href="css/app.css?v=2">
+</head>
+<body>
+<main class="center" style="max-width:640px">
+  <div class="card">
+    <h1>สมัครสมาชิก</h1>
+    <p class="muted">1 บัญชีเลือกได้ 1 บทบาท และเปลี่ยนภายหลังไม่ได้</p>
+    <form id="regForm" class="grid2" novalidate>
+      <div class="field" data-f="firstName"><label>ชื่อ *</label><input name="firstName"><div class="msg"></div></div>
+      <div class="field" data-f="lastName"><label>นามสกุล *</label><input name="lastName"><div class="msg"></div></div>
+      <div class="field" data-f="email"><label>อีเมล *</label><input name="email" type="email"><div class="msg"></div></div>
+      <div class="field" data-f="phone"><label>เบอร์โทร</label><input name="phone"><div class="msg"></div></div>
+      <div class="field" data-f="username"><label>Username *</label><input name="username" autocomplete="username"><div class="msg"></div></div>
+      <div class="field" data-f="password"><label>รหัสผ่าน * (อย่างน้อย 6 ตัวอักษร)</label><input name="password" type="password" autocomplete="new-password"><div class="msg"></div></div>
+      <div class="field full" data-f="role"><label>บทบาท * (เลือกได้ 1 บทบาท)</label>
+        <div class="choices">
+          <label><input type="radio" name="role" value="Sale"> Sale</label>
+          <label><input type="radio" name="role" value="Presale"> Presale Engineer</label>
+          <label><input type="radio" name="role" value="PM"> PM</label>
+          <label><input type="radio" name="role" value="TechEngineer"> Tech Engineer</label>
+        </div><div class="msg"></div></div>
+      <div class="field full hidden" data-f="skills" id="skillBlock"><label>Skill ของ Tech Engineer * (พิมพ์เอง อย่างน้อย 1 รายการ)</label>
+        <div id="skills"></div><div class="msg"></div></div>
+      <div class="full actions"><a class="btn secondary" href="login.html">กลับไปหน้าเข้าสู่ระบบ</a><button>สมัครสมาชิก</button></div>
+    </form>
+  </div>
+</main>
+<script src="js/app.js?v=2"></script>
+<script>
+  // F1 Register (Query R.1–R.6)
+  const form = document.getElementById("regForm");
+  const skillBlock = document.getElementById("skillBlock");
+  let skillInput = App.skillInput(document.getElementById("skills"));
+
+  (async () => {
+    const known = await App.get("/api/skills");                        // R.1: suggestions while typing
+    skillInput = App.skillInput(document.getElementById("skills"), known);
+  })();
+  form.querySelectorAll("input[name=role]").forEach((r) => (r.onchange = () =>
+    skillBlock.classList.toggle("hidden", form.role.value !== "TechEngineer")));
+
+  // RegisterDetectBlank (same rules as the server)
+  function detectBlank(d) {
+    const e = {};
+    if (!d.firstName.trim()) e.firstName = "กรุณากรอกชื่อ";
+    if (!d.lastName.trim()) e.lastName = "กรุณากรอกนามสกุล";
+    if (!d.email.trim()) e.email = "กรุณากรอกอีเมล";
+    else if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(d.email.trim())) e.email = "รูปแบบอีเมลไม่ถูกต้อง";
+    if (!d.username.trim()) e.username = "กรุณากรอก Username";
+    if (!d.password) e.password = "กรุณากรอกรหัสผ่าน";
+    else if (d.password.length < 6) e.password = "รหัสผ่านต้องมีอย่างน้อย 6 ตัวอักษร";
+    if (!d.role) e.role = "กรุณาเลือกบทบาท 1 บทบาท";
+    if (d.role === "TechEngineer") {
+      if (!d.skills.length) e.skills = "Tech Engineer ต้องกรอก Skill อย่างน้อย 1 รายการ";
+      else if (d.skills.length > 20) e.skills = "กรอก Skill ได้ไม่เกิน 20 รายการ";
+      else if (d.skills.some((s) => s.length > 50)) e.skills = "ชื่อ Skill ต้องยาวไม่เกิน 50 ตัวอักษร";
+    }
+    return e;
+  }
+
+  form.onsubmit = async (ev) => {
+    ev.preventDefault();
+    const d = App.formData(form);
+    d.skills = d.role === "TechEngineer" ? skillInput.values() : [];
+    const e = detectBlank(d);
+    if (Object.keys(e).length) return App.showErrors(form, { fields: e });
+    try {
+      await App.post("/api/register", d);
+      await App.post("/api/login", { username: d.username, password: d.password });
+      location.href = "index.html";
+    } catch (err) {
+      App.showErrors(form, err);
+    }
+  };
+</script>
+</body>
+</html>

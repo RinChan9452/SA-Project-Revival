@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>หน้าหลัก – ProjectSA</title>
+  <link rel="stylesheet" href="css/app.css?v=2">
+</head>
+<body>
+<main>
+  <div class="card">
+    <h1 id="hello">ProjectSA</h1>
+    <p class="muted">เลือกงานที่ต้องการทำตามบทบาทของคุณ</p>
+  </div>
+  <div class="tiles" id="tiles"></div>
+</main>
+<script src="js/app.js?v=2"></script>
+<script src="js/bell.js?v=2"></script>
+<script>
+  (async () => {
+    const u = await App.page();
+    if (!u) return;
+    document.getElementById("hello").textContent = `สวัสดี ${u.Name} (${u.RoleName})`;
+    document.getElementById("tiles").innerHTML = u.menu.map((m) =>
+      `<a class="tile" href="${m.page}"><h2>${App.esc(m.title)}</h2></a>`).join("")
+      + `<a class="tile" href="profile.html"><h2>โปรไฟล์ของฉัน</h2></a>`;
+  })();
+</script>
+</body>
+</html>

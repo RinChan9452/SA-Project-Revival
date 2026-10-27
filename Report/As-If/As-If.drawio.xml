@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net">
+  <diagram name="As-If (Revised)" id="asifRevisedPage1">
+    <mxGraphModel dx="3625" dy="1838" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="aiR-0" />
+        <mxCell id="aiR-1" parent="aiR-0" />
+        <mxCell id="aiR-lanes" parent="aiR-1" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fixedHeader=1;fontSize=16;" value="" vertex="1">
+          <mxGeometry height="2120" width="1880" as="geometry" />
+        </mxCell>
+        <mxCell id="aiR-row0" parent="aiR-lanes" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="50" width="1880" as="geometry" />
+        </mxCell>
+        <mxCell id="aiR-c00" parent="aiR-row0" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fillColor=#F5F5F5;fontStyle=1;fontSize=16;" value="Sale" vertex="1">
+          <mxGeometry height="50" width="300" as="geometry">
+            <mxRectangle height="50" width="300" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aiR-c01" parent="aiR-row0" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fillColor=#F5F5F5;fontStyle=1;fontSize=16;" value="จัดซื้อ / Stock" vertex="1">
+          <mxGeometry height="50" width="260" x="300" as="geometry">
+            <mxRectangle height="50" width="260" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aiR-c02" parent="aiR-row0" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fillColor=#F5F5F5;fontStyle=1;fontSize=16;" value="Presale Engineer" vertex="1">
+          <mxGeometry height="50" width="500" x="560" as="geometry">
+            <mxRectangle height="50" width="500" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aiR-c03" parent="aiR-row0" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fillColor=#F5F5F5;fontStyle=1;fontSize=16;" value="PM" vertex="1">
+          <mxGeometry height="50" width="300" x="1060" as="geometry">
+            <mxRectangle height="50" width="300" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aiR-c04" parent="aiR-row0" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fillColor=#F5F5F5;fontStyle=1;fontSize=16;" value="Technical Engineer" vertex="1">
+          <mxGeometry height="50" width="520" x="1360" as="geometry">
+            <mxRectangle height="50" width="520" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aiR-row1" parent="aiR-lanes" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="2070" width="1880" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="aiR-c10" parent="aiR-row1" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fillColor=none;" value="" vertex="1">
+          <mxGeometry height="2070" width="300" as="geometry">
+            <mxRectangle height="2070" width="300" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aiR-c11" parent="aiR-row1" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fillColor=none;" value="" vertex="1">
+          <mxGeometry height="2070" width="260" x="300" as="geometry">
+            <mxRectangle height="2070" width="260" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aiR-c12" parent="aiR-row1" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fillColor=none;" value="" vertex="1">
+          <mxGeometry height="2070" width="500" x="560" as="geometry">
+            <mxRectangle height="2070" width="500" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aiR-c13" parent="aiR-row1" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fillColor=none;" value="" vertex="1">
+          <mxGeometry height="2070" width="300" x="1060" as="geometry">
+            <mxRectangle height="2070" width="300" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aiR-c14" parent="aiR-row1" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fillColor=none;" value="" vertex="1">
+          <mxGeometry height="2070" width="520" x="1360" as="geometry">
+            <mxRectangle height="2070" width="520" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aiR-start" parent="aiR-1" style="ellipse;whiteSpace=wrap;html=1;fontSize=13;fillColor=#000000;fontColor=#FFFFFF;" value="Start" vertex="1">
+          <mxGeometry height="60" width="60" x="120" y="75" as="geometry" />
+        </mxCell>
+        <mxCell id="aiR-S1" parent="aiR-1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;arcSize=14;" value="1. จัดหา Project" vertex="1">
+          <mxGeometry height="64" width="210" x="45" y="183" as="geometry" />
+        </mxCell>
+        <mxCell id="aiR-D1" parent="aiR-1" style="rhombus;whiteSpace=wrap;html=1;fontSize=12;" value="Sale + Presale&lt;br&gt;ตัดสินใจร่วมกัน&lt;br&gt;รับ Project?" vertex="1">
+          <mxGeometry height="92" width="180" x="60" y="279" as="geometry" />
+        </mxCell>
+        <mxCell id="aiR-cA1" parent="aiR-1" style="ellipse;whiteSpace=wrap;html=1;fontSize=14;fontStyle=1;" value="A" vertex="1">
+          <mxGeometry height="40" width="40" x="665" y="313" as="geometry" />
+        </mxCell>
+        <mxCell id="aiR-P1" parent="aiR-1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;arcSize=14;" value="2. ออกแบบ Solution และ&lt;br&gt;วางแผนการทำ Project" vertex="1">
+          <mxGeometry height="64" width="210" x="580" y="403" as="geometry" />
+        </mxCell>
+        <mxCell id="aiR-D2" parent="aiR-1" style="rhombus;whiteSpace=wrap;html=1;fontSize=12;" value="ให้ลูกค้า&lt;br&gt;Confirm Project?" vertex="1">
+          <mxGeometry height="92" width="180" x="60" y="499" as="geometry" />
+        </mxCell>
+        <mxCell id="aiR-P2" parent="aiR-1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;arcSize=14;" value="3. เริ่ม Project" vertex="1">
+          <mxGeometry height="64" width="210" x="580" y="623" as="geometry" />
+        </mxCell>
+        <mxCell id="aiR-P3" parent="aiR-1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;arcSize=14;fillColor=#F8CECC;strokeColor=#B85450;fontStyle=1;" value="4. ส่ง Solution และแผน Project&lt;br&gt;ให้ PM ทางเมล / เอกสาร&lt;br&gt;(Pain Point 5)" vertex="1">
+          <mxGeometry height="64" width="210" x="830" y="623" as="geometry" />
+        </mxCell>
+        <mxCell id="aiR-M1" parent="aiR-1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;arcSize=14;" value="5. วางแผนงานให้ตรงตาม&lt;br&gt;Solution ที่ Presale วางไว้" vertex="1">
+          <mxGeometry height="64" width="210" x="1105" y="623" as="geometry" />
+        </mxCell>
+        <mxCell id="aiR-M2" parent="aiR-1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;arcSize=14;fillColor=#F8CECC;strokeColor=#B85450;fontStyle=1;" value="6. กำหนดทีม Engineer&lt;br&gt;เข้า Project&lt;br&gt;(Pain Point 4)" vertex="1">
+          <mxGeometry height="64" width="210" x="1105" y="733" as="geometry" />
+        </mxCell>
+        <mxCell id="aiR-M3" parent="aiR-1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;arcSize=14;" value="7. PM และ Engineer&lt;br&gt;วางแผนร่วมกัน" vertex="1">
+          <mxGeometry height="64" width="210" x="1105" y="843" as="geometry" />
+        </mxCell>
+        <mxCell id="aiR-P4" parent="aiR-1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;arcSize=14;" value="8. แจ้งอุปกรณ์ที่ต้องใช้&lt;br&gt;ภายใน Project กับ Sale" vertex="1">
+          <mxGeometry height="64" width="210" x="580" y="733" as="geometry" />
+        </mxCell>
+        <mxCell id="aiR-S5" parent="aiR-1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;arcSize=14;" value="9. แจ้งจัดซื้อ / Stock" vertex="1">
+          <mxGeometry height="64" width="210" x="45" y="733" as="geometry" />
+        </mxCell>
+        <mxCell id="aiR-K1" parent="aiR-1" style="rhombus;whiteSpace=wrap;html=1;fontSize=12;" value="Stock เช็คของ&lt;br&gt;ภายในบริษัท ครบไหม?" vertex="1">
+          <mxGeometry height="92" width="180" x="340" y="853" as="geometry" />
+        </mxCell>
+        <mxCell id="aiR-K2" parent="aiR-1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;arcSize=14;" value="10. จัดซื้อสั่งตาม Spec&lt;br&gt;ที่ได้รับแจ้งมา" vertex="1">
+          <mxGeometry height="64" width="200" x="330" y="977" as="geometry" />
+        </mxCell>
+        <mxCell id="aiR-K3" parent="aiR-1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;arcSize=14;" value="11. จัดซื้อ / Stock&lt;br&gt;แจ้ง Sale" vertex="1">
+          <mxGeometry height="64" width="200" x="330" y="1087" as="geometry" />
+        </mxCell>
+        <mxCell id="aiR-S6" parent="aiR-1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;arcSize=14;" value="12. รอรับแจ้งของครบ&lt;br&gt;จากจัดซื้อ / Stock" vertex="1">
+          <mxGeometry height="64" width="210" x="45" y="1153" as="geometry" />
+        </mxCell>
+        <mxCell id="aiR-S7" parent="aiR-1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;arcSize=14;" value="13. แจ้ง Engineer และ PM&lt;br&gt;ว่าของครบแล้ว" vertex="1">
+          <mxGeometry height="64" width="210" x="45" y="1263" as="geometry" />
+        </mxCell>
+        <mxCell id="aiR-T1" parent="aiR-1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;arcSize=14;fillColor=#F8CECC;strokeColor=#B85450;fontStyle=1;" value="14. PM และ Engineer ติดตั้ง&lt;br&gt;อุปกรณ์ที่ Site&lt;br&gt;(Pain Point 2)" vertex="1">
+          <mxGeometry height="64" width="210" x="1645" y="1373" as="geometry" />
+        </mxCell>
+        <mxCell id="aiR-T2" parent="aiR-1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;arcSize=14;" value="15. ทดสอบระบบ" vertex="1">
+          <mxGeometry height="64" width="210" x="1645" y="1483" as="geometry" />
+        </mxCell>
+        <mxCell id="aiR-T3" parent="aiR-1" style="rhombus;whiteSpace=wrap;html=1;fontSize=12;" value="เกิดปัญหา?" vertex="1">
+          <mxGeometry height="92" width="180" x="1660" y="1579" as="geometry" />
+        </mxCell>
+        <mxCell id="aiR-T4" parent="aiR-1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;arcSize=14;" value="16. Engineer แก้ปัญหาที่เกิด" vertex="1">
+          <mxGeometry height="64" width="210" x="1385" y="1593" as="geometry" />
+        </mxCell>
+        <mxCell id="aiR-T5" parent="aiR-1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;arcSize=14;fillColor=#F8CECC;strokeColor=#B85450;fontStyle=1;" value="17. นัดทดสอบระบบกับลูกค้า&lt;br&gt;(Pain Point 1)" vertex="1">
+          <mxGeometry height="64" width="210" x="1645" y="1703" as="geometry" />
+        </mxCell>
+        <mxCell id="aiR-T6" parent="aiR-1" style="rhombus;whiteSpace=wrap;html=1;fontSize=12;" value="ระบบทำงานตรงตาม&lt;br&gt;ความต้องการลูกค้า?" vertex="1">
+          <mxGeometry height="92" width="180" x="1660" y="1799" as="geometry" />
+        </mxCell>
+        <mxCell id="aiR-T8" parent="aiR-1" style="rhombus;whiteSpace=wrap;html=1;fontSize=12;" value="ระบบมีปัญหา หรือ&lt;br&gt;ลูกค้าต้องการเพิ่ม?" vertex="1">
+          <mxGeometry height="92" width="180" x="1400" y="1799" as="geometry" />
+        </mxCell>
+        <mxCell id="aiR-T9" parent="aiR-1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;arcSize=14;fillColor=#F8CECC;strokeColor=#B85450;fontStyle=1;" value="18. แจ้งความต้องการของลูกค้า&lt;br&gt;ให้ Sale&lt;br&gt;(Pain Point 3)" vertex="1">
+          <mxGeometry height="64" width="210" x="1385" y="1923" as="geometry" />
+        </mxCell>
+        <mxCell id="aiR-cA2" parent="aiR-1" style="ellipse;whiteSpace=wrap;html=1;fontSize=14;fontStyle=1;" value="A" vertex="1">
+          <mxGeometry height="40" width="40" x="1470" y="2023" as="geometry" />
+        </mxCell>
+        <mxCell id="aiR-T7" parent="aiR-1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;arcSize=14;" value="19. จัดทำเอกสาร UAT และ&lt;br&gt;Handover document" vertex="1">
+          <mxGeometry height="64" width="210" x="1645" y="1923" as="geometry" />
+        </mxCell>
+        <mxCell id="aiR-end" parent="aiR-1" style="ellipse;whiteSpace=wrap;html=1;fontSize=13;fontStyle=1;" value="ส่งมอบ Project" vertex="1">
+          <mxGeometry height="70" width="140" x="1680" y="2030" as="geometry" />
+        </mxCell>
+        <mxCell id="aiR-e0" edge="1" parent="aiR-1" source="aiR-start" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;html=1;fontSize=12;endArrow=block;endFill=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="aiR-S1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aiR-e1" edge="1" parent="aiR-1" source="aiR-S1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;html=1;fontSize=12;endArrow=block;endFill=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="aiR-D1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aiR-e2" edge="1" parent="aiR-1" source="aiR-D1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;html=1;fontSize=12;endArrow=block;endFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="aiR-S1" value="No">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="280" y="325" />
+              <mxPoint x="280" y="215" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aiR-e3" edge="1" parent="aiR-1" source="aiR-D1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;html=1;fontSize=12;endArrow=block;endFill=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="aiR-P1" value="Yes">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="150" y="435" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aiR-e4" edge="1" parent="aiR-1" source="aiR-cA1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;html=1;fontSize=12;endArrow=block;endFill=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="aiR-P1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aiR-e5" edge="1" parent="aiR-1" source="aiR-P1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;html=1;fontSize=12;endArrow=block;endFill=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="aiR-D2" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="685" y="545" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aiR-e6" edge="1" parent="aiR-1" source="aiR-D2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;html=1;fontSize=12;endArrow=block;endFill=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="aiR-S1" value="No">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="22" y="545" />
+              <mxPoint x="22" y="215" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aiR-e7" edge="1" parent="aiR-1" source="aiR-D2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;html=1;fontSize=12;endArrow=block;endFill=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="aiR-P2" value="Yes">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="150" y="655" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aiR-e8" edge="1" parent="aiR-1" source="aiR-P2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;html=1;fontSize=12;endArrow=block;endFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="aiR-P3" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aiR-e9" edge="1" parent="aiR-1" source="aiR-P3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;html=1;fontSize=12;endArrow=block;endFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="aiR-M1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aiR-e10" edge="1" parent="aiR-1" source="aiR-M1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;html=1;fontSize=12;endArrow=block;endFill=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="aiR-M2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aiR-e11" edge="1" parent="aiR-1" source="aiR-M2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;html=1;fontSize=12;endArrow=block;endFill=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="aiR-M3" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aiR-e12" edge="1" parent="aiR-1" source="aiR-P2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;html=1;fontSize=12;endArrow=block;endFill=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="aiR-P4" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aiR-e13" edge="1" parent="aiR-1" source="aiR-P4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;html=1;fontSize=12;endArrow=block;endFill=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="aiR-S5" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aiR-e14" edge="1" parent="aiR-1" source="aiR-S5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;html=1;fontSize=12;endArrow=block;endFill=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="aiR-K1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="150" y="825" />
+              <mxPoint x="430" y="825" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aiR-e15" edge="1" parent="aiR-1" source="aiR-K1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;html=1;fontSize=12;endArrow=block;endFill=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="aiR-K2" value="ขาด">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aiR-e16" edge="1" parent="aiR-1" source="aiR-K2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;html=1;fontSize=12;endArrow=block;endFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="aiR-K1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="548" y="1009" />
+              <mxPoint x="548" y="899" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aiR-e17" edge="1" parent="aiR-1" source="aiR-K1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;html=1;fontSize=12;endArrow=block;endFill=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="aiR-K3" value="ครบ">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="316" y="899" />
+              <mxPoint x="316" y="1119" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aiR-e18" edge="1" parent="aiR-1" source="aiR-K3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;html=1;fontSize=12;endArrow=block;endFill=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="aiR-S6" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="430" y="1185" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aiR-e19" edge="1" parent="aiR-1" source="aiR-S6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;html=1;fontSize=12;endArrow=block;endFill=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="aiR-S7" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aiR-e20" edge="1" parent="aiR-1" source="aiR-S7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;html=1;fontSize=12;endArrow=block;endFill=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="aiR-T1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="150" y="1405" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aiR-e21" edge="1" parent="aiR-1" source="aiR-M3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;html=1;fontSize=12;endArrow=block;endFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="aiR-T1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1750" y="875" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aiR-e22" edge="1" parent="aiR-1" source="aiR-T1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;html=1;fontSize=12;endArrow=block;endFill=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="aiR-T2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aiR-e23" edge="1" parent="aiR-1" source="aiR-T2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;html=1;fontSize=12;endArrow=block;endFill=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="aiR-T3" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aiR-e24" edge="1" parent="aiR-1" source="aiR-T3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;html=1;fontSize=12;endArrow=block;endFill=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="aiR-T4" value="Yes">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aiR-e25" edge="1" parent="aiR-1" source="aiR-T4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;html=1;fontSize=12;endArrow=block;endFill=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="aiR-T2" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1490" y="1515" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aiR-e26" edge="1" parent="aiR-1" source="aiR-T3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;html=1;fontSize=12;endArrow=block;endFill=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="aiR-T5" value="No">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aiR-e27" edge="1" parent="aiR-1" source="aiR-T5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;html=1;fontSize=12;endArrow=block;endFill=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="aiR-T6" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aiR-e28" edge="1" parent="aiR-1" source="aiR-T6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;html=1;fontSize=12;endArrow=block;endFill=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="aiR-T7" value="Yes">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aiR-e29" edge="1" parent="aiR-1" source="aiR-T6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;html=1;fontSize=12;endArrow=block;endFill=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="aiR-T8" value="No">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aiR-e30" edge="1" parent="aiR-1" source="aiR-T8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;html=1;fontSize=12;endArrow=block;endFill=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="aiR-T4" value="ระบบมีปัญหา">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aiR-e31" edge="1" parent="aiR-1" source="aiR-T8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;html=1;fontSize=12;endArrow=block;endFill=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="aiR-T9" value="ลูกค้าต้องการเพิ่ม">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aiR-e32" edge="1" parent="aiR-1" source="aiR-T9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;html=1;fontSize=12;endArrow=block;endFill=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="aiR-cA2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aiR-e33" edge="1" parent="aiR-1" source="aiR-T7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;html=1;fontSize=12;endArrow=block;endFill=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="aiR-end" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

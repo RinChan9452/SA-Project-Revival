@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net">
+  <diagram id="5Gx_w50ryY-Hsy0W3spP" name="CRUD Table">
+    <mxGraphModel dx="2559" dy="1298" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="crud-title" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=24;fontStyle=1;" value="CRUD Table" vertex="1">
+          <mxGeometry height="40" width="1400" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-h0" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fontStyle=1;fillColor=#DAE8FC;strokeColor=#000000;" value="UC" vertex="1">
+          <mxGeometry height="70" width="70" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-h1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fontStyle=1;fillColor=#DAE8FC;strokeColor=#000000;" value="Use Case" vertex="1">
+          <mxGeometry height="70" width="230" x="70" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-h2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fontStyle=1;fillColor=#DAE8FC;strokeColor=#000000;" value="Actor" vertex="1">
+          <mxGeometry height="70" width="150" x="300" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-h3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fontStyle=1;fillColor=#DAE8FC;strokeColor=#000000;" value="EMPLOYEE" vertex="1">
+          <mxGeometry height="70" width="128" x="450" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-h4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fontStyle=1;fillColor=#DAE8FC;strokeColor=#000000;" value="SKILL" vertex="1">
+          <mxGeometry height="70" width="128" x="578" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-h5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fontStyle=1;fillColor=#DAE8FC;strokeColor=#000000;" value="ENGINEER_&lt;br&gt;SKILL" vertex="1">
+          <mxGeometry height="70" width="128" x="706" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-h6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fontStyle=1;fillColor=#DAE8FC;strokeColor=#000000;" value="CUSTOMER" vertex="1">
+          <mxGeometry height="70" width="128" x="834" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-h7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fontStyle=1;fillColor=#DAE8FC;strokeColor=#000000;" value="PROJECT" vertex="1">
+          <mxGeometry height="70" width="128" x="962" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-h8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fontStyle=1;fillColor=#DAE8FC;strokeColor=#000000;" value="PROJECT_&lt;br&gt;ASSIGNMENT" vertex="1">
+          <mxGeometry height="70" width="128" x="1090" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-h9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fontStyle=1;fillColor=#DAE8FC;strokeColor=#000000;" value="PROJECT_&lt;br&gt;DOCUMENT" vertex="1">
+          <mxGeometry height="70" width="128" x="1218" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-h10" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fontStyle=1;fillColor=#DAE8FC;strokeColor=#000000;" value="TEST_&lt;br&gt;SCHEDULE" vertex="1">
+          <mxGeometry height="70" width="128" x="1346" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-h11" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fontStyle=1;fillColor=#DAE8FC;strokeColor=#000000;" value="CUSTOMER_&lt;br&gt;REQUIREMENT" vertex="1">
+          <mxGeometry height="70" width="128" x="1474" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-h12" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fontStyle=1;fillColor=#DAE8FC;strokeColor=#000000;" value="REQUIREMENT_&lt;br&gt;ATTACHMENT" vertex="1">
+          <mxGeometry height="70" width="128" x="1602" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-h13" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fontStyle=1;fillColor=#DAE8FC;strokeColor=#000000;" value="NOTIFICATION" vertex="1">
+          <mxGeometry height="70" width="128" x="1730" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c0-0" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=#F5F5F5;" value="&lt;b&gt;UC01&lt;/b&gt;" vertex="1">
+          <mxGeometry height="96" width="70" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c0-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=#F5F5F5;align=left;spacingLeft=6;" value="Create Project Profile" vertex="1">
+          <mxGeometry height="96" width="230" x="70" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c0-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=#F5F5F5;align=left;spacingLeft=6;" value="Sale" vertex="1">
+          <mxGeometry height="96" width="150" x="300" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c0-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="&lt;b style=&quot;font-size:15px&quot;&gt;R&lt;/b&gt;" vertex="1">
+          <mxGeometry height="96" width="128" x="450" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c0-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="" vertex="1">
+          <mxGeometry height="96" width="128" x="578" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c0-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="" vertex="1">
+          <mxGeometry height="96" width="128" x="706" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c0-6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="&lt;b style=&quot;font-size:15px&quot;&gt;CR&lt;/b&gt;&lt;font style=&quot;font-size:10px&quot;&gt;&lt;br&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="96" width="128" x="834" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c0-7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="&lt;b style=&quot;font-size:15px&quot;&gt;C&lt;/b&gt;" vertex="1">
+          <mxGeometry height="96" width="128" x="962" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c0-8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="" vertex="1">
+          <mxGeometry height="96" width="128" x="1090" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c0-9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="" vertex="1">
+          <mxGeometry height="96" width="128" x="1218" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c0-10" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="" vertex="1">
+          <mxGeometry height="96" width="128" x="1346" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c0-11" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="" vertex="1">
+          <mxGeometry height="96" width="128" x="1474" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c0-12" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="" vertex="1">
+          <mxGeometry height="96" width="128" x="1602" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c0-13" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="&lt;b style=&quot;font-size:15px&quot;&gt;C&lt;/b&gt;" vertex="1">
+          <mxGeometry height="96" width="128" x="1730" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c1-0" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=#F5F5F5;" value="&lt;b&gt;UC02&lt;/b&gt;" vertex="1">
+          <mxGeometry height="96" width="70" y="286" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c1-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=#F5F5F5;align=left;spacingLeft=6;" value="Store Project Solution Details" vertex="1">
+          <mxGeometry height="96" width="230" x="70" y="286" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c1-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=#F5F5F5;align=left;spacingLeft=6;" value="Presale Engineer" vertex="1">
+          <mxGeometry height="96" width="150" x="300" y="286" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c1-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="&lt;b style=&quot;font-size:15px&quot;&gt;R&lt;/b&gt;" vertex="1">
+          <mxGeometry height="96" width="128" x="450" y="286" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c1-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="" vertex="1">
+          <mxGeometry height="96" width="128" x="578" y="286" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c1-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="" vertex="1">
+          <mxGeometry height="96" width="128" x="706" y="286" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c1-6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="&lt;b style=&quot;font-size:15px&quot;&gt;R&lt;/b&gt;" vertex="1">
+          <mxGeometry height="96" width="128" x="834" y="286" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c1-7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="&lt;b style=&quot;font-size:15px&quot;&gt;RU&lt;/b&gt;&lt;font style=&quot;font-size:10px&quot;&gt;&lt;br&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="96" width="128" x="962" y="286" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c1-8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="" vertex="1">
+          <mxGeometry height="96" width="128" x="1090" y="286" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c1-9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="&lt;b style=&quot;font-size:15px&quot;&gt;CR&lt;/b&gt;&lt;font style=&quot;font-size:10px&quot;&gt;&lt;br&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="96" width="128" x="1218" y="286" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c1-10" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="" vertex="1">
+          <mxGeometry height="96" width="128" x="1346" y="286" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c1-11" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="" vertex="1">
+          <mxGeometry height="96" width="128" x="1474" y="286" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c1-12" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="" vertex="1">
+          <mxGeometry height="96" width="128" x="1602" y="286" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c1-13" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="&lt;b style=&quot;font-size:15px&quot;&gt;C&lt;/b&gt;" vertex="1">
+          <mxGeometry height="96" width="128" x="1730" y="286" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c2-0" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=#F5F5F5;" value="&lt;b&gt;UC03&lt;/b&gt;" vertex="1">
+          <mxGeometry height="96" width="70" y="382" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c2-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=#F5F5F5;align=left;spacingLeft=6;" value="Check Project Details" vertex="1">
+          <mxGeometry height="96" width="230" x="70" y="382" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c2-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=#F5F5F5;align=left;spacingLeft=6;" value="Sale, Presale, PM, Tech Engineer" vertex="1">
+          <mxGeometry height="96" width="150" x="300" y="382" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c2-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="&lt;b style=&quot;font-size:15px&quot;&gt;R&lt;/b&gt;" vertex="1">
+          <mxGeometry height="96" width="128" x="450" y="382" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c2-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="" vertex="1">
+          <mxGeometry height="96" width="128" x="578" y="382" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c2-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="" vertex="1">
+          <mxGeometry height="96" width="128" x="706" y="382" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c2-6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="&lt;b style=&quot;font-size:15px&quot;&gt;R&lt;/b&gt;" vertex="1">
+          <mxGeometry height="96" width="128" x="834" y="382" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c2-7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="&lt;b style=&quot;font-size:15px&quot;&gt;R&lt;/b&gt;" vertex="1">
+          <mxGeometry height="96" width="128" x="962" y="382" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c2-8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="&lt;b style=&quot;font-size:15px&quot;&gt;R&lt;/b&gt;" vertex="1">
+          <mxGeometry height="96" width="128" x="1090" y="382" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c2-9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="&lt;b style=&quot;font-size:15px&quot;&gt;R&lt;/b&gt;" vertex="1">
+          <mxGeometry height="96" width="128" x="1218" y="382" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c2-10" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="&lt;b style=&quot;font-size:15px&quot;&gt;R&lt;/b&gt;" vertex="1">
+          <mxGeometry height="96" width="128" x="1346" y="382" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c2-11" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="&lt;b style=&quot;font-size:15px&quot;&gt;R&lt;/b&gt;" vertex="1">
+          <mxGeometry height="96" width="128" x="1474" y="382" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c2-12" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="&lt;b style=&quot;font-size:15px&quot;&gt;R&lt;/b&gt;" vertex="1">
+          <mxGeometry height="96" width="128" x="1602" y="382" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c2-13" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="" vertex="1">
+          <mxGeometry height="96" width="128" x="1730" y="382" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c3-0" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=#F5F5F5;" value="&lt;b&gt;UC04&lt;/b&gt;" vertex="1">
+          <mxGeometry height="96" width="70" y="478" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c3-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=#F5F5F5;align=left;spacingLeft=6;" value="Assign Engineer to Project" vertex="1">
+          <mxGeometry height="96" width="230" x="70" y="478" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c3-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=#F5F5F5;align=left;spacingLeft=6;" value="PM" vertex="1">
+          <mxGeometry height="96" width="150" x="300" y="478" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c3-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="&lt;b style=&quot;font-size:15px&quot;&gt;R&lt;/b&gt;" vertex="1">
+          <mxGeometry height="96" width="128" x="450" y="478" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c3-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="&lt;b style=&quot;font-size:15px&quot;&gt;R&lt;/b&gt;" vertex="1">
+          <mxGeometry height="96" width="128" x="578" y="478" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c3-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="&lt;b style=&quot;font-size:15px&quot;&gt;R&lt;/b&gt;" vertex="1">
+          <mxGeometry height="96" width="128" x="706" y="478" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c3-6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="&lt;b style=&quot;font-size:15px&quot;&gt;R&lt;/b&gt;" vertex="1">
+          <mxGeometry height="96" width="128" x="834" y="478" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c3-7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="&lt;b style=&quot;font-size:15px&quot;&gt;RU&lt;/b&gt;&lt;font style=&quot;font-size:10px&quot;&gt;&lt;br&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="96" width="128" x="962" y="478" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c3-8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="&lt;b style=&quot;font-size:15px&quot;&gt;CR&lt;/b&gt;&lt;font style=&quot;font-size:10px&quot;&gt;&lt;br&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="96" width="128" x="1090" y="478" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c3-9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="" vertex="1">
+          <mxGeometry height="96" width="128" x="1218" y="478" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c3-10" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="" vertex="1">
+          <mxGeometry height="96" width="128" x="1346" y="478" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c3-11" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="" vertex="1">
+          <mxGeometry height="96" width="128" x="1474" y="478" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c3-12" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="" vertex="1">
+          <mxGeometry height="96" width="128" x="1602" y="478" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c3-13" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="&lt;b style=&quot;font-size:15px&quot;&gt;C&lt;/b&gt;" vertex="1">
+          <mxGeometry height="96" width="128" x="1730" y="478" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c4-0" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=#F5F5F5;" value="&lt;b&gt;UC05&lt;/b&gt;" vertex="1">
+          <mxGeometry height="96" width="70" y="574" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c4-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=#F5F5F5;align=left;spacingLeft=6;" value="Set Project Test Calendar Notification" vertex="1">
+          <mxGeometry height="96" width="230" x="70" y="574" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c4-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=#F5F5F5;align=left;spacingLeft=6;" value="Tech Engineer" vertex="1">
+          <mxGeometry height="96" width="150" x="300" y="574" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c4-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="&lt;b style=&quot;font-size:15px&quot;&gt;R&lt;/b&gt;" vertex="1">
+          <mxGeometry height="96" width="128" x="450" y="574" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c4-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="" vertex="1">
+          <mxGeometry height="96" width="128" x="578" y="574" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c4-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="" vertex="1">
+          <mxGeometry height="96" width="128" x="706" y="574" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c4-6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="&lt;b style=&quot;font-size:15px&quot;&gt;R&lt;/b&gt;" vertex="1">
+          <mxGeometry height="96" width="128" x="834" y="574" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c4-7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="&lt;b style=&quot;font-size:15px&quot;&gt;RU&lt;/b&gt;&lt;font style=&quot;font-size:10px&quot;&gt;&lt;br&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="96" width="128" x="962" y="574" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c4-8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="&lt;b style=&quot;font-size:15px&quot;&gt;R&lt;/b&gt;" vertex="1">
+          <mxGeometry height="96" width="128" x="1090" y="574" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c4-9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="" vertex="1">
+          <mxGeometry height="96" width="128" x="1218" y="574" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c4-10" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="&lt;b style=&quot;font-size:15px&quot;&gt;CRU&lt;/b&gt;&lt;font style=&quot;font-size:10px&quot;&gt;&lt;br&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="96" width="128" x="1346" y="574" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c4-11" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="" vertex="1">
+          <mxGeometry height="96" width="128" x="1474" y="574" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c4-12" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="" vertex="1">
+          <mxGeometry height="96" width="128" x="1602" y="574" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c4-13" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="&lt;b style=&quot;font-size:15px&quot;&gt;C&lt;/b&gt;" vertex="1">
+          <mxGeometry height="96" width="128" x="1730" y="574" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c5-0" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=#F5F5F5;" value="&lt;b&gt;UC06&lt;/b&gt;" vertex="1">
+          <mxGeometry height="96" width="70" y="670" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c5-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=#F5F5F5;align=left;spacingLeft=6;" value="Add Customer New Requirement" vertex="1">
+          <mxGeometry height="96" width="230" x="70" y="670" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c5-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=#F5F5F5;align=left;spacingLeft=6;" value="PM" vertex="1">
+          <mxGeometry height="96" width="150" x="300" y="670" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c5-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="&lt;b style=&quot;font-size:15px&quot;&gt;R&lt;/b&gt;" vertex="1">
+          <mxGeometry height="96" width="128" x="450" y="670" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c5-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="" vertex="1">
+          <mxGeometry height="96" width="128" x="578" y="670" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c5-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="" vertex="1">
+          <mxGeometry height="96" width="128" x="706" y="670" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c5-6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="&lt;b style=&quot;font-size:15px&quot;&gt;R&lt;/b&gt;" vertex="1">
+          <mxGeometry height="96" width="128" x="834" y="670" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c5-7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="&lt;b style=&quot;font-size:15px&quot;&gt;RU&lt;/b&gt;&lt;font style=&quot;font-size:10px&quot;&gt;&lt;br&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="96" width="128" x="962" y="670" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c5-8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="&lt;b style=&quot;font-size:15px&quot;&gt;R&lt;/b&gt;" vertex="1">
+          <mxGeometry height="96" width="128" x="1090" y="670" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c5-9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="" vertex="1">
+          <mxGeometry height="96" width="128" x="1218" y="670" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c5-10" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="" vertex="1">
+          <mxGeometry height="96" width="128" x="1346" y="670" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c5-11" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="&lt;b style=&quot;font-size:15px&quot;&gt;C&lt;/b&gt;" vertex="1">
+          <mxGeometry height="96" width="128" x="1474" y="670" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c5-12" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="&lt;b style=&quot;font-size:15px&quot;&gt;C&lt;/b&gt;" vertex="1">
+          <mxGeometry height="96" width="128" x="1602" y="670" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c5-13" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="&lt;b style=&quot;font-size:15px&quot;&gt;C&lt;/b&gt;" vertex="1">
+          <mxGeometry height="96" width="128" x="1730" y="670" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c6-0" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=#F5F5F5;" value="&lt;b&gt;UC07&lt;/b&gt;" vertex="1">
+          <mxGeometry height="96" width="70" y="766" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c6-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=#F5F5F5;align=left;spacingLeft=6;" value="Approve New Project Requirement" vertex="1">
+          <mxGeometry height="96" width="230" x="70" y="766" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c6-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=#F5F5F5;align=left;spacingLeft=6;" value="Sale" vertex="1">
+          <mxGeometry height="96" width="150" x="300" y="766" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c6-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="&lt;b style=&quot;font-size:15px&quot;&gt;R&lt;/b&gt;" vertex="1">
+          <mxGeometry height="96" width="128" x="450" y="766" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c6-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="" vertex="1">
+          <mxGeometry height="96" width="128" x="578" y="766" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c6-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="" vertex="1">
+          <mxGeometry height="96" width="128" x="706" y="766" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c6-6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="&lt;b style=&quot;font-size:15px&quot;&gt;R&lt;/b&gt;" vertex="1">
+          <mxGeometry height="96" width="128" x="834" y="766" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c6-7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="&lt;b style=&quot;font-size:15px&quot;&gt;RU&lt;/b&gt;&lt;font style=&quot;font-size:10px&quot;&gt;&lt;br&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="96" width="128" x="962" y="766" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c6-8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="" vertex="1">
+          <mxGeometry height="96" width="128" x="1090" y="766" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c6-9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="" vertex="1">
+          <mxGeometry height="96" width="128" x="1218" y="766" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c6-10" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="&lt;b style=&quot;font-size:15px&quot;&gt;R&lt;/b&gt;" vertex="1">
+          <mxGeometry height="96" width="128" x="1346" y="766" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c6-11" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="&lt;b style=&quot;font-size:15px&quot;&gt;RU&lt;/b&gt;&lt;font style=&quot;font-size:10px&quot;&gt;&lt;br&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="96" width="128" x="1474" y="766" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c6-12" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="&lt;b style=&quot;font-size:15px&quot;&gt;R&lt;/b&gt;" vertex="1">
+          <mxGeometry height="96" width="128" x="1602" y="766" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c6-13" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="&lt;b style=&quot;font-size:15px&quot;&gt;C&lt;/b&gt;" vertex="1">
+          <mxGeometry height="96" width="128" x="1730" y="766" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c7-0" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=#F5F5F5;" value="&lt;b&gt;UC08&lt;/b&gt;" vertex="1">
+          <mxGeometry height="96" width="70" y="862" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c7-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=#F5F5F5;align=left;spacingLeft=6;" value="Close Project" vertex="1">
+          <mxGeometry height="96" width="230" x="70" y="862" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c7-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=#F5F5F5;align=left;spacingLeft=6;" value="PM" vertex="1">
+          <mxGeometry height="96" width="150" x="300" y="862" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c7-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="&lt;b style=&quot;font-size:15px&quot;&gt;R&lt;/b&gt;" vertex="1">
+          <mxGeometry height="96" width="128" x="450" y="862" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c7-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="" vertex="1">
+          <mxGeometry height="96" width="128" x="578" y="862" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c7-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="" vertex="1">
+          <mxGeometry height="96" width="128" x="706" y="862" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c7-6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="&lt;b style=&quot;font-size:15px&quot;&gt;R&lt;/b&gt;" vertex="1">
+          <mxGeometry height="96" width="128" x="834" y="862" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c7-7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="&lt;b style=&quot;font-size:15px&quot;&gt;RU&lt;/b&gt;&lt;font style=&quot;font-size:10px&quot;&gt;&lt;br&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="96" width="128" x="962" y="862" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c7-8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="&lt;b style=&quot;font-size:15px&quot;&gt;R&lt;/b&gt;" vertex="1">
+          <mxGeometry height="96" width="128" x="1090" y="862" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c7-9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="" vertex="1">
+          <mxGeometry height="96" width="128" x="1218" y="862" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c7-10" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="&lt;b style=&quot;font-size:15px&quot;&gt;RU&lt;/b&gt;&lt;font style=&quot;font-size:10px&quot;&gt;&lt;br&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="96" width="128" x="1346" y="862" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c7-11" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="&lt;b style=&quot;font-size:15px&quot;&gt;R&lt;/b&gt;" vertex="1">
+          <mxGeometry height="96" width="128" x="1474" y="862" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c7-12" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="" vertex="1">
+          <mxGeometry height="96" width="128" x="1602" y="862" as="geometry" />
+        </mxCell>
+        <mxCell id="crud-c7-13" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;strokeColor=#000000;verticalAlign=middle;fillColor=none;" value="&lt;b style=&quot;font-size:15px&quot;&gt;C&lt;/b&gt;" vertex="1">
+          <mxGeometry height="96" width="128" x="1730" y="862" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

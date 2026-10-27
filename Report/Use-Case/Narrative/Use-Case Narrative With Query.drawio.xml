@@ -1,0 +1,769 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net">
+  <diagram name="Use-Case Narrative With Query" id="narWithQueryPage1">
+    <mxGraphModel dx="3375" dy="1503" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="nqR-0" value="" />
+        <mxCell id="nqR-1" parent="nqR-0" value="" />
+        <mxCell id="nqR-schema" parent="nqR-1" style="rounded=0;html=1;align=left;verticalAlign=top;whiteSpace=wrap;fontSize=12;fontFamily=Courier New;spacing=14;fillColor=#F5F5F5;strokeColor=#666666;" value="&lt;b&gt;Database Schema (ใช้กับทุก Query)&lt;/b&gt;&lt;br&gt;&lt;br&gt;-- ProjectSA : Database schema (SQL Server / T-SQL)&lt;br&gt;-- Mapped from &quot;ER Diagram (Revised)&quot; (Chen). EMPLOYEE subclasses (T,D) -&amp;gt; one table with Role.&lt;br&gt;&lt;br&gt;CREATE TABLE EMPLOYEE (&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;EmployeeID   INT IDENTITY(1,1) PRIMARY KEY,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;FirstName    NVARCHAR(50)  NOT NULL,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;LastName     NVARCHAR(50)  NOT NULL,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Email        NVARCHAR(100) NOT NULL UNIQUE,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Phone        NVARCHAR(20)  NULL,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Username     NVARCHAR(50)  NOT NULL UNIQUE,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Password     NVARCHAR(255) NOT NULL,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;ProfilePicture NVARCHAR(255) NULL,           -- path ใน ./uploads/profile/ (Profile P.5)&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Role         NVARCHAR(20)  NOT NULL CHECK (Role IN (&#39;Sale&#39;,&#39;Presale&#39;,&#39;PM&#39;,&#39;TechEngineer&#39;))&lt;br&gt;);&lt;br&gt;&lt;br&gt;CREATE TABLE SKILL (&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;SkillID      INT IDENTITY(1,1) PRIMARY KEY,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;SkillName    NVARCHAR(50)  NOT NULL UNIQUE,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Description  NVARCHAR(255) NULL&lt;br&gt;);&lt;br&gt;&lt;br&gt;CREATE TABLE ENGINEER_SKILL (&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;EmployeeID   INT NOT NULL REFERENCES EMPLOYEE(EmployeeID),&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;SkillID      INT NOT NULL REFERENCES SKILL(SkillID),&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;PRIMARY KEY (EmployeeID, SkillID)&lt;br&gt;);&lt;br&gt;&lt;br&gt;CREATE TABLE CUSTOMER (&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;CustomerID     INT IDENTITY(1,1) PRIMARY KEY,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;CustomerName   NVARCHAR(100) NOT NULL,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;CustomerEmail  NVARCHAR(100) NOT NULL&lt;br&gt;);&lt;br&gt;&lt;br&gt;CREATE TABLE PROJECT (&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;ProjectID        INT IDENTITY(1,1) PRIMARY KEY,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;ProjectName      NVARCHAR(100) NOT NULL,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;ProjectSite      NVARCHAR(255) NOT NULL,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Status           NVARCHAR(30)  NOT NULL DEFAULT &#39;NewProject&#39;&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;CHECK (Status IN (&#39;NewProject&#39;,&#39;WaitingForAssignEngineer&#39;,&#39;Working&#39;,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&#39;Testing&#39;,&#39;WaitingForApprove&#39;,&#39;Finish&#39;)),&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;CreatedDate      DATETIME      NOT NULL DEFAULT GETDATE(),&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;StartDate        DATE          NULL,          -- Period&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;EndDate          DATE          NULL,          -- Period&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Objective        NVARCHAR(MAX) NULL,          -- Solution&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;EstimatedBudget  DECIMAL(12,2) NULL,          -- Solution&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;SolutionDetail   NVARCHAR(MAX) NULL,          -- Solution&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;CustomerID       INT NOT NULL REFERENCES CUSTOMER(CustomerID),   -- Owns&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;SaleID           INT NOT NULL REFERENCES EMPLOYEE(EmployeeID),   -- Creates&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;PresaleID        INT NOT NULL REFERENCES EMPLOYEE(EmployeeID),   -- Designs&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;PMID             INT NULL     REFERENCES EMPLOYEE(EmployeeID)    -- Manages&lt;br&gt;);&lt;br&gt;&lt;br&gt;CREATE TABLE PROJECT_ASSIGNMENT (                 -- AssignedTo (M:N)&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;ProjectID     INT NOT NULL REFERENCES PROJECT(ProjectID),&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;EngineerID    INT NOT NULL REFERENCES EMPLOYEE(EmployeeID),&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;AssignedDate  DATETIME NOT NULL DEFAULT GETDATE(),&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;PRIMARY KEY (ProjectID, EngineerID)&lt;br&gt;);&lt;br&gt;&lt;br&gt;CREATE TABLE TEST_SCHEDULE (&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;ScheduleID    INT IDENTITY(1,1) PRIMARY KEY,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;ProjectID     INT NOT NULL REFERENCES PROJECT(ProjectID),        -- Has&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;CreatedByID   INT NOT NULL REFERENCES EMPLOYEE(EmployeeID),      -- Sets&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;TestDate      DATE          NOT NULL,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;StartTime     TIME          NOT NULL,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;EndTime       TIME          NOT NULL,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Location      NVARCHAR(255) NOT NULL,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;TestDetail    NVARCHAR(MAX) NULL,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;RemindBefore  INT           NOT NULL,          -- minutes&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Status        NVARCHAR(20)  NOT NULL DEFAULT &#39;Scheduled&#39;&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;CHECK (Status IN (&#39;Scheduled&#39;,&#39;Cancelled&#39;,&#39;Done&#39;)),&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;CreatedDate   DATETIME      NOT NULL DEFAULT GETDATE()&lt;br&gt;);&lt;br&gt;&lt;br&gt;CREATE TABLE CUSTOMER_REQUIREMENT (&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;RequirementID   INT IDENTITY(1,1) PRIMARY KEY,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;ProjectID       INT NOT NULL REFERENCES PROJECT(ProjectID),      -- Contains&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Title           NVARCHAR(150) NOT NULL,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Detail          NVARCHAR(MAX) NOT NULL,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Priority        NVARCHAR(10)  NOT NULL CHECK (Priority IN (&#39;Low&#39;,&#39;Medium&#39;,&#39;High&#39;)),&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;DueDate         DATE          NOT NULL,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;RelatedFeature  NVARCHAR(150) NULL,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Status          NVARCHAR(20)  NOT NULL DEFAULT &#39;Pending&#39;&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;CHECK (Status IN (&#39;Pending&#39;,&#39;Approved&#39;,&#39;Rejected&#39;)),&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;CreatedByID     INT NOT NULL REFERENCES EMPLOYEE(EmployeeID),    -- Records (PM)&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;CreatedDate     DATETIME      NOT NULL DEFAULT GETDATE(),&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;ReviewedByID    INT NULL     REFERENCES EMPLOYEE(EmployeeID),    -- Approves (Sale)&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;ReviewedDate    DATETIME      NULL,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;RejectReason    NVARCHAR(255) NULL&lt;br&gt;);&lt;br&gt;&lt;br&gt;CREATE TABLE REQUIREMENT_ATTACHMENT (             -- multivalued AttachmentFile&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;RequirementID   INT NOT NULL REFERENCES CUSTOMER_REQUIREMENT(RequirementID),&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;AttachmentFile  NVARCHAR(255) NOT NULL,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;PRIMARY KEY (RequirementID, AttachmentFile)&lt;br&gt;);&lt;br&gt;&lt;br&gt;CREATE TABLE PROJECT_DOCUMENT (&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;DocumentID    INT IDENTITY(1,1) PRIMARY KEY,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;ProjectID     INT NOT NULL REFERENCES PROJECT(ProjectID),        -- Stores&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;DocType       NVARCHAR(30)  NOT NULL CHECK (DocType IN (&#39;Solution&#39;,&#39;ProductRequirement&#39;)),&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;FileName      NVARCHAR(255) NOT NULL,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;FilePath      NVARCHAR(255) NOT NULL,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;FileSize      INT           NOT NULL,          -- bytes&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;UploadedDate  DATETIME      NOT NULL DEFAULT GETDATE()&lt;br&gt;);&lt;br&gt;&lt;br&gt;CREATE TABLE NOTIFICATION (&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;NotificationID  INT IDENTITY(1,1) PRIMARY KEY,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;RecipientID     INT NOT NULL REFERENCES EMPLOYEE(EmployeeID),    -- Receives&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;ProjectID       INT NOT NULL REFERENCES PROJECT(ProjectID),      -- Triggers&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Type            NVARCHAR(30)  NOT NULL,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Message         NVARCHAR(255) NOT NULL,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;SendAt          DATETIME      NOT NULL,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;IsRead          BIT           NOT NULL DEFAULT 0&lt;br&gt;);" vertex="1">
+          <mxGeometry height="2032" width="980" x="-1060" as="geometry" />
+        </mxCell>
+        <mxCell id="nqR-title" parent="nqR-1" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;fontSize=16;" value="&lt;b&gt;Use-Case Narrative With Query&lt;/b&gt;&lt;br&gt;SQL Server (T-SQL) • @ตัวแปร = ค่าที่รับจากหน้าจอ / ผู้ใช้ที่ login (@LoginID, @Role)&lt;br&gt;Query N.M = Query ของ System Step N • ทุก Query ทดสอบกับฐานข้อมูลจำลองครบทั้ง Flow แล้ว" vertex="1">
+          <mxGeometry height="90" width="1340" y="-110" as="geometry" />
+        </mxCell>
+        <mxCell id="nqR-c-1" parent="nqR-1" style="shape=table;startSize=52;container=1;collapsible=0;childLayout=tableLayout;strokeColor=default;fontSize=20;fontStyle=1;html=1;" value="UC01 Create Project Profile" vertex="1">
+          <mxGeometry height="1326" width="1360" as="geometry" />
+        </mxCell>
+        <mxCell id="nqR-c-2" parent="nqR-c-1" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="70" width="1360" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="nqR-c-3" parent="nqR-c-2" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=14;fillColor=none;" value="Main Actor" vertex="1">
+          <mxGeometry height="70" width="520" as="geometry">
+            <mxRectangle height="70" width="520" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-4" parent="nqR-c-2" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=14;fillColor=none;spacingLeft=10;spacingRight=10;" value="Sale" vertex="1">
+          <mxGeometry height="70" width="840" x="520" as="geometry">
+            <mxRectangle height="70" width="840" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-5" parent="nqR-c-1" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="76" width="1360" y="122" as="geometry" />
+        </mxCell>
+        <mxCell id="nqR-c-6" parent="nqR-c-5" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=14;fillColor=none;" value="Describe" vertex="1">
+          <mxGeometry height="76" width="520" as="geometry">
+            <mxRectangle height="76" width="520" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-7" parent="nqR-c-5" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=14;fillColor=none;spacingLeft=10;spacingRight=10;" value="ใช้ในการสร้าง Project Profile ใหม่ลงในระบบ หลังจาก Sale ตัดสินใจรับ Project เพื่อเป็นแหล่งข้อมูลกลางของ Project ที่ทุกฝ่ายใช้งานร่วมกัน และส่งต่อให้ Presale Engineer ออกแบบ Solution" vertex="1">
+          <mxGeometry height="76" width="840" x="520" as="geometry">
+            <mxRectangle height="76" width="840" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-8" parent="nqR-c-1" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="76" width="1360" y="198" as="geometry" />
+        </mxCell>
+        <mxCell id="nqR-c-9" parent="nqR-c-8" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=14;fillColor=none;" value="Pre-Condition" vertex="1">
+          <mxGeometry height="76" width="520" as="geometry">
+            <mxRectangle height="76" width="520" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-10" parent="nqR-c-8" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=14;fillColor=none;spacingLeft=10;spacingRight=10;" value="1. Sale เข้าสู่ระบบแล้ว&lt;br&gt;2. Sale ตัดสินใจรับ Project จากลูกค้าแล้ว" vertex="1">
+          <mxGeometry height="76" width="840" x="520" as="geometry">
+            <mxRectangle height="76" width="840" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-11" parent="nqR-c-1" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="76" width="1360" y="274" as="geometry" />
+        </mxCell>
+        <mxCell id="nqR-c-12" parent="nqR-c-11" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=14;fillColor=none;" value="Post-Condition" vertex="1">
+          <mxGeometry height="76" width="520" as="geometry">
+            <mxRectangle height="76" width="520" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-13" parent="nqR-c-11" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=14;fillColor=none;spacingLeft=10;spacingRight=10;" value="1. มี Project Profile ใหม่ในระบบ สถานะ &quot;NewProject&quot;&lt;br&gt;2. Presale Engineer in Charge ได้รับการแจ้งเตือนให้ออกแบบ Solution" vertex="1">
+          <mxGeometry height="76" width="840" x="520" as="geometry">
+            <mxRectangle height="76" width="840" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-14" parent="nqR-c-1" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="70" width="1360" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="nqR-c-15" parent="nqR-c-14" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=20;fillColor=none;" value="Actor Action" vertex="1">
+          <mxGeometry height="70" width="520" as="geometry">
+            <mxRectangle height="70" width="520" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-16" parent="nqR-c-14" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=20;fillColor=none;" value="System" vertex="1">
+          <mxGeometry height="70" width="840" x="520" as="geometry">
+            <mxRectangle height="70" width="840" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-17" parent="nqR-c-1" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="838" width="1360" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="nqR-c-18" parent="nqR-c-17" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=left;verticalAlign=top;fontSize=13;fillColor=none;spacingLeft=6;spacingTop=8;spacingRight=6;" value="&lt;b&gt;Step 1:&lt;/b&gt; Sale กด &quot;Create Project Profile&quot;&lt;br&gt;&lt;b&gt;Step 3:&lt;/b&gt; Sale กรอกข้อมูลเบื้องต้นของ Project แล้วกด &quot;บันทึก&quot;&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;3.1 Project Name&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;3.2 เลือกลูกค้าเดิม หรือกรอกลูกค้าใหม่ (Customer Name, Customer Email)&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;3.3 เลือก Presale Engineer in Charge&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;3.4 Project Site (สถานที่ติดตั้ง/ทำงาน)" vertex="1">
+          <mxGeometry height="838" width="520" as="geometry">
+            <mxRectangle height="838" width="520" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-19" parent="nqR-c-17" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=left;verticalAlign=top;fontSize=13;fillColor=none;spacingLeft=6;spacingTop=8;spacingRight=6;" value="&lt;b&gt;Step 2:&lt;/b&gt; ระบบแสดงแบบฟอร์มสร้าง Project Profile โดยกำหนด Sale in Charge เป็นผู้ใช้งานปัจจุบันอัตโนมัติ พร้อมแสดงรายชื่อลูกค้าเดิมและรายชื่อ Presale Engineer ให้เลือก&lt;br&gt;&lt;b&gt;Query 2.1:&lt;/b&gt; &lt;i&gt;(Sale in Charge = ผู้ใช้ที่ login)&lt;/i&gt;&lt;br&gt;SELECT EmployeeID, FirstName, LastName&lt;br&gt;FROM EMPLOYEE&lt;br&gt;WHERE EmployeeID = @LoginID AND Role = &#39;Sale&#39;;&lt;br&gt;&lt;b&gt;Query 2.2:&lt;/b&gt; &lt;i&gt;(รายชื่อลูกค้าเดิม)&lt;/i&gt;&lt;br&gt;SELECT CustomerID, CustomerName, CustomerEmail&lt;br&gt;FROM CUSTOMER&lt;br&gt;ORDER BY CustomerName;&lt;br&gt;&lt;b&gt;Query 2.3:&lt;/b&gt; &lt;i&gt;(รายชื่อ Presale Engineer)&lt;/i&gt;&lt;br&gt;SELECT EmployeeID, FirstName, LastName&lt;br&gt;FROM EMPLOYEE&lt;br&gt;WHERE Role = &#39;Presale&#39;&lt;br&gt;ORDER BY FirstName;&lt;br&gt;&lt;br&gt;&lt;b&gt;Step 4:&lt;/b&gt; ระบบตรวจสอบความถูกต้องของข้อมูลที่กรอก&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;4.1 เช็คว่ากรอก Project Name&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;4.2 เช็คว่ากรอก Customer Name&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;4.3 เช็คว่ากรอก Customer Email และรูปแบบอีเมลถูกต้อง&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;4.4 เช็คว่าเลือก Presale Engineer in Charge&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;4.5 เช็คว่ากรอก Project Site&lt;br&gt;&lt;br&gt;&lt;b&gt;Step 5:&lt;/b&gt; ระบบสร้าง Project ID อัตโนมัติ และบันทึก Project Profile (กรณีลูกค้าใหม่ บันทึกข้อมูลลูกค้าลงระบบด้วย)&lt;br&gt;&lt;b&gt;Query 5.1:&lt;/b&gt; &lt;i&gt;(กรณีลูกค้าใหม่)&lt;/i&gt;&lt;br&gt;INSERT INTO CUSTOMER (CustomerName, CustomerEmail)&lt;br&gt;VALUES (@CustomerName, @CustomerEmail);&lt;br&gt;SET @CustomerID = SCOPE_IDENTITY();&lt;br&gt;&lt;b&gt;Query 5.2:&lt;/b&gt; &lt;i&gt;(ProjectID สร้างอัตโนมัติจาก IDENTITY(1,1))&lt;/i&gt;&lt;br&gt;INSERT INTO PROJECT (ProjectName, ProjectSite, Status, CreatedDate, CustomerID, SaleID, PresaleID)&lt;br&gt;VALUES (@ProjectName, @ProjectSite, &#39;NewProject&#39;, GETDATE(), @CustomerID, @LoginID, @PresaleID);&lt;br&gt;SET @ProjectID = SCOPE_IDENTITY();&lt;br&gt;&lt;br&gt;&lt;b&gt;Step 6:&lt;/b&gt; ระบบตั้งสถานะ Project เป็น &quot;NewProject&quot;&lt;br&gt;&lt;b&gt;Query 6.1:&lt;/b&gt; &lt;i&gt;(Status = &#39;NewProject&#39; ถูกบันทึกพร้อม Query 5.2)&lt;/i&gt;&lt;br&gt;&lt;br&gt;&lt;b&gt;Step 7:&lt;/b&gt; ระบบส่งการแจ้งเตือนไปยัง Presale Engineer in Charge&lt;br&gt;&lt;b&gt;Query 7.1:&lt;/b&gt;&lt;br&gt;INSERT INTO NOTIFICATION (RecipientID, ProjectID, Type, Message, SendAt, IsRead)&lt;br&gt;VALUES (@PresaleID, @ProjectID, &#39;NewProject&#39;,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;CONCAT(N&#39;มี Project ใหม่รอออกแบบ Solution: &#39;, @ProjectName), GETDATE(), 0);" vertex="1">
+          <mxGeometry height="838" width="840" x="520" as="geometry">
+            <mxRectangle height="838" width="840" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-20" parent="nqR-c-1" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="68" width="1360" y="1258" as="geometry" />
+        </mxCell>
+        <mxCell id="nqR-c-21" parent="nqR-c-20" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=14;fillColor=none;" value="Alternative / Exception Flow" vertex="1">
+          <mxGeometry height="68" width="520" as="geometry">
+            <mxRectangle height="68" width="520" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-22" parent="nqR-c-20" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=left;verticalAlign=middle;fontSize=13;fillColor=none;spacingLeft=6;spacingTop=8;spacingRight=6;" value="&lt;b&gt;4a:&lt;/b&gt; ข้อมูลไม่ครบหรือรูปแบบไม่ถูกต้อง → ระบบแสดงข้อความแจ้งเตือนที่ช่องที่ผิด และกลับไป Step 3&lt;br&gt;&lt;b&gt;3a:&lt;/b&gt; Sale กด &quot;ยกเลิก&quot; → ระบบไม่บันทึกข้อมูล และจบ Use Case" vertex="1">
+          <mxGeometry height="68" width="840" x="520" as="geometry">
+            <mxRectangle height="68" width="840" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-23" parent="nqR-1" style="shape=table;startSize=52;container=1;collapsible=0;childLayout=tableLayout;strokeColor=default;fontSize=20;fontStyle=1;html=1;" value="UC02 Store Project Solution Details" vertex="1">
+          <mxGeometry height="1634" width="1360" x="1480" as="geometry" />
+        </mxCell>
+        <mxCell id="nqR-c-24" parent="nqR-c-23" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="70" width="1360" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="nqR-c-25" parent="nqR-c-24" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=14;fillColor=none;" value="Main Actor" vertex="1">
+          <mxGeometry height="70" width="520" as="geometry">
+            <mxRectangle height="70" width="520" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-26" parent="nqR-c-24" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=14;fillColor=none;spacingLeft=10;spacingRight=10;" value="Presale Engineer" vertex="1">
+          <mxGeometry height="70" width="840" x="520" as="geometry">
+            <mxRectangle height="70" width="840" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-27" parent="nqR-c-23" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="76" width="1360" y="122" as="geometry" />
+        </mxCell>
+        <mxCell id="nqR-c-28" parent="nqR-c-27" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=14;fillColor=none;" value="Describe" vertex="1">
+          <mxGeometry height="76" width="520" as="geometry">
+            <mxRectangle height="76" width="520" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-29" parent="nqR-c-27" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=14;fillColor=none;spacingLeft=10;spacingRight=10;" value="ใช้ในการจัดเก็บรายละเอียด Solution แผนการทำงาน และเอกสารประกอบของ Project ลงในระบบ หลังลูกค้า Confirm Project เพื่อให้ PM และทีมงานนำไปใช้ต่อ และใช้ปรับปรุง Solution เมื่อ Sale อนุมัติ Requirement ใหม่ (UC07)" vertex="1">
+          <mxGeometry height="76" width="840" x="520" as="geometry">
+            <mxRectangle height="76" width="840" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-30" parent="nqR-c-23" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="97" width="1360" y="198" as="geometry" />
+        </mxCell>
+        <mxCell id="nqR-c-31" parent="nqR-c-30" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=14;fillColor=none;" value="Pre-Condition" vertex="1">
+          <mxGeometry height="97" width="520" as="geometry">
+            <mxRectangle height="97" width="520" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-32" parent="nqR-c-30" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=14;fillColor=none;spacingLeft=10;spacingRight=10;" value="1. Presale Engineer เข้าสู่ระบบแล้ว&lt;br&gt;2. มี Project Profile ในระบบ (UC01) ที่ตนเป็น Presale Engineer in Charge&lt;br&gt;3. ลูกค้า Confirm Project แล้ว และ Project อยู่ในสถานะ &quot;NewProject&quot;" vertex="1">
+          <mxGeometry height="97" width="840" x="520" as="geometry">
+            <mxRectangle height="97" width="840" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-33" parent="nqR-c-23" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="97" width="1360" y="295" as="geometry" />
+        </mxCell>
+        <mxCell id="nqR-c-34" parent="nqR-c-33" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=14;fillColor=none;" value="Post-Condition" vertex="1">
+          <mxGeometry height="97" width="520" as="geometry">
+            <mxRectangle height="97" width="520" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-35" parent="nqR-c-33" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=14;fillColor=none;spacingLeft=10;spacingRight=10;" value="1. รายละเอียด Solution และเอกสาร PDF ถูกบันทึกลง Project&lt;br&gt;2. สถานะ Project เปลี่ยนเป็น &quot;WaitingForAssignEngineer&quot;&lt;br&gt;3. PM ได้รับการแจ้งเตือนว่ามี Project รอมอบหมาย Engineer" vertex="1">
+          <mxGeometry height="97" width="840" x="520" as="geometry">
+            <mxRectangle height="97" width="840" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-36" parent="nqR-c-23" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="70" width="1360" y="392" as="geometry" />
+        </mxCell>
+        <mxCell id="nqR-c-37" parent="nqR-c-36" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=20;fillColor=none;" value="Actor Action" vertex="1">
+          <mxGeometry height="70" width="520" as="geometry">
+            <mxRectangle height="70" width="520" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-38" parent="nqR-c-36" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=20;fillColor=none;" value="System" vertex="1">
+          <mxGeometry height="70" width="840" x="520" as="geometry">
+            <mxRectangle height="70" width="840" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-39" parent="nqR-c-23" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="1104" width="1360" y="462" as="geometry" />
+        </mxCell>
+        <mxCell id="nqR-c-40" parent="nqR-c-39" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=left;verticalAlign=top;fontSize=13;fillColor=none;spacingLeft=6;spacingTop=8;spacingRight=6;" value="&lt;b&gt;Step 2:&lt;/b&gt; Presale เลือก Project ที่ต้องการ&lt;br&gt;&lt;b&gt;Step 4:&lt;/b&gt; Presale กรอกรายละเอียด Solution&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;4.1 Start Date / End Date&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;4.2 Project Objective&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;4.3 Estimated Budget&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;4.4 รายละเอียด Solution&lt;br&gt;&lt;b&gt;Step 6:&lt;/b&gt; Presale อัปโหลดเอกสาร Solution และ Product Requirement แล้วกด &quot;บันทึก&quot;" vertex="1">
+          <mxGeometry height="1104" width="520" as="geometry">
+            <mxRectangle height="1104" width="520" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-41" parent="nqR-c-39" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=left;verticalAlign=top;fontSize=13;fillColor=none;spacingLeft=6;spacingTop=8;spacingRight=6;" value="&lt;b&gt;Step 1:&lt;/b&gt; ระบบแสดงรายการ Project สถานะ &quot;NewProject&quot; ที่ Presale คนนี้รับผิดชอบ (Project ID, Project Name, Customer Name)&lt;br&gt;&lt;b&gt;Query 1.1:&lt;/b&gt;&lt;br&gt;SELECT p.ProjectID, p.ProjectName, c.CustomerName&lt;br&gt;FROM PROJECT p&lt;br&gt;JOIN CUSTOMER c ON c.CustomerID = p.CustomerID&lt;br&gt;WHERE p.PresaleID = @LoginID AND p.Status = &#39;NewProject&#39;&lt;br&gt;ORDER BY p.CreatedDate DESC;&lt;br&gt;&lt;br&gt;&lt;b&gt;Step 3:&lt;/b&gt; ระบบแสดงข้อมูล Project ที่เลือก และแบบฟอร์มรายละเอียด Solution (ถ้ามีข้อมูลเดิมจะแสดงข้อมูลเดิมให้แก้ไข)&lt;br&gt;&lt;b&gt;Query 3.1:&lt;/b&gt; &lt;i&gt;(ข้อมูล Project + Solution เดิม (ถ้ามี))&lt;/i&gt;&lt;br&gt;SELECT p.ProjectID, p.ProjectName, p.ProjectSite, c.CustomerName,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;p.StartDate, p.EndDate, p.Objective, p.EstimatedBudget, p.SolutionDetail&lt;br&gt;FROM PROJECT p&lt;br&gt;JOIN CUSTOMER c ON c.CustomerID = p.CustomerID&lt;br&gt;WHERE p.ProjectID = @ProjectID AND p.PresaleID = @LoginID;&lt;br&gt;&lt;b&gt;Query 3.2:&lt;/b&gt; &lt;i&gt;(เอกสารที่เคยอัปโหลด)&lt;/i&gt;&lt;br&gt;SELECT DocumentID, DocType, FileName, UploadedDate&lt;br&gt;FROM PROJECT_DOCUMENT&lt;br&gt;WHERE ProjectID = @ProjectID&lt;br&gt;ORDER BY UploadedDate DESC;&lt;br&gt;&lt;br&gt;&lt;b&gt;Step 5:&lt;/b&gt; ระบบตรวจสอบความถูกต้องของข้อมูลที่กรอก&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;5.1 เช็คการกรอก Start / End Date และ End Date ต้องไม่ก่อน Start Date&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;5.2 เช็คการกรอก Project Objective&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;5.3 เช็คการกรอก Estimated Budget เป็นตัวเลขที่มากกว่า 0&lt;br&gt;&lt;br&gt;&lt;b&gt;Step 7:&lt;/b&gt; ระบบตรวจสอบไฟล์ที่อัปโหลด&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;7.1 ต้องเป็นไฟล์ PDF&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;7.2 ขนาดไฟล์ไม่เกิน 50 MB ต่อไฟล์&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;7.3 ต้องมีเอกสาร Solution อย่างน้อย 1 ไฟล์&lt;br&gt;&lt;br&gt;&lt;b&gt;Step 8:&lt;/b&gt; ระบบบันทึกรายละเอียด Solution และไฟล์ลง Project ที่เลือก พร้อมประเภทเอกสาร (Solution / Product Requirement) และวันเวลาที่อัปโหลด&lt;br&gt;&lt;b&gt;Query 8.1:&lt;/b&gt;&lt;br&gt;UPDATE PROJECT&lt;br&gt;SET StartDate = @StartDate, EndDate = @EndDate, Objective = @Objective,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;EstimatedBudget = @EstimatedBudget, SolutionDetail = @SolutionDetail&lt;br&gt;WHERE ProjectID = @ProjectID;&lt;br&gt;&lt;b&gt;Query 8.2:&lt;/b&gt; &lt;i&gt;(ทำซ้ำทุกไฟล์, @DocType = &#39;Solution&#39; / &#39;ProductRequirement&#39;)&lt;/i&gt;&lt;br&gt;INSERT INTO PROJECT_DOCUMENT (ProjectID, DocType, FileName, FilePath, FileSize, UploadedDate)&lt;br&gt;VALUES (@ProjectID, @DocType, @FileName, @FilePath, @FileSize, GETDATE());&lt;br&gt;&lt;br&gt;&lt;b&gt;Step 9:&lt;/b&gt; ระบบอัปเดตสถานะ Project เป็น &quot;WaitingForAssignEngineer&quot;&lt;br&gt;&lt;b&gt;Query 9.1:&lt;/b&gt;&lt;br&gt;UPDATE PROJECT&lt;br&gt;SET Status = &#39;WaitingForAssignEngineer&#39;&lt;br&gt;WHERE ProjectID = @ProjectID;&lt;br&gt;&lt;br&gt;&lt;b&gt;Step 10:&lt;/b&gt; ระบบส่งการแจ้งเตือนไปยัง PM ว่ามี Project รอมอบหมาย Engineer&lt;br&gt;&lt;b&gt;Query 10.1:&lt;/b&gt; &lt;i&gt;(แจ้ง PM ทุกคน)&lt;/i&gt;&lt;br&gt;INSERT INTO NOTIFICATION (RecipientID, ProjectID, Type, Message, SendAt, IsRead)&lt;br&gt;SELECT EmployeeID, @ProjectID, &#39;WaitingAssign&#39;,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;N&#39;มี Project รอมอบหมาย Engineer&#39;, GETDATE(), 0&lt;br&gt;FROM EMPLOYEE&lt;br&gt;WHERE Role = &#39;PM&#39;;" vertex="1">
+          <mxGeometry height="1104" width="840" x="520" as="geometry">
+            <mxRectangle height="1104" width="840" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-42" parent="nqR-c-23" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="68" width="1360" y="1566" as="geometry" />
+        </mxCell>
+        <mxCell id="nqR-c-43" parent="nqR-c-42" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=14;fillColor=none;" value="Alternative / Exception Flow" vertex="1">
+          <mxGeometry height="68" width="520" as="geometry">
+            <mxRectangle height="68" width="520" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-44" parent="nqR-c-42" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=left;verticalAlign=middle;fontSize=13;fillColor=none;spacingLeft=6;spacingTop=8;spacingRight=6;" value="&lt;b&gt;5a:&lt;/b&gt; ข้อมูลไม่ครบหรือไม่ถูกต้อง → ระบบแจ้งเตือนที่ช่องที่ผิด และกลับไป Step 4&lt;br&gt;&lt;b&gt;7a:&lt;/b&gt; ไฟล์ไม่ใช่ PDF หรือมีขนาดเกิน 50 MB → ระบบแจ้งเตือนและไม่บันทึกไฟล์นั้น กลับไป Step 6" vertex="1">
+          <mxGeometry height="68" width="840" x="520" as="geometry">
+            <mxRectangle height="68" width="840" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-45" parent="nqR-1" style="shape=table;startSize=52;container=1;collapsible=0;childLayout=tableLayout;strokeColor=default;fontSize=20;fontStyle=1;html=1;" value="UC03 Check Project Details" vertex="1">
+          <mxGeometry height="2137" width="1360" x="2960" as="geometry" />
+        </mxCell>
+        <mxCell id="nqR-c-46" parent="nqR-c-45" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="70" width="1360" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="nqR-c-47" parent="nqR-c-46" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=14;fillColor=none;" value="Main Actor" vertex="1">
+          <mxGeometry height="70" width="520" as="geometry">
+            <mxRectangle height="70" width="520" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-48" parent="nqR-c-46" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=14;fillColor=none;spacingLeft=10;spacingRight=10;" value="Sale, Presale Engineer, PM, Tech Engineer" vertex="1">
+          <mxGeometry height="70" width="840" x="520" as="geometry">
+            <mxRectangle height="70" width="840" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-49" parent="nqR-c-45" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="76" width="1360" y="122" as="geometry" />
+        </mxCell>
+        <mxCell id="nqR-c-50" parent="nqR-c-49" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=14;fillColor=none;" value="Describe" vertex="1">
+          <mxGeometry height="76" width="520" as="geometry">
+            <mxRectangle height="76" width="520" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-51" parent="nqR-c-49" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=14;fillColor=none;spacingLeft=10;spacingRight=10;" value="สำหรับให้ทุกฝ่ายเข้ามาดูรายละเอียดล่าสุดของ Project ได้ตลอดเวลา และดาวน์โหลดเอกสาร Solution / Requirement เพื่อลดปัญหาข้อมูลตกหล่นเมื่อส่งต่องานระหว่างฝ่าย (ดูข้อมูลอย่างเดียว ไม่มีการแก้ไข)" vertex="1">
+          <mxGeometry height="76" width="840" x="520" as="geometry">
+            <mxRectangle height="76" width="840" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-52" parent="nqR-c-45" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="76" width="1360" y="198" as="geometry" />
+        </mxCell>
+        <mxCell id="nqR-c-53" parent="nqR-c-52" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=14;fillColor=none;" value="Pre-Condition" vertex="1">
+          <mxGeometry height="76" width="520" as="geometry">
+            <mxRectangle height="76" width="520" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-54" parent="nqR-c-52" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=14;fillColor=none;spacingLeft=10;spacingRight=10;" value="1. ผู้ใช้เข้าสู่ระบบแล้ว&lt;br&gt;2. มี Project Profile ในระบบ (UC01)" vertex="1">
+          <mxGeometry height="76" width="840" x="520" as="geometry">
+            <mxRectangle height="76" width="840" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-55" parent="nqR-c-45" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="70" width="1360" y="274" as="geometry" />
+        </mxCell>
+        <mxCell id="nqR-c-56" parent="nqR-c-55" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=14;fillColor=none;" value="Post-Condition" vertex="1">
+          <mxGeometry height="70" width="520" as="geometry">
+            <mxRectangle height="70" width="520" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-57" parent="nqR-c-55" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=14;fillColor=none;spacingLeft=10;spacingRight=10;" value="ผู้ใช้เห็นรายละเอียดล่าสุดของ Project และสามารถดาวน์โหลดเอกสารของ Project ได้ (ข้อมูลในระบบไม่ถูกเปลี่ยนแปลง)" vertex="1">
+          <mxGeometry height="70" width="840" x="520" as="geometry">
+            <mxRectangle height="70" width="840" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-58" parent="nqR-c-45" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="70" width="1360" y="344" as="geometry" />
+        </mxCell>
+        <mxCell id="nqR-c-59" parent="nqR-c-58" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=20;fillColor=none;" value="Actor Action" vertex="1">
+          <mxGeometry height="70" width="520" as="geometry">
+            <mxRectangle height="70" width="520" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-60" parent="nqR-c-58" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=20;fillColor=none;" value="System" vertex="1">
+          <mxGeometry height="70" width="840" x="520" as="geometry">
+            <mxRectangle height="70" width="840" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-61" parent="nqR-c-45" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="1636" width="1360" y="414" as="geometry" />
+        </mxCell>
+        <mxCell id="nqR-c-62" parent="nqR-c-61" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=left;verticalAlign=top;fontSize=13;fillColor=none;spacingLeft=6;spacingTop=8;spacingRight=6;" value="&lt;b&gt;Step 2:&lt;/b&gt; ผู้ใช้เลือก Project หรือค้นหาด้วย Project ID / Project Name&lt;br&gt;&lt;b&gt;Step 5:&lt;/b&gt; ผู้ใช้กดดาวน์โหลดเอกสารที่ต้องการ" vertex="1">
+          <mxGeometry height="1636" width="520" as="geometry">
+            <mxRectangle height="1636" width="520" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-63" parent="nqR-c-61" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=left;verticalAlign=top;fontSize=13;fillColor=none;spacingLeft=6;spacingTop=8;spacingRight=6;" value="&lt;b&gt;Step 1:&lt;/b&gt; ระบบแสดงรายการ Project ที่ผู้ใช้เกี่ยวข้อง (Project ID, Project Name, Customer Name, Status)&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;1.1 Sale / Presale: Project ที่ตนเป็นผู้รับผิดชอบ&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;1.2 PM: Project ทั้งหมด&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;1.3 Tech Engineer: Project ที่ตนถูกมอบหมาย&lt;br&gt;&lt;b&gt;Query 1.1:&lt;/b&gt; &lt;i&gt;(@Role / @LoginID จากผู้ใช้ที่ login, @Keyword ใช้ค้นหาใน Step 2 (NULL = แสดงทั้งหมด))&lt;/i&gt;&lt;br&gt;SELECT p.ProjectID, p.ProjectName, c.CustomerName, p.Status&lt;br&gt;FROM PROJECT p&lt;br&gt;JOIN CUSTOMER c ON c.CustomerID = p.CustomerID&lt;br&gt;WHERE (@Role = &#39;PM&#39; OR p.SaleID = @LoginID OR p.PresaleID = @LoginID&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;OR EXISTS (SELECT 1 FROM PROJECT_ASSIGNMENT pa&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;WHERE pa.ProjectID = p.ProjectID AND pa.EngineerID = @LoginID))&lt;br&gt;&amp;nbsp;&amp;nbsp;AND (@Keyword IS NULL OR p.ProjectName LIKE CONCAT(&#39;%&#39;, @Keyword, &#39;%&#39;)&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;OR CAST(p.ProjectID AS NVARCHAR(10)) = @Keyword)&lt;br&gt;ORDER BY p.ProjectID DESC;&lt;br&gt;&lt;br&gt;&lt;b&gt;Step 3:&lt;/b&gt; ระบบตรวจสอบว่ามี Project อยู่ในระบบ และผู้ใช้มีสิทธิ์เข้าถึง&lt;br&gt;&lt;b&gt;Query 3.1:&lt;/b&gt; &lt;i&gt;(ผลลัพธ์ = 0 → Alternative 3a)&lt;/i&gt;&lt;br&gt;SELECT COUNT(*) AS Found&lt;br&gt;FROM PROJECT p&lt;br&gt;WHERE p.ProjectID = @ProjectID&lt;br&gt;&amp;nbsp;&amp;nbsp;AND (@Role = &#39;PM&#39; OR p.SaleID = @LoginID OR p.PresaleID = @LoginID&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;OR EXISTS (SELECT 1 FROM PROJECT_ASSIGNMENT pa&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;WHERE pa.ProjectID = p.ProjectID AND pa.EngineerID = @LoginID));&lt;br&gt;&lt;br&gt;&lt;b&gt;Step 4:&lt;/b&gt; ระบบแสดงรายละเอียดของ Project&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;4.1 ข้อมูลเบื้องต้น: Project ID, Project Name, Status, Project Site&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;4.2 ข้อมูลลูกค้า: Customer Name, Customer Email&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;4.3 ผู้รับผิดชอบ: Sale in Charge, Presale Engineer in Charge, PM, Tech Engineer ที่ถูกมอบหมาย&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;4.4 Solution: Start / End Date, Project Objective, Estimated Budget, รายละเอียด Solution&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;4.5 นัดหมายทดสอบล่าสุด (วัน เวลา สถานที่)&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;4.6 รายการ New Requirement และสถานะ&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;4.7 รายการเอกสารแนบ (Solution, Product Requirement, New Requirement)&lt;br&gt;&lt;b&gt;Query 4.1:&lt;/b&gt; &lt;i&gt;(Step 4.1 – 4.4)&lt;/i&gt;&lt;br&gt;SELECT p.ProjectID, p.ProjectName, p.Status, p.ProjectSite,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;c.CustomerName, c.CustomerEmail,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;CONCAT(s.FirstName, &#39; &#39;, s.LastName)   AS SaleInCharge,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;CONCAT(ps.FirstName, &#39; &#39;, ps.LastName) AS PresaleInCharge,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;CASE WHEN p.PMID IS NULL THEN NULL&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;ELSE CONCAT(pm.FirstName, &#39; &#39;, pm.LastName) END AS PMName,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;p.StartDate, p.EndDate, p.Objective, p.EstimatedBudget, p.SolutionDetail&lt;br&gt;FROM PROJECT p&lt;br&gt;JOIN CUSTOMER c       ON c.CustomerID  = p.CustomerID&lt;br&gt;JOIN EMPLOYEE s       ON s.EmployeeID  = p.SaleID&lt;br&gt;JOIN EMPLOYEE ps      ON ps.EmployeeID = p.PresaleID&lt;br&gt;LEFT JOIN EMPLOYEE pm ON pm.EmployeeID = p.PMID&lt;br&gt;WHERE p.ProjectID = @ProjectID;&lt;br&gt;&lt;b&gt;Query 4.2:&lt;/b&gt; &lt;i&gt;(Step 4.3 Tech Engineer ที่ถูกมอบหมาย)&lt;/i&gt;&lt;br&gt;SELECT e.EmployeeID, e.FirstName, e.LastName, pa.AssignedDate&lt;br&gt;FROM PROJECT_ASSIGNMENT pa&lt;br&gt;JOIN EMPLOYEE e ON e.EmployeeID = pa.EngineerID&lt;br&gt;WHERE pa.ProjectID = @ProjectID;&lt;br&gt;&lt;b&gt;Query 4.3:&lt;/b&gt; &lt;i&gt;(Step 4.5 นัดหมายทดสอบล่าสุด)&lt;/i&gt;&lt;br&gt;SELECT TOP 1 TestDate, StartTime, EndTime, Location, TestDetail&lt;br&gt;FROM TEST_SCHEDULE&lt;br&gt;WHERE ProjectID = @ProjectID AND Status IN (&#39;Scheduled&#39;, &#39;Done&#39;)&lt;br&gt;ORDER BY TestDate DESC;&lt;br&gt;&lt;b&gt;Query 4.4:&lt;/b&gt; &lt;i&gt;(Step 4.6 New Requirement)&lt;/i&gt;&lt;br&gt;SELECT RequirementID, Title, Priority, DueDate, Status&lt;br&gt;FROM CUSTOMER_REQUIREMENT&lt;br&gt;WHERE ProjectID = @ProjectID&lt;br&gt;ORDER BY CreatedDate DESC;&lt;br&gt;&lt;b&gt;Query 4.5:&lt;/b&gt; &lt;i&gt;(Step 4.7 เอกสาร Solution / Product Requirement)&lt;/i&gt;&lt;br&gt;SELECT DocumentID, DocType, FileName, UploadedDate&lt;br&gt;FROM PROJECT_DOCUMENT&lt;br&gt;WHERE ProjectID = @ProjectID&lt;br&gt;ORDER BY UploadedDate DESC;&lt;br&gt;&lt;b&gt;Query 4.6:&lt;/b&gt; &lt;i&gt;(Step 4.7 เอกสารแนบของ New Requirement)&lt;/i&gt;&lt;br&gt;SELECT ra.RequirementID, r.Title, ra.AttachmentFile&lt;br&gt;FROM REQUIREMENT_ATTACHMENT ra&lt;br&gt;JOIN CUSTOMER_REQUIREMENT r ON r.RequirementID = ra.RequirementID&lt;br&gt;WHERE r.ProjectID = @ProjectID;&lt;br&gt;&lt;br&gt;&lt;b&gt;Step 6:&lt;/b&gt; ระบบส่งไฟล์เอกสารให้ผู้ใช้ดาวน์โหลด&lt;br&gt;&lt;b&gt;Query 6.1:&lt;/b&gt; &lt;i&gt;(เอกสาร Project)&lt;/i&gt;&lt;br&gt;SELECT FileName, FilePath&lt;br&gt;FROM PROJECT_DOCUMENT&lt;br&gt;WHERE DocumentID = @DocumentID AND ProjectID = @ProjectID;&lt;br&gt;&lt;b&gt;Query 6.2:&lt;/b&gt; &lt;i&gt;(เอกสารแนบ Requirement)&lt;/i&gt;&lt;br&gt;SELECT ra.AttachmentFile&lt;br&gt;FROM REQUIREMENT_ATTACHMENT ra&lt;br&gt;JOIN CUSTOMER_REQUIREMENT r ON r.RequirementID = ra.RequirementID&lt;br&gt;WHERE ra.RequirementID = @RequirementID AND r.ProjectID = @ProjectID&lt;br&gt;&amp;nbsp;&amp;nbsp;AND ra.AttachmentFile = @AttachmentFile;" vertex="1">
+          <mxGeometry height="1636" width="840" x="520" as="geometry">
+            <mxRectangle height="1636" width="840" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-64" parent="nqR-c-45" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="87" width="1360" y="2050" as="geometry" />
+        </mxCell>
+        <mxCell id="nqR-c-65" parent="nqR-c-64" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=14;fillColor=none;" value="Alternative / Exception Flow" vertex="1">
+          <mxGeometry height="87" width="520" as="geometry">
+            <mxRectangle height="87" width="520" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-66" parent="nqR-c-64" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=left;verticalAlign=middle;fontSize=13;fillColor=none;spacingLeft=6;spacingTop=8;spacingRight=6;" value="&lt;b&gt;3a:&lt;/b&gt; ไม่พบ Project หรือผู้ใช้ไม่มีสิทธิ์ → ระบบแจ้ง &quot;ไม่พบ Project&quot; และกลับไป Step 1&lt;br&gt;&lt;b&gt;4a:&lt;/b&gt; ส่วนที่ยังไม่มีข้อมูล (เช่น ยังไม่มี Solution / นัดทดสอบ) → ระบบแสดง &quot;ยังไม่มีข้อมูล&quot; ในส่วนนั้น&lt;br&gt;&lt;b&gt;5a:&lt;/b&gt; ผู้ใช้ไม่ดาวน์โหลดเอกสาร → จบ Use Case หลัง Step 4" vertex="1">
+          <mxGeometry height="87" width="840" x="520" as="geometry">
+            <mxRectangle height="87" width="840" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-67" parent="nqR-1" style="shape=table;startSize=52;container=1;collapsible=0;childLayout=tableLayout;strokeColor=default;fontSize=20;fontStyle=1;html=1;" value="UC04 Assign Engineer to Project" vertex="1">
+          <mxGeometry height="2014" width="1360" x="4440" as="geometry" />
+        </mxCell>
+        <mxCell id="nqR-c-68" parent="nqR-c-67" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="70" width="1360" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="nqR-c-69" parent="nqR-c-68" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=14;fillColor=none;" value="Main Actor" vertex="1">
+          <mxGeometry height="70" width="520" as="geometry">
+            <mxRectangle height="70" width="520" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-70" parent="nqR-c-68" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=14;fillColor=none;spacingLeft=10;spacingRight=10;" value="PM" vertex="1">
+          <mxGeometry height="70" width="840" x="520" as="geometry">
+            <mxRectangle height="70" width="840" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-71" parent="nqR-c-67" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="76" width="1360" y="122" as="geometry" />
+        </mxCell>
+        <mxCell id="nqR-c-72" parent="nqR-c-71" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=14;fillColor=none;" value="Describe" vertex="1">
+          <mxGeometry height="76" width="520" as="geometry">
+            <mxRectangle height="76" width="520" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-73" parent="nqR-c-71" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=14;fillColor=none;spacingLeft=10;spacingRight=10;" value="ใช้ในการมอบหมาย Tech Engineer ให้รับผิดชอบ Project โดย PM สามารถ Filter Engineer ตาม Skill และเห็นจำนวน Project ที่ Engineer แต่ละคนรับผิดชอบอยู่ เพื่อเลือกคนให้เหมาะสมกับงาน" vertex="1">
+          <mxGeometry height="76" width="840" x="520" as="geometry">
+            <mxRectangle height="76" width="840" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-74" parent="nqR-c-67" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="97" width="1360" y="198" as="geometry" />
+        </mxCell>
+        <mxCell id="nqR-c-75" parent="nqR-c-74" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=14;fillColor=none;" value="Pre-Condition" vertex="1">
+          <mxGeometry height="97" width="520" as="geometry">
+            <mxRectangle height="97" width="520" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-76" parent="nqR-c-74" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=14;fillColor=none;spacingLeft=10;spacingRight=10;" value="1. PM เข้าสู่ระบบแล้ว&lt;br&gt;2. Project อยู่ในสถานะ &quot;WaitingForAssignEngineer&quot; (Presale บันทึก Solution แล้ว – UC02)&lt;br&gt;3. มีข้อมูล Tech Engineer และ Skill ของแต่ละคนในระบบ" vertex="1">
+          <mxGeometry height="97" width="840" x="520" as="geometry">
+            <mxRectangle height="97" width="840" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-77" parent="nqR-c-67" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="97" width="1360" y="295" as="geometry" />
+        </mxCell>
+        <mxCell id="nqR-c-78" parent="nqR-c-77" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=14;fillColor=none;" value="Post-Condition" vertex="1">
+          <mxGeometry height="97" width="520" as="geometry">
+            <mxRectangle height="97" width="520" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-79" parent="nqR-c-77" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=14;fillColor=none;spacingLeft=10;spacingRight=10;" value="1. รายชื่อ Tech Engineer ถูกบันทึกเข้า Project และ PM ถูกบันทึกเป็น PM ของ Project&lt;br&gt;2. สถานะ Project เปลี่ยนเป็น &quot;Working&quot;&lt;br&gt;3. Tech Engineer ที่ถูกมอบหมายได้รับการแจ้งเตือน" vertex="1">
+          <mxGeometry height="97" width="840" x="520" as="geometry">
+            <mxRectangle height="97" width="840" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-80" parent="nqR-c-67" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="70" width="1360" y="392" as="geometry" />
+        </mxCell>
+        <mxCell id="nqR-c-81" parent="nqR-c-80" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=20;fillColor=none;" value="Actor Action" vertex="1">
+          <mxGeometry height="70" width="520" as="geometry">
+            <mxRectangle height="70" width="520" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-82" parent="nqR-c-80" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=20;fillColor=none;" value="System" vertex="1">
+          <mxGeometry height="70" width="840" x="520" as="geometry">
+            <mxRectangle height="70" width="840" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-83" parent="nqR-c-67" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="1484" width="1360" y="462" as="geometry" />
+        </mxCell>
+        <mxCell id="nqR-c-84" parent="nqR-c-83" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=left;verticalAlign=top;fontSize=13;fillColor=none;spacingLeft=6;spacingTop=8;spacingRight=6;" value="&lt;b&gt;Step 2:&lt;/b&gt; PM เลือก Project ที่จะกำหนด Tech Engineer&lt;br&gt;&lt;b&gt;Step 4:&lt;/b&gt; PM เลือก Skill ที่ต้องการเพื่อ Filter (เช่น CCNA, Linux)&lt;br&gt;&lt;b&gt;Step 6:&lt;/b&gt; PM เลือก Tech Engineer เข้า Project ตามความเหมาะสม แล้วกด &quot;ยืนยัน&quot;" vertex="1">
+          <mxGeometry height="1484" width="520" as="geometry">
+            <mxRectangle height="1484" width="520" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-85" parent="nqR-c-83" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=left;verticalAlign=top;fontSize=13;fillColor=none;spacingLeft=6;spacingTop=8;spacingRight=6;" value="&lt;b&gt;Step 1:&lt;/b&gt; ระบบแสดงรายการ Project สถานะ &quot;WaitingForAssignEngineer&quot;&lt;br&gt;&lt;b&gt;Query 1.1:&lt;/b&gt;&lt;br&gt;SELECT p.ProjectID, p.ProjectName, c.CustomerName&lt;br&gt;FROM PROJECT p&lt;br&gt;JOIN CUSTOMER c ON c.CustomerID = p.CustomerID&lt;br&gt;WHERE p.Status = &#39;WaitingForAssignEngineer&#39;&lt;br&gt;ORDER BY p.CreatedDate;&lt;br&gt;&lt;br&gt;&lt;b&gt;Step 3:&lt;/b&gt; ระบบแสดงรายละเอียด Solution ของ Project (Start / End Date, Objective) และรายชื่อ Tech Engineer ทั้งหมดพร้อม Skill และจำนวน Project ที่กำลังรับผิดชอบ (Engineer ที่อยู่ใน Project อยู่แล้วจะถูกเลือกไว้ให้)&lt;br&gt;&lt;b&gt;Query 3.1:&lt;/b&gt;&lt;br&gt;SELECT ProjectID, ProjectName, StartDate, EndDate, Objective&lt;br&gt;FROM PROJECT&lt;br&gt;WHERE ProjectID = @ProjectID;&lt;br&gt;&lt;b&gt;Query 3.2:&lt;/b&gt; &lt;i&gt;(Engineer + Skill + จำนวน Project ที่ทำอยู่ + อยู่ใน Project นี้แล้วหรือไม่)&lt;/i&gt;&lt;br&gt;SELECT e.EmployeeID, e.FirstName, e.LastName,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;STRING_AGG(s.SkillName, &#39;, &#39;) AS Skills,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;(SELECT COUNT(*) FROM PROJECT_ASSIGNMENT x&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;JOIN PROJECT y ON y.ProjectID = x.ProjectID&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;WHERE x.EngineerID = e.EmployeeID AND y.Status IN (&#39;Working&#39;,&#39;Testing&#39;)) AS ActiveProjects,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;CASE WHEN EXISTS (SELECT 1 FROM PROJECT_ASSIGNMENT z&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;WHERE z.ProjectID = @ProjectID AND z.EngineerID = e.EmployeeID)&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;THEN 1 ELSE 0 END AS InThisProject&lt;br&gt;FROM EMPLOYEE e&lt;br&gt;LEFT JOIN ENGINEER_SKILL es ON es.EmployeeID = e.EmployeeID&lt;br&gt;LEFT JOIN SKILL s           ON s.SkillID     = es.SkillID&lt;br&gt;WHERE e.Role = &#39;TechEngineer&#39;&lt;br&gt;GROUP BY e.EmployeeID, e.FirstName, e.LastName;&lt;br&gt;&lt;b&gt;Query 3.3:&lt;/b&gt; &lt;i&gt;(ตัวเลือก Skill สำหรับ Filter)&lt;/i&gt;&lt;br&gt;SELECT SkillID, SkillName&lt;br&gt;FROM SKILL&lt;br&gt;ORDER BY SkillName;&lt;br&gt;&lt;br&gt;&lt;b&gt;Step 5:&lt;/b&gt; ระบบแสดงเฉพาะ Tech Engineer ที่มี Skill ตรงตามที่ Filter&lt;br&gt;&lt;b&gt;Query 5.1:&lt;/b&gt;&lt;br&gt;SELECT e.EmployeeID, e.FirstName, e.LastName,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;STRING_AGG(s.SkillName, &#39;, &#39;) AS Skills,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;(SELECT COUNT(*) FROM PROJECT_ASSIGNMENT x&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;JOIN PROJECT y ON y.ProjectID = x.ProjectID&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;WHERE x.EngineerID = e.EmployeeID AND y.Status IN (&#39;Working&#39;,&#39;Testing&#39;)) AS ActiveProjects&lt;br&gt;FROM EMPLOYEE e&lt;br&gt;JOIN ENGINEER_SKILL es ON es.EmployeeID = e.EmployeeID&lt;br&gt;JOIN SKILL s           ON s.SkillID     = es.SkillID&lt;br&gt;WHERE e.Role = &#39;TechEngineer&#39;&lt;br&gt;&amp;nbsp;&amp;nbsp;AND EXISTS (SELECT 1 FROM ENGINEER_SKILL f&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;WHERE f.EmployeeID = e.EmployeeID AND f.SkillID = @SkillID)&lt;br&gt;GROUP BY e.EmployeeID, e.FirstName, e.LastName;&lt;br&gt;&lt;br&gt;&lt;b&gt;Step 7:&lt;/b&gt; ระบบตรวจสอบว่าเลือก Tech Engineer อย่างน้อย 1 คน&lt;br&gt;&lt;br&gt;&lt;b&gt;Step 8:&lt;/b&gt; ระบบบันทึก Tech Engineer ลง Project พร้อมวันที่มอบหมาย และบันทึก PM ผู้มอบหมายเป็น PM ของ Project&lt;br&gt;&lt;b&gt;Query 8.1:&lt;/b&gt; &lt;i&gt;(ทำซ้ำทุก Engineer ที่เลือก (ไม่เพิ่มซ้ำคนที่อยู่แล้ว))&lt;/i&gt;&lt;br&gt;INSERT INTO PROJECT_ASSIGNMENT (ProjectID, EngineerID, AssignedDate)&lt;br&gt;SELECT @ProjectID, @EngineerID, GETDATE()&lt;br&gt;WHERE NOT EXISTS (SELECT 1 FROM PROJECT_ASSIGNMENT&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;WHERE ProjectID = @ProjectID AND EngineerID = @EngineerID);&lt;br&gt;&lt;b&gt;Query 8.2:&lt;/b&gt; &lt;i&gt;(PM ผู้มอบหมาย = PM ของ Project)&lt;/i&gt;&lt;br&gt;UPDATE PROJECT&lt;br&gt;SET PMID = @LoginID&lt;br&gt;WHERE ProjectID = @ProjectID;&lt;br&gt;&lt;br&gt;&lt;b&gt;Step 9:&lt;/b&gt; ระบบอัปเดตสถานะ Project เป็น &quot;Working&quot;&lt;br&gt;&lt;b&gt;Query 9.1:&lt;/b&gt;&lt;br&gt;UPDATE PROJECT&lt;br&gt;SET Status = &#39;Working&#39;&lt;br&gt;WHERE ProjectID = @ProjectID;&lt;br&gt;&lt;br&gt;&lt;b&gt;Step 10:&lt;/b&gt; ระบบส่งการแจ้งเตือนไปยัง Tech Engineer ที่ถูกมอบหมาย&lt;br&gt;&lt;b&gt;Query 10.1:&lt;/b&gt;&lt;br&gt;INSERT INTO NOTIFICATION (RecipientID, ProjectID, Type, Message, SendAt, IsRead)&lt;br&gt;SELECT pa.EngineerID, @ProjectID, &#39;Assigned&#39;,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;CONCAT(N&#39;คุณถูกมอบหมายใน Project: &#39;, p.ProjectName), GETDATE(), 0&lt;br&gt;FROM PROJECT_ASSIGNMENT pa&lt;br&gt;JOIN PROJECT p ON p.ProjectID = pa.ProjectID&lt;br&gt;WHERE pa.ProjectID = @ProjectID;" vertex="1">
+          <mxGeometry height="1484" width="840" x="520" as="geometry">
+            <mxRectangle height="1484" width="840" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-86" parent="nqR-c-67" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="68" width="1360" y="1946" as="geometry" />
+        </mxCell>
+        <mxCell id="nqR-c-87" parent="nqR-c-86" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=14;fillColor=none;" value="Alternative / Exception Flow" vertex="1">
+          <mxGeometry height="68" width="520" as="geometry">
+            <mxRectangle height="68" width="520" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-88" parent="nqR-c-86" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=left;verticalAlign=middle;fontSize=13;fillColor=none;spacingLeft=6;spacingTop=8;spacingRight=6;" value="&lt;b&gt;5a:&lt;/b&gt; ไม่มี Engineer ที่มี Skill ตรงตาม Filter → ระบบแสดง &quot;ไม่พบ Engineer&quot; และกลับไป Step 4&lt;br&gt;&lt;b&gt;7a:&lt;/b&gt; ยังไม่ได้เลือก Engineer → ระบบแจ้งเตือน และกลับไป Step 6" vertex="1">
+          <mxGeometry height="68" width="840" x="520" as="geometry">
+            <mxRectangle height="68" width="840" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-89" parent="nqR-1" style="shape=table;startSize=52;container=1;collapsible=0;childLayout=tableLayout;strokeColor=default;fontSize=20;fontStyle=1;html=1;" value="UC05 Set Project Test Calendar Notification" vertex="1">
+          <mxGeometry height="1892" width="1360" y="2257" as="geometry" />
+        </mxCell>
+        <mxCell id="nqR-c-90" parent="nqR-c-89" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="70" width="1360" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="nqR-c-91" parent="nqR-c-90" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=14;fillColor=none;" value="Main Actor" vertex="1">
+          <mxGeometry height="70" width="520" as="geometry">
+            <mxRectangle height="70" width="520" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-92" parent="nqR-c-90" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=14;fillColor=none;spacingLeft=10;spacingRight=10;" value="Tech Engineer" vertex="1">
+          <mxGeometry height="70" width="840" x="520" as="geometry">
+            <mxRectangle height="70" width="840" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-93" parent="nqR-c-89" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="76" width="1360" y="122" as="geometry" />
+        </mxCell>
+        <mxCell id="nqR-c-94" parent="nqR-c-93" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=14;fillColor=none;" value="Describe" vertex="1">
+          <mxGeometry height="76" width="520" as="geometry">
+            <mxRectangle height="76" width="520" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-95" parent="nqR-c-93" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=14;fillColor=none;spacingLeft=10;spacingRight=10;" value="ใช้ในการกำหนดวัน เวลา และสถานที่ทดสอบระบบกับลูกค้า พร้อมตั้งการแจ้งเตือนล่วงหน้าไปยัง PM, ทีม Engineer และลูกค้า เพื่อลดปัญหานัดหมายคลาดเคลื่อนและสถานที่ไม่ตรงตามนัด" vertex="1">
+          <mxGeometry height="76" width="840" x="520" as="geometry">
+            <mxRectangle height="76" width="840" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-96" parent="nqR-c-89" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="97" width="1360" y="198" as="geometry" />
+        </mxCell>
+        <mxCell id="nqR-c-97" parent="nqR-c-96" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=14;fillColor=none;" value="Pre-Condition" vertex="1">
+          <mxGeometry height="97" width="520" as="geometry">
+            <mxRectangle height="97" width="520" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-98" parent="nqR-c-96" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=14;fillColor=none;spacingLeft=10;spacingRight=10;" value="1. Tech Engineer เข้าสู่ระบบแล้ว และถูกมอบหมายใน Project (UC04)&lt;br&gt;2. ติดตั้งอุปกรณ์ที่ site และทดสอบภายในผ่านแล้ว&lt;br&gt;3. Project อยู่ในสถานะ &quot;Working&quot; (หรือ &quot;Testing&quot; กรณีนัดทดสอบใหม่หลังแก้ปัญหา)" vertex="1">
+          <mxGeometry height="97" width="840" x="520" as="geometry">
+            <mxRectangle height="97" width="840" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-99" parent="nqR-c-89" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="97" width="1360" y="295" as="geometry" />
+        </mxCell>
+        <mxCell id="nqR-c-100" parent="nqR-c-99" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=14;fillColor=none;" value="Post-Condition" vertex="1">
+          <mxGeometry height="97" width="520" as="geometry">
+            <mxRectangle height="97" width="520" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-101" parent="nqR-c-99" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=14;fillColor=none;spacingLeft=10;spacingRight=10;" value="1. นัดหมายทดสอบถูกบันทึกในระบบ&lt;br&gt;2. สถานะ Project เป็น &quot;Testing&quot;&lt;br&gt;3. PM, ทีม Engineer และลูกค้าได้รับการแจ้งเตือนทันที และได้รับแจ้งเตือนซ้ำตามเวลาที่ตั้งไว้" vertex="1">
+          <mxGeometry height="97" width="840" x="520" as="geometry">
+            <mxRectangle height="97" width="840" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-102" parent="nqR-c-89" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="70" width="1360" y="392" as="geometry" />
+        </mxCell>
+        <mxCell id="nqR-c-103" parent="nqR-c-102" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=20;fillColor=none;" value="Actor Action" vertex="1">
+          <mxGeometry height="70" width="520" as="geometry">
+            <mxRectangle height="70" width="520" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-104" parent="nqR-c-102" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=20;fillColor=none;" value="System" vertex="1">
+          <mxGeometry height="70" width="840" x="520" as="geometry">
+            <mxRectangle height="70" width="840" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-105" parent="nqR-c-89" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="1370" width="1360" y="462" as="geometry" />
+        </mxCell>
+        <mxCell id="nqR-c-106" parent="nqR-c-105" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=left;verticalAlign=top;fontSize=13;fillColor=none;spacingLeft=6;spacingTop=8;spacingRight=6;" value="&lt;b&gt;Step 2:&lt;/b&gt; Tech Engineer เลือก Project ที่ต้องการตั้งนัดทดสอบ&lt;br&gt;&lt;b&gt;Step 4:&lt;/b&gt; Tech Engineer กรอกรายละเอียดนัดทดสอบ แล้วกด &quot;บันทึก&quot;&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;4.1 วันที่ทดสอบ&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;4.2 เวลาเริ่ม – เวลาสิ้นสุด&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;4.3 สถานที่ทดสอบ (ค่าเริ่มต้นคือ Project Site)&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;4.4 รายละเอียดการทดสอบ&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;4.5 เวลาแจ้งเตือนล่วงหน้า (เช่น 1 วัน, 3 ชั่วโมง)" vertex="1">
+          <mxGeometry height="1370" width="520" as="geometry">
+            <mxRectangle height="1370" width="520" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-107" parent="nqR-c-105" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=left;verticalAlign=top;fontSize=13;fillColor=none;spacingLeft=6;spacingTop=8;spacingRight=6;" value="&lt;b&gt;Step 1:&lt;/b&gt; ระบบแสดงรายการ Project ที่ Tech Engineer คนนี้ถูกมอบหมาย และมีสถานะ &quot;Working&quot; หรือ &quot;Testing&quot;&lt;br&gt;&lt;b&gt;Query 1.1:&lt;/b&gt;&lt;br&gt;SELECT p.ProjectID, p.ProjectName, c.CustomerName, p.Status&lt;br&gt;FROM PROJECT p&lt;br&gt;JOIN CUSTOMER c           ON c.CustomerID = p.CustomerID&lt;br&gt;JOIN PROJECT_ASSIGNMENT pa ON pa.ProjectID = p.ProjectID&lt;br&gt;WHERE pa.EngineerID = @LoginID AND p.Status IN (&#39;Working&#39;,&#39;Testing&#39;);&lt;br&gt;&lt;br&gt;&lt;b&gt;Step 3:&lt;/b&gt; ระบบแสดงข้อมูล Project (Project Site, Customer Name / Email, Engineer ในทีม) นัดหมายทดสอบเดิม (ถ้ามี) และแบบฟอร์มนัดหมาย&lt;br&gt;&lt;b&gt;Query 3.1:&lt;/b&gt;&lt;br&gt;SELECT p.ProjectSite, c.CustomerName, c.CustomerEmail&lt;br&gt;FROM PROJECT p&lt;br&gt;JOIN CUSTOMER c ON c.CustomerID = p.CustomerID&lt;br&gt;WHERE p.ProjectID = @ProjectID;&lt;br&gt;&lt;b&gt;Query 3.2:&lt;/b&gt; &lt;i&gt;(Engineer ในทีม)&lt;/i&gt;&lt;br&gt;SELECT e.FirstName, e.LastName&lt;br&gt;FROM PROJECT_ASSIGNMENT pa&lt;br&gt;JOIN EMPLOYEE e ON e.EmployeeID = pa.EngineerID&lt;br&gt;WHERE pa.ProjectID = @ProjectID;&lt;br&gt;&lt;b&gt;Query 3.3:&lt;/b&gt; &lt;i&gt;(นัดหมายเดิม)&lt;/i&gt;&lt;br&gt;SELECT ScheduleID, TestDate, StartTime, EndTime, Location&lt;br&gt;FROM TEST_SCHEDULE&lt;br&gt;WHERE ProjectID = @ProjectID AND Status = &#39;Scheduled&#39;;&lt;br&gt;&lt;br&gt;&lt;b&gt;Step 5:&lt;/b&gt; ระบบตรวจสอบความถูกต้องของข้อมูลที่กรอก&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;5.1 วันที่ทดสอบต้องไม่เป็นวันที่ผ่านมาแล้ว&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;5.2 เวลาสิ้นสุดต้องอยู่หลังเวลาเริ่ม&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;5.3 ต้องกรอกสถานที่ทดสอบ&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;5.4 ต้องเลือกเวลาแจ้งเตือนล่วงหน้า&lt;br&gt;&lt;br&gt;&lt;b&gt;Step 6:&lt;/b&gt; ระบบบันทึกนัดหมายทดสอบลงระบบ สถานะนัด &quot;Scheduled&quot; (ถ้ามีนัดเดิม เปลี่ยนนัดเดิมเป็น &quot;Cancelled&quot;)&lt;br&gt;&lt;b&gt;Query 6.1:&lt;/b&gt; &lt;i&gt;(ยกเลิกนัดเดิม (ถ้ามี))&lt;/i&gt;&lt;br&gt;UPDATE TEST_SCHEDULE&lt;br&gt;SET Status = &#39;Cancelled&#39;&lt;br&gt;WHERE ProjectID = @ProjectID AND Status = &#39;Scheduled&#39;;&lt;br&gt;&lt;b&gt;Query 6.2:&lt;/b&gt;&lt;br&gt;INSERT INTO TEST_SCHEDULE (ProjectID, CreatedByID, TestDate, StartTime, EndTime,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Location, TestDetail, RemindBefore, Status, CreatedDate)&lt;br&gt;VALUES (@ProjectID, @LoginID, @TestDate, @StartTime, @EndTime,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;@Location, @TestDetail, @RemindBefore, &#39;Scheduled&#39;, GETDATE());&lt;br&gt;SET @ScheduleID = SCOPE_IDENTITY();&lt;br&gt;&lt;br&gt;&lt;b&gt;Step 7:&lt;/b&gt; ระบบอัปเดตสถานะ Project เป็น &quot;Testing&quot;&lt;br&gt;&lt;b&gt;Query 7.1:&lt;/b&gt;&lt;br&gt;UPDATE PROJECT&lt;br&gt;SET Status = &#39;Testing&#39;&lt;br&gt;WHERE ProjectID = @ProjectID;&lt;br&gt;&lt;br&gt;&lt;b&gt;Step 8:&lt;/b&gt; ระบบส่งการแจ้งเตือนนัดหมายไปยัง PM และ Tech Engineer ใน Project และส่งอีเมลนัดหมายไปยัง Customer Email&lt;br&gt;&lt;b&gt;Query 8.1:&lt;/b&gt; &lt;i&gt;(แจ้ง PM + Engineer ทุกคนใน Project (อีเมลลูกค้าใช้ CustomerEmail จาก Query 3.1))&lt;/i&gt;&lt;br&gt;INSERT INTO NOTIFICATION (RecipientID, ProjectID, Type, Message, SendAt, IsRead)&lt;br&gt;SELECT r.EmployeeID, @ProjectID, &#39;TestSchedule&#39;,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;CONCAT(N&#39;นัดทดสอบ &#39;, @TestDate, &#39; &#39;, LEFT(CONCAT(@StartTime, &#39;&#39;), 5), N&#39; ที่ &#39;, @Location), GETDATE(), 0&lt;br&gt;FROM (SELECT EngineerID AS EmployeeID FROM PROJECT_ASSIGNMENT WHERE ProjectID = @ProjectID&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;UNION&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;SELECT PMID FROM PROJECT WHERE ProjectID = @ProjectID AND PMID IS NOT NULL) r;&lt;br&gt;&lt;br&gt;&lt;b&gt;Step 9:&lt;/b&gt; ระบบส่งการแจ้งเตือนซ้ำตามเวลาแจ้งเตือนล่วงหน้าที่ตั้งไว้&lt;br&gt;&lt;b&gt;Query 9.1:&lt;/b&gt; &lt;i&gt;(แจ้งเตือนล่วงหน้าตาม RemindBefore (นาที))&lt;/i&gt;&lt;br&gt;INSERT INTO NOTIFICATION (RecipientID, ProjectID, Type, Message, SendAt, IsRead)&lt;br&gt;SELECT r.EmployeeID, @ProjectID, &#39;TestReminder&#39;,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;CONCAT(N&#39;เตือน: นัดทดสอบ &#39;, @TestDate, &#39; &#39;, LEFT(CONCAT(@StartTime, &#39;&#39;), 5), N&#39; ที่ &#39;, @Location),&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;DATEADD(MINUTE, -@RemindBefore, CAST(CONCAT(@TestDate, &#39; &#39;, LEFT(CONCAT(@StartTime, &#39;&#39;), 8)) AS DATETIME)), 0&lt;br&gt;FROM (SELECT EngineerID AS EmployeeID FROM PROJECT_ASSIGNMENT WHERE ProjectID = @ProjectID&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;UNION&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;SELECT PMID FROM PROJECT WHERE ProjectID = @ProjectID AND PMID IS NOT NULL) r;" vertex="1">
+          <mxGeometry height="1370" width="840" x="520" as="geometry">
+            <mxRectangle height="1370" width="840" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-108" parent="nqR-c-89" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="60" width="1360" y="1832" as="geometry" />
+        </mxCell>
+        <mxCell id="nqR-c-109" parent="nqR-c-108" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=14;fillColor=none;" value="Alternative / Exception Flow" vertex="1">
+          <mxGeometry height="60" width="520" as="geometry">
+            <mxRectangle height="60" width="520" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-110" parent="nqR-c-108" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=left;verticalAlign=middle;fontSize=13;fillColor=none;spacingLeft=6;spacingTop=8;spacingRight=6;" value="&lt;b&gt;5a:&lt;/b&gt; ข้อมูลไม่ครบหรือไม่ถูกต้อง → ระบบแจ้งเตือนที่ช่องที่ผิด และกลับไป Step 4" vertex="1">
+          <mxGeometry height="60" width="840" x="520" as="geometry">
+            <mxRectangle height="60" width="840" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-111" parent="nqR-1" style="shape=table;startSize=52;container=1;collapsible=0;childLayout=tableLayout;strokeColor=default;fontSize=20;fontStyle=1;html=1;" value="UC06 Add Customer New Requirement" vertex="1">
+          <mxGeometry height="1788" width="1360" x="1480" y="2257" as="geometry" />
+        </mxCell>
+        <mxCell id="nqR-c-112" parent="nqR-c-111" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="70" width="1360" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="nqR-c-113" parent="nqR-c-112" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=14;fillColor=none;" value="Main Actor" vertex="1">
+          <mxGeometry height="70" width="520" as="geometry">
+            <mxRectangle height="70" width="520" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-114" parent="nqR-c-112" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=14;fillColor=none;spacingLeft=10;spacingRight=10;" value="PM" vertex="1">
+          <mxGeometry height="70" width="840" x="520" as="geometry">
+            <mxRectangle height="70" width="840" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-115" parent="nqR-c-111" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="76" width="1360" y="122" as="geometry" />
+        </mxCell>
+        <mxCell id="nqR-c-116" parent="nqR-c-115" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=14;fillColor=none;" value="Describe" vertex="1">
+          <mxGeometry height="76" width="520" as="geometry">
+            <mxRectangle height="76" width="520" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-117" parent="nqR-c-115" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=14;fillColor=none;spacingLeft=10;spacingRight=10;" value="ใช้ในการบันทึก Requirement ใหม่ที่ลูกค้าขอเพิ่มระหว่างการทดสอบระบบเข้าสู่ Project และส่งให้ Sale พิจารณาอนุมัติผ่านระบบ แทนการส่งอีเมลและบันทึกซ้ำซ้อน" vertex="1">
+          <mxGeometry height="76" width="840" x="520" as="geometry">
+            <mxRectangle height="76" width="840" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-118" parent="nqR-c-111" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="118" width="1360" y="198" as="geometry" />
+        </mxCell>
+        <mxCell id="nqR-c-119" parent="nqR-c-118" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=14;fillColor=none;" value="Pre-Condition" vertex="1">
+          <mxGeometry height="118" width="520" as="geometry">
+            <mxRectangle height="118" width="520" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-120" parent="nqR-c-118" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=14;fillColor=none;spacingLeft=10;spacingRight=10;" value="1. PM เข้าสู่ระบบแล้ว และเป็น PM ของ Project&lt;br&gt;2. Project อยู่ในสถานะ &quot;Testing&quot; (หรือ &quot;WaitingForApprove&quot; กรณีเพิ่ม Requirement หลายข้อจากการทดสอบรอบเดียวกัน)&lt;br&gt;3. ลูกค้าแจ้งความต้องการเพิ่มเติม" vertex="1">
+          <mxGeometry height="118" width="840" x="520" as="geometry">
+            <mxRectangle height="118" width="840" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-121" parent="nqR-c-111" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="97" width="1360" y="316" as="geometry" />
+        </mxCell>
+        <mxCell id="nqR-c-122" parent="nqR-c-121" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=14;fillColor=none;" value="Post-Condition" vertex="1">
+          <mxGeometry height="97" width="520" as="geometry">
+            <mxRectangle height="97" width="520" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-123" parent="nqR-c-121" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=14;fillColor=none;spacingLeft=10;spacingRight=10;" value="1. Requirement ใหม่ถูกบันทึกในระบบ สถานะ &quot;รออนุมัติ&quot;&lt;br&gt;2. สถานะ Project เปลี่ยนเป็น &quot;WaitingForApprove&quot;&lt;br&gt;3. Sale in Charge ได้รับการแจ้งเตือนให้พิจารณา" vertex="1">
+          <mxGeometry height="97" width="840" x="520" as="geometry">
+            <mxRectangle height="97" width="840" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-124" parent="nqR-c-111" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="70" width="1360" y="413" as="geometry" />
+        </mxCell>
+        <mxCell id="nqR-c-125" parent="nqR-c-124" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=20;fillColor=none;" value="Actor Action" vertex="1">
+          <mxGeometry height="70" width="520" as="geometry">
+            <mxRectangle height="70" width="520" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-126" parent="nqR-c-124" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=20;fillColor=none;" value="System" vertex="1">
+          <mxGeometry height="70" width="840" x="520" as="geometry">
+            <mxRectangle height="70" width="840" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-127" parent="nqR-c-111" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="1218" width="1360" y="483" as="geometry" />
+        </mxCell>
+        <mxCell id="nqR-c-128" parent="nqR-c-127" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=left;verticalAlign=top;fontSize=13;fillColor=none;spacingLeft=6;spacingTop=8;spacingRight=6;" value="&lt;b&gt;Step 2:&lt;/b&gt; PM เลือก Project ที่ต้องการเพิ่ม Requirement ใหม่&lt;br&gt;&lt;b&gt;Step 4:&lt;/b&gt; PM กรอกรายละเอียด Requirement ใหม่&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;4.1 หัวข้อ / ชื่อ Requirement&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;4.2 รายละเอียดความต้องการ&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;4.3 ระดับความสำคัญ (Low / Medium / High)&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;4.4 วันที่ลูกค้าต้องการให้เสร็จ&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;4.5 ส่วนงาน / ฟีเจอร์ที่เกี่ยวข้อง (ถ้ามี)&lt;br&gt;&lt;b&gt;Step 6:&lt;/b&gt; PM อัปโหลดเอกสารประกอบ (ไฟล์สเปค, รูปภาพตัวอย่าง, เอกสารจากลูกค้า) (ถ้ามี) แล้วกด &quot;ส่งอนุมัติ&quot;" vertex="1">
+          <mxGeometry height="1218" width="520" as="geometry">
+            <mxRectangle height="1218" width="520" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-129" parent="nqR-c-127" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=left;verticalAlign=top;fontSize=13;fillColor=none;spacingLeft=6;spacingTop=8;spacingRight=6;" value="&lt;b&gt;Step 1:&lt;/b&gt; ระบบแสดงรายการ Project สถานะ &quot;Testing&quot; หรือ &quot;WaitingForApprove&quot; ที่ PM คนนี้ดูแล (Project ID, Project Name, Customer Name, Status)&lt;br&gt;&lt;b&gt;Query 1.1:&lt;/b&gt;&lt;br&gt;SELECT p.ProjectID, p.ProjectName, c.CustomerName, p.Status&lt;br&gt;FROM PROJECT p&lt;br&gt;JOIN CUSTOMER c ON c.CustomerID = p.CustomerID&lt;br&gt;WHERE p.PMID = @LoginID AND p.Status IN (&#39;Testing&#39;,&#39;WaitingForApprove&#39;);&lt;br&gt;&lt;br&gt;&lt;b&gt;Step 3:&lt;/b&gt; ระบบแสดงรายละเอียด Project และแบบฟอร์ม Requirement ใหม่&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;3.1 Project Name&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;3.2 Customer Name&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;3.3 PM&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;3.4 Tech Engineer ที่ถูกมอบหมาย&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;3.5 สถานะปัจจุบัน&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;3.6 Start Date&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;3.7 รายละเอียด Solution&lt;br&gt;&lt;b&gt;Query 3.1:&lt;/b&gt; &lt;i&gt;(Step 3.1 – 3.3, 3.5 – 3.7)&lt;/i&gt;&lt;br&gt;SELECT p.ProjectName, c.CustomerName,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;CONCAT(pm.FirstName, &#39; &#39;, pm.LastName) AS PMName,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;p.Status, p.StartDate, p.SolutionDetail&lt;br&gt;FROM PROJECT p&lt;br&gt;JOIN CUSTOMER c  ON c.CustomerID  = p.CustomerID&lt;br&gt;JOIN EMPLOYEE pm ON pm.EmployeeID = p.PMID&lt;br&gt;WHERE p.ProjectID = @ProjectID;&lt;br&gt;&lt;b&gt;Query 3.2:&lt;/b&gt; &lt;i&gt;(Step 3.4)&lt;/i&gt;&lt;br&gt;SELECT e.FirstName, e.LastName&lt;br&gt;FROM PROJECT_ASSIGNMENT pa&lt;br&gt;JOIN EMPLOYEE e ON e.EmployeeID = pa.EngineerID&lt;br&gt;WHERE pa.ProjectID = @ProjectID;&lt;br&gt;&lt;br&gt;&lt;b&gt;Step 5:&lt;/b&gt; ระบบตรวจสอบความถูกต้องของข้อมูลที่กรอก&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;5.1 หัวข้อและรายละเอียดต้องไม่ว่าง&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;5.2 ต้องเลือกระดับความสำคัญ&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;5.3 วันที่ต้องการให้เสร็จต้องไม่เป็นวันที่ผ่านมาแล้ว&lt;br&gt;&lt;br&gt;&lt;b&gt;Step 7:&lt;/b&gt; ระบบตรวจสอบไฟล์ที่อัปโหลด ต้องเป็น PDF / JPG / PNG และขนาดไม่เกิน 50 MB ต่อไฟล์&lt;br&gt;&lt;br&gt;&lt;b&gt;Step 8:&lt;/b&gt; ระบบบันทึก Requirement ใหม่ลง Project พร้อม Requirement ID, วันเวลาที่บันทึก, ผู้บันทึก (PM) และสถานะ &quot;รออนุมัติ&quot;&lt;br&gt;&lt;b&gt;Query 8.1:&lt;/b&gt; &lt;i&gt;(สถานะ &#39;Pending&#39; = รออนุมัติ)&lt;/i&gt;&lt;br&gt;INSERT INTO CUSTOMER_REQUIREMENT (ProjectID, Title, Detail, Priority, DueDate,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;RelatedFeature, Status, CreatedByID, CreatedDate)&lt;br&gt;VALUES (@ProjectID, @Title, @Detail, @Priority, @DueDate,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;@RelatedFeature, &#39;Pending&#39;, @LoginID, GETDATE());&lt;br&gt;SET @RequirementID = SCOPE_IDENTITY();&lt;br&gt;&lt;b&gt;Query 8.2:&lt;/b&gt; &lt;i&gt;(ทำซ้ำทุกไฟล์ (ถ้ามี))&lt;/i&gt;&lt;br&gt;INSERT INTO REQUIREMENT_ATTACHMENT (RequirementID, AttachmentFile)&lt;br&gt;VALUES (@RequirementID, @AttachmentFile);&lt;br&gt;&lt;br&gt;&lt;b&gt;Step 9:&lt;/b&gt; ระบบอัปเดตสถานะ Project เป็น &quot;WaitingForApprove&quot;&lt;br&gt;&lt;b&gt;Query 9.1:&lt;/b&gt;&lt;br&gt;UPDATE PROJECT&lt;br&gt;SET Status = &#39;WaitingForApprove&#39;&lt;br&gt;WHERE ProjectID = @ProjectID;&lt;br&gt;&lt;br&gt;&lt;b&gt;Step 10:&lt;/b&gt; ระบบส่งการแจ้งเตือนไปยัง Sale in Charge ทั้งในแอปและอีเมล&lt;br&gt;&lt;b&gt;Query 10.1:&lt;/b&gt; &lt;i&gt;(แจ้ง Sale in Charge (อีเมลส่งจากแอป))&lt;/i&gt;&lt;br&gt;INSERT INTO NOTIFICATION (RecipientID, ProjectID, Type, Message, SendAt, IsRead)&lt;br&gt;SELECT p.SaleID, p.ProjectID, &#39;RequirementPending&#39;,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;CONCAT(N&#39;มี Requirement ใหม่รออนุมัติ: &#39;, @Title), GETDATE(), 0&lt;br&gt;FROM PROJECT p&lt;br&gt;WHERE p.ProjectID = @ProjectID;" vertex="1">
+          <mxGeometry height="1218" width="840" x="520" as="geometry">
+            <mxRectangle height="1218" width="840" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-130" parent="nqR-c-111" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="87" width="1360" y="1701" as="geometry" />
+        </mxCell>
+        <mxCell id="nqR-c-131" parent="nqR-c-130" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=14;fillColor=none;" value="Alternative / Exception Flow" vertex="1">
+          <mxGeometry height="87" width="520" as="geometry">
+            <mxRectangle height="87" width="520" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-132" parent="nqR-c-130" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=left;verticalAlign=middle;fontSize=13;fillColor=none;spacingLeft=6;spacingTop=8;spacingRight=6;" value="&lt;b&gt;5a:&lt;/b&gt; ข้อมูลไม่ครบหรือไม่ถูกต้อง → ระบบแจ้งเตือนที่ช่องที่ผิด และกลับไป Step 4&lt;br&gt;&lt;b&gt;6a:&lt;/b&gt; ไม่มีเอกสารประกอบ → ข้าม Step 7 ไป Step 8&lt;br&gt;&lt;b&gt;7a:&lt;/b&gt; ไฟล์ผิดประเภทหรือเกิน 50 MB → ระบบแจ้งเตือนและไม่บันทึกไฟล์นั้น กลับไป Step 6" vertex="1">
+          <mxGeometry height="87" width="840" x="520" as="geometry">
+            <mxRectangle height="87" width="840" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-133" parent="nqR-1" style="shape=table;startSize=52;container=1;collapsible=0;childLayout=tableLayout;strokeColor=default;fontSize=20;fontStyle=1;html=1;" value="UC07 Approve New Project Requirement" vertex="1">
+          <mxGeometry height="2164" width="1360" x="2960" y="2257" as="geometry" />
+        </mxCell>
+        <mxCell id="nqR-c-134" parent="nqR-c-133" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="70" width="1360" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="nqR-c-135" parent="nqR-c-134" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=14;fillColor=none;" value="Main Actor" vertex="1">
+          <mxGeometry height="70" width="520" as="geometry">
+            <mxRectangle height="70" width="520" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-136" parent="nqR-c-134" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=14;fillColor=none;spacingLeft=10;spacingRight=10;" value="Sale" vertex="1">
+          <mxGeometry height="70" width="840" x="520" as="geometry">
+            <mxRectangle height="70" width="840" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-137" parent="nqR-c-133" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="76" width="1360" y="122" as="geometry" />
+        </mxCell>
+        <mxCell id="nqR-c-138" parent="nqR-c-137" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=14;fillColor=none;" value="Describe" vertex="1">
+          <mxGeometry height="76" width="520" as="geometry">
+            <mxRectangle height="76" width="520" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-139" parent="nqR-c-137" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=14;fillColor=none;spacingLeft=10;spacingRight=10;" value="ใช้ในการตรวจสอบและพิจารณา Requirement ใหม่ที่ PM บันทึกไว้ (UC06) ว่าจะอนุมัติหรือปฏิเสธ ถ้าอนุมัติ Project จะกลับไปให้ Presale Engineer ปรับ Solution (UC02)" vertex="1">
+          <mxGeometry height="76" width="840" x="520" as="geometry">
+            <mxRectangle height="76" width="840" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-140" parent="nqR-c-133" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="76" width="1360" y="198" as="geometry" />
+        </mxCell>
+        <mxCell id="nqR-c-141" parent="nqR-c-140" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=14;fillColor=none;" value="Pre-Condition" vertex="1">
+          <mxGeometry height="76" width="520" as="geometry">
+            <mxRectangle height="76" width="520" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-142" parent="nqR-c-140" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=14;fillColor=none;spacingLeft=10;spacingRight=10;" value="1. Sale เข้าสู่ระบบแล้ว และเป็น Sale in Charge ของ Project&lt;br&gt;2. Project อยู่ในสถานะ &quot;WaitingForApprove&quot; และมี Requirement สถานะ &quot;รออนุมัติ&quot; (UC06)" vertex="1">
+          <mxGeometry height="76" width="840" x="520" as="geometry">
+            <mxRectangle height="76" width="840" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-143" parent="nqR-c-133" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="97" width="1360" y="274" as="geometry" />
+        </mxCell>
+        <mxCell id="nqR-c-144" parent="nqR-c-143" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=14;fillColor=none;" value="Post-Condition" vertex="1">
+          <mxGeometry height="97" width="520" as="geometry">
+            <mxRectangle height="97" width="520" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-145" parent="nqR-c-143" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=14;fillColor=none;spacingLeft=10;spacingRight=10;" value="1. Requirement ถูกอัปเดตเป็น &quot;อนุมัติ&quot; หรือ &quot;ปฏิเสธ&quot; พร้อมผู้พิจารณา วันที่ และเหตุผล&lt;br&gt;2. สถานะ Project เปลี่ยนเป็น &quot;NewProject&quot; (มีข้อที่อนุมัติ) หรือ &quot;Finish&quot; (ปฏิเสธทั้งหมด)&lt;br&gt;3. PM และ Presale Engineer ได้รับการแจ้งเตือนผลการพิจารณา" vertex="1">
+          <mxGeometry height="97" width="840" x="520" as="geometry">
+            <mxRectangle height="97" width="840" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-146" parent="nqR-c-133" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="70" width="1360" y="371" as="geometry" />
+        </mxCell>
+        <mxCell id="nqR-c-147" parent="nqR-c-146" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=20;fillColor=none;" value="Actor Action" vertex="1">
+          <mxGeometry height="70" width="520" as="geometry">
+            <mxRectangle height="70" width="520" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-148" parent="nqR-c-146" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=20;fillColor=none;" value="System" vertex="1">
+          <mxGeometry height="70" width="840" x="520" as="geometry">
+            <mxRectangle height="70" width="840" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-149" parent="nqR-c-133" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="1636" width="1360" y="441" as="geometry" />
+        </mxCell>
+        <mxCell id="nqR-c-150" parent="nqR-c-149" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=left;verticalAlign=top;fontSize=13;fillColor=none;spacingLeft=6;spacingTop=8;spacingRight=6;" value="&lt;b&gt;Step 2:&lt;/b&gt; Sale เลือก Project ที่ต้องการตรวจสอบ&lt;br&gt;&lt;b&gt;Step 4:&lt;/b&gt; Sale เลือก Requirement ที่ต้องการตรวจสอบ&lt;br&gt;&lt;b&gt;Step 7:&lt;/b&gt; Sale เลือก &quot;อนุมัติ&quot; หรือ &quot;ปฏิเสธ&quot; พร้อมระบุเหตุผล (บังคับกรณีปฏิเสธ) แล้วกด &quot;ยืนยัน&quot;" vertex="1">
+          <mxGeometry height="1636" width="520" as="geometry">
+            <mxRectangle height="1636" width="520" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-151" parent="nqR-c-149" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=left;verticalAlign=top;fontSize=13;fillColor=none;spacingLeft=6;spacingTop=8;spacingRight=6;" value="&lt;b&gt;Step 1:&lt;/b&gt; ระบบแสดงรายการ Project สถานะ &quot;WaitingForApprove&quot; ที่ Sale คนนี้รับผิดชอบ พร้อมจำนวน Requirement ที่รออนุมัติ&lt;br&gt;&lt;b&gt;Query 1.1:&lt;/b&gt;&lt;br&gt;SELECT p.ProjectID, p.ProjectName, c.CustomerName,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;COUNT(r.RequirementID) AS PendingCount&lt;br&gt;FROM PROJECT p&lt;br&gt;JOIN CUSTOMER c             ON c.CustomerID = p.CustomerID&lt;br&gt;JOIN CUSTOMER_REQUIREMENT r ON r.ProjectID  = p.ProjectID AND r.Status = &#39;Pending&#39;&lt;br&gt;WHERE p.SaleID = @LoginID AND p.Status = &#39;WaitingForApprove&#39;&lt;br&gt;GROUP BY p.ProjectID, p.ProjectName, c.CustomerName;&lt;br&gt;&lt;br&gt;&lt;b&gt;Step 3:&lt;/b&gt; ระบบแสดงรายการ Requirement สถานะ &quot;รออนุมัติ&quot; ของ Project (Requirement ID, หัวข้อ, ความสำคัญ, วันที่ต้องการ, ผู้บันทึก)&lt;br&gt;&lt;b&gt;Query 3.1:&lt;/b&gt;&lt;br&gt;SELECT r.RequirementID, r.Title, r.Priority, r.DueDate,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;CONCAT(e.FirstName, &#39; &#39;, e.LastName) AS CreatedBy&lt;br&gt;FROM CUSTOMER_REQUIREMENT r&lt;br&gt;JOIN EMPLOYEE e ON e.EmployeeID = r.CreatedByID&lt;br&gt;WHERE r.ProjectID = @ProjectID AND r.Status = &#39;Pending&#39;&lt;br&gt;ORDER BY r.CreatedDate;&lt;br&gt;&lt;br&gt;&lt;b&gt;Step 5:&lt;/b&gt; ระบบตรวจสอบว่า Requirement ยังอยู่ในสถานะ &quot;รออนุมัติ&quot;&lt;br&gt;&lt;b&gt;Query 5.1:&lt;/b&gt; &lt;i&gt;(ไม่ใช่ &#39;Pending&#39; → Alternative 5a)&lt;/i&gt;&lt;br&gt;SELECT Status&lt;br&gt;FROM CUSTOMER_REQUIREMENT&lt;br&gt;WHERE RequirementID = @RequirementID;&lt;br&gt;&lt;br&gt;&lt;b&gt;Step 6:&lt;/b&gt; ระบบแสดงรายละเอียด Requirement และเอกสารประกอบให้ Sale ตรวจ&lt;br&gt;&lt;b&gt;Query 6.1:&lt;/b&gt;&lt;br&gt;SELECT Title, Detail, Priority, DueDate, RelatedFeature, CreatedDate&lt;br&gt;FROM CUSTOMER_REQUIREMENT&lt;br&gt;WHERE RequirementID = @RequirementID;&lt;br&gt;&lt;b&gt;Query 6.2:&lt;/b&gt;&lt;br&gt;SELECT AttachmentFile&lt;br&gt;FROM REQUIREMENT_ATTACHMENT&lt;br&gt;WHERE RequirementID = @RequirementID;&lt;br&gt;&lt;br&gt;&lt;b&gt;Step 8:&lt;/b&gt; ระบบตรวจสอบว่ากรอกเหตุผลแล้ว (กรณีปฏิเสธ)&lt;br&gt;&lt;br&gt;&lt;b&gt;Step 9:&lt;/b&gt; ระบบบันทึกผลการพิจารณาของ Sale ลง Requirement: สถานะ (อนุมัติ / ปฏิเสธ), ผู้พิจารณา, วันที่พิจารณา, เหตุผล&lt;br&gt;&lt;b&gt;Query 9.1:&lt;/b&gt; &lt;i&gt;(@Decision = &#39;Approved&#39; / &#39;Rejected&#39;)&lt;/i&gt;&lt;br&gt;UPDATE CUSTOMER_REQUIREMENT&lt;br&gt;SET Status = @Decision, ReviewedByID = @LoginID,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;ReviewedDate = GETDATE(), RejectReason = @RejectReason&lt;br&gt;WHERE RequirementID = @RequirementID AND Status = &#39;Pending&#39;;&lt;br&gt;&lt;br&gt;&lt;b&gt;Step 10:&lt;/b&gt; ระบบแจ้งเตือน PM ถึงผลการพิจารณา โดยระบุชื่อ Requirement ผลการพิจารณา และเหตุผล&lt;br&gt;&lt;b&gt;Query 10.1:&lt;/b&gt; &lt;i&gt;(แจ้ง PM ผู้บันทึก Requirement)&lt;/i&gt;&lt;br&gt;INSERT INTO NOTIFICATION (RecipientID, ProjectID, Type, Message, SendAt, IsRead)&lt;br&gt;SELECT r.CreatedByID, r.ProjectID, &#39;RequirementResult&#39;,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;CONCAT(N&#39;Requirement &quot;&#39;, r.Title, N&#39;&quot; : &#39;, r.Status,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;CASE WHEN r.RejectReason IS NULL THEN N&#39;&#39;&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;ELSE CONCAT(N&#39; (เหตุผล: &#39;, r.RejectReason, N&#39;)&#39;) END), GETDATE(), 0&lt;br&gt;FROM CUSTOMER_REQUIREMENT r&lt;br&gt;WHERE r.RequirementID = @RequirementID;&lt;br&gt;&lt;br&gt;&lt;b&gt;Step 11:&lt;/b&gt; เมื่อ Requirement ที่รออนุมัติของ Project ถูกพิจารณาครบทุกข้อ ระบบอัปเดตสถานะ Project&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;11.1 มีอย่างน้อย 1 ข้อที่อนุมัติ → สถานะ &quot;NewProject&quot; และแจ้งเตือน Presale Engineer in Charge ให้ปรับ Solution (UC02) โดยเอกสาร Requirement จะแสดงใน Check Project Details (UC03)&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;11.2 ปฏิเสธทั้งหมด → สถานะ &quot;Finish&quot; (ดำเนินการ UAT / Handover ต่อ)&lt;br&gt;&lt;b&gt;Query 11.1:&lt;/b&gt; &lt;i&gt;(ยังเหลือ &amp;gt; 0 → Alternative 11a)&lt;/i&gt;&lt;br&gt;SELECT COUNT(*) AS PendingLeft&lt;br&gt;FROM CUSTOMER_REQUIREMENT&lt;br&gt;WHERE ProjectID = @ProjectID AND Status = &#39;Pending&#39;;&lt;br&gt;&lt;b&gt;Query 11.2:&lt;/b&gt; &lt;i&gt;(นับเฉพาะรอบนี้ = Requirement ที่บันทึกหลังนัดทดสอบล่าสุด)&lt;/i&gt;&lt;br&gt;SELECT COUNT(*) AS ApprovedThisRound&lt;br&gt;FROM CUSTOMER_REQUIREMENT&lt;br&gt;WHERE ProjectID = @ProjectID AND Status = &#39;Approved&#39;&lt;br&gt;&amp;nbsp;&amp;nbsp;AND CreatedDate &amp;gt;= (SELECT MAX(CreatedDate) FROM TEST_SCHEDULE&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;WHERE ProjectID = @ProjectID);&lt;br&gt;&lt;b&gt;Query 11.3:&lt;/b&gt; &lt;i&gt;(Step 11.1 (ApprovedThisRound &amp;gt; 0))&lt;/i&gt;&lt;br&gt;UPDATE PROJECT&lt;br&gt;SET Status = &#39;NewProject&#39;&lt;br&gt;WHERE ProjectID = @ProjectID;&lt;br&gt;&lt;br&gt;INSERT INTO NOTIFICATION (RecipientID, ProjectID, Type, Message, SendAt, IsRead)&lt;br&gt;SELECT PresaleID, ProjectID, &#39;RequirementResult&#39;,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;N&#39;มี Requirement ใหม่ที่อนุมัติแล้ว กรุณาปรับ Solution&#39;, GETDATE(), 0&lt;br&gt;FROM PROJECT&lt;br&gt;WHERE ProjectID = @ProjectID;&lt;br&gt;&lt;b&gt;Query 11.4:&lt;/b&gt; &lt;i&gt;(Step 11.2 (ApprovedThisRound = 0))&lt;/i&gt;&lt;br&gt;UPDATE PROJECT&lt;br&gt;SET Status = &#39;Finish&#39;&lt;br&gt;WHERE ProjectID = @ProjectID;" vertex="1">
+          <mxGeometry height="1636" width="840" x="520" as="geometry">
+            <mxRectangle height="1636" width="840" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-152" parent="nqR-c-133" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="87" width="1360" y="2077" as="geometry" />
+        </mxCell>
+        <mxCell id="nqR-c-153" parent="nqR-c-152" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=14;fillColor=none;" value="Alternative / Exception Flow" vertex="1">
+          <mxGeometry height="87" width="520" as="geometry">
+            <mxRectangle height="87" width="520" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-c-154" parent="nqR-c-152" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=left;verticalAlign=middle;fontSize=13;fillColor=none;spacingLeft=6;spacingTop=8;spacingRight=6;" value="&lt;b&gt;5a:&lt;/b&gt; Requirement ถูกพิจารณาไปแล้ว → ระบบแจ้งเตือน และกลับไป Step 3&lt;br&gt;&lt;b&gt;8a:&lt;/b&gt; ปฏิเสธแต่ไม่กรอกเหตุผล → ระบบแจ้งเตือน และกลับไป Step 7&lt;br&gt;&lt;b&gt;11a:&lt;/b&gt; ยังมี Requirement รออนุมัติเหลืออยู่ → สถานะ Project ยังเป็น &quot;WaitingForApprove&quot; และกลับไป Step 3" vertex="1">
+          <mxGeometry height="87" width="840" x="520" as="geometry">
+            <mxRectangle height="87" width="840" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-u8-t" parent="nqR-1" style="shape=table;startSize=52;container=1;collapsible=0;childLayout=tableLayout;strokeColor=default;fontSize=20;fontStyle=1;html=1;" value="UC08 Close Project" vertex="1">
+          <mxGeometry height="1921" width="1360" x="4440" y="2257" as="geometry" />
+        </mxCell>
+        <mxCell id="nqR-u8-r0" parent="nqR-u8-t" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="70" width="1360" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="nqR-u8-r0c0" parent="nqR-u8-r0" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=14;fillColor=none;" value="Main Actor" vertex="1">
+          <mxGeometry height="70" width="520" as="geometry">
+            <mxRectangle height="70" width="520" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-u8-r0c1" parent="nqR-u8-r0" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=14;fillColor=none;spacingLeft=10;spacingRight=10;" value="PM" vertex="1">
+          <mxGeometry height="70" width="840" x="520" as="geometry">
+            <mxRectangle height="70" width="840" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-u8-r1" parent="nqR-u8-t" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="76" width="1360" y="122" as="geometry" />
+        </mxCell>
+        <mxCell id="nqR-u8-r1c0" parent="nqR-u8-r1" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=14;fillColor=none;" value="Describe" vertex="1">
+          <mxGeometry height="76" width="520" as="geometry">
+            <mxRectangle height="76" width="520" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-u8-r1c1" parent="nqR-u8-r1" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=14;fillColor=none;spacingLeft=10;spacingRight=10;" value="ใช้ในการปิด Project เมื่อลูกค้าทดสอบระบบผ่านและไม่มี Requirement ใหม่ โดย PM เป็นผู้ตัดสินใจกดปุ่ม &quot;ปิด Project&quot; ระบบเปลี่ยนสถานะเป็น Finish และแจ้งเตือนผู้รับผิดชอบทุกคนใน Project ก่อนจัดทำเอกสาร UAT และ Handover" vertex="1">
+          <mxGeometry height="76" width="840" x="520" as="geometry">
+            <mxRectangle height="76" width="840" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-u8-r2" parent="nqR-u8-t" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="97" width="1360" y="198" as="geometry" />
+        </mxCell>
+        <mxCell id="nqR-u8-r2c0" parent="nqR-u8-r2" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=14;fillColor=none;" value="Pre-Condition" vertex="1">
+          <mxGeometry height="97" width="520" as="geometry">
+            <mxRectangle height="97" width="520" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-u8-r2c1" parent="nqR-u8-r2" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=14;fillColor=none;spacingLeft=10;spacingRight=10;" value="1. PM เข้าสู่ระบบแล้ว และเป็น PM ของ Project&lt;br&gt;2. Project อยู่ในสถานะ &quot;Testing&quot; และลูกค้าทดสอบระบบผ่านตามความต้องการ&lt;br&gt;3. ไม่มี Requirement สถานะ &quot;รออนุมัติ&quot;" vertex="1">
+          <mxGeometry height="97" width="840" x="520" as="geometry">
+            <mxRectangle height="97" width="840" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-u8-r3" parent="nqR-u8-t" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="118" width="1360" y="295" as="geometry" />
+        </mxCell>
+        <mxCell id="nqR-u8-r3c0" parent="nqR-u8-r3" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=14;fillColor=none;" value="Post-Condition" vertex="1">
+          <mxGeometry height="118" width="520" as="geometry">
+            <mxRectangle height="118" width="520" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-u8-r3c1" parent="nqR-u8-r3" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=14;fillColor=none;spacingLeft=10;spacingRight=10;" value="1. สถานะ Project เปลี่ยนเป็น &quot;Finish&quot;&lt;br&gt;2. นัดทดสอบล่าสุดเปลี่ยนเป็น &quot;Done&quot;&lt;br&gt;3. Sale in Charge, Presale Engineer in Charge และ Tech Engineer ทุกคนใน Project ได้รับการแจ้งเตือนว่า Project ถูกปิดแล้ว" vertex="1">
+          <mxGeometry height="118" width="840" x="520" as="geometry">
+            <mxRectangle height="118" width="840" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-u8-r4" parent="nqR-u8-t" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="70" width="1360" y="413" as="geometry" />
+        </mxCell>
+        <mxCell id="nqR-u8-r4c0" parent="nqR-u8-r4" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=20;fillColor=none;" value="Actor Action" vertex="1">
+          <mxGeometry height="70" width="520" as="geometry">
+            <mxRectangle height="70" width="520" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-u8-r4c1" parent="nqR-u8-r4" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=20;fillColor=none;" value="System" vertex="1">
+          <mxGeometry height="70" width="840" x="520" as="geometry">
+            <mxRectangle height="70" width="840" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-u8-r5" parent="nqR-u8-t" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="1351" width="1360" y="483" as="geometry" />
+        </mxCell>
+        <mxCell id="nqR-u8-r5c0" parent="nqR-u8-r5" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=left;verticalAlign=top;fontSize=13;fillColor=none;spacingLeft=6;spacingTop=8;spacingRight=6;" value="&lt;b&gt;Step 2:&lt;/b&gt; PM เลือก Project ที่ต้องการปิด&lt;br&gt;&lt;b&gt;Step 4:&lt;/b&gt; PM กดปุ่ม &quot;ปิด Project&quot; และกดยืนยัน" vertex="1">
+          <mxGeometry height="1351" width="520" as="geometry">
+            <mxRectangle height="1351" width="520" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-u8-r5c1" parent="nqR-u8-r5" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=left;verticalAlign=top;fontSize=13;fillColor=none;spacingLeft=6;spacingTop=8;spacingRight=6;" value="&lt;b&gt;Step 1:&lt;/b&gt; ระบบแสดงรายการ Project สถานะ &quot;Testing&quot; ที่ PM คนนี้ดูแล (Project ID, Project Name, Customer Name)&lt;br&gt;&lt;b&gt;Query 1.1:&lt;/b&gt;&lt;br&gt;SELECT p.ProjectID, p.ProjectName, c.CustomerName&lt;br&gt;FROM PROJECT p&lt;br&gt;JOIN CUSTOMER c ON c.CustomerID = p.CustomerID&lt;br&gt;WHERE p.PMID = @LoginID AND p.Status = &#39;Testing&#39;&lt;br&gt;ORDER BY p.ProjectID DESC;&lt;br&gt;&lt;br&gt;&lt;b&gt;Step 3:&lt;/b&gt; ระบบแสดงข้อมูล Project ผู้รับผิดชอบ และนัดทดสอบล่าสุด พร้อมปุ่ม &quot;ปิด Project&quot;&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;3.1 Project Name, Customer Name, Sale in Charge, Presale Engineer in Charge&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;3.2 Tech Engineer ที่ถูกมอบหมาย&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;3.3 นัดทดสอบล่าสุด (วัน เวลา สถานที่)&lt;br&gt;&lt;b&gt;Query 3.1:&lt;/b&gt; &lt;i&gt;(Step 3.1 – 3.2 ข้อมูล Project + Sale / Presale)&lt;/i&gt;&lt;br&gt;SELECT p.ProjectID, p.ProjectName, c.CustomerName,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;CONCAT(s.FirstName, &#39; &#39;, s.LastName)   AS SaleInCharge,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;CONCAT(ps.FirstName, &#39; &#39;, ps.LastName) AS PresaleInCharge&lt;br&gt;FROM PROJECT p&lt;br&gt;JOIN CUSTOMER c  ON c.CustomerID  = p.CustomerID&lt;br&gt;JOIN EMPLOYEE s  ON s.EmployeeID  = p.SaleID&lt;br&gt;JOIN EMPLOYEE ps ON ps.EmployeeID = p.PresaleID&lt;br&gt;WHERE p.ProjectID = @ProjectID AND p.PMID = @LoginID;&lt;br&gt;&lt;b&gt;Query 3.2:&lt;/b&gt; &lt;i&gt;(Step 3.2 Tech Engineer ที่ถูกมอบหมาย)&lt;/i&gt;&lt;br&gt;SELECT e.FirstName, e.LastName&lt;br&gt;FROM PROJECT_ASSIGNMENT pa&lt;br&gt;JOIN EMPLOYEE e ON e.EmployeeID = pa.EngineerID&lt;br&gt;WHERE pa.ProjectID = @ProjectID;&lt;br&gt;&lt;b&gt;Query 3.3:&lt;/b&gt; &lt;i&gt;(Step 3.3 นัดทดสอบล่าสุด)&lt;/i&gt;&lt;br&gt;SELECT TOP 1 TestDate, StartTime, EndTime, Location&lt;br&gt;FROM TEST_SCHEDULE&lt;br&gt;WHERE ProjectID = @ProjectID AND Status = &#39;Scheduled&#39;&lt;br&gt;ORDER BY TestDate DESC;&lt;br&gt;&lt;br&gt;&lt;b&gt;Step 5:&lt;/b&gt; ระบบตรวจสอบก่อนปิด Project&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;5.1 Project ยังอยู่ในสถานะ &quot;Testing&quot; และ PM คนนี้เป็น PM ของ Project&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;5.2 ไม่มี Requirement สถานะ &quot;รออนุมัติ&quot;&lt;br&gt;&lt;b&gt;Query 5.1:&lt;/b&gt; &lt;i&gt;(ต้องเป็น &#39;Testing&#39; ไม่ใช่ → Alternative 5a)&lt;/i&gt;&lt;br&gt;SELECT Status&lt;br&gt;FROM PROJECT&lt;br&gt;WHERE ProjectID = @ProjectID AND PMID = @LoginID;&lt;br&gt;&lt;b&gt;Query 5.2:&lt;/b&gt; &lt;i&gt;(ต้องเป็น 0 มากกว่า 0 → Alternative 5a)&lt;/i&gt;&lt;br&gt;SELECT COUNT(*) AS PendingCount&lt;br&gt;FROM CUSTOMER_REQUIREMENT&lt;br&gt;WHERE ProjectID = @ProjectID AND Status = &#39;Pending&#39;;&lt;br&gt;&lt;br&gt;&lt;b&gt;Step 6:&lt;/b&gt; ระบบอัปเดตสถานะ Project เป็น &quot;Finish&quot;&lt;br&gt;&lt;b&gt;Query 6.1:&lt;/b&gt;&lt;br&gt;UPDATE PROJECT&lt;br&gt;SET Status = &#39;Finish&#39;&lt;br&gt;WHERE ProjectID = @ProjectID AND Status = &#39;Testing&#39;;&lt;br&gt;&lt;br&gt;&lt;b&gt;Step 7:&lt;/b&gt; ระบบเปลี่ยนสถานะนัดทดสอบล่าสุดเป็น &quot;Done&quot;&lt;br&gt;&lt;b&gt;Query 7.1:&lt;/b&gt;&lt;br&gt;UPDATE TEST_SCHEDULE&lt;br&gt;SET Status = &#39;Done&#39;&lt;br&gt;WHERE ProjectID = @ProjectID AND Status = &#39;Scheduled&#39;;&lt;br&gt;&lt;br&gt;&lt;b&gt;Step 8:&lt;/b&gt; ระบบส่งการแจ้งเตือนไปยังผู้รับผิดชอบทุกคนใน Project (Sale in Charge, Presale Engineer in Charge และ Tech Engineer ที่ถูกมอบหมาย) ว่า Project ถูกปิดแล้ว และให้เตรียมจัดทำเอกสาร UAT และ Handover&lt;br&gt;&lt;b&gt;Query 8.1:&lt;/b&gt; &lt;i&gt;(แจ้ง Sale, Presale และ Tech Engineer ทุกคนใน Project)&lt;/i&gt;&lt;br&gt;INSERT INTO NOTIFICATION (RecipientID, ProjectID, Type, Message, SendAt, IsRead)&lt;br&gt;SELECT r.EmployeeID, p.ProjectID, &#39;ProjectClosed&#39;,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;CONCAT(N&#39;Project ปิดแล้ว: &#39;, p.ProjectName, N&#39; (เตรียมจัดทำเอกสาร UAT และ Handover)&#39;), GETDATE(), 0&lt;br&gt;FROM (SELECT SaleID AS EmployeeID FROM PROJECT WHERE ProjectID = @ProjectID&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;UNION&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;SELECT PresaleID FROM PROJECT WHERE ProjectID = @ProjectID&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;UNION&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;SELECT EngineerID FROM PROJECT_ASSIGNMENT WHERE ProjectID = @ProjectID) r&lt;br&gt;CROSS JOIN PROJECT p&lt;br&gt;WHERE p.ProjectID = @ProjectID;" vertex="1">
+          <mxGeometry height="1351" width="840" x="520" as="geometry">
+            <mxRectangle height="1351" width="840" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-u8-r6" parent="nqR-u8-t" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="87" width="1360" y="1834" as="geometry" />
+        </mxCell>
+        <mxCell id="nqR-u8-r6c0" parent="nqR-u8-r6" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=center;verticalAlign=middle;fontSize=14;fillColor=none;" value="Alternative / Exception Flow" vertex="1">
+          <mxGeometry height="87" width="520" as="geometry">
+            <mxRectangle height="87" width="520" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nqR-u8-r6c1" parent="nqR-u8-r6" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=14;spacingLeft=8;spacingRight=8;align=left;verticalAlign=middle;fontSize=13;fillColor=none;spacingLeft=6;spacingTop=8;spacingRight=6;" value="&lt;b&gt;4a:&lt;/b&gt; PM กดยกเลิกในหน้าต่างยืนยัน → ระบบไม่เปลี่ยนแปลงข้อมูล และจบ Use Case&lt;br&gt;&lt;b&gt;5a:&lt;/b&gt; Project ไม่ได้อยู่ในสถานะ &quot;Testing&quot; หรือยังมี Requirement รออนุมัติ → ระบบแจ้ง &quot;ไม่สามารถปิด Project ได้&quot; และกลับไป Step 1" vertex="1">
+          <mxGeometry height="87" width="840" x="520" as="geometry">
+            <mxRectangle height="87" width="840" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

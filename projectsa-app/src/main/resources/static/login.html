@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>เข้าสู่ระบบ – ProjectSA</title>
+  <link rel="stylesheet" href="css/app.css?v=2">
+</head>
+<body>
+<main class="center">
+  <div class="card">
+    <h1>ProjectSA</h1>
+    <p class="muted">Project Management Program – เข้าสู่ระบบ</p>
+    <form id="loginForm" novalidate>
+      <div class="field" data-f="username"><label>Username</label><input name="username" autocomplete="username" autofocus><div class="msg"></div></div>
+      <div class="field" data-f="password" style="margin-top:12px"><label>รหัสผ่าน</label><input name="password" type="password" autocomplete="current-password"><div class="msg"></div></div>
+      <p class="muted" style="font-size:13px">บทบาทมาจากบัญชีของคุณ (1 บัญชี = 1 บทบาท) ไม่ต้องเลือกตอนเข้าสู่ระบบ</p>
+      <div class="actions"><a class="btn secondary" href="register.html">สมัครสมาชิก</a><button>เข้าสู่ระบบ</button></div>
+    </form>
+  </div>
+  <p class="muted" style="font-size:13px;text-align:center">บัญชีทดลอง: sale / presale / pm / tech1 / tech2 – รหัสผ่าน demo1234</p>
+</main>
+<script src="js/app.js?v=2"></script>
+<script>
+  // F2 Login (Query L.1)
+  const form = document.getElementById("loginForm");
+  form.onsubmit = async (ev) => {
+    ev.preventDefault();
+    const d = App.formData(form);
+    const err = {};
+    if (!d.username.trim()) err.username = "กรุณากรอก Username";
+    if (!d.password) err.password = "กรุณากรอกรหัสผ่าน";
+    if (Object.keys(err).length) return App.showErrors(form, { fields: err });
+    try {
+      await App.post("/api/login", d);
+      location.href = "index.html";
+    } catch (e) {
+      App.showErrors(form, e);
+    }
+  };
+</script>
+</body>
+</html>
